@@ -5,7 +5,10 @@ public static class CustomLog
 {
     private static LogLevel minimunLogLevel = LogLevel.Trace;
 
-    public static void SetMinimunLogLevel(LogLevel logLevel) => minimunLogLevel = logLevel;
+    public static void Initialize(DebugConfig debugConfig) 
+    {
+        minimunLogLevel = debugConfig.MinimunLogLevel;
+    }
 
     public static void Log(string message, LogLevel logLevel, UnityEngine.Object context = null) 
     {
