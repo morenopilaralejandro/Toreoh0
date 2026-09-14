@@ -70,4 +70,5 @@ public class CacheLruAudioClip
     }
 
     public IEnumerable<AudioClip> Values => map.Values.Select(n => n.Value.Val);
+    public IEnumerable<string> Keys => map.Values.Select(n => n.Value.Key);
 }
