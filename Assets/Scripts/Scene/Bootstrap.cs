@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 public class Bootstrap : MonoBehaviour 
 {
     [SerializeField] private DebugConfig debugConfig;
+    [SerializeField] private AddressableConfig addressableConfig;
 
     private async void Awake() 
     {
+        InitializeGame();
         await BootGameAsync();
     }
 
     private async Task BootGameAsync()
     {
-        CustomLog.SetMinimunLogLevel(debugConfig.MinimunLogLevel);
-
         SceneManager.LoadScene("LoadingScene", LoadSceneMode.Single);
 
         SceneManager.LoadScene("MainCamera", LoadSceneMode.Additive);
@@ -36,5 +36,12 @@ public class Bootstrap : MonoBehaviour
         #else
             SceneLoader.Instance.LoadGroup("sceneMainMenu");
         #endif
+    }
+
+    private void InitializeGame() 
+    {
+        CustomLog.Initialize(debugConfig);
+        AddressableLoader.Initialize(addressableConfig);
+        AddressableBuilder.Initialize(addressableConfig);
     }
 }
