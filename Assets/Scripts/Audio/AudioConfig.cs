@@ -7,6 +7,6 @@ public class AudioConfig : ScriptableObject
     public int CacheLruAudioClipSfx; //10
 
     [Header("Values")]
-    public int FactorSfxLoopVolume; //0.7f
+    public float FactorSfxLoopVolume; //0.7f
     public float MinIntervalPerSfxUI; //0.05f
 }
