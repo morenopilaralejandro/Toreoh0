@@ -1,4 +1,19 @@
+using UnityEngine;
+
 public class AudioChannelSfxLoop : AudioChannel 
 { 
-    public overrider void SetVolume() => source.volume * config.FactorSfxLoopVolume;
+    public AudioChannelSfxLoop(
+        AudioConfig config,
+        AudioSource source,
+        IAudioLoader loader,
+        IAudioPlayer player,
+        bool isLoop) 
+    : base(
+        config,
+        source,
+        loader,
+        player,
+        isLoop) { }
+
+    public override void SetVolume(float volume) => source.volume = volume * config.FactorSfxLoopVolume;
 }

@@ -3,9 +3,9 @@ using System.Threading.Tasks;
 
 public class AudioLoaderWithCache : IAudioLoader 
 {
-    private CacheLruAudioClip cache;
+    private CacheLru<string, AudioClip> cache;
     
-    public void Initialize(CacheLruAudioClip cache) 
+    public void Initialize(CacheLru<string, AudioClip> cache) 
     {
         this.cache = cache;
     }

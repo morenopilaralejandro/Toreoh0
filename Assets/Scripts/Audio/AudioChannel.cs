@@ -9,11 +9,11 @@ public abstract class AudioChannel
     protected IAudioPlayer player;
     protected bool isLoop;
 
-    protected AudioChannel(
+    public AudioChannel(
         AudioConfig config,
         AudioSource source,
         IAudioLoader loader,
-        IAudioPlayer player
+        IAudioPlayer player,
         bool isLoop)
     {
         this.config = config;
@@ -33,13 +33,13 @@ public abstract class AudioChannel
     }
     public virtual async void Stop(string address) 
     {
-        if (IsPlayingClip(address)) Stop(); 
+        if (await IsPlayingClip(address)) Stop(); 
     }
 
     public virtual void SetVolume(float volume) => source.volume = volume;
     public virtual AudioClip GetClip() => source.clip;
     public virtual bool IsPlaying() => source.isPlaying;
     public virtual bool IsPlayingClip(AudioClip clip) => source.isPlaying && source.clip == clip;
-    public virtual async bool IsPlayingClip(string address) => IsPlayingClip(await loader.LoadAudioAsync(address));
-    public virtual bool Clear() => loader.Clear();
+    public virtual async Task<bool> IsPlayingClip(string address) => IsPlayingClip(await loader.LoadAudioAsync(address));
+    public virtual void Clear() => loader.Clear();
 }

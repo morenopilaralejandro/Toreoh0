@@ -4,7 +4,7 @@ using UnityEngine;
 public class AudioConfig : ScriptableObject
 {
     [Header("Cache Size")]
-    public int CacheLruAudioClipSfx;
+    public int CacheLruAudioClipSfx; //10
 
     [Header("Values")]
     public int FactorSfxLoopVolume; //0.7f

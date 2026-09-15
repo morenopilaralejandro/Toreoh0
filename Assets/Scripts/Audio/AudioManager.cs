@@ -2,24 +2,25 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    /*
     public static AudioManager Instance { get; private set; }
 
     [Header("Audio Sources")]
-    [SereializeField] private AudioSource sourceBgm;
-    [SereializeField] private AudioSource sourceSfxDefault;
-    [SereializeField] private AudioSource sourceSfxLoop;
-    [Header("Config")]
-    [SereializeField] private AudioConfig config;
+    [SerializeField] private AudioSource sourceBgm;
+    [SerializeField] private AudioSource sourceSfxDefault;
+    [SerializeField] private AudioSource sourceSfxLoop;
 
+    [Header("Config")]
+    [SerializeField] private AudioConfig config;
+
+    private CacheLru<string, AudioClip> cacheSfx;
     private IAudioLoader loaderWithCache;
     private IAudioLoader loaderWithoutCache;
-    private IAudioPlayer audioPlayer
+    private IAudioPlayer player;
 
-    public AudioChannelSfxDefault Sfx { get; private set; }
-    public AudioChannelSfxLoop SfxLoop { get; private set; }
-    public AudioChannelSfxUI SfxUI { get; private set; }
-    public AudioChannelBgm Bgm { get; private set; }
+    public AudioChannel Sfx { get; private set; }
+    public AudioChannel SfxLoop { get; private set; }
+    public AudioChannel SfxUI { get; private set; }
+    public AudioChannel Bgm { get; private set; }
 
     private void Awake() 
     {
@@ -36,7 +37,39 @@ public class AudioManager : MonoBehaviour
 
     private void Initialize() 
     {
+        cacheSfx = new CacheLru<string, AudioClip>(config.CacheLruAudioClipSfx);
+        loaderWithCache = new AudioLoaderWithCache();
+        loaderWithCache.Initialize(cacheSfx);
+        loaderWithoutCache = new AudioLoaderWithoutCache();
+        player = new AudioPlayer();
 
+        Sfx = new AudioChannelSfxDefault(
+            config,
+            sourceSfxDefault,
+            loaderWithCache,
+            player,
+            isLoop : false);
+
+        SfxLoop = new AudioChannelSfxLoop(
+            config,
+            sourceSfxLoop,
+            loaderWithCache,
+            player,
+            isLoop : true);
+
+        SfxUI = new AudioChannelSfxUI(
+            config,
+            sourceSfxDefault,
+            loaderWithCache,
+            player,
+            isLoop : false);
+
+        Bgm = new AudioChannelBgm(
+            config,
+            sourceSfxDefault,
+            loaderWithoutCache,
+            player,
+            isLoop : true);
     }
 
     public void Clear() 
@@ -48,17 +81,16 @@ public class AudioManager : MonoBehaviour
     }
 
     //event
-
     private void OnEnable() 
     {
-        SettingsEvent.OnVolumeBgmChanged += HandleVolumeBgmChanged;
-        SettingsEvent.OnVolumeSfxChanged += HandleVolumeSfxChanged;
+        SettingsEvents.OnVolumeBgmChanged += HandleVolumeBgmChanged;
+        SettingsEvents.OnVolumeSfxChanged += HandleVolumeSfxChanged;
     }
 
     private void OnDisable() 
     {
-        SettingsEvent.OnVolumeBgmChanged -= HandleVolumeBgmChanged;
-        SettingsEvent.OnVolumeSfxChanged -= HandleVolumeSfxChanged;
+        SettingsEvents.OnVolumeBgmChanged -= HandleVolumeBgmChanged;
+        SettingsEvents.OnVolumeSfxChanged -= HandleVolumeSfxChanged;
     }
 
     private void HandleVolumeBgmChanged(float volume) 
@@ -72,6 +104,4 @@ public class AudioManager : MonoBehaviour
         SfxUI.SetVolume(volume);
         SfxLoop.SetVolume(volume);
     }
-
-    */
 }
