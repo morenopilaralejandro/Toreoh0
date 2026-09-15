@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 public class CacheLru<TKey, TValue>
 {
@@ -72,4 +73,7 @@ public class CacheLru<TKey, TValue>
         map.Clear();
         list.Clear();
     }
+
+    public IEnumerable<TKey> Keys => map.Values.Select(n => n.Value.Key);
+    public IEnumerable<TValue> Values => map.Values.Select(n => n.Value.Val);
 }
