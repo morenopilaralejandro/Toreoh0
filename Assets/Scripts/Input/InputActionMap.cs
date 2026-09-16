@@ -2,7 +2,7 @@ using UnityEngine.InputSystem;
 using System;
 using System.Collections.Generic;
 
-public abstract class InputActionMap<T> where T : Enum
+public abstract class InputActionMap<T> : IInputActionMap where T : Enum
 {
     protected InputActionsGame inputActions;
     protected InputStateTracker<T> tracker;
@@ -15,6 +15,8 @@ public abstract class InputActionMap<T> where T : Enum
         this.tracker = tracker;
         BindAll();
     }
+
+    public virtual void Reset() => tracker.InvalidateAllBuffers();
 
     protected abstract void BindAll();
 

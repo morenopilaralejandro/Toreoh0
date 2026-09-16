@@ -1,15 +1,22 @@
 namespace Aremoreno.Enums.Input
 {
-    public enum ControlScheme 
-    {
-        Traditional,
-        Touch
-    }
-
-    public enum InputDeviceType 
+    public enum DeviceType 
     {
         KeyboardMouse,
         Gamepad,
+        Touch
+    }
+
+    public enum ControlScheme 
+    {
+        KeyboardMouse,
+        Gamepad,
+        Touch
+    }
+
+    public enum ControlSchemeCustom
+    {
+        Traditional,
         Touch
     }
 
