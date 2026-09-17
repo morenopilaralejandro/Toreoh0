@@ -7,4 +7,7 @@ public class InputConfig : ScriptableObject
 {
     [Header("ControlScheme")]
     public List<InputControlSchemeMapping> ControlSchemeMappings;
+
+    [Header("ScreenToWorldConverter")]
+    public float GroundY;
 }

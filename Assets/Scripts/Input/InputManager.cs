@@ -16,6 +16,7 @@ public class InputManager : MonoBehaviour
     public InputActionMapNavigation MapNavigation { get; private set; }
     public InputLocker Locker { get; private set; }
     public InputControlSchemeTracker ControlSchemeTracker { get; private set; }
+    public ScreenToWorldConverter ScreenToWorldConverter { get; private set; }
 
     // Lifecycle
     private void Awake() 
@@ -59,6 +60,14 @@ public class InputManager : MonoBehaviour
 
         ControlSchemeTracker = new InputControlSchemeTracker();
         ControlSchemeTracker.Initialize(playerInput, config.ControlSchemeMappings);
+
+        ScreenToWorldConverter = new ScreenToWorldConverter();
+        ScreenToWorldConverter.Initialize(config, Camera.main);
+
+        MapBattle.Enable();
+        MapBattle.Enable();
+        MapDialog.Disable();
+        MapNavigation.Enable();
     }
 
     /*
