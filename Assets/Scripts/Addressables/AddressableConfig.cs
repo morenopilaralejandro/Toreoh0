@@ -5,7 +5,6 @@ public class AddressableConfig : ScriptableObject
 {
     [Header("Cache Size")]
     public int CacheLruSize;
-    public int CacheLruAudioClipSfx;
 
     [Header("Address Patch")]
     public string SeparatorPathMain;

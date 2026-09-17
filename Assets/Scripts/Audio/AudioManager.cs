@@ -83,22 +83,22 @@ public class AudioManager : MonoBehaviour
     //event
     private void OnEnable() 
     {
-        SettingsEvents.OnVolumeBgmChanged += HandleVolumeBgmChanged;
-        SettingsEvents.OnVolumeSfxChanged += HandleVolumeSfxChanged;
+        SettingsEvents.OnVolumeBgmChanged += OnVolumeBgmChanged;
+        SettingsEvents.OnVolumeSfxChanged += OnVolumeSfxChanged;
     }
 
     private void OnDisable() 
     {
-        SettingsEvents.OnVolumeBgmChanged -= HandleVolumeBgmChanged;
-        SettingsEvents.OnVolumeSfxChanged -= HandleVolumeSfxChanged;
+        SettingsEvents.OnVolumeBgmChanged -= OnVolumeBgmChanged;
+        SettingsEvents.OnVolumeSfxChanged -= OnVolumeSfxChanged;
     }
 
-    private void HandleVolumeBgmChanged(float volume) 
+    private void OnVolumeBgmChanged(float volume) 
     {
         Bgm.SetVolume(volume);
     }
 
-    private void HandleVolumeSfxChanged(float volume) 
+    private void OnVolumeSfxChanged(float volume) 
     {
         Sfx.SetVolume(volume);
         SfxUI.SetVolume(volume);

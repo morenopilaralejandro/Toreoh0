@@ -14,8 +14,8 @@ public class DatabaseRegistry
     private void CreateDatabases() 
     {
         // use addresable tags - labels
-        // CharacterData = new Database<CharacterData>("CharacterData", obj => obj.CharacterId);
-        SceneGroupData = new Database<SceneGroupData>("SceneGroupData", obj => obj.SceneGroupId);
+        // CharacterData = new Database<CharacterData>("CharacterData", _ => _.CharacterId);
+        SceneGroupData = new Database<SceneGroupData>("SceneGroupData", _ => _.SceneGroupId);
     }
 
     public IEnumerable<IAsyncDatabase> GetAllDatabases() 

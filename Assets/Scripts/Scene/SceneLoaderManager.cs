@@ -68,13 +68,9 @@ public class SceneLoaderManager : MonoBehaviour
     // Coroutines
     private IEnumerator ExecuteLoad(SceneLoaderContext context)
     {
-        //sceneLoader. input manager lock
-
+        sceneLoader.InputManager.Locker.Lock();
         yield return sceneLoader.Strategy.Load(context);
-
-        //input manager unlock
-
-        SceneEvents.RaiseSceneGroupLoaded(context.Id);
+        sceneLoader.InputManager.Locker.Unlock();
     }
 
     private IEnumerator ExecuteUnload(SceneLoaderContext context)

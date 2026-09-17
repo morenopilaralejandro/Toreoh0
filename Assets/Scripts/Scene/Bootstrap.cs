@@ -26,7 +26,7 @@ public class Bootstrap : MonoBehaviour
         await Addressables.InitializeAsync().Task;
         await DatabaseManager.Instance.InitializeAsync();
 
-        await SceneManager.UnloadSceneAsync("LoadingScene");
+        //await SceneManager.UnloadSceneAsync("LoadingScene");
 
         #if UNITY_EDITOR || DEVELOPMENT_BUILD
             if (debugConfig.IsBootToDebugMainMenu)
