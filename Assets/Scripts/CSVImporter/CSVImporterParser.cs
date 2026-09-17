@@ -1,4 +1,4 @@
-using System.Collections.Generic
+using System.Collections.Generic;
 
 public static class CSVImporterParser 
 {
@@ -39,14 +39,14 @@ public static class CSVImporterParser
         return list;
     }
 
-    public static T ParseEnum<T>(string stringValue) => EnumUtils.StringToEnum(stringValue, ignoreCase : true);
+    public static T ParseEnum<T>(string stringValue) where T : struct, System.Enum => EnumUtils.StringToEnum(stringValue, ignoreCase : true);
     
-    public static List<T> ParseEnumList<T>(string stringValue) => EnumUtils.ParseEnumList<T>(stringValue, config.DelimiterMain);
+    public static List<T> ParseEnumList<T>(string stringValue) where T : struct, System.Enum => EnumUtils.ParseEnumList<T>(stringValue, config.DelimiterMain);
 
     // Item
     public static List<ItemReward> ParseItemRewardList(string stringValue)
     {
-        var list = new List<string>();
+        var list = new List<ItemReward>();
         if(string.IsNullOrWhiteSpace(stringValue)) return list;
 
         string[] parts = stringValue.Split(config.DelimiterMain);
@@ -56,7 +56,7 @@ public static class CSVImporterParser
             var itemReward = new ItemReward();
             itemReward.ItemId = subparts[0].Trim();
             itemReward.Quantity = int.Parse(subparts[1]);
-            list.Add(itemReward)
+            list.Add(itemReward);
         }
         return list;
     }

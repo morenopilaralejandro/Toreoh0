@@ -8,6 +8,7 @@ public class CSVImporterConfig : ScriptableObject
 
     [Header("CSV Path")]
     public string PathCSV;
+    public string PathData;
 
     [Header("Parse Delimiter")]
     public char DelimiterMain;
@@ -23,27 +24,4 @@ public class CSVImporterConfig : ScriptableObject
     [Header("TypeMapping")]
     public string EnumNameSpace;
     public string MethodPrefix;
-    public List<CSVTypeMappingString> CSVTypeMappings;
-    public Dictionary<SerializableFieldCustom, CSVTypeMapping> MethodMap;
-
-    public void BuildMethodMap() 
-    {
-        TypeMap = new Dictionary<SerializableFieldCustom, CSVTypeMapping>();
-        var Type parserType = typeof(CSVImporterParser);
-        var Type method = parserType.GetMethod($"{MethodPrefix}{mapping.MethodName}");
-        var Type genericType = string.IsNullOrWhiteSpace(mapping.GenericTypeName) 
-            ? null 
-            : GetTypeByName($"{EnumNameSpace}{mapping.GenericTypeName}");
-        if (genericType != null)
-            method = method.MakeGenericMethod(genericType);
-        foreach (mapping in CSVTypeMappings) 
-        {
-            var newMapping = new CSVTypeMapping 
-            {
-                SerializableFieldCustom = mapping.SerializableFieldCustom,
-                Method = method,
-                GenericType = string.IsNullOrWhiteSpace(mapping.GenericTypeName) ? null : mapping.GenericTypeName;
-            }
-        }
-    }
 }

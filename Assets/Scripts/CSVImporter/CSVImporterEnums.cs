@@ -8,10 +8,15 @@ namespace Aremoreno.Enums.CSVImporter
         Int,
         Float,
         Bool,
-        // enum
-        EnumElement,
-        EnumElementList,
+        Enum,
+        EnumList,
         // class
         ItemRewardList
+    }
+
+    public enum EnumGenericType 
+    {
+        None,
+        InputBattle
     }
 }

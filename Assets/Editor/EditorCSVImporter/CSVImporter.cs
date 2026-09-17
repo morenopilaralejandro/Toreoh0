@@ -10,8 +10,8 @@ public class CSVImporter
     }
 
     // add gui
-        get the config
-        get the data that you want
+        get the config (the scriptableObject is called ) CSVImporterConfig get it auto
+        get the data that you want (CSVImporterData)
 
     
     public void Import()
@@ -19,6 +19,8 @@ public class CSVImporter
         string csvPath = Path.Combine(Application.dataPath, config.PathCSV, data.FileNameCSV);
         AssetDatabaseManager.CreateFolderFromPath(data.PathOutput);
         
+        Type parserType = typeof(CSVImporterParser);
+        Type scriptableObjectType = GetTypeByName(data.ScriptableObjectTypeName);
         string[] lines = File.ReadAllLines(csvPath);
         string[] headers = lines[0].Split(config.Separator);
         var columnMap = new Dictionary<string, int>();
@@ -28,30 +30,35 @@ public class CSVImporter
         for (int i = 1; i < lines.Length; i++) 
         {
             string[] values = lines[i].Split(config.Separator);
-            Type scriptableObjectType = GetTypeByName(data.ScriptableObjectTypeName);
             var instance = ScriptableObject.CreateInstance(scriptableObjectType);
             foreach (var fieldMapping in data.FieldMappings) 
             {
                 int columnIndex = columnMap[fieldMapping.ColumnName];
                 string valueRaw = values[columnIndex].Trim();
-                object valueParsed = ParseValue(rawValue, fieldMapping.SerializableFieldCustom);
+                object valueParsed = ParseValue(rawValue, fieldMapping, parserType);
                 FieldInfo field = scriptableObjectType.GetField(fieldMapping.FieldName);
                 field.SetValue(instance, valueParsed);
             }            
             FieldInfo idField = scriptableObjectType.GetField(data.IdFieldName);
             object idObjectValue = idField.GetValue(instance);
             string idStringValue = idObjectValue.ToString();
-            string assetName = $"{data.AssetNamePrefix}{idValue}";
+            string assetName = $"{data.AssetNamePrefix}{idStringValue}";
             string assetPath = $"{data.PathOutput}/{assetName}.asset";
+            AssetDatabase.CreateAsset(instance, assetPath);
         }
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
     }
 
-    private static object ParseValue(string stringValue, SerializableFieldCustom serializableFieldCustom) 
+    private static object ParseValue(string stringValue, CSVFieldMapping fieldMapping, Type parserType) 
     {
-        CSVMethodMapping mapping = config.MethodMap[serializableFieldCustom];
-        var method = mapping.Method;
-        return method.Invoke(null, new object [] { string});
+        MethodInfo method = parserType.GetMethod($"{config.MethodPrefix}{fieldMapping.SerializableFieldCustom.ToString()}");
+        if (fieldMapping.EnumGenericType != EnumGenericType.None) 
+        {
+            Type genericType = GetTypeByName($"{config.EnumNameSpace}{fieldMapping.EnumGenericType.ToString()}");
+            method = method.MakeGenericMethod(genericType);
+        }
+
+        return method.Invoke(null, new object [] { stringValue });
     }
 }
