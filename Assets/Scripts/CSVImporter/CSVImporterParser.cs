@@ -4,9 +4,9 @@ public static class CSVImporterParser
 {
     private static CSVImporterConfig config;
 
-    public static void Initialize(CSVImporterConfig config)
+    public static void Initialize(CSVImporterConfig importerConfig)
     {
-        this.config = config;
+        config = importerConfig;
     }
 
     // Generic
@@ -39,7 +39,7 @@ public static class CSVImporterParser
         return list;
     }
 
-    public static T ParseEnum<T>(string stringValue) where T : struct, System.Enum => EnumUtils.StringToEnum(stringValue, ignoreCase : true);
+    public static T ParseEnum<T>(string stringValue) where T : struct, System.Enum => EnumUtils.StringToEnum<T>(stringValue, ignoreCase : true);
     
     public static List<T> ParseEnumList<T>(string stringValue) where T : struct, System.Enum => EnumUtils.ParseEnumList<T>(stringValue, config.DelimiterMain);
 

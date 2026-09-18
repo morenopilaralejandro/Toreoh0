@@ -1,4 +1,5 @@
-using System.Collections.Generic
+using UnityEngine;
+using System.Collections.Generic;
 
 [CreateAssetMenu(fileName = "CSVImporterData", menuName = "ScriptableObject/CSV/CSVImporterData")]
 public class CSVImporterData : ScriptableObject
@@ -8,7 +9,9 @@ public class CSVImporterData : ScriptableObject
     public string ScriptableObjectTypeName;
     public string AssetNamePrefix;
     public string IdFieldName;
+    [AddressableGroupDropdown]
     public string AddressableGroup;
-    public string AddressableTag;
+    [AddressableLabelsDropdown]
+    public List<string> AddressableLabels;
     public List<CSVFieldMapping> FieldMappings;
 }

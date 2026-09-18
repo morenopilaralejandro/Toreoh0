@@ -1,4 +1,5 @@
-using System.Collections.Generic
+using UnityEngine;
+using System.Collections.Generic;
 
 [CreateAssetMenu(fileName = "CSVImporterConfig", menuName = "ScriptableObject/CSV/CSVImporterConfig")]
 public class CSVImporterConfig : ScriptableObject
