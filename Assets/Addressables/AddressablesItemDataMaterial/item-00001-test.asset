@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55fadf15bb8f353a990c12c0599c3cd7, type: 3}
+  m_Name: item-00001-test
+  m_EditorClassIdentifier: Assembly-CSharp::ItemDataMaterial
+  ItemId: item-00001-test
+  TestInt: 20
+  TestFloat: 1.2
+  TestBool: 1
+  TestInputBattle: 1
+  TestItemRewardList:
+  - ItemId: idtest1
+    Quantity: 1
+  - ItemId: idtest2
+    Quantity: 2

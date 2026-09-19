@@ -11,6 +11,9 @@ public class CSVImporterConfig : ScriptableObject
     public string PathCSV;
     public string PathData;
 
+    [Header("Output Path")]
+    public string OutputPath;
+
     [Header("Parse Delimiter")]
     public char DelimiterMain;
     public char DelimiterSub;
@@ -22,7 +25,6 @@ public class CSVImporterConfig : ScriptableObject
     [Header("Parse Valid Values")]
     public List<string> ValidBoolValues;
 
-    [Header("TypeMapping")]
-    public string EnumNameSpace;
+    [Header("Mapping")]
     public string MethodPrefix;
 }

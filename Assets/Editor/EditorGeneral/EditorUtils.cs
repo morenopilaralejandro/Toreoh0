@@ -11,7 +11,7 @@ public static class EditorUtils
     // folder
     public static void CreateFolder(string parent, string folder)
     {
-        if(!IsValidFolder($"{parent}/{folder}")) return;
+        if(IsValidFolder($"{parent}/{folder}")) return;
         AssetDatabase.CreateFolder(parent, folder);
     }
 
@@ -22,7 +22,8 @@ public static class EditorUtils
         for(int i = 1; i < parts.Length; i++)
         {
             string nextPath = $"{currentPath}/{parts[i]}";
-            CreateFolder(currentPath, parts[i]);
+            if (!IsValidFolder(nextPath))
+                CreateFolder(currentPath, parts[i]);
             currentPath = nextPath;
         }
     }

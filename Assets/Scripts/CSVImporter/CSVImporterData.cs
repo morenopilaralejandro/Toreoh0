@@ -12,6 +12,6 @@ public class CSVImporterData : ScriptableObject
     [AddressableGroupDropdown]
     public string AddressableGroup;
     [AddressableLabelsDropdown]
-    public List<string> AddressableLabels;
+    public AddressableLabels AddressableLabels;
     public List<CSVFieldMapping> FieldMappings;
 }

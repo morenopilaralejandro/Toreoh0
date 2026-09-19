@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CSVImporterConfig
   Separator: 44
   PathCSV: Csv
-  PathData: Addressables/AddressablesCSVImporterData
+  PathData: Assets/Addressables/AddressablesCSVImporterData
+  OutputPath: Assets/Addressables
   DelimiterMain: 124
   DelimiterSub: 35
   DefaultValueInt: 0
@@ -25,5 +26,4 @@ MonoBehaviour:
   - 1
   - yes
   - Yes
-  EnumNameSpace: Aremoreno.Enums.
   MethodPrefix: Parse

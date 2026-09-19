@@ -10,46 +10,49 @@ public class AddressableLabelsDropdownDrawer : PropertyDrawer
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
         EditorGUI.BeginProperty(position, label, property);
-        Rect buttonRect = new Rect(
-            position.x,
-            position.y,
-            position.width,
-            EditorGUIUtility.singleLineHeight
-        );
-        string summary = GetSelectedLabelsSummary(property);
         if(EditorGUI.DropdownButton(
-            buttonRect,
-            new GUIContent($"{label.text}: {summary}"),
+            position,
+            new GUIContent($"{label.text}: {GetSelectedLabelsSummary(property)}"),
             FocusType.Keyboard
         )) 
         {
             ShowLabelsMenu(property);
         }
-
         EditorGUI.EndProperty();
     }
 
     private string GetSelectedLabelsSummary(SerializedProperty property)
     {
-        if(property.arraySize == 0) return "None";
-        List<string> labels = new();
-        for (int i = 0; i < property.arraySize; i++)
-            labels.Add(property.GetArrayElementAtIndex(i).stringValue);
-        return string.Join(", ", labels);
+        SerializedProperty labels = property.FindPropertyRelative("LabelList");
+        List<string> selectedLabels = new();
+        for (int i = 0; i < labels.arraySize; i++)
+            selectedLabels.Add(labels.GetArrayElementAtIndex(i).stringValue);
+        if(selectedLabels.Count == 0) return "None";
+        return string.Join(", ", selectedLabels);
     }
 
     private void ShowLabelsMenu(SerializedProperty property) 
     {
         List<string> availableLabels = EditorUtils.GetAllAddressableLabels();
         GenericMenu menu = new GenericMenu();
+        SerializedObject serializedObject = property.serializedObject;
+        string propertyPath = property.propertyPath;
+        SerializedProperty labels = property.FindPropertyRelative("LabelList");
         List<string> selectedLabels = new();
-        for (int i = 0; i < property.arraySize; i++)
-            selectedLabels.Add(property.GetArrayElementAtIndex(i).stringValue);
+        for (int i = 0; i < labels.arraySize; i++)
+            selectedLabels.Add(labels.GetArrayElementAtIndex(i).stringValue);
         foreach (string label in availableLabels.OrderBy(x => x)) 
             menu.AddItem(
                 new GUIContent(label),
                 selectedLabels.Contains(label),
-                () => { ToggleLabel(property, label); }
+                () => 
+                { 
+                    serializedObject.Update();
+                    SerializedProperty parent = serializedObject.FindProperty(propertyPath);
+                    SerializedProperty labelsProperty = parent.FindPropertyRelative("LabelList");
+                    ToggleLabel(labelsProperty, label); 
+                    serializedObject.ApplyModifiedProperties();
+                }
             );
         if (availableLabels.Count == 0)
             menu.AddDisabledItem(new GUIContent("No labels found"));   
@@ -58,21 +61,16 @@ public class AddressableLabelsDropdownDrawer : PropertyDrawer
 
     private void ToggleLabel(SerializedProperty property, string label)
     {
-        property.serializedObject.Update();
         int index = FindLableIndex(property, label);
         if (index >= 0) 
         {
             property.DeleteArrayElementAtIndex(index);
+            return;
         } 
-        else 
-        {
-            int newIndex = property.arraySize;
-            property.arraySize++;
-            property.InsertArrayElementAtIndex(newIndex);
-            property.GetArrayElementAtIndex(newIndex).stringValue = label;
-        }
-        property.serializedObject.ApplyModifiedProperties();
-        GUI.changed = true;
+        int newIndex = property.arraySize;
+        property.InsertArrayElementAtIndex(newIndex);
+        SerializedProperty element = property.GetArrayElementAtIndex(newIndex);
+        element.stringValue = label;
     }
 
     private int FindLableIndex(SerializedProperty property, string label)

@@ -46,11 +46,11 @@ public class CSVImporter : EditorWindow
 
     public void ImportCSVFromData()
     {
-        EditorUtils.CreateFolderFromPath(data.OutputFolder);
+        EditorUtils.CreateFolderFromPath($"{config.OutputPath}/{data.OutputFolder}");
         
         Type parserType = typeof(CSVImporterParser);
-        Type scriptableObjectType = Type.GetType(data.ScriptableObjectTypeName);
-        string csvAbsolutePath = EditorUtils.GetAbsolutePath($"{config.PathCSV}/{data.CSVFileName}");
+        Type scriptableObjectType = ReflectionUtils.GetTypeByName(data.ScriptableObjectTypeName);
+        string csvAbsolutePath = EditorUtils.GetAbsolutePath($"{config.PathCSV}/{data.CSVFileName}.csv");
         string[] lines = File.ReadAllLines(csvAbsolutePath);
         string[] headers = lines[0].Split(config.Separator);
         var columnMap = new Dictionary<string, int>();
@@ -61,7 +61,7 @@ public class CSVImporter : EditorWindow
         {
             string[] values = lines[i].Split(config.Separator);
             var instance = ScriptableObject.CreateInstance(scriptableObjectType);
-            foreach (var fieldMapping in data.FieldMappings) 
+            foreach (var fieldMapping in data.FieldMappings)
             {
                 int columnIndex = columnMap[fieldMapping.ColumnName];
                 string valueRaw = values[columnIndex].Trim();
@@ -73,12 +73,12 @@ public class CSVImporter : EditorWindow
             object idObjectValue = idField.GetValue(instance);
             string idStringValue = idObjectValue.ToString();
             string assetName = $"{data.AssetNamePrefix}{idStringValue}";
-            string assetPath = $"{data.OutputFolder}/{assetName}.asset";
+            string assetPath = $"{config.OutputPath}/{data.OutputFolder}/{assetName}.asset";
             EditorUtils.CreateAsset(instance, assetPath);
             EditorUtils.ConfigureAssetAsAddressable(
                 EditorUtils.GetAssetGuid(assetPath), 
                 EditorUtils.GetAddressableGroupByGuid(data.AddressableGroup), 
-                data.AddressableLabels);
+                data.AddressableLabels.LabelList);
         }
         EditorUtils.SaveAssets();
         EditorUtils.RefreshAssets();
@@ -89,7 +89,7 @@ public class CSVImporter : EditorWindow
         MethodInfo method = parserType.GetMethod($"{config.MethodPrefix}{fieldMapping.SerializableFieldCustom.ToString()}");
         if (fieldMapping.EnumGenericType != EnumGenericType.None) 
         {
-            Type genericType = Type.GetType($"{config.EnumNameSpace}{fieldMapping.EnumGenericType.ToString()}");
+            Type genericType = ReflectionUtils.GetTypeByName(fieldMapping.EnumGenericType.ToString());
             method = method.MakeGenericMethod(genericType);
         }
         return method.Invoke(null, new object [] { stringValue });
