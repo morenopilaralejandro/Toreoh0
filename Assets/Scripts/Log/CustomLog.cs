@@ -4,15 +4,19 @@ using System.Diagnostics;
 public static class CustomLog 
 {
     private static LogLevel minimunLogLevel = LogLevel.Trace;
+    private static FileLogger fileLogger;
 
     public static void Initialize(DebugConfig debugConfig) 
     {
         minimunLogLevel = debugConfig.MinimunLogLevel;
+        fileLogger = new FileLogger();
+        fileLogger.Initialize(debugConfig);
     }
 
     public static void Log(string message, LogLevel logLevel, UnityEngine.Object context = null) 
     {
         if(logLevel < minimunLogLevel) return;
+        fileLogger.WriteToFile(message, logLevel);
         switch(logLevel) 
         {
             case LogLevel.Warning:
@@ -40,7 +44,10 @@ public static class CustomLog
     [Conditional("DEVELOPMENT_BUILD")]
     public static void Info(string message, UnityEngine.Object context = null) => Log(message, LogLevel.Info, context);
 
+    [Conditional("UNITY_EDITOR")]
+    [Conditional("DEVELOPMENT_BUILD")]
     public static void Warning(string message, UnityEngine.Object context = null) => Log(message, LogLevel.Warning, context);
+
     public static void Error(string message, UnityEngine.Object context = null) => Log(message, LogLevel.Error, context);
     public static void Fatal(string message, UnityEngine.Object context = null) => Log(message, LogLevel.Fatal, context);
 }
