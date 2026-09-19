@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e6b9e9c5c27bdcfa941ba98dfb5946, type: 3}
+  m_Name: CSVImporterData-ItemDataMaterial
+  m_EditorClassIdentifier: Assembly-CSharp::CSVImporterData
+  CSVFileName: ItemMaterial - Data
+  OutputFolder: AddressablesItemDataMaterial
+  ScriptableObjectTypeName: ItemDataMaterial
+  AssetNamePrefix: 
+  IdFieldName: ItemId
+  AddressableGroup: a3f393564d9c202c083b4a3354f25956
+  AddressableLabels:
+    LabelList:
+    - ItemData
+  FieldMappings:
+  - SerializableFieldCustom: 0
+    FieldName: ItemId
+    ColumnName: ItemId
+    EnumGenericType: 0
+  - SerializableFieldCustom: 2
+    FieldName: TestInt
+    ColumnName: TestInt
+    EnumGenericType: 0
+  - SerializableFieldCustom: 3
+    FieldName: TestFloat
+    ColumnName: TestFloat
+    EnumGenericType: 0
+  - SerializableFieldCustom: 4
+    FieldName: TestBool
+    ColumnName: TestBool
+    EnumGenericType: 0
+  - SerializableFieldCustom: 5
+    FieldName: TestInputBattle
+    ColumnName: TestInputBattle
+    EnumGenericType: 1
+  - SerializableFieldCustom: 7
+    FieldName: TestItemRewardList
+    ColumnName: TestItemRewardList
+    EnumGenericType: 0

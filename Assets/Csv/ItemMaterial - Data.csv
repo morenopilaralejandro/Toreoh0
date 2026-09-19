@@ -1,0 +1,3 @@
+ItemId,TestInt,TestFloat,TestBool,TestInputBattle,TestItemRewardList
+item-00000-test,20,1.2,TRUE,Shoot,idtest1#1|idtest2#2
+item-00001-test,20,1.2,TRUE,Pass,idtest1#1|idtest2#2
