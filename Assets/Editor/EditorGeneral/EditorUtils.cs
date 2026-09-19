@@ -29,6 +29,7 @@ public static class EditorUtils
     }
 
     public static string GetAbsolutePath(string path) => Path.Combine(Application.dataPath, path);
+    public static string GetAbsolutePathPersistent(string path) => Path.Combine(Application.persistentDataPath, path);
     public static void CreateAsset(Object asset, string path) => AssetDatabase.CreateAsset(asset, path);
     public static void SaveAssets() => AssetDatabase.SaveAssets();
     public static void RefreshAssets() => AssetDatabase.Refresh();
