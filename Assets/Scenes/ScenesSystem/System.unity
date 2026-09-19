@@ -454,6 +454,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InputManager
   config: {fileID: 11400000, guid: bb6549f2f78f39791a2b524ae51bd3f9, type: 2}
   playerInput: {fileID: 847453079}
+--- !u!1 &862600150
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 862600152}
+  - component: {fileID: 862600151}
+  m_Layer: 0
+  m_Name: ColorManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &862600151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862600150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2a94290e7583a3e1be6e2893d6ca1cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorManager
+  Palettes: {fileID: 11400000, guid: 91eb5cc5fa1cc60c9b9915e8f4c1414d, type: 2}
+--- !u!4 &862600152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862600150}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &954554103
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,3 +745,4 @@ SceneRoots:
   - {fileID: 1096774212}
   - {fileID: 954554104}
   - {fileID: 847453078}
+  - {fileID: 862600152}
