@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-Shared
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Localization-Assets-Shared
+  m_GUID: da3a9fe7d33597ccd9f6b3f3975869fb
+  m_SerializeEntries:
+  - m_GUID: 3dead02f24ed869699734526202b2518
+    m_Address: Assets/Localization/LocalizationStringTables/Gameplay-Item-Name-Romanized/Gameplay-Item-Name-Romanized
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 484cba6f97a35eebdbdf4353cbaffc31
+    m_Address: Assets/Localization/LocalizationStringTables/Gameplay-Item-Description-Romanized/Gameplay-Item-Description-Romanized
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 735824408b5855db8be90f3ec8f1c914
+    m_Address: Assets/Localization/LocalizationStringTables/UI-Common-Localized/UI-Common-Localized
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 812cf92040dd210b698ba5e708598048
+    m_Address: Assets/Localization/LocalizationStringTables/Gameplay-Item-Name-Localized/Gameplay-Item-Name-Localized
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8ee8f42b4049a47eb9f8ec8c045103fb
+    m_Address: Assets/Localization/LocalizationStringTables/UI-Common-Romanized/UI-Common-Romanized
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aaf44e918670e6a94a6ae206c6e43c59
+    m_Address: Assets/Localization/LocalizationStringTables/Gameplay-Item-Description-Localized/Gameplay-Item-Description-Localized
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: fd8f0a373a4da231f8de6474b1779402, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: e3e706790030c5a9ead0607285e9a817, type: 2}
+    - {fileID: 11400000, guid: e25c78335047dbfaf87968432c45e140, type: 2}
+    - {fileID: 11400000, guid: 9af102f784de0f8788bb392271949e39, type: 2}

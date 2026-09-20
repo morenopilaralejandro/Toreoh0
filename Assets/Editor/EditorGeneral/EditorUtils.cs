@@ -38,6 +38,8 @@ public static class EditorUtils
     //asset
     public static bool IsExistingAssetPath(string path) => GetMainAssetTypeAtPath(path) != null;
     public static T LoadAssetAtPath<T>(string path) where T : Object => AssetDatabase.LoadAssetAtPath<T>(path);
+    public static Object[] LoadAllAssetsAtPath(string path) => AssetDatabase.LoadAllAssetsAtPath(path);
+    public static string[] FindAssets(string filter, string[] folders = null) => AssetDatabase.FindAssets(filter, folders);
     public static string GetAssetGuid(string path) => AssetDatabase.AssetPathToGUID(path);
     public static string GetAssetPath(string guid) => AssetDatabase.GUIDToAssetPath(guid);
     public static System.Type GetMainAssetTypeAtPath(string path) => AssetDatabase.GetMainAssetTypeAtPath(path);

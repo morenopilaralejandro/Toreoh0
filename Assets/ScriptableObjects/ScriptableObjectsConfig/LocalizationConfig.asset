@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94fe2b11c1e741231acb0643ae711734, type: 3}
+  m_Name: LocalizationConfig
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizationConfig
+  FontAtlasPath: Assets/Localization/LocalizationFontAtlas
+  FontAtlasFileName: FontAtlasCharacters.txt
+  ExtraAtlasCharacters: 20002d005f002e002c003a003b002200230025002f003000310032003300340035003600370038003900
+  TableNameSeparator: 45
