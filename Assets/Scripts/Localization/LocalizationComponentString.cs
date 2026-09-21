@@ -8,11 +8,6 @@ public class LocalizationComponentString
 
     public LocalizationComponentString(LocalizationEntity entity, string id, LocalizationField[] fields)
     {
-        Initialize(entity, id, fields);
-    }
-
-    public void Initialize(LocalizationEntity entity, string id, LocalizationField[] fields)
-    {
         localizedStrings.Clear();
         foreach (var field in fields)
             localizedStrings[field] = new LocalizedString(

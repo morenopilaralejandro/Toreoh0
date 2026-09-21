@@ -10,11 +10,6 @@ public class LocalizationComponentAsset<T> where T : Object
 
     public LocalizationComponentAsset(LocalizationEntity entity, string id, LocalizationField[] fields)
     {
-        Initialize(entity, id, fields);
-    }
-
-    public void Initialize(LocalizationEntity entity, string id, LocalizationField[] fields) 
-    {
         localizedAssets.Clear();
         foreach(var field in fields)
         {

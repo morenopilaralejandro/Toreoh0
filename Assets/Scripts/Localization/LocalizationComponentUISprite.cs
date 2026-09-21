@@ -26,7 +26,7 @@ public class LocalizationComponentUISprite : MonoBehaviour
     private void OnEnable() 
     {
         SettingsEvents.OnLocalizationStyleChanged += OnLocalizationStyleChanged;
-        ApplyLocalizationStyle(LocalizationStyle.Localized); // TODO current
+        ApplyLocalizationStyle(SettingsManager.Instance.Settings.Common.LocalizationStyle);
     }
 
     private void OnDisable() 

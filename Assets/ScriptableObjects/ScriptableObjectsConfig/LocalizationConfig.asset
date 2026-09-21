@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94fe2b11c1e741231acb0643ae711734, type: 3}
   m_Name: LocalizationConfig
   m_EditorClassIdentifier: Assembly-CSharp::LocalizationConfig
+  IsLocalizationEnabled: 0
+  LocaleIndexDefault: 1
+  TableNameSeparator: 45
   FontAtlasPath: Assets/Localization/LocalizationFontAtlas
   FontAtlasFileName: FontAtlasCharacters.txt
   ExtraAtlasCharacters: 20002d005f002e002c003a003b002200230025002f003000310032003300340035003600370038003900
-  TableNameSeparator: 45

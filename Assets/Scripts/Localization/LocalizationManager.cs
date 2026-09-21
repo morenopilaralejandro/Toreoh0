@@ -8,6 +8,7 @@ public class LocalizationManager : MonoBehaviour
     public static LocalizationManager Instance { get; private set; }
     [SerializeField] private LocalizationConfig config;
     [SerializeField] private LocalizationTableMappingConfig mappingConfig;
+    private SettingsManager settingsManager;
     
     private void Awake() 
     {
@@ -24,10 +25,14 @@ public class LocalizationManager : MonoBehaviour
 
     private void Start()
     {
-        OnLanguageChanged(1); // TODO current settings LocaleIndex
+        settingsManager = SettingsManager.Instance;
+        if (config.IsLocalizationEnabled)
+            OnLanguageChanged(settingsManager.Settings.Common.LocaleIndex);
+        else 
+            OnLanguageChanged(config.LocaleIndexDefault);
     }
 
-    private void Initialize() 
+    private void Initialize()
     {
         mappingConfig.Initialize();
     }
@@ -36,7 +41,7 @@ public class LocalizationManager : MonoBehaviour
         mappingConfig.GetTableReference(
             entity, 
             field, 
-            LocalizationStyle.Localized); // TODO current setting LocalizationStyle
+            settingsManager.Settings.Common.LocalizationStyle);
 
     // event
     private void OnEnable()

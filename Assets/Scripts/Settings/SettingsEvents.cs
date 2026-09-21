@@ -1,4 +1,5 @@
 using System;
+using Aremoreno.Enums.Input;
 using Aremoreno.Enums.Localization;
 
 public static class SettingsEvents 
@@ -18,4 +19,8 @@ public static class SettingsEvents
     public static event Action<LocalizationStyle> OnLocalizationStyleChanged;
     public static void RaiseLocalizationStyleChanged(LocalizationStyle localizationStyle) 
         => OnLocalizationStyleChanged.Invoke(localizationStyle);
+
+    public static event Action<ControlSchemeCustom> OnControlSchemeCustomChanged;
+    public static void RaiseControlSchemeCustomChanged(ControlSchemeCustom controlSchemeCustom) 
+        => OnControlSchemeCustomChanged.Invoke(controlSchemeCustom);
 }
