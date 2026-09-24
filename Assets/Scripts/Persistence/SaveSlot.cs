@@ -8,7 +8,7 @@ public class SaveSlot
     {
         SlotIndex = slotIndex;
         PersistenceWriter writer = new PersistenceWriter(slotIndex, config);
-        Save = new PersistenceSaver(config, writer);
+        Saver = new PersistenceSaver(config, writer);
         Loader = new PersistenceLoader(config, writer);
     }
 }

@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class PersistenceSaver 
 {
     private PersistenceConfig config;
@@ -11,18 +13,18 @@ public class PersistenceSaver
 
     public void SaveGame()
     {
-        PersistenceEvents.OnGameSaveStarted.Invoke();
+        PersistenceEvents.RaiseGameSaveStarted();
         SaveData saveData = CreateSaveData();
         writer.TryWriteSaveData(saveData);
-        PersistenceEvents.OnGameSaveEnded.Invoke(saveData);
+        PersistenceEvents.RaiseGameSaveEnded(saveData);
     }
 
     private SaveData CreateSaveData() 
     {
         return new SaveData 
         {
-            SaveDataHeader = CreateHeader();
-            PlayTimeSaveData = PersistenceManager.Instance.PlayTimeTracker.Export();
+            SaveDataHeader = CreateHeader(),
+            PlayTimeSaveData = PersistenceManager.Instance.PlayTimeTracker.Export()
             //system export
         };
     }
@@ -31,10 +33,10 @@ public class PersistenceSaver
     {
         return new SaveDataHeader 
         {
-            FileSignature = config.FileSignature;
-            GameIdetifier = config.GameIdetifier;
-            SaveFormatVersion = config.SaveFormatVersion;
-            GameVersion = Application.version;
+            FileSignature = config.FileSignature,
+            GameIdetifier = config.GameIdetifier,
+            SaveFormatVersion = config.SaveFormatVersion,
+            GameVersion = Application.version
         };
     }
 }

@@ -10,6 +10,6 @@ public static class PersistenceValidator
     public static bool IsValidSaveData(SaveData saveData) 
     {
         // TODO check SaveFormatVersion etc
-        return data != null;
+        return saveData != null;
     }
 }

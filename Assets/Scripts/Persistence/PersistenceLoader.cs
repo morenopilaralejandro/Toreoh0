@@ -11,9 +11,9 @@ public class PersistenceLoader
 
     public void LoadGame()
     {
-        PersistenceEvents.OnGameLoadStarted.Invoke();
+        PersistenceEvents.RaiseGameLoadStarted();
         SaveData saveData = null;
         writer.TryGetLastSaveData(out saveData);
-        PersistenceEvents.OnGameLoadEnded.Invoke(saveData);
+        PersistenceEvents.RaiseGameLoadEnded(saveData);
     }
 }

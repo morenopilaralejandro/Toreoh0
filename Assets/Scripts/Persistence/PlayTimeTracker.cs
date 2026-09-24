@@ -1,3 +1,5 @@
+using System;
+
 public class PlayTimeTracker 
 {
     public long TimestampSave { get; private set; }
@@ -14,16 +16,16 @@ public class PlayTimeTracker
     {
         long now = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
         long sessionSeconds = now - TimestampSessionStart;
-        return playTimeSeconds + sessionSeconds;
+        return PlayTimeSeconds + sessionSeconds;
     }
 
     public PlayTimeSaveData Export() 
     {
         return new PlayTimeSaveData 
         {
-            TimestampSave = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
-            TimestampCreation = TimestampCreation;
-            PlayTimeSeconds = GetCurrentPlayTimeSeconds();
+            TimestampSave = DateTimeOffset.UtcNow.ToUnixTimeSeconds(),
+            TimestampCreation = TimestampCreation,
+            PlayTimeSeconds = GetCurrentPlayTimeSeconds()
         };
     }
 
@@ -56,7 +58,7 @@ public class PlayTimeTracker
 
     private void OnGameLoadEnded(SaveData saveData) 
     {
-        Import();
+        Import(saveData.PlayTimeSaveData);
         StartSession();
     }
 

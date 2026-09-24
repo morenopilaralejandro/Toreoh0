@@ -1,3 +1,6 @@
+using UnityEngine;
+using System.IO;
+
 public class PersistenceWriter
 {
     private PersistenceConfig config;

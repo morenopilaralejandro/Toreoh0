@@ -1,4 +1,4 @@
-using System.Collections.Gereric;
+using System.Collections.Generic;
 
 public static class PersistenceParser 
 {
@@ -22,8 +22,8 @@ public static class PersistenceParser
         foreach (var kvp in source)
             list.Add(new SerializableKeyValue<TKey, TValue>
             {
-                Key = kvp.Key;
-                Val = kvp.Value;
+                Key = kvp.Key,
+                Val = kvp.Value
             });
         return list;
     }

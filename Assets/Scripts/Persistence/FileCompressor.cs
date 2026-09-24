@@ -7,16 +7,16 @@ public static class FileCompressor
     {
         using (FileStream srcStream =  new FileStream(srcPath, FileMode.Open))
             using (FileStream dstStream = new FileStream(dstPath, FileMode.Create))
-                using (GzipStream gzipStream = new GzipStream(dstStream, CompressionMode.Compress))
-                    srcStream.CopyTo(gzipStream);
+                using (GZipStream gZipStream = new GZipStream(dstStream, CompressionMode.Compress))
+                    srcStream.CopyTo(gZipStream);
     }
 
     public static void Decompress(string srcPath, string dstPath) 
     {
         using (FileStream srcStream = new FileStream(srcPath, FileMode.Open))
             using (FileStream dstStream = new FileStream(dstPath, FileMode.Create))
-                using (GzipStream gzipStream = new GzipStream(dstStream, CompressionMode.Decompress))
-                    gzipStream.CopyTo(dstStream);
+                using (GZipStream gZipStream = new GZipStream(dstStream, CompressionMode.Decompress))
+                    gZipStream.CopyTo(dstStream);
     }
     
 
