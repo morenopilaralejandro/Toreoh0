@@ -18,4 +18,9 @@ public class SpeakerComponentLocalization
         ResolvedName = name;
         IsResolved = true;
     }
+
+    /*
+        if HasDisplayName show name ui
+        if !IsResolved call localization bridge to resolve and SetResolvedName
+    */
 }

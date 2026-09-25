@@ -66,7 +66,7 @@ public class InputManager : MonoBehaviour
 
         MapBattle.Enable();
         MapBattle.Enable();
-        MapDialog.Disable();
+        MapDialog.Enable();
         MapNavigation.Enable();
     }
 

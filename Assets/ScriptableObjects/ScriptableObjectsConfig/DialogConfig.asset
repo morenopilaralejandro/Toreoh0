@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e23a76d23644f79479cf7e6e6422c373, type: 3}
   m_Name: DialogConfig
   m_EditorClassIdentifier: Assembly-CSharp::DialogConfig
-  SmartStringArgumentRegexPattern: 
+  SmartStringArgumentRegexPattern: \{(\w+)\}
