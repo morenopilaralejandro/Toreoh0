@@ -1,9 +1,11 @@
+using System.Collections.Generic;
+
 public class DialogViewedTracker
 {
     private HashSet<string> viewedDialogsHashSet;
     
     public void MarkAsViewed(string dialogId) => viewedDialogsHashSet.Add(dialogId);
-    public void HasViewed(string dialogId) => viewedDialogsHashSet.Contains(dialogId)
+    public void HasViewed(string dialogId) => viewedDialogsHashSet.Contains(dialogId);
 
     public void Clear()
     {
@@ -17,6 +19,6 @@ public class DialogViewedTracker
 
     public List<string> Export() 
     {
-        return PersistenceParser.ParseHashset<string>(viewedDialogsHashSet);
+        return PersistenceParser.ParseHashSet<string>(viewedDialogsHashSet);
     }
 }

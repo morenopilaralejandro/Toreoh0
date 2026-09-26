@@ -38,6 +38,12 @@ public class AddressableBinding<T> where T : Object
         version++;
     }
 
+    public void CancelAndRelease() 
+    {
+        Cancel();
+        Release();
+    }
+
     /*
     Usage
         private readonly AddressableBinding<Sprite> binding = new();

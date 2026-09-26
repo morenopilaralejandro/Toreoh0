@@ -8,6 +8,6 @@ public class Speaker
     {
         AttributesComponent = new SpeakerComponentAttributes(data);
         LocalizationComponent = new SpeakerComponentLocalization(data, this);
-        AppearanceComponent = new SpeakerComponentAppearance(data);
+        AppearanceComponent = new SpeakerComponentAppearance(data, this);
     }
 }

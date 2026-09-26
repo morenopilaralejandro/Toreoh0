@@ -3,10 +3,9 @@ namespace Aremoreno.Enums.Dialog
     public enum DialogState 
     {
         Inactive,
-        ShowingText,
-        WatingForContinue,
-        WatingForChoice,
-        Processing
+        Processing,
+        WaitingForContinue,
+        WaitingForChoice
     }
 
     public enum SpeakerType 

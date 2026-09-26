@@ -1,3 +1,5 @@
+using Aremoreno.Enums.Dialog;
+
 public class DialogStateMachine 
 {
     public DialogState State { get; private set; }

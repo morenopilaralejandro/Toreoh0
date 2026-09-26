@@ -13,6 +13,14 @@ public static class DialogEvents
     public static void RaiseDialogEnded()
         => OnDialogEnded.Invoke();
 
+    public static event Action OnDialogCompleted;
+    public static void RaiseDialogCompleted()
+        => OnDialogCompleted.Invoke();
+
+    public static event Action OnDialogCanceled;
+    public static void RaiseDialogCanceled()
+        => OnDialogCanceled.Invoke();
+
     // UI
     public static event Action OnTextDisplayComplete;
     public static void RaiseTextDisplayComplete()
@@ -26,20 +34,16 @@ public static class DialogEvents
     public static void RaiseContinueRequested()
         => OnContinueRequested.Invoke();
 
-    public static event Action OnDialogMenuClosed;
-    public static void RaiseDialogMenuClose()
-        => OnDialogMenuClosed.Invoke();
+    public static event Action OnDialogSubMenuClosed;
+    public static void RaiseDialogSubMenuClose()
+        => OnDialogSubMenuClosed.Invoke();
 
     // Story
-    public static event Action<DialogSerializableLine> OnLineReady;
-    public static void RaiseLineReady(DialogSerializableLine line)
-        => OnLineReady.Invoke(line);
+    public static event Action<DialogSerializableLine, Speaker> OnLineReady;
+    public static void RaiseLineReady(DialogSerializableLine line, Speaker speaker)
+        => OnLineReady.Invoke(line, speaker);
 
     public static event Action<List<DialogSerializableChoice>> OnChoicesReady;
     public static void RaiseChoicesReady(List<DialogSerializableChoice> choices)
         => OnChoicesReady.Invoke(choices);
-
-    public static event Action OnDialogCompleted;
-    public static void RaiseDialogCompleted()
-        => OnDialogCompleted.Invoke();
 }

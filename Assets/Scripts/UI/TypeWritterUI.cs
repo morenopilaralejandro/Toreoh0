@@ -1,4 +1,10 @@
-public class TypeWritterUI : MoneBehaviour 
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using System;
+using System.Collections;
+
+public class TypeWritterUI : MonoBehaviour 
 {
     [SerializeField] TMP_Text text;
     [SerializeField] private AudioClip writterSfxClip;
@@ -11,7 +17,7 @@ public class TypeWritterUI : MoneBehaviour
     private bool isSkipRequested;
     public event Action OnTypeWritterEnded;
 
-    public IsTyping => isTyping;
+    public bool IsTyping => isTyping;
 
     // TMP_Text TextMeshProUGUI
 
@@ -25,7 +31,7 @@ public class TypeWritterUI : MoneBehaviour
         text.text = stringValue;
         text.maxVisibleCharacters = 0;
 
-        int totalCharacters = string.Length;
+        int totalCharacters = stringValue.Length;
         int visibleCount = 0;
         int sfxCounter = 0;
         while (visibleCount < totalCharacters)

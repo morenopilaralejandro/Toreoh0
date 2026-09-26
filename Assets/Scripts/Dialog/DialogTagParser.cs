@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 public static class DialogTagParser 
 {
     private const string DefaultString = "";
@@ -9,7 +11,6 @@ public static class DialogTagParser
     private const int PrefixLengthSpeaker = 4; // speaker:
 
     private static readonly char[] tagSeparator = { ':' };
-    private static StringBuilder sb = new StringBuilder();
 
     public static DialogSerializableLine ParseLine(string textRaw, List<string> tags)
     {
@@ -18,8 +19,8 @@ public static class DialogTagParser
             TextRaw = textRaw,
             TextResolved = DefaultString,
             LocalizationKey = DefaultString,
-            SpeakerData = new SpeakerData()
-        }
+            SpeakerData = null
+        };
 
         if (tags == null) return line;
 
@@ -36,6 +37,7 @@ public static class DialogTagParser
                 line.SpeakerData = ParseSpeakerData(tag.Substring(PrefixLengthSpeaker));
             }
         }
+        return line;
     }
 
     public static DialogSerializableChoice ParseChoice(string textRaw, List<string> tags)
@@ -45,7 +47,7 @@ public static class DialogTagParser
             TextRaw = textRaw,
             TextResolved = DefaultString,
             LocalizationKey = DefaultString
-        }
+        };
 
         if (tags == null) return choice;
 
@@ -58,6 +60,7 @@ public static class DialogTagParser
                 choice.LocalizationKey = tag.Substring(PrefixLengthLocalizationKey);
             }
         }
+        return choice;
     }
 
     private static SpeakerData ParseSpeakerData(string stringValue) 
@@ -68,7 +71,7 @@ public static class DialogTagParser
             SpeakerType = parts.Length > 0 ? parts[0] : DefaultSpeakerType,
             SpeakerId = parts.Length > 1 ? parts[1] : DefaultString,
             Mood = parts.Length > 2 ? parts[2] : DefaultMood,
-            CompoundKey = stringValue,
-        }
+            SpeakerCompoundKey = stringValue
+        };
     }
 }

@@ -24,7 +24,8 @@ public class PersistenceSaver
         return new SaveData 
         {
             SaveDataHeader = CreateHeader(),
-            PlayTimeSaveData = PersistenceManager.Instance.PlayTimeTracker.Export()
+            PlayTimeSaveData = PersistenceManager.Instance.PlayTimeTracker.Export(),
+            DialogManagerSaveData = DialogManager.Instance.PersistenceComponent.Export()
             //system export
         };
     }

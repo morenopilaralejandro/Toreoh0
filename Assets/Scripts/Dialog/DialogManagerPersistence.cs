@@ -16,7 +16,7 @@ public class DialogManagerPersistence
         };
     }
 
-    public void Import(DialogManagerSaveData saveData) 
+    public void Import(SaveData saveData) 
     {
         dialogManager.InkStoryComponent.Import(saveData.DialogManagerSaveData);
         dialogManager.ViewedTracker.Import(saveData.DialogManagerSaveData);
@@ -41,6 +41,6 @@ public class DialogManagerPersistence
         PersistenceEvents.OnNewGameStarted -= OnNewGameStarted;
     }
 
-    private void OnGameLoadEnded(SaveData saveData) => Import();
+    private void OnGameLoadEnded(SaveData saveData) => Import(saveData);
     private void OnNewGameStarted() => InitializeForNewGame();
 }

@@ -2,18 +2,18 @@ public class DialogCacheSpeaker
 {
     private CacheLru<string, Speaker> cache;
     private Speaker speaker = null;
-    
+    public Speaker CurrentSpeaker => speaker;
+
     public void Initialize(DialogConfig config) 
     {
         cache = new CacheLru<string, Speaker>(config.CacheSpeakerCapacity);
     }
 
-    public Speaker GetSpeaker(SpeakerData data) 
+    public void CacheCurrentSpeaker(SpeakerData data) 
     {
-        if (TryGet(data.CompoundKey, out speaker)) return speaker;
+        if (TryGet(data.SpeakerCompoundKey, out speaker)) return;
         speaker = new Speaker(data);
         Add(speaker.AttributesComponent.SpeakerCompoundKey, speaker);
-        return speaker;
     }
 
     private void Add(string compoundKey, Speaker speaker) => cache.Add(compoundKey, speaker);

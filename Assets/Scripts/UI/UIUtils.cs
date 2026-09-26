@@ -1,20 +1,24 @@
-public static void UIUtils
+using UnityEngine;
+using System;
+using System.Collections;
+
+public static class UIUtils
 {
-    public static void SetCancasGroupVisible(CanvasGroup canvasGroup, bool isVisible)
+    public static void SetCanvasGroupVisible(CanvasGroup canvasGroup, bool isVisible)
     {
         canvasGroup.alpha = isVisible ? 1f : 0f;
         canvasGroup.interactable = isVisible;
-        canvasGroup.blocksRaycast = isVisible;
+        canvasGroup.blocksRaycasts = isVisible;
     }
 
-    public static void SetCancasGroupInteractable(CanvasGroup canvasGroup, bool isInteractable)
+    public static void SetCanvasGroupInteractable(CanvasGroup canvasGroup, bool isInteractable)
     {
         canvasGroup.interactable = isInteractable;
-        canvasGroup.blocksRaycast = isInteractable;
+        canvasGroup.blocksRaycasts = isInteractable;
     }
 
     public static IEnumerator FadeCanvasGroup(
-        CanvasGroup canvasGroup
+        CanvasGroup canvasGroup,
         float fromValue,
         float toValue,
         float duration,
@@ -24,7 +28,7 @@ public static void UIUtils
         canvasGroup.alpha = fromValue;
         while (elapsed < duration) 
         {
-            elapsed += Time.delpaTime;
+            elapsed += Time.deltaTime;
             canvasGroup.alpha = Mathf.Lerp(fromValue, toValue, elapsed / duration);
             yield return null;
         }

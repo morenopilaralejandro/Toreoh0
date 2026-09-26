@@ -2,7 +2,7 @@
 public class DialogSerializableChoice 
 {
     public int ChoiceIndex;
-    public int TextRaw;
-    public int TextResolved;
+    public string TextRaw;
+    public string TextResolved;
     public string LocalizationKey;
 }

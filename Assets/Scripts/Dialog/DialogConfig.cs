@@ -1,10 +1,11 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 [CreateAssetMenu(fileName = "DialogConfig", menuName = "ScriptableObject/Dialog/DialogConfig")]
 public class DialogConfig : ScriptableObject
 {
     [Header("Ink Story")]
-    public List<StoryMapping> StoryMappings = new ();
+    public List<InkStoryMapping> StoryMappings = new ();
 
     [Header("Speaker")]
     public int CacheSpeakerCapacity;

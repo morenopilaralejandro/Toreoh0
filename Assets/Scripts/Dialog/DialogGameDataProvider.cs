@@ -1,3 +1,5 @@
+using Ink.Runtime;
+
 public class DialogGameDataProvider
 {
     private DialogLocalizationBridge localizationBridge;
@@ -31,11 +33,23 @@ public class DialogGameDataProvider
         {
             return localizationBridge.ResolveItemName(id);
         };
+
+
+        story.BindExternalFunction("GetCurrentChestItemName", (string id)) =>
+        {
+            // world manager chest system get current chest item -> set before chest dialog
+            return localizationBridge.ResolveItemName(id);
+        };
+
+        story.BindExternalFunction("OpenSubmenuShop", (string id)) =>
+        {
+            return localizationBridge.ResolveItemName(id);
+        };
         */
     }
 
     // SyncVariablesFromGameState
-    private void SyncVariablesFromGameState(Story story) 
+    public void SyncVariablesFromGameState(Story story) 
     {
         story.variablesState["heroName"] = GetHeroName();
     }
