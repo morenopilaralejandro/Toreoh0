@@ -2,7 +2,7 @@ namespace Aremoreno.Enums.Localization
 {
     public enum LocalizationEntity 
     {
-        Characters,
+        Character,
         Shop,
         Item,
         Wing,
@@ -11,7 +11,10 @@ namespace Aremoreno.Enums.Localization
         Quest,
         Quest_Objective,
         Story_Chapter,
-        Story_Event
+        Story_Event,
+        Npc,
+        Zone,
+        Dialog
     }
 
     public enum LocalizationField 
