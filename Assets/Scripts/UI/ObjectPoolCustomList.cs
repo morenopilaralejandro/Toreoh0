@@ -1,7 +1,18 @@
+using System;
+using System.Collections.Generic;
+
 public class ObjectPoolCustomList<T> : ObjectPoolCustom<T> 
 {
     private readonly List<T> list = new ();
-    public IReadOnlyList<T> ActiveElements => list;
+    public List<T> ActiveElements => list;
+
+    public ObjectPoolCustomList(
+        Func<T> createFunc,
+        Action<T> actionOnGet,
+        Action<T> actionOnRelease,
+        Action<T> actionOnDestroy,
+        int defaultCapacity
+    ) : base(createFunc, actionOnGet, actionOnRelease, actionOnDestroy, defaultCapacity) { }
 
     public override int CountActive => list.Count;
     public override int CountAll => CountActive + base.CountInactive;

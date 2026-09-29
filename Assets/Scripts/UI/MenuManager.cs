@@ -1,3 +1,6 @@
+using UnityEngine;
+using System.Collections.Generic;
+
 public class MenuManager : MonoBehaviour
 {
     public static MenuManager Instance { get; private set; }
@@ -15,7 +18,7 @@ public class MenuManager : MonoBehaviour
 
     // fields
     private readonly Stack<Menu> stackOpened = new();
-    private readonly HashSet<menu> hashSetPendingClose = new();
+    private readonly HashSet<Menu> hashSetPendingClose = new();
 
     // open
     public void OpenMenu(Menu menu) 
@@ -94,9 +97,9 @@ public class MenuManager : MonoBehaviour
     private void CloseMenuInternal(Menu menu) 
     {
         hashSetPendingClose.Remove(menu);
-        top.SetInteractable(menu);
-        top.Hide();
-        top.OnClosed();
+        menu.SetInteractable(menu);
+        menu.Hide();
+        menu.OnClosed();
         UIEvents.RaiseMenuClosed(menu);
     }
 

@@ -1,4 +1,6 @@
+using System.Collections.Generic;
+
 public interface ISelectorSource<T>
 {
-    IEnumarable<T> Enumerate();
+    IEnumerable<T> Enumerate();
 }

@@ -5,3 +5,4 @@ namespace Aremoreno.Enums.UI
         Moving,
         Replacing
     }
+}

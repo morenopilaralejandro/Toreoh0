@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using Aremoreno.Enums.Input;
+
 public class SelectorDialogChoice : Selector<DialogSerializableChoice, SelectorDialogChoiceListItem>
 {
     // fields
@@ -7,27 +10,26 @@ public class SelectorDialogChoice : Selector<DialogSerializableChoice, SelectorD
     // override
 
     // input
-    protected override void OnGainedInput() => InputManager.Instance.Dialog.Tracker.OnButtonDown += OnButtonDown;
-    protected override void OnLostInput() => InputManager.Instance.Dialog.Tracker.OnButtonDown -= OnButtonDown;
+    protected override void OnGainedInput() => InputManager.Instance.MapDialog.Tracker.OnButtonDown += OnButtonDown;
+    protected override void OnLostInput() => InputManager.Instance.MapDialog.Tracker.OnButtonDown -= OnButtonDown;
 
     private void OnButtonDown(InputDialog input)
     {
-        if (input = InputDialog.Choose) OnButtonChooseClicked();
-        else if (input = InputDialog.Cancel) OnButtonCancelClicked();
+        if (input == InputDialog.Choose) OnButtonChooseClicked();
+        else if (input == InputDialog.Cancel) OnButtonCancelClicked();
     }
 
     public void OnButtonChooseClicked() 
     {
-        raise the current selcted
-        var choice = ;
+        var choice = GetSelectedElement()?.Data;
+        if (choice == null) return; 
         DialogEvents.RaiseChoiceSelected(choice.ChoiceIndex);
         RequestClose();
     }
 
     public void OnButtonCancelClicked() 
     {
-        raise the last one
-        var choice = ;
+        var choice = ScrollAdapter.PoolWrapper.Pool.ActiveElements[ScrollAdapter.PoolWrapper.Pool.CountActive - 1].Data;
         DialogEvents.RaiseChoiceSelected(choice.ChoiceIndex);
         RequestClose();
     }

@@ -1,3 +1,7 @@
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
+
 public abstract class Menu : MonoBehaviour, IMenuClosable
 {
     // fields
@@ -11,9 +15,9 @@ public abstract class Menu : MonoBehaviour, IMenuClosable
     [SerializeField] protected bool isHiddenOnAwake = true;
     [SerializeField] protected bool isHiddenWhenNotInterable = false;
     [SerializeField] protected bool isDeactivatedOnHide = false; // gameObject.SetActive(false)
-    [SerializeField] protected bool isHiddenWhenCovered = false
+    [SerializeField] protected bool isHiddenWhenCovered = false;
     [SerializeField] protected bool isDimmedWhenCovered = false;
-    [SerializeField, Range(0f, 1f)] protected float dimmedAlpha = 0.5;
+    [SerializeField, Range(0f, 1f)] protected float dimmedAlpha = 0.5f;
 
     [Header("Audio")]
     [SerializeField] protected string sfxOpen  = "sfx-menu_open";
@@ -21,6 +25,7 @@ public abstract class Menu : MonoBehaviour, IMenuClosable
 
     protected MenuManager menuManager;
     protected InputManager inputManager;
+    protected AudioManager audioManager;
 
     protected GameObject lastSelected;
     protected bool wasInteractable;
@@ -41,6 +46,7 @@ public abstract class Menu : MonoBehaviour, IMenuClosable
     {
         menuManager = MenuManager.Instance;
         inputManager = InputManager.Instance;
+        audioManager = AudioManager.Instance;
     }
 
     protected virtual void OnEnable() 
@@ -95,7 +101,7 @@ public abstract class Menu : MonoBehaviour, IMenuClosable
         if (isInteractable && !wasInteractable) OnGainedInput();
         else if (!isInteractable && wasInteractable) OnLostInput();
         wasInteractable = isInteractable;
-        if (isInteractable) SetDefaultFocus;
+        if (isInteractable) SetDefaultFocus();
     }
 
     public virtual bool IsInteractable() => canvasGroup.interactable;
@@ -108,13 +114,13 @@ public abstract class Menu : MonoBehaviour, IMenuClosable
     public virtual void OnOpened() 
     {
         if (!string.IsNullOrEmpty(sfxOpen))
-            AudioManager.Instance.SfxUI.Play(sfxOpen);
+            _ = audioManager.SfxUI.Play(sfxOpen);
     }
 
     public virtual void OnClosed() 
     {
         if (!string.IsNullOrEmpty(sfxOpen))
-            AudioManager.Instance.SfxUI.Play(sfxClose);
+            _ = audioManager.SfxUI.Play(sfxClose);
     }
 
     public virtual void OnCovered() 
@@ -133,7 +139,7 @@ public abstract class Menu : MonoBehaviour, IMenuClosable
     public void SetDefaultSelectable(Selectable selectable, bool focusImmediately = true)
     {
         defaultSelectable = selectable;
-        if(!inputManager.ShouldAutoFocus) return;
+        if(!inputManager.ControlSchemeTracker.ShouldAutoFocus) return;
         if (focusImmediately && selectable != null)
         {
             EventSystem.current.SetSelectedGameObject(selectable.gameObject);
@@ -143,7 +149,7 @@ public abstract class Menu : MonoBehaviour, IMenuClosable
 
     protected virtual void SetDefaultFocus() 
     {
-        if(!inputManager.ShouldAutoFocus) return;
+        if(!inputManager.ControlSchemeTracker.ShouldAutoFocus) return;
         isRestoringFocus = true;
         if (hasMemory && lastSelected != null)
         {
@@ -151,7 +157,7 @@ public abstract class Menu : MonoBehaviour, IMenuClosable
             isRestoringFocus = false;
             return;
         }
-        if (defaultSelectable == null || EventSystem.current.curretSeletedGameObject == defaultSelectable.gameObject) 
+        if (defaultSelectable == null || EventSystem.current.currentSelectedGameObject == defaultSelectable.gameObject) 
         {
             isRestoringFocus = false;
             return;
@@ -162,7 +168,7 @@ public abstract class Menu : MonoBehaviour, IMenuClosable
 
     protected virtual void OnSelectableSelected(GameObject go) 
     {
-        if (!IsInteractable() return);
+        if (!IsInteractable()) return;
         if (go == null) return;
         if (!go.transform.IsChildOf(transform)) return;
         lastSelected = go;

@@ -1,4 +1,6 @@
-public SelectorDialogChoiceSource : ISelectorSource<DialogSerializableChoice>
+using System.Collections.Generic;
+
+public class SelectorDialogChoiceSource : ISelectorSource<DialogSerializableChoice>
 {
     private List<DialogSerializableChoice> choices;
     

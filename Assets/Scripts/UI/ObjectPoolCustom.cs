@@ -1,6 +1,9 @@
-public abstract class ObjectPoolCustom<T> : IObjectPool<T>
+using System;
+using System.Collections.Generic;
+
+public abstract class ObjectPoolCustom<T> : IObjectPoolCustom<T>
 {
-    protected readonly sQueue<T> queue = new();
+    protected readonly Queue<T> queue = new();
 
     protected Func<T> createFunc;
     protected Action<T> actionOnGet;
@@ -12,7 +15,7 @@ public abstract class ObjectPoolCustom<T> : IObjectPool<T>
     public virtual int CountAll => queue.Count;
     public int CountInactive => queue.Count;
 
-    public ObjectPool<T>(
+    protected ObjectPoolCustom(
         Func<T> createFunc,
         Action<T> actionOnGet,
         Action<T> actionOnRelease,
@@ -31,23 +34,16 @@ public abstract class ObjectPoolCustom<T> : IObjectPool<T>
 
     public virtual T Get() 
     {
-        var element;
-        if (queue.Count > 0) 
-        {
-            element = queue.Dequeue();
-            element.SetActive(true);
-        }
-        else 
-        {
-            element = createFunc.Invoke();
-        }
-        return element
+        T element = queue.Count > 0 
+            ? element = queue.Dequeue() 
+            : element = createFunc.Invoke();
+        actionOnGet?.Invoke(element);
+        return element;
     }
 
     public virtual void Release(T element)
     {
-        actionOnRelease.Invoke(element);
-        element.SetActive(false);
+        actionOnRelease?.Invoke(element);
         queue.Enqueue(element);
     }
 
@@ -55,7 +51,7 @@ public abstract class ObjectPoolCustom<T> : IObjectPool<T>
 
     public virtual void Clear() 
     {
-        for (var element in pool) 
+        foreach (var element in queue)
         {
             if (element != null) actionOnDestroy.Invoke(element);
         }
@@ -67,7 +63,6 @@ public abstract class ObjectPoolCustom<T> : IObjectPool<T>
         for (int i = 0; i < defaultCapacity; i++) 
         {
             var element = createFunc.Invoke();
-            element.SetActive(false);
             queue.Enqueue(element);
         }
     }

@@ -1,14 +1,14 @@
-public abstract class ObjectPoolCustomListWrapper<T> : MonoBehaviour 
+using System;
+
+public abstract class ObjectPoolCustomListWrapper<T> 
 {
     public ObjectPoolCustomList<T> Pool { get; private set; }
 
-    public ObjectPoolCustomListWrapper(int defaultCapacity) 
+    public virtual void Initialize(Action<T> actionOnGet, Action<T> actionOnRelease, int defaultCapacity) 
     {
-        Pool = new ObjectPoolCustomList<T>(CreateElement,OnGetElement,OnReturnElement,OnDestroyElement,defaultCapacity);
+        Pool = new ObjectPoolCustomList<T>(CreateElement, actionOnGet, actionOnRelease, OnDestroyElement, defaultCapacity);
     }
 
     protected abstract T CreateElement();
-    protected abstract T OnGetElement();
-    protected abstract void OnReturnElement(T element);
     protected abstract void OnDestroyElement(T element);
 }
