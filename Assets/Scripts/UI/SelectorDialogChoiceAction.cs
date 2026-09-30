@@ -1,6 +1,6 @@
-public class SelectorDialogChoiceAction : ISelectorClickAction<DialogSerializableChoice>
+public class SelectorDialogChoiceAction : ISelectorActionClick<DialogSerializableChoice>
 {
-    public void Execute(DialogSerializableChoice obj, IClosableMenu menu)
+    public void Execute(DialogSerializableChoice obj, IMenuClosable menu)
     {
         DialogEvents.RaiseChoiceSelected(obj.ChoiceIndex);
     }

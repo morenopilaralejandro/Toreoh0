@@ -1,13 +1,16 @@
+using UnityEngine;
+using TMPro;
+
 public class SelectorDialogChoiceListItem : SelectorListItem<DialogSerializableChoice>
 {
     [SerializeField] private TMP_Text textChoice;
 
-    protected override void OnBind(DialogSerializableChoice obj)
+    public override void SetData(DialogSerializableChoice data)
     {
-        textChoice.text = obj.TextResolved;
+        textChoice.text = data.TextResolved;
     }
 
-    protected override void OnUnbind(DialogSerializableChoice obj)
+    public override void Clear()
     {
         textChoice.text = string.Empty;
     }
