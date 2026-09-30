@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using System.Collections;
 
 public class ScrollViewAuto : MonoBehaviour 
 {
     [Header("References")]
-    [SerializeField] private ScrollRect scorllRect;
+    [SerializeField] private ScrollRect scrollRect;
     [SerializeField] private RectTransform viewport;
     [SerializeField] private RectTransform content;
 
@@ -17,9 +20,34 @@ public class ScrollViewAuto : MonoBehaviour
     private Vector2 targetAnchoredPos;
     private bool isActive;
 
-    private readonly const MAX_CHILD_DEPTH = 4;
+    private float contentHeight;
+    private float contentWidth;
+    private float viewportHeight;
+    private float viewportWidth;
+    private float viewportHalfHeight;
+    private float viewportHalfWidth;
+    private float viewportTop;
+    private float viewportBottom;
+    private float viewportRight;
+    private float viewportLeft;
+
+    public const int MAX_CHILD_DEPTH = 4;
 
     // lifecycle
+    private void Awake() 
+    {
+        contentHeight = content.rect.height;
+        contentWidth = content.rect.width;
+        viewportHeight = viewport.rect.height;
+        viewportWidth = viewport.rect.width;
+        viewportHalfHeight = viewportHeight * 0.5f;
+        viewportHalfWidth = viewportWidth * 0.5f;
+        viewportTop = viewport.rect.yMax - padding;
+        viewportBottom = viewport.rect.yMin + padding;
+        viewportRight = viewport.rect.xMax - padding;
+        viewportLeft = viewport.rect.xMin + padding;
+    }
+
     private void LateUpdate() 
     {
         if (!isActive) return;
@@ -56,7 +84,7 @@ public class ScrollViewAuto : MonoBehaviour
         lastSelected = null;
     }
 
-    private IEnumerable DelayedReset () 
+    private IEnumerator DelayedReset() 
     {
         yield return null;
         lastSelected = null;
@@ -69,29 +97,41 @@ public class ScrollViewAuto : MonoBehaviour
         if (!IsChildOfContent(selected.transform)) return;
         RectTransform selectedRectTransform = selected.transform as RectTransform;
         if (selectedRectTransform == null) return;
-        Cancas.ForceUpdateCanvases();
+        Canvas.ForceUpdateCanvases();
         ComputeAndApplyScroll(selectedRectTransform);
     }
     
     // scroll
     private void ComputeAndApplyScroll(RectTransform selectedRectTransform) 
     {
-        Vector2 rectTrasformCenterInViewPort = viewport.InverseTransformPoint(selectedRectTransform.TransformPoint(selectedRectTransform.rect.center));
+        Vector2 selectedCenterInViewPort = viewport.InverseTransformPoint(selectedRectTransform.TransformPoint(selectedRectTransform.rect.center));
         float selectedHalfHeight = selectedRectTransform.rect.height * 0.5f;
         float selectedHalfWidth = selectedRectTransform.rect.width * 0.5f;
-        float viewportHalfHeight = viewport.rect.height * 0.5f;
-        float viewportHalfWidth = viewport.rect.width * 0.5f;
         Vector2 newPosition = content.anchoredPosition;
-        bool hasChanged = false;
+        bool hasChanged = true;
 
         if (scrollRect.vertical)
         {
-
+            float selectedTop = selectedCenterInViewPort.y + selectedHalfHeight;
+            float selectedBottom = selectedCenterInViewPort.y - selectedHalfHeight;
+            if (selectedBottom < viewportBottom) 
+                newPosition.y += viewportBottom - selectedBottom;
+            else if (selectedTop > viewportTop)
+                newPosition.y -= selectedTop - viewportTop;
+            else
+                hasChanged = false;
         }
 
-        if (scorllRect.horizontal)
+        if (scrollRect.horizontal)
         {
-
+            float selectedRight = selectedCenterInViewPort.x + selectedHalfWidth;
+            float selectedLeft = selectedCenterInViewPort.x - selectedHalfWidth;
+            if (selectedLeft < viewportLeft) 
+                newPosition.x -= viewportLeft - selectedLeft;
+            else if (selectedRight > viewportRight)
+                newPosition.x += selectedRight - viewportRight;
+            else
+                hasChanged = false;
         }
 
         if (!hasChanged) return;
@@ -100,20 +140,15 @@ public class ScrollViewAuto : MonoBehaviour
 
     private Vector2 ClampToContent(Vector2 pos) 
     {
-        float contentHeight = content.rect.height;
-        float contentWidth = content.rect.width;
-        float viewportHeight = viewport.rect.height;
-        float viewportWidth = viewport.rect.width;
-
         if (scrollRect.vertical) 
         {
-            float maxY = Mathf.Max(0f, contentHeight - viewportHalfHeight);
+            float maxY = Mathf.Max(0f, contentHeight - viewportHeight);
             pos.y = Mathf.Clamp(pos.y, 0f, maxY);
         }
 
         if (scrollRect.horizontal) 
         {
-            float maxX = Mathf.Clamp(pos.x, -maxX, 0f);
+            float maxX = Mathf.Max(0f, contentWidth - viewportHalfWidth);
             pos.x = Mathf.Clamp(pos.x, -maxX, 0f);
         }
 
@@ -146,18 +181,30 @@ public class ScrollViewAuto : MonoBehaviour
         return false;
     }
 
-    public void ScrollTo() 
+    public void ScrollTo(RectTransform rectTransform, bool isInstantForced = false) 
     {
-
+        if (rectTransform == null) return;
+        bool wasInstant = isInstant;
+        if (isInstantForced) isInstant = true;
+        ComputeAndApplyScroll(rectTransform);
+        isInstant = wasInstant;
     }
 
     public void ResetToTop() 
     {
-
+        content.anchoredPosition = Vector2.zero;
+        isScrolling = false;
+        lastSelected = null;
     }
 
     public void OnScroll(BaseEventData baseEventData) 
     {
-
+        if (!isActive) return;
+        isScrolling = false;
+        PointerEventData pointerEventData = baseEventData as PointerEventData;
+        if (pointerEventData == null) return;
+        scrollRect.OnScroll(pointerEventData);
+        EventSystem.current?.SetSelectedGameObject(null);
+        // lastSelected = EventSystem.current?.currentSelectedGameObject;
     }
 }
