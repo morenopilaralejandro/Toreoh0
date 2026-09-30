@@ -19,14 +19,14 @@ public class Bootstrap : MonoBehaviour
     {
         SceneManager.LoadScene("LoadingScene", LoadSceneMode.Single);
 
-        SceneManager.LoadScene("MainCamera", LoadSceneMode.Additive);
+        SceneManager.LoadScene("CameraMain", LoadSceneMode.Additive);
         SceneManager.LoadScene("SystemManager", LoadSceneMode.Additive);
-        SceneManager.LoadScene("GlobalLighting", LoadSceneMode.Additive);
+        // SceneManager.LoadScene("LightingGlobal", LoadSceneMode.Additive);
 
         await Addressables.InitializeAsync().Task;
         await DatabaseManager.Instance.InitializeAsync();
 
-        //await SceneManager.UnloadSceneAsync("LoadingScene");
+        // await SceneManager.UnloadSceneAsync("LoadingScene");
 
         #if UNITY_EDITOR || DEVELOPMENT_BUILD
             if (debugConfig.IsBootToDebugMainMenu)

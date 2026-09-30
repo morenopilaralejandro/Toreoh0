@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections;
+using Aremoreno.Enums.Input;
 
 public class ScrollViewAuto : MonoBehaviour 
 {
@@ -19,6 +20,8 @@ public class ScrollViewAuto : MonoBehaviour
     private bool isScrolling;
     private Vector2 targetAnchoredPos;
     private bool isActive;
+    private bool shouldActivate;
+    private InputManager inputManager;
 
     private float contentHeight;
     private float contentWidth;
@@ -48,8 +51,15 @@ public class ScrollViewAuto : MonoBehaviour
         viewportLeft = viewport.rect.xMin + padding;
     }
 
+    private void Start()
+    {
+        inputManager = InputManager.Instance;
+        shouldActivate = inputManager.ShouldAutoFocus;
+    }
+
     private void LateUpdate() 
     {
+        if (!shouldActivate) return;
         if (!isActive) return;
         GameObject selected = EventSystem.current?.currentSelectedGameObject;
         if (selected != lastSelected) 
@@ -73,6 +83,7 @@ public class ScrollViewAuto : MonoBehaviour
     // isActive
     public void Activate() 
     {
+        if (!shouldActivate) return;
         isActive = true;
         StartCoroutine(DelayedReset());
     }
@@ -97,8 +108,10 @@ public class ScrollViewAuto : MonoBehaviour
         if (!IsChildOfContent(selected.transform)) return;
         RectTransform selectedRectTransform = selected.transform as RectTransform;
         if (selectedRectTransform == null) return;
-        Canvas.ForceUpdateCanvases();
+        //Canvas.ForceUpdateCanvases();
+        //LayoutRebuilder.ForceRebuidLayoutInmediate(content);
         ComputeAndApplyScroll(selectedRectTransform);
+        // use couroutine with WaitForEndOfFrame if it doesnt work
     }
     
     // scroll
@@ -206,5 +219,21 @@ public class ScrollViewAuto : MonoBehaviour
         scrollRect.OnScroll(pointerEventData);
         EventSystem.current?.SetSelectedGameObject(null);
         // lastSelected = EventSystem.current?.currentSelectedGameObject;
+    }
+
+    // event
+    private void OnEnable() 
+    {
+        InputEvents.OnControlSchemeChanged += OnControlSchemeChanged;
+    }
+
+    private void OnDisable() 
+    {
+        InputEvents.OnControlSchemeChanged -= OnControlSchemeChanged;
+    }
+
+    private void OnControlSchemeChanged(ControlScheme controlScheme) 
+    {
+        shouldActivate = inputManager.ShouldAutoFocus;
     }
 }
