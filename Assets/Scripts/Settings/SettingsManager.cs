@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.IO;
+using Aremoreno.Enums.Display;
 using Aremoreno.Enums.Input;
 using Aremoreno.Enums.Localization;
 
@@ -20,7 +21,10 @@ public class SettingsManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
+    }
 
+    public void Start() 
+    {
         Initialize();
     }
 
@@ -42,6 +46,7 @@ public class SettingsManager : MonoBehaviour
         {
             Settings = config.PresetDefault;
         }
+        SettingsEvents.RaiseSettingsLoadEnded(Settings);
     }
 
     public void SaveSettings() 
@@ -72,6 +77,24 @@ public class SettingsManager : MonoBehaviour
     {
         Settings.Common.LocalizationStyle = style;
         SettingsEvents.RaiseLocalizationStyleChanged(style);
+    }
+
+    public void SetIsScreenFlipped(bool isScreenFlipped) 
+    {
+        Settings.Common.IsScreenFlipped = isScreenFlipped;
+        SettingsEvents.RaiseIsScreenFlippedChanged(isScreenFlipped);
+    }
+
+    public void SetIsDisplayAutoDetect(bool isDisplayAutoDetect) 
+    {
+        Settings.Common.IsDisplayAutoDetect = isDisplayAutoDetect;
+        SettingsEvents.RaiseIsDisplayAutoDetectChanged(isDisplayAutoDetect);
+    }
+
+    public void SetDisplayMode(DisplayMode displayMode) 
+    {
+        Settings.Common.DisplayMode = displayMode;
+        SettingsEvents.RaiseDisplayModeChanged(displayMode);
     }
 
     public void SetControlSchemeCustom(ControlSchemeCustom controlSchemeCustom) 

@@ -20,6 +20,9 @@ MonoBehaviour:
       LocalizationStyle: 0
       VolumeBgm: 1
       VolumeSfx: 1
+      IsScreenFlipped: 0
+      IsDisplayAutoDetect: 0
+      DisplayMode: 1
       ControlSchemeCustom: 0
     ControlTraditional:
       IsAutoPass: 0

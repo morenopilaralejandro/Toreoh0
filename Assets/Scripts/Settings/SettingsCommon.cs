@@ -1,3 +1,4 @@
+using Aremoreno.Enums.Display;
 using Aremoreno.Enums.Input;
 using Aremoreno.Enums.Localization;
 
@@ -6,7 +7,13 @@ public class SettingsCommon
 {
     public int LocaleIndex = 0;
     public LocalizationStyle LocalizationStyle = LocalizationStyle.Localized;
+
     public float VolumeBgm = 1f;
     public float VolumeSfx = 1f;
+
+    public bool IsScreenFlipped = false;
+    public bool IsDisplayAutoDetect = true;
+    public DisplayMode DisplayMode = DisplayMode.SingleScreen;
+
     public ControlSchemeCustom ControlSchemeCustom = ControlSchemeCustom.Traditional;
 }

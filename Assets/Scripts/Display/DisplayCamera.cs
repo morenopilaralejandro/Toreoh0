@@ -1,13 +1,18 @@
+using UnityEngine;
+using Aremoreno.Enums.Display;
+
 public class DisplayCamera : MonoBehaviour
 {
-    [SerializeField] private DisplayScreen displayScreen;
-    public Camera Camera { get; private set; }
+    public DisplayScreen DisplayScreen;
+    public Camera CameraObject { get; private set; }
 
     private DisplayManager displayManager;
 
     private void Start() 
     {
+        CameraObject = GetComponent<Camera>();
         displayManager = DisplayManager.Instance;
+        if (displayManager != null) displayManager.RegisterCamera(this);
     }
 
     private void OnEnable()
@@ -22,7 +27,7 @@ public class DisplayCamera : MonoBehaviour
 
     private void OnDisplayRefreshRequested()
     {
-        camera.targetDisplay = displayManager.GetTargetDisplay(displayScreen);
-        camera.rect = displayManager.GetRect(displayScreen);
+        CameraObject.targetDisplay = displayManager.GetTargetDisplay(DisplayScreen);
+        CameraObject.rect = displayManager.GetRect(DisplayScreen);
     }
 }

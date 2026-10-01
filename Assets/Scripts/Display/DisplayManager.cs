@@ -1,3 +1,6 @@
+using UnityEngine;
+using Aremoreno.Enums.Display;
+
 public class DisplayManager : MonoBehaviour
 {
     public static DisplayManager Instance { get; private set; }
@@ -30,32 +33,38 @@ public class DisplayManager : MonoBehaviour
     // api
     public void RegisterCamera(DisplayCamera displayCamera) 
     {
-        if (displayCamera.DisplayScreen == DisplayScreen.Top) 
-            CameraTop = displayCamera.Camera;
+        if (displayCamera.DisplayScreen == DisplayScreen.TopScreen) 
+            CameraTop = displayCamera.CameraObject;
         else
-            CameraBottom = displayCamera.Camera;
+            CameraBottom = displayCamera.CameraObject;
+
+        if (CameraTop != null && CameraBottom != null) 
+        {
+            CheckAutoDetect();
+            CacheDisplay();
+        }
     }
 
-    public void GetCamera(DisplayScreen displayScreen) => displayScreen == DisplayScreen.TopScreen ? CameraTop : CameraBottom;
-    public void GetTargetDisplay(DisplayScreen displayScreen) => displayScreen == DisplayScreen.TopScreen ? TargetDisplayTop : TargetDisplayBottom;
-    public void GetRect(DisplayScreen displayScreen) => displayScreen == DisplayScreen.TopScreen ? RectTop : RectBottom;
+    public Camera GetCamera(DisplayScreen displayScreen) => displayScreen == DisplayScreen.TopScreen ? CameraTop : CameraBottom;
+    public int GetTargetDisplay(DisplayScreen displayScreen) => displayScreen == DisplayScreen.TopScreen ? TargetDisplayTop : TargetDisplayBottom;
+    public Rect GetRect(DisplayScreen displayScreen) => displayScreen == DisplayScreen.TopScreen ? RectTop : RectBottom;
 
     // logic
     private void CacheDisplay()
     {
         // rect     only changes on single screen
         // target   only changes on double screen
-        if(DisplayModeCurrent = DisplayMode.SingleScreen)
+        if(DisplayModeCurrent == DisplayMode.SingleScreen)
         {
             TargetDisplayTop = config.TargetDisplaySingle;
             TargetDisplayBottom = config.TargetDisplaySingle;
-            RectTop = isFlipped ? config.RectBottomSingle : config.RectTopSingle;
-            RectBottom = isFlipped ? config.RectTopSingle : config.RectBottomSingle;
+            RectTop = IsScreenFlipped ? config.RectBottomSingle : config.RectTopSingle;
+            RectBottom = IsScreenFlipped ? config.RectTopSingle : config.RectBottomSingle;
         }
         else
         {
-            TargetDisplayTop = isFlipped ? config.TargetDisplayBottom : config.TargetDisplayTop;
-            TargetDisplayBottom = isFlipped ? config.TargetDisplayTop : config.TargetDisplayBottom;
+            TargetDisplayTop = IsScreenFlipped ? config.TargetDisplayBottomDouble : config.TargetDisplayTopDouble;
+            TargetDisplayBottom = IsScreenFlipped ? config.TargetDisplayTopDouble : config.TargetDisplayBottomDouble;
             RectTop = config.RectDouble;
             RectBottom = config.RectDouble;
         }
@@ -64,6 +73,12 @@ public class DisplayManager : MonoBehaviour
 
     private void CheckAutoDetect()
     {
+        if (config.IsDebugDoubleScreen) 
+        {
+            DisplayModeCurrent = DisplayMode.DoubleScreen;
+            return;
+        }
+
         bool hasTwoRealScreens = Display.displays.Length == 2;
         if (hasTwoRealScreens)
             DisplayModeCurrent = IsDisplayAutoDetect ? DisplayModeDefault : DisplayMode.DoubleScreen;
@@ -90,7 +105,7 @@ public class DisplayManager : MonoBehaviour
 
     private void OnIsScreenFlippedChanged(bool isScreenFlipped)
     {
-        IsFlipped = isScreenFlipped;
+        IsScreenFlipped = isScreenFlipped;
         CacheDisplay();
     }
 
@@ -110,18 +125,8 @@ public class DisplayManager : MonoBehaviour
 
     private void OnSettingsLoadEnded(Settings settings)
     {
-        IsScreenFlipped = setting.Common.IsScreenFlipped;
-        IsDisplayAutoDetect = setting.Common.IsDisplayAutoDetect;
-        DisplayModeDefault = setting.Common.DisplayMode;
-        CheckAutoDetect();
-        CacheDisplay();
+        IsScreenFlipped = settings.Common.IsScreenFlipped;
+        IsDisplayAutoDetect = settings.Common.IsDisplayAutoDetect;
+        DisplayModeDefault = settings.Common.DisplayMode;
     }
 }
-
-
-
-
-
-
-
-

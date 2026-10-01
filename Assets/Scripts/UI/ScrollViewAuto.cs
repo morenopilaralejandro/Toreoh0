@@ -54,7 +54,7 @@ public class ScrollViewAuto : MonoBehaviour
     private void Start()
     {
         inputManager = InputManager.Instance;
-        shouldActivate = inputManager.ShouldAutoFocus;
+        shouldActivate = inputManager.ControlSchemeTracker.ShouldAutoFocus;
     }
 
     private void LateUpdate() 
@@ -234,6 +234,6 @@ public class ScrollViewAuto : MonoBehaviour
 
     private void OnControlSchemeChanged(ControlScheme controlScheme) 
     {
-        shouldActivate = inputManager.ShouldAutoFocus;
+        shouldActivate = inputManager.ControlSchemeTracker.ShouldAutoFocus;
     }
 }

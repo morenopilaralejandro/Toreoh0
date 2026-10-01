@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 1176327797}
   - component: {fileID: 1176327796}
   - component: {fileID: 1176327800}
+  - component: {fileID: 1176327801}
   m_Layer: 0
   m_Name: CameraBottom
   m_TagString: MainCamera
@@ -293,6 +294,19 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!114 &1176327801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176327795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c78464714aff8f75eaf85162f6ca9baf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DisplayCamera
+  DisplayScreen: 1
 --- !u!1 &1789917735
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,6 +320,7 @@ GameObject:
   - component: {fileID: 1789917737}
   - component: {fileID: 1789917736}
   - component: {fileID: 1789917740}
+  - component: {fileID: 1789917741}
   m_Layer: 0
   m_Name: CameraTop
   m_TagString: Untagged
@@ -463,6 +478,19 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!114 &1789917741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789917735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c78464714aff8f75eaf85162f6ca9baf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DisplayCamera
+  DisplayScreen: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

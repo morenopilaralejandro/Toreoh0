@@ -1,15 +1,18 @@
+using UnityEngine;
+using Aremoreno.Enums.Display;
+
 public class DisplayCanvas : MonoBehaviour
 {
-    [SerializeField] private DisplayScreen displayScreen;
+    public DisplayScreen DisplayScreen;
     [SerializeField] private Canvas canvas;
-    [SerializeField] private RectTranform rectTranformDebug;
+    [SerializeField] private RectTransform rectTransformDebug;
 
     private DisplayManager displayManager;
 
     private void Awake() 
     {
-        rectTranformDebug.offsetMin = Vector2.zero;
-        rectTranformDebug.offsetMax = Vector2.zero;
+        rectTransformDebug.offsetMin = Vector2.zero;
+        rectTransformDebug.offsetMax = Vector2.zero;
         displayManager = DisplayManager.Instance;
         if (displayManager != null) OnDisplayRefreshRequested();
     }
@@ -27,9 +30,8 @@ public class DisplayCanvas : MonoBehaviour
 
     private void OnDisplayRefreshRequested()
     {
-        var camera = displayManager.GetCamera(displayScreen);
-        canvas.targetDisplay = camera.targetDisplay;
         canvas.renderMode = RenderMode.ScreenSpaceCamera;
-        canvas.worldCamera = camera;
+        canvas.worldCamera = displayManager.GetCamera(DisplayScreen);
+        canvas.targetDisplay = displayManager.GetTargetDisplay(DisplayScreen);;
     }
 }
