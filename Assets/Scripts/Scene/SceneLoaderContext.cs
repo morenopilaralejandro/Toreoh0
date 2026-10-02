@@ -15,7 +15,7 @@ public class SceneLoaderContext
         IReadOnlyList<SceneData> scenesToLoad,
         IReadOnlyList<SceneData> scenesToUnload,
         ISceneLoaderOperations operations,
-        string loadingScreenSceneName = "LoadingScene") 
+        string loadingScreenSceneName = "SceneLoadingScreen") 
     {
         this.Id = id;
         ScenesToLoad = scenesToLoad;

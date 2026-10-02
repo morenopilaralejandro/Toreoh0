@@ -1,12 +1,15 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System.Collections.Generic;
 
 public abstract class Menu : MonoBehaviour, IMenuClosable
 {
     // fields
     [Header("Generic")]
-    [SerializeField] protected CanvasGroup canvasGroup;
+
+    [SerializeField] protected List<CanvasGroup> canvasGroupList;
+    [SerializeField] protected List<GameObject> gameObjectList;
     [SerializeField] protected Selectable defaultSelectable;
     [SerializeField] protected bool hasMemory = true;
     [SerializeField] protected bool isCloseAllPreviousOnBack = false;
@@ -67,23 +70,18 @@ public abstract class Menu : MonoBehaviour, IMenuClosable
     public virtual void Show() 
     {
         if (isDeactivatedOnHide)
-            gameObject.SetActive(true);
+            SetActive(true);
         else
-            canvasGroup.alpha = 1f;
+            SetVisible(true);
         SetDefaultFocus();
     }
 
     public virtual void Hide()
     {
         if (isDeactivatedOnHide)
-            gameObject.SetActive(false);
+            SetActive(false);
         else
-            canvasGroup.alpha = 0f;
-    }
-
-    public void SetVisible(bool isVisible) 
-    {
-        canvasGroup.alpha = isVisible ? 1f : 0f;
+            SetVisible(false);
     }
 
     protected void HideImmediately() 
@@ -92,19 +90,42 @@ public abstract class Menu : MonoBehaviour, IMenuClosable
         Hide();
     }
 
+    public void SetVisible(bool isVisible) 
+    {
+        foreach (var canvasGroup in canvasGroupList)
+            canvasGroup.alpha = isVisible ? 1f : 0f;
+    }
+
+    public void SetAlpha(float alpha) 
+    {
+        foreach (var canvasGroup in canvasGroupList)
+            canvasGroup.alpha = alpha;
+    }
+
+    public void SetActive(bool isActive) 
+    {
+        foreach (var go in gameObjectList)
+            go.SetActive(isActive);
+    }
+
+
     // interactability
     public virtual void SetInteractable(bool isInteractable)
     {
-        canvasGroup.interactable = isInteractable;
-        canvasGroup.blocksRaycasts = isInteractable;
-        if (isHiddenWhenNotInterable) canvasGroup.alpha = isInteractable ? 1f : 0f;
+        foreach (var canvasGroup in canvasGroupList) 
+        {
+            canvasGroup.interactable = isInteractable;
+            canvasGroup.blocksRaycasts = isInteractable;
+        }
+
+        if (isHiddenWhenNotInterable) SetVisible(isInteractable);
         if (isInteractable && !wasInteractable) OnGainedInput();
         else if (!isInteractable && wasInteractable) OnLostInput();
         wasInteractable = isInteractable;
         if (isInteractable) SetDefaultFocus();
     }
 
-    public virtual bool IsInteractable() => canvasGroup.interactable;
+    public virtual bool IsInteractable() => canvasGroupList[0].interactable;
     
     // input
     protected virtual void OnGainedInput() { }
@@ -126,12 +147,12 @@ public abstract class Menu : MonoBehaviour, IMenuClosable
     public virtual void OnCovered() 
     {
         if (isHiddenWhenCovered) SetVisible(false);
-        else if (isDimmedWhenCovered) canvasGroup.alpha = dimmedAlpha;
+        else if (isDimmedWhenCovered) SetAlpha(dimmedAlpha);
     }
 
     public virtual void OnRevealed() 
     {
-        if (isHiddenWhenCovered || isDimmedWhenCovered) canvasGroup.alpha = 1f;
+        if (isHiddenWhenCovered || isDimmedWhenCovered) SetAlpha(1f);
     }
 
     // memory

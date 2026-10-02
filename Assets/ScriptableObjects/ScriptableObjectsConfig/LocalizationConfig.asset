@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LocalizationConfig
   m_EditorClassIdentifier: Assembly-CSharp::LocalizationConfig
   IsLocalizationEnabled: 0
-  LocaleIndexDefault: 1
+  LocaleIndexDefault: 2
   TableNameSeparator: 45
   FontAtlasPath: Assets/Localization/LocalizationFontAtlas
   FontAtlasFileName: FontAtlasCharacters.txt

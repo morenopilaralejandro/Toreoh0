@@ -78,7 +78,7 @@ public class InputStateTracker<T> where T : Enum
 
     public void InvalidateAllBuffers() 
     {
-        foreach (var input in buttons.Keys) 
+        foreach (var input in new List<T>(buttons.Keys))
         {
             var button = buttons[input];
             button.ClearBuffer();

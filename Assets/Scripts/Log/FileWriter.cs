@@ -9,7 +9,7 @@ public class FileWriter
     public void Initialize(string path)
     {
         this.path = Path.Combine(Application.persistentDataPath, path);
-        streamWriter = new StreamWriter(path, true) { AutoFlush = true };
+        streamWriter = new StreamWriter(this.path, true) { AutoFlush = true };
     }
 
     public void WriteToFile(string message) 

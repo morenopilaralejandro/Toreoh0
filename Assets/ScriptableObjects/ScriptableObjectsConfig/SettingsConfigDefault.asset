@@ -16,10 +16,13 @@ MonoBehaviour:
   SettingsFileName: settings
   PresetDefault:
     Common:
-      LocaleIndex: 0
+      LocaleIndex: 2
       LocalizationStyle: 0
       VolumeBgm: 1
       VolumeSfx: 1
+      IsScreenFlipped: 0
+      IsDisplayAutoDetect: 1
+      DisplayMode: 1
       ControlSchemeCustom: 0
     ControlTraditional:
       IsAutoPass: 0

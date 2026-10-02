@@ -7,6 +7,7 @@ public class InputControlSchemeTracker
     public ControlScheme CurrentControlScheme { get; private set; }
     public ControlScheme PreviousControlScheme { get; private set; }
     private Dictionary<string, ControlScheme> map;
+    private PlayerInput playerInput;
 
     public void Initialize(
         PlayerInput playerInput,
@@ -14,7 +15,7 @@ public class InputControlSchemeTracker
     {
         BuildMap(mappings);
         playerInput.onControlsChanged += OnControlsChanged;
-        OnControlsChanged(playerInput);
+        // OnControlsChanged(playerInput);
     }
 
     private void OnControlsChanged(PlayerInput playerInput) 
@@ -40,4 +41,19 @@ public class InputControlSchemeTracker
     }
 
     public bool ShouldAutoFocus => CurrentControlScheme != ControlScheme.Touch;
+
+    // event
+    /*
+
+    public void Subscribe() 
+    {
+        playerInput.onControlsChanged += OnControlsChanged;
+    }
+
+    public void Unsubscribe() 
+    {
+        playerInput.onControlsChanged -= OnControlsChanged;
+    }
+
+    */
 }

@@ -23,15 +23,6 @@ public class LocalizationManager : MonoBehaviour
         Initialize();
     }
 
-    private void Start()
-    {
-        settingsManager = SettingsManager.Instance;
-        if (config.IsLocalizationEnabled)
-            OnLanguageChanged(settingsManager.Settings.Common.LocaleIndex);
-        else 
-            OnLanguageChanged(config.LocaleIndexDefault);
-    }
-
     private void Initialize()
     {
         mappingConfig.Initialize();
@@ -46,16 +37,26 @@ public class LocalizationManager : MonoBehaviour
     // event
     private void OnEnable()
     {
+        SettingsEvents.OnSettingsLoadEnded += OnSettingsLoadEnded;
         SettingsEvents.OnLanguageChanged += OnLanguageChanged;
     }
 
     private void OnDisable()
     {
+        SettingsEvents.OnSettingsLoadEnded -= OnSettingsLoadEnded;
         SettingsEvents.OnLanguageChanged -= OnLanguageChanged;
     }
 
     private void OnLanguageChanged(int localeIndex) 
     {
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[localeIndex];
+    }
+
+    private void OnSettingsLoadEnded(Settings settings) 
+    {
+        if (config.IsLocalizationEnabled)
+            OnLanguageChanged(settings.Common.LocaleIndex);
+        else 
+            OnLanguageChanged(config.LocaleIndexDefault);
     }
 }

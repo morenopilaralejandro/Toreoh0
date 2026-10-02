@@ -17,25 +17,26 @@ public class Bootstrap : MonoBehaviour
 
     private async Task BootGameAsync()
     {
-        SceneManager.LoadScene("LoadingScene", LoadSceneMode.Single);
+        SceneManager.LoadScene("SceneLoadingScreen", LoadSceneMode.Single);
 
-        SceneManager.LoadScene("MainCamera", LoadSceneMode.Additive);
-        SceneManager.LoadScene("SystemManager", LoadSceneMode.Additive);
-        SceneManager.LoadScene("GlobalLighting", LoadSceneMode.Additive);
+        SceneManager.LoadScene("SceneSystem", LoadSceneMode.Additive);
+        SceneManager.LoadScene("SceneCameraMain", LoadSceneMode.Additive);
+        // SceneManager.LoadScene("LightingGlobal", LoadSceneMode.Additive);
 
         await Addressables.InitializeAsync().Task;
         await DatabaseManager.Instance.InitializeAsync();
 
-        //await SceneManager.UnloadSceneAsync("LoadingScene");
-
         #if UNITY_EDITOR || DEVELOPMENT_BUILD
             if (debugConfig.IsBootToDebugMainMenu)
-                SceneLoaderManager.Instance.LoadGroup("sceneDebugMainMenu");
+                SceneLoaderManager.Instance.LoadGroup("SceneGroupData-DebugMainMenu");
             else
-                SceneLoaderManager.Instance.LoadGroup("sceneDebugMainMenu");
+                SceneLoaderManager.Instance.LoadGroup("SceneGroupData-MainMenu");
         #else
-            SceneLoader.Instance.LoadGroup("sceneMainMenu");
+            // SceneLoader.Instance.LoadGroup("SceneGroupData-MainMenu");
+            SceneLoaderManager.Instance.LoadGroup("SceneGroupData-DebugMainMenu");
         #endif
+
+        await SceneManager.UnloadSceneAsync("SceneLoadingScreen");
     }
 
     private void InitializeGame() 
