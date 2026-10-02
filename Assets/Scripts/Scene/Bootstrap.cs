@@ -26,16 +26,17 @@ public class Bootstrap : MonoBehaviour
         await Addressables.InitializeAsync().Task;
         await DatabaseManager.Instance.InitializeAsync();
 
-        // await SceneManager.UnloadSceneAsync("LoadingScene");
-
         #if UNITY_EDITOR || DEVELOPMENT_BUILD
             if (debugConfig.IsBootToDebugMainMenu)
                 SceneLoaderManager.Instance.LoadGroup("SceneGroupData-DebugMainMenu");
             else
                 SceneLoaderManager.Instance.LoadGroup("SceneGroupData-MainMenu");
         #else
-            SceneLoader.Instance.LoadGroup("SceneGroupData-MainMenu");
+            // SceneLoader.Instance.LoadGroup("SceneGroupData-MainMenu");
+            SceneLoaderManager.Instance.LoadGroup("SceneGroupData-DebugMainMenu");
         #endif
+
+        await SceneManager.UnloadSceneAsync("SceneLoadingScreen");
     }
 
     private void InitializeGame() 

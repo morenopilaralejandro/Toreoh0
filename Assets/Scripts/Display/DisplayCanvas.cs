@@ -7,14 +7,11 @@ public class DisplayCanvas : MonoBehaviour
     [SerializeField] private Canvas canvas;
     [SerializeField] private RectTransform rectTransformDebug;
 
-    private DisplayManager displayManager;
-
     private void Awake() 
     {
         rectTransformDebug.offsetMin = Vector2.zero;
         rectTransformDebug.offsetMax = Vector2.zero;
-        displayManager = DisplayManager.Instance;
-        if (displayManager != null) OnDisplayRefreshRequested();
+        OnDisplayRefreshRequested();
     }
     
     // event
@@ -30,8 +27,9 @@ public class DisplayCanvas : MonoBehaviour
 
     private void OnDisplayRefreshRequested()
     {
+        if (DisplayManager.Instance == null) return;
         canvas.renderMode = RenderMode.ScreenSpaceCamera;
-        canvas.worldCamera = displayManager.GetCamera(DisplayScreen);
-        canvas.targetDisplay = displayManager.GetTargetDisplay(DisplayScreen);;
+        canvas.worldCamera = DisplayManager.Instance.GetCamera(DisplayScreen);
+        canvas.targetDisplay = DisplayManager.Instance.GetTargetDisplay(DisplayScreen);;
     }
 }

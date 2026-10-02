@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0095a75e43d44acc59553fb7ef026a39, type: 3}
   m_Name: DisplayConfig
   m_EditorClassIdentifier: Assembly-CSharp::DisplayConfig
-  IsDebugDoubleScreen: 1
+  IsDebugDoubleScreen: 0
   RectTopSingle:
     serializedVersion: 2
     x: 0
