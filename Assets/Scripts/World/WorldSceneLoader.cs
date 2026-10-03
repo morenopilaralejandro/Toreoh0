@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class WorldSceneLoader : MonoBehaviour
 {
@@ -6,6 +7,7 @@ public class WorldSceneLoader : MonoBehaviour
 
     private void Initialize() 
     {
+        /*
         ISceneLoaderRegistry registry = new SceneLoaderRegistryGroup();
         sceneLoader = new SceneLoader(
             registry,
@@ -13,13 +15,14 @@ public class WorldSceneLoader : MonoBehaviour
             InputManager.Instance,
             DatabaseManager.Instance
         );
+        */
     }
-
 
     // TODO use new string[] { address } when calling and only use the one with enumerable
     // Load by data
-    private void LoadScene(string address, isFade = false) 
+    public void LoadScene(string scene, bool isFade = false)
     {
+        /*
         sceneLoader.Strategy = isFade
             ? new SceneLoaderStrategyFade()
             : new SceneLoaderStrategyDirect();
@@ -32,12 +35,17 @@ public class WorldSceneLoader : MonoBehaviour
         );
 
         StartCoroutine(ExecuteLoad(context));
+        */
     }
 
-    private void LoadScenes(Enumaerable list, isFade = false)
-
-    private void UnloadScene(string address)
+    public void LoadScenes(IEnumerable scenes, bool isFade = false) 
     {
+
+    }
+
+    public void UnloadScene(string scene)
+    {
+        /*
         SceneLoaderContext context = new SceneLoaderContext(
             sceneGroupData.SceneGroupId,
             null,
@@ -46,12 +54,17 @@ public class WorldSceneLoader : MonoBehaviour
         );
 
         StartCoroutine(ExecuteUnload(context));
+        */
     }
 
-    private void UnloadScenes(list)
-
-    private void UnloadAll() 
+    public void UnloadScenes(IEnumerable scenes, bool isFade = false)
     {
+
+    }
+
+    public void UnloadAll() 
+    {
+        /*
         SceneLoaderContext context = new SceneLoaderContext(
             sceneGroupData.SceneGroupId,
             null,
@@ -60,9 +73,11 @@ public class WorldSceneLoader : MonoBehaviour
         );
 
         StartCoroutine(ExecuteUnload(context));
+        */
     }
 
     // Coroutines
+    /*
     private IEnumerator ExecuteLoad(SceneLoaderContext context)
     {
         yield return sceneLoader.Strategy.Load(context);
@@ -72,4 +87,5 @@ public class WorldSceneLoader : MonoBehaviour
     {
         yield return context.UnloadScenes();
     }
+    */
 }

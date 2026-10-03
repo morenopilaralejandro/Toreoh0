@@ -1,3 +1,5 @@
+using Aremoreno.Enums.Localization;
+
 public class ZoneComponentLocalization 
 {
     private LocalizationComponentString localizationStringComponent;

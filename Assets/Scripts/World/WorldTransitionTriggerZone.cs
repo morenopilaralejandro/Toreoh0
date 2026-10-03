@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class WorldTransitionTriggerZone : WorldTransitionTrigger
 {
     [SerializeField] private ZoneData zoneData;

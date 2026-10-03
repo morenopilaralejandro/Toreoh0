@@ -1,37 +1,27 @@
+using UnityEngine;
+using System.Collections.Generic;
+
 public static class GizmosUtils 
 {
-    private static Matrix4x4 matrixOriginal;
-    private static Color colorOriginal;
+    private static Stack<(Matrix4x4 matrix, Color color)> stackState = new();
 
-    private static void CacheMatrix() 
+    private static void Push() 
     {
-        matrixOriginal = Gizmos.matrix;
-        colorOriginal = Gizmos.color;
+        stackState.Push((Gizmos.matrix, Gizmos.color));
     }
 
-    private static void CacheColor() 
+    private static void Pop() 
     {
-        matrixOriginal = Gizmos.matrix;
-        colorOriginal = Gizmos.color;
-    }
-
-    private static void RestoreMatrix() 
-    {
-        Gizmos.matrix = matrixOriginal;
-        Gizmos.color = colorOriginal;
-    }
-
-    private static void RestoreColor() 
-    {
-        Gizmos.matrix = matrixOriginal;
-        Gizmos.color = colorOriginal;
+        if (stackState.Count <= 0) return;
+        var state = stackState.Pop();
+        Gizmos.matrix = state.matrix;
+        Gizmos.color = state.color;
     }
 
     public static void DrawCollider2D<T>(T collider, Color color, bool isSolid = true) where T : Collider2D
     {
         if (collider == null) return;
-        CacheMatrix();
-        CacheColor();
+        Push();
         Gizmos.matrix = collider.transform.localToWorldMatrix;
         switch(collider)
         {
@@ -43,45 +33,44 @@ public static class GizmosUtils
                     Gizmos.DrawWireCube(box.offset, box.size);
                 break;
         }
-        RestoreMatrix();
-        RestoreColor();
+        Pop();
     }
 
     public static void DrawCube(Color color, Vector3 center, Vector3 size, bool isSolid = true) 
     {
-        CacheColor();
+        Push();
         Gizmos.color = color;
         if (isSolid)
             Gizmos.DrawCube(center, size);
         else
             Gizmos.DrawWireCube(center, size);
-        RestoreColor();
+        Pop();
     }
 
-    public static void DrawSphere(Color color, Vector3 center, Vector3 size, bool isSolid = true) 
+    public static void DrawSphere(Color color, Vector3 center, float radius, bool isSolid = true) 
     {
-        CacheColor();
+        Push();
         Gizmos.color = color;
         if (isSolid)
-            Gizmos.DrawSphere(center, size);
+            Gizmos.DrawSphere(center, radius);
         else
-            Gizmos.DrawWireSphere(center, vsize);
-        RestoreColor();
+            Gizmos.DrawWireSphere(center, radius);
+        Pop();
     }
 
     public static void DrawLine(Color color, Vector3 from, Vector3 to)
     {
-        CacheColor();
+        Push();
         Gizmos.color = color;
         Gizmos.DrawLine(from, to);
-        RestoreColor();
+        Pop();
     }
 
     public static void DrawRay(Color color, Vector3 from, Vector3 direction)
     {
-        CacheColor();
+        Push();
         Gizmos.color = color;
         Gizmos.DrawRay(from, direction);
-        RestoreColor();
+        Pop();
     }
 }

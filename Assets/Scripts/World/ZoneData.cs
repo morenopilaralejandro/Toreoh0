@@ -1,3 +1,7 @@
+using UnityEngine;
+using System.Collections.Generic;
+using Aremoreno.Enums.World;
+
 [CreateAssetMenu(fileName = "ZoneData", menuName = "ScriptableObject/World/ZoneData")]
 public class ZoneData : ScriptableObject
 {

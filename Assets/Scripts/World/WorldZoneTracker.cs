@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class WorldZoneTracker
 {
     public ZoneData ZoneCurrent { get; private set; }
@@ -11,7 +13,7 @@ public class WorldZoneTracker
 
     }
 
-    private SetZone(ZoneData zoneNew) 
+    public void SetZone(ZoneData zoneNew) 
     {
         if (zoneNew == ZoneCurrent || zoneNew == null) return;
         ZonePrevious = ZoneCurrent;
@@ -20,7 +22,7 @@ public class WorldZoneTracker
         UpdateBgm();
 
         // TODO FastTravelTracker.TryAddZone(zoneData);
-        WorldEvents.RaiseZoneChanged(ZonePrevious, ZoneCurrent, LocalizationComponent.ZoneName)
+        WorldEvents.RaiseZoneChanged(ZonePrevious, ZoneCurrent, LocalizationComponent.ZoneName);
     }
 
 

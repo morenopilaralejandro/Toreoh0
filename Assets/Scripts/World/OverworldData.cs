@@ -1,3 +1,6 @@
+using UnityEngine;
+using System.Collections.Generic;
+
 [CreateAssetMenu(fileName = "OverworldData", menuName = "ScriptableObject/World/OverworldData")]
 public class OverworldData : ScriptableObject
 {

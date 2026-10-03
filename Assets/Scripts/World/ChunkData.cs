@@ -1,3 +1,5 @@
+using UnityEngine;
+
 [CreateAssetMenu(fileName = "ChunkData", menuName = "ScriptableObject/World/ChunkData")]
 public class ChunkData : ScriptableObject
 {
@@ -5,5 +7,5 @@ public class ChunkData : ScriptableObject
     public ZoneData ZoneData;
     public Vector2Int ChunkCoord;
     public string SceneAddressChunk;
-    public List<string> SpawnIds = new List<string>();
+    //public List<string> SpawnPointIds = new List<string>();
 }

@@ -1,16 +1,16 @@
 using UnityEngine;
+using Aremoreno.Enums.World;
 
 [RequireComponent(typeof(Collider2D))]
 public abstract class WorldTransitionTrigger : MonoBehaviour, IInteractable
 {
-    [SerializeField] private AudioClip sfx;
-    [SerializeField] private bool isInteractionRequired = false;
-    private string tagCharacterMain = "CharacterMain";
+    [SerializeField] protected AudioClip sfx;
+    [SerializeField] protected bool isInteractionRequired = false;
 
-    private AudioManager audioManager;
-    private WorldManager worldManager;
+    protected AudioManager audioManager;
+    protected WorldManager worldManager;
 
-    private WorldTransitionTriggerComponentStateMachine stateComponent;
+    protected WorldTransitionTriggerComponentStateMachine stateComponent;
 
     protected void Awake() 
     {
@@ -21,7 +21,7 @@ public abstract class WorldTransitionTrigger : MonoBehaviour, IInteractable
 
     protected void OnTriggerEnter2D(Collider2D other) 
     {
-        if (!other.CompareTag(tagCharacterMain)) return;
+        if (!other.CompareTag(WorldConstants.TAG_CHARACTER_MAIN)) return;
         if (isInteractionRequired)
         {
             stateComponent.SetState(WorldTransitionTriggerState.CharacterInTrigger);
@@ -34,7 +34,7 @@ public abstract class WorldTransitionTrigger : MonoBehaviour, IInteractable
 
     protected void OnTriggerExit2D(Collider2D other) 
     {
-        if (!other.CompareTag(tagCharacterMain)) return;
+        if (!other.CompareTag(WorldConstants.TAG_CHARACTER_MAIN)) return;
         stateComponent.SetState(WorldTransitionTriggerState.Idle);
         // TODO event hide interaction indicator
     }
@@ -54,6 +54,6 @@ public abstract class WorldTransitionTrigger : MonoBehaviour, IInteractable
 
     protected void OnDrawGizmos() 
     {
-        GizmosUtils.DrawCollider2D(GetComponent<Collider2D>(), Color.green, true)
+        GizmosUtils.DrawCollider2D(GetComponent<Collider2D>(), Color.green, true);
     }
 }

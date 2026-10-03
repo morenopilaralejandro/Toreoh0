@@ -1,3 +1,4 @@
+using UnityEngine;
 using Aremoreno.Enums.Animation;
 
 public class SpawnPoint : MonoBehaviour
@@ -9,7 +10,7 @@ public class SpawnPoint : MonoBehaviour
 
     private void OnDrawGizmos() 
     {
-        GizmosUtils.DrawSphere(Color.green, transform.position, 0.3f)
-        GizmosUtils.DrawRay(Color.blue, transform.position, (Vector3)CharacterDirectionUtils.EnumToVector2(FacingDirection) * 0.5f)
+        GizmosUtils.DrawSphere(Color.green, transform.position, 0.3f);
+        GizmosUtils.DrawRay(Color.blue, transform.position, (Vector3)CharacterDirectionUtils.EnumToVector2(FacingDirection) * 0.5f);
     }
 }

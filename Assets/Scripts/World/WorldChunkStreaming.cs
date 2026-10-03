@@ -1,3 +1,6 @@
+using UnityEngine;
+using System.Collections.Generic;
+
 public class WorldChunkStreaming
 {
     private CharacterEntityWorld character;
@@ -7,11 +10,14 @@ public class WorldChunkStreaming
     private OverworldData overworldData;
     private bool isActive;
     private bool isUpdating;
+    private float updateTimer;
     private float updateInterval;
     private float inverseChunkSize;
     private int radius;
     private Vector2Int lastCharacterChunkCoord;
 
+    private readonly Dictionary<string, ChunkData> dictChunkData = new ();
+    private readonly Dictionary<Vector2Int, ChunkData> dictChunkCoord = new ();
     private readonly HashSet<string> hashSetSceneLoaded = new ();
     private readonly HashSet<string> hashSetSceneDesired = new ();
     private readonly List<string> listScenePendingLoad = new ();
@@ -27,9 +33,9 @@ public class WorldChunkStreaming
     public void Update()
     {
         if (!isActive || overworldData == null) return;
-        updateTimer += Time.deltaTime
+        updateTimer += Time.deltaTime;
         if (updateTimer >= updateInterval)
-            _ = UpdateChunksAroundCharacter();
+            UpdateChunksAroundCharacter();
     }
 
     public void StartStreaming(OverworldData overworldData)
@@ -50,16 +56,16 @@ public class WorldChunkStreaming
             dictChunkCoord[chunk.ChunkCoord] = chunk;
         }
 
-        _ = UpdateChunksAroundCharacter();
+        UpdateChunksAroundCharacter();
     }
 
-    public async Task StopStreaming() 
+    public void StopStreaming() 
     {
         isActive = false;
         overworldData = null;
     }
 
-    public async Task UpdateChunksAroundCharacter() 
+    public void UpdateChunksAroundCharacter() 
     {
         updateTimer = 0;
         if (character == null) return;
@@ -75,12 +81,12 @@ public class WorldChunkStreaming
         zoneTracker.SetZone(dictChunkCoord[lastCharacterChunkCoord].ZoneData);
 
         // determine disired
-        desired.Clear();
+        hashSetSceneDesired.Clear();
         for (int xDelta = -radius; xDelta <= radius; xDelta++) 
         {
             for (int yDelta = -radius; yDelta <= radius; yDelta++) 
             {
-                Vector2Int calculatedChunkCoord = new Vector2Int(xCurrent + xDelta, y);
+                Vector2Int calculatedChunkCoord = new Vector2Int(xCurrent + xDelta, yCurrent + yDelta);
                 ChunkData chunk;
                 if (dictChunkCoord.TryGetValue(calculatedChunkCoord, out chunk))
                     hashSetSceneDesired.Add(chunk.SceneAddressChunk);
@@ -91,8 +97,8 @@ public class WorldChunkStreaming
         listSetScenePendingUnload.Clear();
         foreach (string loaded in hashSetSceneLoaded)
         {
-            if (!hashSetSceneDesired(loaded))    
-                listSetScenePendingUnload.Add(loaded)
+            if (!hashSetSceneDesired.Contains(loaded))
+                listSetScenePendingUnload.Add(loaded);
         }
 
         // determine load

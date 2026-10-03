@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 public class SpawnPointRegistry 
 {
     private List<SpawnPoint> listRegistered = new();

@@ -10,7 +10,7 @@ public class WorldConfig : ScriptableObject
 
     [Header("Character - Interaction")]
     public LayerMask InteractableLayer;
-    public int InteractableDetectionInterval = 5f;
+    public float InteractableDetectionInterval = 5f;
     public float IntractionCastRadius = 0.3f;
     public float IntractionRange = 0.75f;
 

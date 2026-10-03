@@ -1,3 +1,4 @@
+using UnityEngine;
 using Aremoreno.Enums.Animation;
 
 public static class CharacterDirectionUtils 
@@ -14,6 +15,8 @@ public static class CharacterDirectionUtils
                 return Vector2.left;
             case CharacterDirection.Right:
                 return Vector2.right;
+            default:
+                return Vector2.down;
         }
     }
 }

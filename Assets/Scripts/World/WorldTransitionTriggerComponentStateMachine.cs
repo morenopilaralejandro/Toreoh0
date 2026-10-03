@@ -1,3 +1,5 @@
+using Aremoreno.Enums.World;
+
 public class WorldTransitionTriggerComponentStateMachine
 {
     public WorldTransitionTriggerState State { get; private set; }
