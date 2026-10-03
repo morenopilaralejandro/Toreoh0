@@ -26,7 +26,7 @@ public class SceneLoaderOperationsDefault : ISceneLoaderOperations
         registry.Unregister(sceneName);
     }
 
-    private IEnumerator AwaitSceneObjectLoaders(string sceneName) 
+    public IEnumerator AwaitSceneObjectLoaders(string sceneName) 
     {
         Scene scene = SceneManager.GetSceneByName(sceneName);
         var loaders = scene.GetRootGameObjects()

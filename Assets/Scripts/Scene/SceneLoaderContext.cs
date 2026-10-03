@@ -24,7 +24,7 @@ public class SceneLoaderContext
         this.loadingScreenSceneName = loadingScreenSceneName;
     }
 
-    public IEnumerator LoadScenes() 
+    public IEnumerator LoadScenes()
     {
         foreach (var scene in ScenesToLoad) 
             yield return operations.Load(scene.SceneName);
