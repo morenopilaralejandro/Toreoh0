@@ -55,7 +55,7 @@ public class WorldZoneLoader
     }
 
     // SpawnPoint
-    public void LoadZoneAtSpawnPoint(ZoneData zoneData, string spawnPointId) 
+    public void LoadZoneAtSpawnPoint(ZoneData zoneData, string spawnPointId)
     {
         SpawnPoint spawnPoint = spawnPointRegistry.GetSpawnPoint(spawnPointId);
         LoadZoneAtPosition(zoneData, spawnPoint.SpawnPosition, spawnPoint.FacingDirection);       

@@ -1,6 +1,5 @@
 namespace Aremoreno.Enums.Scene
 {
-    /*
     public enum SceneState
     {
         Unloaded,
@@ -8,5 +7,4 @@ namespace Aremoreno.Enums.Scene
         Loaded,
         Unloading
     }
-    */
 }

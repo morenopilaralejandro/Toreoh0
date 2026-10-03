@@ -1,91 +1,88 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
-public class WorldSceneLoader : MonoBehaviour
+public class WorldSceneLoader
 {
     private SceneLoader sceneLoader;
 
     private void Initialize() 
     {
-        /*
-        ISceneLoaderRegistry registry = new SceneLoaderRegistryGroup();
+        ISceneLoaderRegistry registry = new SceneLoaderRegistry();
         sceneLoader = new SceneLoader(
             registry,
             new SceneLoaderOperationsAddressable(registry),
             InputManager.Instance,
             DatabaseManager.Instance
         );
-        */
     }
 
-    // TODO use new string[] { address } when calling and only use the one with enumerable
-    // Load by data
-    public void LoadScene(string scene, bool isFade = false)
+    public async Task LoadScenes(IEnumerable<string> scenes, bool isFadeOut = false) 
     {
         /*
-        sceneLoader.Strategy = isFade
-            ? new SceneLoaderStrategyFade()
+        sceneLoader.Strategy = isFadeOut
+            ? new SceneLoaderStrategyFadeOut()
             : new SceneLoaderStrategyDirect();
+        */
+
+        sceneLoader.Strategy = new SceneLoaderStrategyDirect();
 
         SceneLoaderContext context = new SceneLoaderContext(
-            id : sceneGroupData.SceneGroupId,
-            scenesToLoad : new string[] { address },
+            id : scenes.GetHashCode().ToString(),
+            scenesToLoad : scenes,
             scenesToUnload : null,
             operations : sceneLoader.Operations
         );
 
-        StartCoroutine(ExecuteLoad(context));
-        */
+        await ExecuteLoad(context);
     }
 
-    public void LoadScenes(IEnumerable scenes, bool isFade = false) 
-    {
-
-    }
-
-    public void UnloadScene(string scene)
+    public async Task UnloadScenes(IEnumerable<string> scenes, bool isFadeIn = false)
     {
         /*
+        sceneLoader.Strategy = isFadeIn
+            ? new SceneLoaderStrategyFadeIn()
+            : new SceneLoaderStrategyDirect();
+        */
+
+        sceneLoader.Strategy = new SceneLoaderStrategyDirect();
+
         SceneLoaderContext context = new SceneLoaderContext(
-            sceneGroupData.SceneGroupId,
+            scenes.GetHashCode().ToString(),
             null,
-            new string[] { address },
+            scenes,
             sceneLoader.Operations
         );
 
-        StartCoroutine(ExecuteUnload(context));
-        */
+        await ExecuteUnload(context);
     }
 
-    public void UnloadScenes(IEnumerable scenes, bool isFade = false)
+    public async Task UnloadAll() 
     {
-
-    }
-
-    public void UnloadAll() 
-    {
-        /*
         SceneLoaderContext context = new SceneLoaderContext(
-            sceneGroupData.SceneGroupId,
+            "UnloadAll",
             null,
-            registry.GetLoadedScenes(),
+            null,
             sceneLoader.Operations
         );
 
-        StartCoroutine(ExecuteUnload(context));
-        */
+        await ExecuteUnloadAll();
     }
 
-    // Coroutines
-    /*
-    private IEnumerator ExecuteLoad(SceneLoaderContext context)
+    // Execute
+    private async Task ExecuteLoad(SceneLoaderContext context)
     {
         yield return sceneLoader.Strategy.Load(context);
     }
 
-    private IEnumerator ExecuteUnload(SceneLoaderContext context)
+    private async Task ExecuteUnload(SceneLoaderContext context)
     {
         yield return context.UnloadScenes();
     }
-    */
+
+    private async Task ExecuteUnloadAll(SceneLoaderContext context)
+    {
+        yield return context.UnloadAll();
+    }
 }

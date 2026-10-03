@@ -2,41 +2,26 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Linq;
+using Aremoreno.Enums.Scene;
 
-public class SceneLoaderOperationsDefault : ISceneLoaderOperations
+public class SceneLoaderOperationsDefault : SceneLoaderOperations
 {
-    private ISceneLoaderRegistry registry;
+    public SceneLoaderOperationsDefault(ISceneLoaderRegistry registry) : base(registry) { }
 
-    public SceneLoaderOperationsDefault(ISceneLoaderRegistry registry)
+    public override IEnumerator Load(string scene) 
     {
-        this.registry = registry;
-    }
-
-    public IEnumerator Load(string sceneName) 
-    {
-        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+        base.Load(scene);
+        AsyncOperation operation = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
         while (!operation.isDone) yield return null;
-        registry.Register(sceneName);
+        registry.SetState(scene, SceneState.Loaded);
     }
 
-    public IEnumerator Unload(string sceneName) 
+    public override IEnumerator Unload(string scene) 
     {
-        AsyncOperation operation = SceneManager.UnloadSceneAsync(sceneName);
-        while (!operation.isDone)  yield return null;
-        registry.Unregister(sceneName);
-    }
-
-    public IEnumerator AwaitSceneObjectLoaders(string sceneName) 
-    {
-        Scene scene = SceneManager.GetSceneByName(sceneName);
-        var loaders = scene.GetRootGameObjects()
-            .SelectMany(go => go.GetComponentsInChildren<IAsyncSceneLoader>())
-            .ToList();
-
-        if (loaders.Count > 0) 
-        {
-            var task = loaders.Select(l => l.LoadAsync()).ToList();
-            while (task.Any(t => !t.IsCompleted)) yield return null;
-        }
+        base.Unload(scene);
+        AsyncOperation operation = SceneManager.UnloadSceneAsync(scene);
+        while (!operation.isDone) yield return null;
+        yield return base.AwaitSceneObjectLoaders(scene);
+        registry.SetState(scene, SceneState.Unloaded);
     }
 }

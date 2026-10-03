@@ -8,16 +8,16 @@ public class SceneGroupData : ScriptableObject
     public bool HasLoadingScreen = true;
     public List<SceneData> Scenes = new ();
 
-    private List<SceneData> validScenes;
+    private List<string> validScenes;
 
-    public IReadOnlyList<SceneData> GetValidScenes() 
+    public IReadOnlyList<string> GetValidScenes() 
     {
         if (validScenes != null) return validScenes;
-        validScenes = new List<SceneData>(Scenes.Count);
+        validScenes = new List<string>(Scenes.Count);
         foreach(SceneData scene in Scenes) 
         {
             if(!scene.IsDebugOnly || DebugUtils.IsDevBuild)
-                validScenes.Add(scene);
+                validScenes.Add(scene.SceneName);
         }
         return validScenes;
     }

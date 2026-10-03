@@ -28,7 +28,7 @@ public class SceneLoaderManager : MonoBehaviour
 
     private void Initialize() 
     {
-        ISceneLoaderRegistry registry = new SceneLoaderRegistryGroup();
+        ISceneLoaderRegistry registry = new SceneLoaderRegistry();
         sceneLoader = new SceneLoader(
             registry,
             new SceneLoaderOperationsDefault(registry),
