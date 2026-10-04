@@ -9,5 +9,10 @@ public interface ISceneLoaderRegistry
     bool IsUnloaded(string sceneName);
     bool IsUnloading(string sceneName);
     List<string> GetScenesToUnload();
+
+    void AddSceneData<T>(string sceneName, T data);
+    T GetSceneData<T>(string sceneName);
+    void RemoveSceneData(string sceneName);
+
     void Clear();
 }

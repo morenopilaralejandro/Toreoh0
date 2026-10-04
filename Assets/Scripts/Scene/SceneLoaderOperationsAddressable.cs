@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.ResourceManagement.ResourceProviders;
 using System.Collections;
 using System.Linq;
 using System.Threading.Tasks;
@@ -26,11 +28,15 @@ public class SceneLoaderOperationsAddressable : SceneLoaderOperations
 
     private async Task LoadAsync(string scene) 
     {
-        await Addressables.LoadSceneAsync(scene, LoadSceneMode.Additive, true).Task;
+        AsyncOperationHandle<SceneInstance> handle = Addressables.LoadSceneAsync(scene, LoadSceneMode.Additive, true);
+        registry.AddSceneData<AsyncOperationHandle<SceneInstance>>(scene, handle);
+        await handle.Task;
     }
 
     private async Task UnloadAsync(string scene) 
     {
-        await Addressables.UnloadSceneAsync(scene).Task;
+        AsyncOperationHandle<SceneInstance> handle = registry.GetSceneData<AsyncOperationHandle<SceneInstance>>(scene);
+        await Addressables.UnloadSceneAsync(handle).Task;
+        registry.RemoveSceneData(scene);
     }
 }

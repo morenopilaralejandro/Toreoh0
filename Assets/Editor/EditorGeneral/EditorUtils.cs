@@ -34,6 +34,7 @@ public static class EditorUtils
     public static void SaveAssets() => AssetDatabase.SaveAssets();
     public static void RefreshAssets() => AssetDatabase.Refresh();
     public static bool IsValidFolder(string path) => AssetDatabase.IsValidFolder(path);
+    public static void SetDirty(Object target) => EditorUtility.SetDirty(target);
 
     //asset
     public static bool IsExistingAssetPath(string path) => GetMainAssetTypeAtPath(path) != null;

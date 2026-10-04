@@ -5,11 +5,13 @@ using System.Threading.Tasks;
 
 public class WorldSceneLoader
 {
+    private SceneLoaderManager sceneLoaderManager;
     private SceneLoader sceneLoader;
 
-    private void Initialize() 
+    private void Initialize(SceneLoaderManager sceneLoaderManager) 
     {
-        ISceneLoaderRegistry registry = new SceneLoaderRegistry();
+        this.sceneLoaderManager = sceneLoaderManager;
+        ISceneLoaderRegistry registry = new SceneLoaderRegistryAddressable();
         sceneLoader = new SceneLoader(
             registry,
             new SceneLoaderOperationsAddressable(registry),
@@ -35,7 +37,7 @@ public class WorldSceneLoader
             operations : sceneLoader.Operations
         );
 
-        await ExecuteLoad(context);
+        await sceneLoaderManager.StartCoroutineAsync(ExecuteLoad(context));
     }
 
     public async Task UnloadScenes(IEnumerable<string> scenes, bool isFadeIn = false)
@@ -55,7 +57,7 @@ public class WorldSceneLoader
             sceneLoader.Operations
         );
 
-        await ExecuteUnload(context);
+        await sceneLoaderManager.StartCoroutineAsync(ExecuteUnload(context));
     }
 
     public async Task UnloadAll() 
@@ -67,21 +69,21 @@ public class WorldSceneLoader
             sceneLoader.Operations
         );
 
-        await ExecuteUnloadAll();
+        await sceneLoaderManager.StartCoroutineAsync(ExecuteUnloadAll(context));
     }
 
     // Execute
-    private async Task ExecuteLoad(SceneLoaderContext context)
+    private IEnumerator ExecuteLoad(SceneLoaderContext context)
     {
         yield return sceneLoader.Strategy.Load(context);
     }
 
-    private async Task ExecuteUnload(SceneLoaderContext context)
+    private IEnumerator ExecuteUnload(SceneLoaderContext context)
     {
         yield return context.UnloadScenes();
     }
 
-    private async Task ExecuteUnloadAll(SceneLoaderContext context)
+    private IEnumerator ExecuteUnloadAll(SceneLoaderContext context)
     {
         yield return context.UnloadAll();
     }

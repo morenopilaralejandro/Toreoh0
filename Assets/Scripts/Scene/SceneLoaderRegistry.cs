@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using Aremoreno.Enums.Scene;
 
-public class SceneLoaderRegistry : ISceneLoaderRegistry
+public abstract class SceneLoaderRegistry : ISceneLoaderRegistry
 {
-    private Dictionary<string, SceneState> dictState;
+    protected Dictionary<string, SceneState> dictState;
 
     public void SetState(string scene, SceneState state)
     {
@@ -13,7 +13,7 @@ public class SceneLoaderRegistry : ISceneLoaderRegistry
             dictState[scene] = state;
     }
 
-    private bool IsState(string scene, SceneState state, bool defaultValue) 
+    protected bool IsState(string scene, SceneState state, bool defaultValue) 
     {
         if (dictState.TryGetValue(scene, out var currentState))
             return currentState == state;
@@ -37,7 +37,11 @@ public class SceneLoaderRegistry : ISceneLoaderRegistry
         return loadedScenes;
     }
 
-    public void Clear() 
+    public abstract void AddSceneData<T>(string scene, T data);
+    public abstract T GetSceneData<T>(string scene);
+    public abstract void RemoveSceneData(string scene);
+
+    public virtual void Clear()
     {
         dictState.Clear();
     }
