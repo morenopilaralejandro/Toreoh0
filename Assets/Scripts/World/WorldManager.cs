@@ -6,7 +6,9 @@ public class WorldManager : MonoBehaviour
 
     [SerializeField] private WorldConfig config;
 
+    public CharacterEntityWorld CharacterMain;
     public WorldZoneLoader ZoneLoader { get; private set; }
+    public SpawnPointRegistry SpawnPointRegistry { get; private set; }
 
     private void Awake() 
     {

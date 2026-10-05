@@ -14,4 +14,9 @@ public static class ColorUtils
         else
             return $"#{r:X2}{g:X2}{b:X2}";
     }
+
+    public static Color ChangeAlpha(Color color, float alpha) 
+    {
+        return new Color(color.r, color.g, color.b, alpha);
+    }
 }

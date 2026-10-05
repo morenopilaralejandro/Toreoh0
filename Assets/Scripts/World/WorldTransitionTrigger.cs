@@ -54,6 +54,9 @@ public abstract class WorldTransitionTrigger : MonoBehaviour, IInteractable
 
     protected void OnDrawGizmos() 
     {
-        GizmosUtils.DrawCollider2D(GetComponent<Collider2D>(), Color.green, true);
+        GizmosUtils.DrawCollider2D(
+            GetComponent<Collider2D>(), 
+            WorldConstants.GizmosColorTransitionTrigger, 
+            true);
     }
 }

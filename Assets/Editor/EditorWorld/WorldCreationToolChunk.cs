@@ -2,13 +2,11 @@ using UnityEngine;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 
-public class WorldCreationToolChunk : EditorWindow
+public class WorldCreationToolChunk : WorldCreationTool<SceneRootChunk>
 {
-    private WorldConfig config;
     private OverworldData overworldData;
     private ZoneData zoneData;
     private Vector2Int chunkCoord;
-    private GameObject gridPrefab;
     
     [MenuItem("Tools/World/WorldCreationToolChunk")]
     public static void ShowWindow()
@@ -25,20 +23,22 @@ public class WorldCreationToolChunk : EditorWindow
             typeof(WorldConfig),
             false        
         );
-        zoneData = (ZoneData)EditorGUILayout.ObjectField(
-            "zoneData",
-            zoneData,
-            typeof(ZoneData),
-            false        
-        );
-        overworldData = zoneData.OverworldData;
-        chunkCoord = EditorGUILayout.Vector2IntField("chunkCoord", chunkCoord);
         gridPrefab = (GameObject)EditorGUILayout.ObjectField(
             "gridPrefab",
             gridPrefab,
             typeof(GameObject),
             false        
         );
+        zoneData = (ZoneData)EditorGUILayout.ObjectField(
+            "zoneData",
+            zoneData,
+            typeof(ZoneData),
+            false        
+        );
+        chunkCoord = EditorGUILayout.Vector2IntField("chunkCoord", chunkCoord);
+
+        if (zoneData != null)
+            overworldData = zoneData.OverworldData;
 
         EditorGUILayout.Space();
 
@@ -72,7 +72,7 @@ public class WorldCreationToolChunk : EditorWindow
         EditorGUILayout.LabelField($"{label} ({coord.x}, {coord.y}) -> status");
     }
 
-    private void CreateScene() 
+    protected override void CreateScene() 
     {
         var scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Additive);
 
@@ -87,31 +87,14 @@ public class WorldCreationToolChunk : EditorWindow
             ChunkCoord = chunkCoord,
             SceneAddressChunk = sceneAddress
         };
+        overworldData.Chunks.Add(chunkData);
         
-        // root
-        GameObject root = new GameObject("Root");
-        var sceneRoot = root.AddComponent<SceneRootChunk>();
+        var sceneRoot = base.CreateSceneRoot();
         sceneRoot.ChunkData = chunkData;
 
-        // grid
-        GameObject grid = (GameObject)PrefabUtility.InstantiatePrefab(gridPrefab, scene);
-        grid.transform.SetParent(root.transform);
-
-        foreach (string obj in config.SceneEmptyObjects)
-            CreateEmptyObject(obj, root.transform);
-
-        EditorSceneManager.SaveScene(scene, scenePath);
-        EditorSceneManager.CloseScene(scene, true);
-
-        overworldData.Chunks.Add(chunkData);
-        EditorUtils.SetDirty(overworldData);
-        EditorUtils.SaveAssets();
-        EditorUtils.RefreshAssets();
-    }
-
-    private void CreateEmptyObject(string name, Transform parentTransform) 
-    {
-        GameObject go = new GameObject(name);
-        go.transform.SetParent(parentTransform);
+        base.CreateGrid(scene);
+        base.CreateEmptyObjectAll();
+        base.SetSnappableTransforms(sceneRoot);
+        base.FinalizeScene(scene, scenePath, overworldData);
     }
 }

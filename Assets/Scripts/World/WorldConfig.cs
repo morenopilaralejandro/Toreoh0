@@ -25,8 +25,10 @@ public class WorldConfig : ScriptableObject
 
     [Header("Editor Creation Tool")]
     public string SceneZoneFolder;
-    public string PrefixChunk; //scene_chunk_overworldId_coord
-    public string PrefixInterior; //scene_interior_zoneId
+    public string PrefixChunk; // scene_chunk_overworldId_coord
+    public string PrefixInterior; // scene_interior_zoneId
+    [AddressableGroupDropdown] // SceneZone
+    public string AddressableGroup;
     public List<string> SceneEmptyObjects;
     /*
         SpawnPoints
