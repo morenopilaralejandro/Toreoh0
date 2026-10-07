@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 public class WorldChunkStreaming
 {
@@ -69,9 +70,11 @@ public class WorldChunkStreaming
     {
         isActive = false;
         overworldData = null;
+        hashSetSceneLoaded.Clear();
+        hashSetSceneDesired.Clear();
     }
 
-    public void UpdateChunksAroundCharacter() 
+    public async void UpdateChunksAroundCharacter() 
     {
         updateTimer = 0;
         if (character == null) return;
@@ -116,15 +119,20 @@ public class WorldChunkStreaming
                 listScenePendingLoad.Add(desired); 
         }
 
+        await PerformSceneOperations();
+    }
+
+    private async Task PerformSceneOperations() 
+    {
         // perform unload
         foreach (string scene in listSetScenePendingUnload) 
             hashSetSceneLoaded.Remove(scene);
-        sceneLoader.UnloadScenes(listSetScenePendingUnload);
+        await sceneLoader.UnloadScenes(listSetScenePendingUnload);
 
         // perform load
         foreach (string scene in listScenePendingLoad) 
             hashSetSceneLoaded.Add(scene);
-        sceneLoader.LoadScenes(listScenePendingLoad);
+        await sceneLoader.LoadScenes(listScenePendingLoad);
 
         isUpdating = false;
     }

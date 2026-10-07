@@ -13,8 +13,33 @@ MonoBehaviour:
   m_Name: LocalizationTableMappingConfig
   m_EditorClassIdentifier: Assembly-CSharp::LocalizationTableMappingConfig
   Mappings:
-  - Entity: 0
+  - Entity: 2
+    Field: 2
+    Style: 0
+    TableReference:
+      m_TableCollectionName: Gameplay-Item-Description-Localized
+  - Entity: 2
+    Field: 2
+    Style: 1
+    TableReference:
+      m_TableCollectionName: Gameplay-Item-Description-Romanized
+  - Entity: 2
     Field: 0
     Style: 0
     TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: Gameplay-Item-Name-Localized
+  - Entity: 2
+    Field: 0
+    Style: 1
+    TableReference:
+      m_TableCollectionName: Gameplay-Item-Name-Romanized
+  - Entity: 11
+    Field: 0
+    Style: 0
+    TableReference:
+      m_TableCollectionName: Gameplay-Zone-Name-Localized
+  - Entity: 11
+    Field: 0
+    Style: 1
+    TableReference:
+      m_TableCollectionName: Gameplay-Zone-Name-Romanized

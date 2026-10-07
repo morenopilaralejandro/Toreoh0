@@ -19,3 +19,8 @@ MonoBehaviour:
   SceneAddressInterior: 
   FieldData: {fileID: 0}
   Encounters: []
+  SpawnPoints:
+  - SpawnPointId: test_interior_b
+    FacingDirection: 0
+    SpawnPosition: {x: 8.5, y: 7.5, z: 0}
+    ZoneId: 

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Threading.Tasks;
 using Aremoreno.Enums.Animation;
 using Aremoreno.Enums.World;
 
@@ -40,14 +41,13 @@ public class WorldZoneLoader
     private void LoadZoneAtPositionOverworld(ZoneData zoneData, Vector3 pos, CharacterDirection facingDirection) 
     {
         SetCharacter(pos, facingDirection);
-        chunkStreaming.UpdateChunksAroundCharacter();
         chunkStreaming.StartStreaming(zoneData.OverworldData);
         // state in overworld
     }
 
-    private void LoadZoneAtPositionInterior(ZoneData zoneData, Vector3 pos, CharacterDirection facingDirection)
+    private async void LoadZoneAtPositionInterior(ZoneData zoneData, Vector3 pos, CharacterDirection facingDirection)
     {
-        sceneLoader.LoadScenes(new string[] { zoneData.SceneAddressInterior });
+        await sceneLoader.LoadScenes(new string[] { zoneData.SceneAddressInterior });
         SetCharacter(pos, facingDirection);
         // state in interior
     }
@@ -63,10 +63,10 @@ public class WorldZoneLoader
     }
 
     // Unload
-    public void UnloadCurrentZone() 
+    public async Task UnloadCurrentZone() 
     {
         chunkStreaming.StopStreaming();
-        sceneLoader.UnloadAll();
+        await sceneLoader.UnloadAll();
     }
 
     // helper
@@ -86,10 +86,10 @@ public class WorldZoneLoader
             WorldArgs.CharacterFacingDirection);
     }
 
-    public void TransitionToZone(string spawnPointId)
+    public async void TransitionToZone(string spawnPointId)
     {
         // if state is transitioning return
-        UnloadCurrentZone();
+        await UnloadCurrentZone();
         LoadZoneAtSpawnPoint(spawnPointId);
     }
 }

@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Aremoreno.Enums.Scene;
 
 public class SceneLoaderRegistryAddressable : SceneLoaderRegistry
 {

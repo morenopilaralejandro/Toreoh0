@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEditor;
 
 public class SceneRootInterior : SceneRoot
 {
@@ -26,5 +27,6 @@ public class SceneRootInterior : SceneRoot
         ZoneData.SpawnPoints.Clear();
         foreach (var spawnPoint in base.spawnPoints)
             ZoneData.SpawnPoints.Add(spawnPoint);
+        EditorUtility.SetDirty(ZoneData);
     }
 }

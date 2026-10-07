@@ -18,7 +18,7 @@ public abstract class SceneLoaderOperations : ISceneLoaderOperations
     public virtual IEnumerator Load(string scene) 
     {
         if (isUnloadingAll) yield break;
-        if (!registry.IsLoaded(scene)) yield break;
+        if (registry.IsLoaded(scene)) yield break;
         registry.SetState(scene, SceneState.Loading);
     }
 
@@ -34,7 +34,6 @@ public abstract class SceneLoaderOperations : ISceneLoaderOperations
         isUnloadingAll = true;
         foreach (var scene in registry.GetScenesToUnload())
             yield return Unload(scene);
-        registry.Clear();
         isUnloadingAll = false;
     }
 

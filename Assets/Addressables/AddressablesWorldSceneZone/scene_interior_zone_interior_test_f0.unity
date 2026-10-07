@@ -345,7 +345,7 @@ MonoBehaviour:
   - SpawnPointId: test_interior_a
     FacingDirection: 1
     SpawnPosition: {x: 24.5, y: 17.5, z: 0}
-    ZoneId: zone_interior_test_f0
+    ZoneId: 
   ListSnappableTransforms:
   - {fileID: 1210504297}
   - {fileID: 1681200562}

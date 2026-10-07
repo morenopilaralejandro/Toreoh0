@@ -36,5 +36,6 @@ public class WorldPopulatorSpawnPoint : EditorWindow
             zoneList.Add(EditorUtils.LoadAssetAtPath<ZoneData>(EditorUtils.GetAssetPath(guid)));
         foreach (ZoneData zoneData in zoneList)
             registry.Register(zoneData);
+        EditorUtils.SetDirty(registry);
     }
 }

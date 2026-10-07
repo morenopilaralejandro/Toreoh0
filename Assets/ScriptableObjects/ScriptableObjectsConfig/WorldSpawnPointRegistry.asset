@@ -12,3 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3445137940cba565fabe09437dec554b, type: 3}
   m_Name: WorldSpawnPointRegistry
   m_EditorClassIdentifier: Assembly-CSharp::SpawnPointRegistry
+  listSpawnPoint:
+  - SpawnPointId: test_interior_a
+    FacingDirection: 1
+    SpawnPosition: {x: 24.5, y: 17.5, z: 0}
+    ZoneId: zone_interior_test_f0
+  - SpawnPointId: test_interior_b
+    FacingDirection: 0
+    SpawnPosition: {x: 8.5, y: 7.5, z: 0}
+    ZoneId: zone_overworld_test1

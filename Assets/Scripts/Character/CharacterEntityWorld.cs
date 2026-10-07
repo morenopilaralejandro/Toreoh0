@@ -7,12 +7,13 @@ public class CharacterEntityWorld : MonoBehaviour
 
     private void Update() 
     {
-        rb.linearVelocity = InputManager.Instance.MapBattle.Move * 5f;
+        rb.linearVelocity = InputManager.Instance.MapBattle.Move * 20f;
     }
 
     public void Teleport(Vector3 pos)
     {
         rb.position = pos;
+        WorldEvents.RaiseCharacterTeleported(pos);
     }
 
     public void SetFacing(CharacterDirection direction)

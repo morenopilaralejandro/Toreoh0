@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEditor;
 
 [ExecuteAlways]
 public class SceneRootChunk : SceneRoot
@@ -31,6 +32,7 @@ public class SceneRootChunk : SceneRoot
         base.CollectSpawnPoints();
         foreach (var spawnPoint in base.spawnPoints)
             ChunkData.ZoneData.SpawnPoints.Add(spawnPoint);
+        EditorUtility.SetDirty(ChunkData.ZoneData);
     }
 
     // snap

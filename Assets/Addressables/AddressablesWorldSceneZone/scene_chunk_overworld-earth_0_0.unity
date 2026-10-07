@@ -184,7 +184,7 @@ MonoBehaviour:
   - SpawnPointId: test_interior_b
     FacingDirection: 0
     SpawnPosition: {x: 8.5, y: 7.5, z: 0}
-    ZoneId: zone_overworld_test1
+    ZoneId: 
   ListSnappableTransforms:
   - {fileID: 1027616456}
   - {fileID: 172415665}
