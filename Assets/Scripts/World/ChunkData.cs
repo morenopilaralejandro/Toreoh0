@@ -7,5 +7,4 @@ public class ChunkData : ScriptableObject
     public ZoneData ZoneData;
     public Vector2Int ChunkCoord;
     public string SceneAddressChunk;
-    //public List<string> SpawnPointIds = new List<string>();
 }

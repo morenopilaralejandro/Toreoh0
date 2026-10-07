@@ -16,6 +16,7 @@ public class SceneLoaderOperationsAddressable : SceneLoaderOperations
     {
         base.Load(scene);
         yield return LoadAsync(scene);
+        yield return base.AwaitSceneObjectLoaders(scene);
         registry.SetState(scene, SceneState.Loaded);
     }
 
@@ -36,6 +37,7 @@ public class SceneLoaderOperationsAddressable : SceneLoaderOperations
     private async Task UnloadAsync(string scene) 
     {
         AsyncOperationHandle<SceneInstance> handle = registry.GetSceneData<AsyncOperationHandle<SceneInstance>>(scene);
+if(!handle.IsValid()) CustomLog.Error($"invalid {scene}");
         await Addressables.UnloadSceneAsync(handle).Task;
         registry.RemoveSceneData(scene);
     }

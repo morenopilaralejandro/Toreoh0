@@ -23,8 +23,14 @@ public class WorldChunkStreaming
     private readonly List<string> listScenePendingLoad = new ();
     private readonly List<string> listSetScenePendingUnload = new ();
 
-    public void Initialize()
+    public WorldChunkStreaming(
+        CharacterEntityWorld character,
+        WorldSceneLoader sceneLoader,
+        WorldZoneTracker zoneTracker)
     {
+        this.character = character;
+        this.sceneLoader = sceneLoader;
+        this.zoneTracker = zoneTracker;
         this.inverseChunkSize = 1f / WorldConstants.CHUCK_SIZE;
         this.radius = WorldConstants.CHUCK_STREAMING_RADIUS;
         this.updateInterval = WorldConstants.CHUCK_STREAMING_UPDATE_INTERVAL;
@@ -78,7 +84,8 @@ public class WorldChunkStreaming
         if (xCurrent == lastCharacterChunkCoord.x && yCurrent == lastCharacterChunkCoord.y) return;
         lastCharacterChunkCoord.x = xCurrent;
         lastCharacterChunkCoord.y = yCurrent;
-        zoneTracker.SetZone(dictChunkCoord[lastCharacterChunkCoord].ZoneData);
+        if (dictChunkCoord.TryGetValue(lastCharacterChunkCoord, out ChunkData lastChunk))
+            zoneTracker.SetZone(lastChunk.ZoneData);
 
         // determine disired
         hashSetSceneDesired.Clear();

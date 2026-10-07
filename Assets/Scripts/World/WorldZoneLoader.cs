@@ -28,7 +28,7 @@ public class WorldZoneLoader
     }
 
     // position
-    public void LoadZoneAtPosition(ZoneData zoneData, Vector3 pos, CharacterDirection facingDirection)
+    private void LoadZoneAtPosition(ZoneData zoneData, Vector3 pos, CharacterDirection facingDirection)
     {
         zoneTracker.SetZone(zoneData);
         if (zoneData.ZoneType == ZoneType.Overworld)
@@ -37,28 +37,29 @@ public class WorldZoneLoader
             LoadZoneAtPositionInterior(zoneData, pos, facingDirection);
     }
 
-    public void LoadZoneAtPositionOverworld(ZoneData zoneData, Vector3 pos, CharacterDirection facingDirection) 
+    private void LoadZoneAtPositionOverworld(ZoneData zoneData, Vector3 pos, CharacterDirection facingDirection) 
     {
-        character.Teleport(pos);
-        character.SetFacing(facingDirection);
+        SetCharacter(pos, facingDirection);
         chunkStreaming.UpdateChunksAroundCharacter();
         chunkStreaming.StartStreaming(zoneData.OverworldData);
         // state in overworld
     }
 
-    public void LoadZoneAtPositionInterior(ZoneData zoneData, Vector3 pos, CharacterDirection facingDirection)
+    private void LoadZoneAtPositionInterior(ZoneData zoneData, Vector3 pos, CharacterDirection facingDirection)
     {
         sceneLoader.LoadScenes(new string[] { zoneData.SceneAddressInterior });
-        character.Teleport(pos);
-        character.SetFacing(facingDirection);
+        SetCharacter(pos, facingDirection);
         // state in interior
     }
 
     // SpawnPoint
-    public void LoadZoneAtSpawnPoint(ZoneData zoneData, string spawnPointId)
+    private void LoadZoneAtSpawnPoint(string spawnPointId)
     {
-        SpawnPoint spawnPoint = spawnPointRegistry.GetSpawnPoint(spawnPointId);
-        LoadZoneAtPosition(zoneData, spawnPoint.SpawnPosition, spawnPoint.FacingDirection);       
+        SpawnPoint spawnPoint = spawnPointRegistry.Get(spawnPointId); 
+        LoadZoneAtPosition(
+            databaseManager.DatabaseRegistry.ZoneData.Get(spawnPoint.ZoneId), 
+            spawnPoint.SpawnPosition, 
+            spawnPoint.FacingDirection);
     }
 
     // Unload
@@ -68,20 +69,27 @@ public class WorldZoneLoader
         sceneLoader.UnloadAll();
     }
 
-    // other
+    // helper
+    private void SetCharacter(Vector3 pos, CharacterDirection facingDirection) 
+    {
+        character.Teleport(pos);
+        character.SetFacing(facingDirection);
+    }
+
+    // api
     public void LoadZoneFromUnloaded()
     {
         // state transitioning
         LoadZoneAtPosition(
             databaseManager.DatabaseRegistry.ZoneData.Get(WorldArgs.ZoneId),
-            WorldArgs.CharacterPosition, 
+            WorldArgs.CharacterPosition,
             WorldArgs.CharacterFacingDirection);
     }
 
-    public void TransitionToZone(ZoneData zoneData, string spawnPointId)
+    public void TransitionToZone(string spawnPointId)
     {
         // if state is transitioning return
         UnloadCurrentZone();
-        LoadZoneAtSpawnPoint(zoneData, spawnPointId);
+        LoadZoneAtSpawnPoint(spawnPointId);
     }
 }

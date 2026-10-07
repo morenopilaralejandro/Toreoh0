@@ -2,7 +2,7 @@ using UnityEngine;
 using Aremoreno.Enums.World;
 
 [RequireComponent(typeof(Collider2D))]
-public abstract class WorldTransitionTrigger : MonoBehaviour, IInteractable
+public abstract class WorldTransitionTriggerEntity : MonoBehaviour, IInteractable
 {
     [SerializeField] protected AudioClip sfx;
     [SerializeField] protected bool isInteractionRequired = false;
@@ -57,6 +57,6 @@ public abstract class WorldTransitionTrigger : MonoBehaviour, IInteractable
         GizmosUtils.DrawCollider2D(
             GetComponent<Collider2D>(), 
             WorldConstants.GizmosColorTransitionTrigger, 
-            true);
+            false);
     }
 }

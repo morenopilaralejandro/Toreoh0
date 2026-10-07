@@ -8,7 +8,7 @@ public class WorldSceneLoader
     private SceneLoaderManager sceneLoaderManager;
     private SceneLoader sceneLoader;
 
-    private void Initialize(SceneLoaderManager sceneLoaderManager) 
+    public WorldSceneLoader(SceneLoaderManager sceneLoaderManager) 
     {
         this.sceneLoaderManager = sceneLoaderManager;
         ISceneLoaderRegistry registry = new SceneLoaderRegistryAddressable();
@@ -22,6 +22,7 @@ public class WorldSceneLoader
 
     public async Task LoadScenes(IEnumerable<string> scenes, bool isFadeOut = false) 
     {
+        CustomLog.Warning("Load");
         /*
         sceneLoader.Strategy = isFadeOut
             ? new SceneLoaderStrategyFadeOut()
@@ -42,6 +43,7 @@ public class WorldSceneLoader
 
     public async Task UnloadScenes(IEnumerable<string> scenes, bool isFadeIn = false)
     {
+        CustomLog.Warning("UnloadScenes");
         /*
         sceneLoader.Strategy = isFadeIn
             ? new SceneLoaderStrategyFadeIn()
@@ -62,6 +64,7 @@ public class WorldSceneLoader
 
     public async Task UnloadAll() 
     {
+        CustomLog.Warning("UnloadAll");
         SceneLoaderContext context = new SceneLoaderContext(
             "UnloadAll",
             null,

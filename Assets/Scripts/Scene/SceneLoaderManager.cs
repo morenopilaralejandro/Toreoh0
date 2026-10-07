@@ -69,7 +69,7 @@ public class SceneLoaderManager : MonoBehaviour
 
     // Load by id
     public void LoadGroup(string sceneGroupId) => LoadGroup(sceneLoader.DatabaseManager.DatabaseRegistry.SceneGroupData.Get(sceneGroupId));
-    public void UnloadGroupGroup(string sceneGroupId) => UnloadGroup(sceneLoader.DatabaseManager.DatabaseRegistry.SceneGroupData.Get(sceneGroupId));
+    public void UnloadGroup(string sceneGroupId) => UnloadGroup(sceneLoader.DatabaseManager.DatabaseRegistry.SceneGroupData.Get(sceneGroupId));
 
     // Coroutines
     private IEnumerator ExecuteLoad(SceneLoaderContext context)

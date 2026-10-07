@@ -34,7 +34,7 @@ public class SceneLoaderContext
     public IEnumerator UnloadScenes() 
     {
         foreach (var scene in ScenesToUnload ?? new List<string>()) 
-            yield return operations.Load(scene);
+            yield return operations.Unload(scene);
     }
 
     public IEnumerator UnloadAll()

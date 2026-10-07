@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfb61aa41aee37b949b5f1d6b13f9d5d, type: 3}
+  m_Name: zone_overworld_test2
+  m_EditorClassIdentifier: Assembly-CSharp::ZoneData
+  ZoneId: zone_overworld_test2
+  ZoneType: 0
+  Bgm: {fileID: 0}
+  OverworldData: {fileID: 11400000, guid: 692ce3fb379f69eb59c355356726631c, type: 2}
+  SceneAddressInterior: 
+  FieldData: {fileID: 0}
+  Encounters: []

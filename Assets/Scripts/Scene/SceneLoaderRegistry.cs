@@ -3,7 +3,7 @@ using Aremoreno.Enums.Scene;
 
 public abstract class SceneLoaderRegistry : ISceneLoaderRegistry
 {
-    protected Dictionary<string, SceneState> dictState;
+    protected Dictionary<string, SceneState> dictState = new ();
 
     public void SetState(string scene, SceneState state)
     {

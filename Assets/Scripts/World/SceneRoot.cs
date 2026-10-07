@@ -6,7 +6,6 @@ public abstract class SceneRoot : MonoBehaviour
 {
     [SerializeField] protected List<SpawnPoint> spawnPoints = new();
     public List<Transform> ListSnappableTransforms;
-    protected SpawnPointRegistry spawnPointRegistry;
 
     protected abstract Vector3 size { get; }
     protected abstract Vector3 center { get; }
@@ -21,25 +20,15 @@ public abstract class SceneRoot : MonoBehaviour
             WorldConstants.GizmosAlphaSceneRootFill
         );
 
-
-    // lifecycle
-    protected void Start() 
-    {
-        spawnPointRegistry = WorldManager.Instance.SpawnPointRegistry;
-        spawnPointRegistry.Register(spawnPoints);
-    }
-
-    protected void OnDestroy() 
-    {
-        if (spawnPointRegistry != null)
-            spawnPointRegistry.Unregister(spawnPoints);
-    }
-
     // spawn
-    [ContextMenu("CollectSpawnPoints")]
     protected virtual void CollectSpawnPoints()
     {
-        GetComponentsInChildren<SpawnPoint>(spawnPoints);
+        List<SpawnPointEntity> listSpawnPointEntity = new ();
+        GetComponentsInChildren<SpawnPointEntity>(listSpawnPointEntity);
+        spawnPoints.Clear();
+        foreach (var entity in listSpawnPointEntity) 
+            spawnPoints.Add(entity.GetSpawnPoint());
+
         EditorUtility.SetDirty(this);
     }
 
@@ -63,7 +52,7 @@ public abstract class SceneRoot : MonoBehaviour
         transform.position = newPos;
     }
 
-    protected float SnapValue(float floatValue) => Mathf.Floor(floatValue * 10f) / 10f;
+    protected float SnapValue(float floatValue) => Mathf.Round(floatValue * 2) / 2;
 
     // gizmos
     protected void OnDrawGizmos()
@@ -85,7 +74,6 @@ public abstract class SceneRoot : MonoBehaviour
 
     protected void OnDrawGizmosSelected()
     {
-
         GizmosUtils.DrawCube(
             WorldConstants.GizmosColorSceneRootSelectedOutline,
             center,
@@ -93,12 +81,11 @@ public abstract class SceneRoot : MonoBehaviour
             isSolid: false
         );
 
+        // draw tiles
         /*
-        protected override float sizeFloat => WorldConstants.CHUCK_SIZE;
-        protected override float sizeFloat => WorldConstants.INTERIOR_SIZE;
-
+        float sizeFloat = size.x;
         Bounds bounds = new Bounds(center, size);
-        for (int i = 1, i < sizeFloat; i++) 
+        for (int i = 1; i < sizeFloat; i++) 
         {
             GizmosUtils.DrawLine(
                 WorldConstants.GizmosColorSceneRootSelectedLine,

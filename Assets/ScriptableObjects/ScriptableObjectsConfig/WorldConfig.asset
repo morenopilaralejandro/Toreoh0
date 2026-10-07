@@ -26,9 +26,10 @@ MonoBehaviour:
   RunSpeed: 4
   StepBetweenEncountersBaseMin: 10
   StepBetweenEncountersBaseMax: 30
-  SceneZoneFolder: Assets/Addressables/AddressablesSceneZone
-  PrefixChunk: chunk
-  PrefixInterior: interior
+  SceneZoneFolder: Assets/Addressables/AddressablesWorldSceneZone
+  ChunkDataFolder: Assets/Addressables/AddressablesWorldChunkData
+  PrefixChunk: scene_chunk
+  PrefixInterior: scene_interior
   AddressableGroup: 86c619b07b94d1299b5db1362565b24f
   SceneEmptyObjects:
   - SpawnPoints

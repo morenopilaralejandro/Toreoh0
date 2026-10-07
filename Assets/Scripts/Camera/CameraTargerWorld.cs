@@ -7,7 +7,6 @@ public class CameraTargerWorld : MonoBehaviour
     private CinemachineBrain brain;
     private WorldManager worldManager;
 
-
     private void Start() 
     {
         worldManager = WorldManager.Instance;

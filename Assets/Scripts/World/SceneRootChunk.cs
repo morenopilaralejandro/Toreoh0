@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[ExecuteAlways]
 public class SceneRootChunk : SceneRoot
 {
     public ChunkData ChunkData;
@@ -18,8 +19,21 @@ public class SceneRootChunk : SceneRoot
             0f
         );
 
+    private void Awake() 
+    {
+        SnapChunk();
+    }
+
+    // spawn
+    [ContextMenu("CollectSpawnPoints")]
+    protected override void CollectSpawnPoints() 
+    {
+        base.CollectSpawnPoints();
+        foreach (var spawnPoint in base.spawnPoints)
+            ChunkData.ZoneData.SpawnPoints.Add(spawnPoint);
+    }
+
     // snap
-    [ContextMenu("SnapChunk")]
     private void SnapChunk() 
     {
         Vector3 pos = new Vector3(

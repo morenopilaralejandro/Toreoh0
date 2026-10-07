@@ -18,4 +18,13 @@ public class SceneRootInterior : SceneRoot
             0f
         );
 
+    // spawn
+    [ContextMenu("CollectSpawnPoints")]
+    protected override void CollectSpawnPoints() 
+    {
+        base.CollectSpawnPoints();
+        ZoneData.SpawnPoints.Clear();
+        foreach (var spawnPoint in base.spawnPoints)
+            ZoneData.SpawnPoints.Add(spawnPoint);
+    }
 }

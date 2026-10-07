@@ -19,4 +19,7 @@ public class ZoneData : ScriptableObject
     [Header("Encounter")]
     public FieldData FieldData;
     public List<EncounterData> Encounters;
+
+    [Header("SpawnPoint")]
+    public List<SpawnPoint> SpawnPoints = new List<SpawnPoint>();
 }

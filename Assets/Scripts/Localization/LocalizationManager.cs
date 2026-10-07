@@ -8,7 +8,7 @@ public class LocalizationManager : MonoBehaviour
     public static LocalizationManager Instance { get; private set; }
     [SerializeField] private LocalizationConfig config;
     [SerializeField] private LocalizationTableMappingConfig mappingConfig;
-    private SettingsManager settingsManager;
+    [SerializeField] private SettingsManager settingsManager;
     
     private void Awake() 
     {

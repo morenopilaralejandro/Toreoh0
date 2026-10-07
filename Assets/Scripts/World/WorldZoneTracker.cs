@@ -8,9 +8,9 @@ public class WorldZoneTracker
 
     private AudioManager audioManager;
 
-    public WorldZoneTracker() 
+    public WorldZoneTracker(AudioManager audioManager) 
     {
-
+        this.audioManager = audioManager;
     }
 
     public void SetZone(ZoneData zoneNew) 

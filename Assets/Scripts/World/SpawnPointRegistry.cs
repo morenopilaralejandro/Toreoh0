@@ -1,32 +1,41 @@
+using UnityEngine;
 using System.Collections.Generic;
 
-public class SpawnPointRegistry 
+[CreateAssetMenu(fileName = "ChunkData", menuName = "ScriptableObject/World/SpawnPointRegistry")]
+public class SpawnPointRegistry : ScriptableObject
 {
-    private List<SpawnPoint> listRegistered = new();
+    [SerializeField] private List<SpawnPoint> listSpawnPoint = new ();
+    private Dictionary<string, SpawnPoint> dictSpawnPoint = new ();
 
-    public void Register(List<SpawnPoint> points) 
+    public void Initialize() 
     {
-        foreach(var point in points) 
-            listRegistered.Add(point);
+        BuildDict();
     }
 
-    public void Unregister(List<SpawnPoint> points) 
+    public void Register(ZoneData zoneData)
     {
-        foreach(var point in points) 
-            listRegistered.Remove(point);
-    }
-
-    public SpawnPoint GetSpawnPoint(string spawnPointId) 
-    {
-        foreach(var point in listRegistered) 
+        foreach(var spawnPoint in zoneData.SpawnPoints) 
         {
-            if (point.SpawnPointId == spawnPointId) return point;
+            spawnPoint.ZoneId = zoneData.ZoneId;
+            listSpawnPoint.Add(spawnPoint);
         }
-        return null;
     }
 
-    public void Clear() 
+    private void BuildDict() 
     {
-        listRegistered.Clear();
+        foreach(var point in listSpawnPoint) 
+            dictSpawnPoint[point.SpawnPointId] = point;
     }
+
+    public bool TryGet(string id, out SpawnPoint point) 
+    {
+        if (dictSpawnPoint.TryGetValue(id, out point))
+            return true;
+        else
+            return false;
+    }
+
+    public SpawnPoint Get(string id) => dictSpawnPoint[id];
+    public void Clear() => dictSpawnPoint.Clear();
+
 }

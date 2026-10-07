@@ -14,7 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: ZoneData
   m_GUID: df3b5f81202e582babdf7c967fbbc05a
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 32baae7d85d3d51bca271982a635ef30
+    m_Address: Assets/Addressables/AddressablesZoneData/zone_overworld_test2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ZoneData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 501ca0c55ae8ae59dbc68e8daf90ac2d
+    m_Address: Assets/Addressables/AddressablesZoneData/zone_overworld_test1.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ZoneData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c2791a966da3cac16ab2515809e0ff79
+    m_Address: Assets/Addressables/AddressablesZoneData/zone_interior_test_f0.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ZoneData
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: fd8f0a373a4da231f8de6474b1779402, type: 2}
   m_SchemaSet:

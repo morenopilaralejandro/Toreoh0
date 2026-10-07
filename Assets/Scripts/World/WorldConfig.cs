@@ -25,6 +25,7 @@ public class WorldConfig : ScriptableObject
 
     [Header("Editor Creation Tool")]
     public string SceneZoneFolder;
+    public string ChunkDataFolder;
     public string PrefixChunk; // scene_chunk_overworldId_coord
     public string PrefixInterior; // scene_interior_zoneId
     [AddressableGroupDropdown] // SceneZone

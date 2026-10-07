@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: 4cef6991fe93563c8a102d091f3ae764
   m_SerializeEntries:
+  - m_GUID: 2125730e49256cae6b48bcea94a0ade6
+    m_Address: Assets/Addressables/AddressablesSceneGroupData/SceneGroupData-World.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - SceneGroupData
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c6e89bab6a1c185b3a77ac980857675a
     m_Address: Assets/Addressables/AddressablesSceneGroupData/SceneGroupData.asset
     m_ReadOnly: 0

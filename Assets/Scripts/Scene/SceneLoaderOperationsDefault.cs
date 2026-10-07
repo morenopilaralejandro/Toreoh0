@@ -13,6 +13,7 @@ public class SceneLoaderOperationsDefault : SceneLoaderOperations
         base.Load(scene);
         AsyncOperation operation = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
         while (!operation.isDone) yield return null;
+        yield return base.AwaitSceneObjectLoaders(scene);
         registry.SetState(scene, SceneState.Loaded);
     }
 
@@ -21,7 +22,6 @@ public class SceneLoaderOperationsDefault : SceneLoaderOperations
         base.Unload(scene);
         AsyncOperation operation = SceneManager.UnloadSceneAsync(scene);
         while (!operation.isDone) yield return null;
-        yield return base.AwaitSceneObjectLoaders(scene);
         registry.SetState(scene, SceneState.Unloaded);
     }
 }

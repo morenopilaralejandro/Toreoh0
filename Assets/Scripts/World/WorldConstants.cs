@@ -23,6 +23,6 @@ public static class WorldConstants
     public static Color GizmosColorSceneRootDefaultOutline = Color.orange;
     public static Color GizmosColorSceneRootSelectedFill = Color.green;
     public static Color GizmosColorSceneRootSelectedOutline = Color.red;
-    public static Color GizmosColorSceneRootSelectedLine = Color.orange;
+    public static Color GizmosColorSceneRootSelectedLine = Color.yellow;
     public static float GizmosAlphaSceneRootFill = 0.1f;
 }

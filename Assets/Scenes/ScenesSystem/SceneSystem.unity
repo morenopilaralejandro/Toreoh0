@@ -631,6 +631,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LocalizationManager
   config: {fileID: 11400000, guid: 8d68c5dcefc15899d88b47bd05fb6963, type: 2}
   mappingConfig: {fileID: 11400000, guid: cd4db677d16d78b5f8cc1f58eb58d080, type: 2}
+  settingsManager: {fileID: 1063683404}
 --- !u!4 &979937621
 Transform:
   m_ObjectHideFlags: 0
@@ -983,8 +984,8 @@ SceneRoots:
   - {fileID: 954554104}
   - {fileID: 1047597923}
   - {fileID: 862600152}
-  - {fileID: 979937621}
   - {fileID: 1063683405}
+  - {fileID: 979937621}
   - {fileID: 403765186}
   - {fileID: 1342279685}
   - {fileID: 124266324}

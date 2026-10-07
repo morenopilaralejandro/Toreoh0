@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Shared
   m_GUID: da3a9fe7d33597ccd9f6b3f3975869fb
   m_SerializeEntries:
+  - m_GUID: 19d5768e4843132e582a1a4b8a612dc2
+    m_Address: Assets/Localization/LocalizationStringTables/Gameplay-Zone-Name-Romanized/Gameplay-Zone-Name-Romanized
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3dead02f24ed869699734526202b2518
     m_Address: Assets/Localization/LocalizationStringTables/Gameplay-Item-Name-Romanized/Gameplay-Item-Name-Romanized
       Shared Data.asset
@@ -41,6 +47,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8ee8f42b4049a47eb9f8ec8c045103fb
     m_Address: Assets/Localization/LocalizationStringTables/UI-Common-Romanized/UI-Common-Romanized
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 94c306db6ddb65559ada9129668b701c
+    m_Address: Assets/Localization/LocalizationStringTables/Gameplay-Zone-Name-Localized/Gameplay-Zone-Name-Localized
       Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []

@@ -68,8 +68,8 @@ public class WorldCreationToolChunk : WorldCreationTool<SceneRootChunk>
     private void LayoutNeighborStatus(Vector2Int direction, string label) 
     {
         Vector2Int coord = chunkCoord + direction;
-        string status = IsExistingChunk(coord) ? "exists" : "empty";
-        EditorGUILayout.LabelField($"{label} ({coord.x}, {coord.y}) -> status");
+        string status = IsExistingChunk(coord) ? "x" : "o";
+        EditorGUILayout.LabelField($"{status} -> ({coord.x}, {coord.y}) {label}");
     }
 
     protected override void CreateScene() 
@@ -79,14 +79,15 @@ public class WorldCreationToolChunk : WorldCreationTool<SceneRootChunk>
         string id = $"{config.PrefixChunk}_{overworldData.OverworldId}_{chunkCoord.x}_{chunkCoord.y}";
         string sceneAddress = id;
         string scenePath = $"{config.SceneZoneFolder}/{sceneAddress}.unity";
+        string chunkDataPath = $"{config.ChunkDataFolder}/{id}.asset";
 
-        ChunkData chunkData = new ChunkData
-        {
-            ChunkId = id,
-            ZoneData = zoneData,
-            ChunkCoord = chunkCoord,
-            SceneAddressChunk = sceneAddress
-        };
+        ChunkData chunkData = ScriptableObject.CreateInstance<ChunkData>();
+        chunkData.ChunkId = id;
+        chunkData.ZoneData = zoneData;
+        chunkData.ChunkCoord = chunkCoord;
+        chunkData.SceneAddressChunk = sceneAddress;
+        EditorUtils.CreateAsset(chunkData, chunkDataPath);
+
         overworldData.Chunks.Add(chunkData);
         
         var sceneRoot = base.CreateSceneRoot();

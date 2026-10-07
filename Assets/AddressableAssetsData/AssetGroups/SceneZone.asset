@@ -14,7 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: SceneZone
   m_GUID: 86c619b07b94d1299b5db1362565b24f
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 1690ac550318710acbfd58ff500b1e79
+    m_Address: scene_chunk_overworld-earth_0_0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 312f4f362d07e23af876dddd9d1159bd
+    m_Address: scene_chunk_overworld-earth_1_0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ec73154c3e5be5d1d9512a584dc8dd90
+    m_Address: scene_interior_zone_interior_test_f0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: fd8f0a373a4da231f8de6474b1779402, type: 2}
   m_SchemaSet:
