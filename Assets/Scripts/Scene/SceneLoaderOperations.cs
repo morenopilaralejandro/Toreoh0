@@ -37,7 +37,7 @@ public abstract class SceneLoaderOperations : ISceneLoaderOperations
         isUnloadingAll = false;
     }
 
-    protected IEnumerator AwaitSceneObjectLoaders(string sceneName) 
+    protected IEnumerator AwaitSceneObjectLoaders(string sceneName)
     {
         Scene scene = SceneManager.GetSceneByName(sceneName);
         var loaders = scene.GetRootGameObjects()

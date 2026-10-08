@@ -18,18 +18,11 @@ public class WorldSceneLoader
             InputManager.Instance,
             DatabaseManager.Instance
         );
+        sceneLoader.Strategy = new SceneLoaderStrategyDirect();
     }
 
-    public async Task LoadScenes(IEnumerable<string> scenes, bool isFadeOut = false) 
+    public async Task LoadScenes(IEnumerable<string> scenes)
     {
-        /*
-        sceneLoader.Strategy = isFadeOut
-            ? new SceneLoaderStrategyFadeOut()
-            : new SceneLoaderStrategyDirect();
-        */
-
-        sceneLoader.Strategy = new SceneLoaderStrategyDirect();
-
         SceneLoaderContext context = new SceneLoaderContext(
             id : scenes.GetHashCode().ToString(),
             scenesToLoad : scenes,
@@ -40,16 +33,8 @@ public class WorldSceneLoader
         await sceneLoaderManager.StartCoroutineAsync(ExecuteLoad(context));
     }
 
-    public async Task UnloadScenes(IEnumerable<string> scenes, bool isFadeIn = false)
+    public async Task UnloadScenes(IEnumerable<string> scenes)
     {
-        /*
-        sceneLoader.Strategy = isFadeIn
-            ? new SceneLoaderStrategyFadeIn()
-            : new SceneLoaderStrategyDirect();
-        */
-
-        sceneLoader.Strategy = new SceneLoaderStrategyDirect();
-
         SceneLoaderContext context = new SceneLoaderContext(
             scenes.GetHashCode().ToString(),
             null,

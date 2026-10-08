@@ -11,6 +11,8 @@ public class WorldZoneLoader
     private WorldSceneLoader sceneLoader;
     private WorldZoneTracker zoneTracker;
     private SpawnPointRegistry spawnPointRegistry;
+    private WorldComponentStateMachine stateMachine;
+    private FadeScreen fadeScreen;
 
     public WorldZoneLoader(
         DatabaseManager databaseManager, 
@@ -18,7 +20,9 @@ public class WorldZoneLoader
         WorldChunkStreaming chunkStreaming, 
         WorldSceneLoader sceneLoader, 
         WorldZoneTracker zoneTracker, 
-        SpawnPointRegistry spawnPointRegistry)
+        SpawnPointRegistry spawnPointRegistry,
+        WorldComponentStateMachine stateMachine,
+        FadeScreen fadeScreen)
     {
         this.databaseManager = databaseManager;
         this.character = character;
@@ -26,26 +30,28 @@ public class WorldZoneLoader
         this.sceneLoader = sceneLoader;
         this.zoneTracker = zoneTracker;
         this.spawnPointRegistry = spawnPointRegistry;
+        this.stateMachine = stateMachine;   
+        this.fadeScreen = fadeScreen;
     }
 
     // position
-    private void LoadZoneAtPosition(ZoneData zoneData, Vector3 pos, CharacterDirection facingDirection)
+    private async Task LoadZoneAtPosition(ZoneData zoneData, Vector3 pos, CharacterDirection facingDirection)
     {
-        zoneTracker.SetZone(zoneData);
         if (zoneData.ZoneType == ZoneType.Overworld)
-            LoadZoneAtPositionOverworld(zoneData, pos, facingDirection);
+            await LoadZoneAtPositionOverworld(zoneData, pos, facingDirection);
         else
-            LoadZoneAtPositionInterior(zoneData, pos, facingDirection);
+            await LoadZoneAtPositionInterior(zoneData, pos, facingDirection);
+        zoneTracker.SetZone(zoneData);
     }
 
-    private void LoadZoneAtPositionOverworld(ZoneData zoneData, Vector3 pos, CharacterDirection facingDirection) 
+    private async Task LoadZoneAtPositionOverworld(ZoneData zoneData, Vector3 pos, CharacterDirection facingDirection) 
     {
         SetCharacter(pos, facingDirection);
-        chunkStreaming.StartStreaming(zoneData.OverworldData);
+        await chunkStreaming.StartStreaming(zoneData.OverworldData);
         // state in overworld
     }
 
-    private async void LoadZoneAtPositionInterior(ZoneData zoneData, Vector3 pos, CharacterDirection facingDirection)
+    private async Task LoadZoneAtPositionInterior(ZoneData zoneData, Vector3 pos, CharacterDirection facingDirection)
     {
         await sceneLoader.LoadScenes(new string[] { zoneData.SceneAddressInterior });
         SetCharacter(pos, facingDirection);
@@ -53,10 +59,10 @@ public class WorldZoneLoader
     }
 
     // SpawnPoint
-    private void LoadZoneAtSpawnPoint(string spawnPointId)
+    private async Task LoadZoneAtSpawnPoint(string spawnPointId)
     {
         SpawnPoint spawnPoint = spawnPointRegistry.Get(spawnPointId); 
-        LoadZoneAtPosition(
+        await LoadZoneAtPosition(
             databaseManager.DatabaseRegistry.ZoneData.Get(spawnPoint.ZoneId), 
             spawnPoint.SpawnPosition, 
             spawnPoint.FacingDirection);
@@ -77,19 +83,26 @@ public class WorldZoneLoader
     }
 
     // api
-    public void LoadZoneFromUnloaded()
+    public async Task LoadZoneFromUnloaded()
     {
         // state transitioning
-        LoadZoneAtPosition(
+        stateMachine.SetState(WorldState.Processing);
+        await LoadZoneAtPosition(
             databaseManager.DatabaseRegistry.ZoneData.Get(WorldArgs.ZoneId),
             WorldArgs.CharacterPosition,
             WorldArgs.CharacterFacingDirection);
+        await fadeScreen.FadeOut();
+        stateMachine.SetState(WorldState.Idle);
     }
 
     public async void TransitionToZone(string spawnPointId)
     {
         // if state is transitioning return
+        stateMachine.SetState(WorldState.Processing);
+        await fadeScreen.FadeIn();
         await UnloadCurrentZone();
-        LoadZoneAtSpawnPoint(spawnPointId);
+        await LoadZoneAtSpawnPoint(spawnPointId);
+        await fadeScreen.FadeOut();
+        stateMachine.SetState(WorldState.Idle);
     }
 }

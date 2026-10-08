@@ -114,6 +114,7 @@ public abstract class Menu : MonoBehaviour, IMenuClosable
     {
         foreach (var canvasGroup in canvasGroupList) 
         {
+            if (canvasGroup == null) return;
             canvasGroup.interactable = isInteractable;
             canvasGroup.blocksRaycasts = isInteractable;
         }

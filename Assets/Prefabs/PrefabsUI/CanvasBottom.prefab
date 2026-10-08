@@ -118,6 +118,7 @@ MonoBehaviour:
   DisplayScreen: 1
   canvas: {fileID: 605178051964043392}
   rectTransformDebug: {fileID: 3689291835727572098}
+  sortingLayerName: Character
 --- !u!1 &5511574906326272419
 GameObject:
   m_ObjectHideFlags: 0

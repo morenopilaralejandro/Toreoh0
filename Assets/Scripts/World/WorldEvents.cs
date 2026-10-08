@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using Aremoreno.Enums.World;
 
 public static class WorldEvents 
 {
@@ -10,4 +11,8 @@ public static class WorldEvents
     public static event Action<Vector3> OnCharacterTeleported;
     public static void RaiseCharacterTeleported(Vector3 pos)
         => OnCharacterTeleported?.Invoke(pos);
+
+    public static event Action<WorldState, WorldState> OnWorldStateChanged;
+    public static void RaiseWorldStateChanged(WorldState stateNew, WorldState stateOld)
+        => OnWorldStateChanged?.Invoke(stateNew, stateOld);
 }

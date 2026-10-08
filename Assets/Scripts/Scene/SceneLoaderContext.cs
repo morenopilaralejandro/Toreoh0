@@ -25,13 +25,14 @@ public class SceneLoaderContext
         this.loadingScreenSceneName = loadingScreenSceneName;
     }
 
+    // load
     public IEnumerator LoadScenes()
     {
         foreach (var scene in ScenesToLoad) 
             yield return operations.Load(scene);
     }
 
-    public IEnumerator UnloadScenes() 
+    public IEnumerator UnloadScenes()
     {
         foreach (var scene in ScenesToUnload ?? new List<string>()) 
             yield return operations.Unload(scene);
@@ -42,6 +43,7 @@ public class SceneLoaderContext
         yield return operations.UnloadAll();
     }
 
+    // loadingScreen
     public IEnumerator LoadLoadingScreen()
     {
         yield return operations.Load(loadingScreenSceneName);

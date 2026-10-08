@@ -42,14 +42,13 @@ public class WorldChunkStreaming
         if (!isActive || overworldData == null) return;
         updateTimer += Time.deltaTime;
         if (updateTimer >= updateInterval)
-            UpdateChunksAroundCharacter();
+            _ = UpdateChunksAroundCharacter();
     }
 
-    public void StartStreaming(OverworldData overworldData)
+    public async Task StartStreaming(OverworldData overworldData)
     {
         this.overworldData = overworldData;
         lastCharacterChunkCoord = new Vector2Int(int.MinValue, int.MinValue);   
-        isActive = true;
         updateTimer = 0f;
 
         dictChunkData.Clear();
@@ -63,7 +62,8 @@ public class WorldChunkStreaming
             dictChunkCoord[chunk.ChunkCoord] = chunk;
         }
 
-        UpdateChunksAroundCharacter();
+        await UpdateChunksAroundCharacter();
+        isActive = true;
     }
 
     public void StopStreaming() 
@@ -74,7 +74,7 @@ public class WorldChunkStreaming
         hashSetSceneDesired.Clear();
     }
 
-    public async void UpdateChunksAroundCharacter() 
+    public async Task UpdateChunksAroundCharacter() 
     {
         updateTimer = 0;
         if (character == null) return;
@@ -84,7 +84,11 @@ public class WorldChunkStreaming
         Vector3 pos = character.transform.position;
         int xCurrent = Mathf.FloorToInt(pos.x * inverseChunkSize);
         int yCurrent = Mathf.FloorToInt(pos.y * inverseChunkSize);
-        if (xCurrent == lastCharacterChunkCoord.x && yCurrent == lastCharacterChunkCoord.y) return;
+        if (xCurrent == lastCharacterChunkCoord.x && yCurrent == lastCharacterChunkCoord.y) 
+        {   
+            isUpdating = false;
+            return;
+        }
         lastCharacterChunkCoord.x = xCurrent;
         lastCharacterChunkCoord.y = yCurrent;
         if (dictChunkCoord.TryGetValue(lastCharacterChunkCoord, out ChunkData lastChunk))
