@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DebugConfig
   IsBootToDebugMainMenu: 1
   MinimunLogLevel: 0
-  IsFileLoggerEnable: 0
-  FileLoggerPath: log.txt
+  IsFileLoggerEnable: 1
+  FileLoggerFolder: Log
+  FileLoggerName: log.txt

@@ -15,4 +15,8 @@ public static class WorldEvents
     public static event Action<WorldState, WorldState> OnWorldStateChanged;
     public static void RaiseWorldStateChanged(WorldState stateNew, WorldState stateOld)
         => OnWorldStateChanged?.Invoke(stateNew, stateOld);
+
+    public static event Action<bool> OnIsNoClipEnabledChanged;
+    public static void RaiseIsNoClipEnabledChanged(bool isEnabled)
+        => OnIsNoClipEnabledChanged?.Invoke(isEnabled);
 }

@@ -20,6 +20,7 @@ public class SceneRootInterior : SceneRoot
         );
 
     // spawn
+    #if UNITY_EDITOR 
     [ContextMenu("CollectSpawnPoints")]
     protected override void CollectSpawnPoints() 
     {
@@ -29,4 +30,5 @@ public class SceneRootInterior : SceneRoot
             ZoneData.SpawnPoints.Add(spawnPoint);
         EditorUtility.SetDirty(ZoneData);
     }
+    #endif
 }

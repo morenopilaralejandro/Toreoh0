@@ -15,20 +15,20 @@ public class PersistenceWriter
         this.config = config;
         pathDefault = Path.Combine(
             Application.persistentDataPath, 
-            $"{config.Path}/{config.FileNamePrefix}{config.FileNameSeparator}{slotIndex}{config.FileNameSeparator}{config.FileNameDefault}.json");
+            $"{config.Folder}/{config.FileNamePrefix}{config.FileNameSeparator}{slotIndex}{config.FileNameSeparator}{config.FileNameDefault}.json");
         pathEmergency = Path.Combine(
             Application.persistentDataPath, 
-            $"{config.Path}/{config.FileNamePrefix}{config.FileNameSeparator}{slotIndex}{config.FileNameSeparator}{config.FileNameEmergency}.json");
+            $"{config.Folder}/{config.FileNamePrefix}{config.FileNameSeparator}{slotIndex}{config.FileNameSeparator}{config.FileNameEmergency}.json");
         pathTemp = Path.Combine(
             Application.persistentDataPath, 
-            $"{config.Path}/{config.FileNamePrefix}{config.FileNameSeparator}{slotIndex}{config.FileNameSeparator}{config.FileNameTemp}.json");
+            $"{config.Folder}/{config.FileNamePrefix}{config.FileNameSeparator}{slotIndex}{config.FileNameSeparator}{config.FileNameTemp}.json");
 
         pathDefaultCompressed = Path.Combine(
             Application.persistentDataPath, 
-            $"{config.Path}/{config.FileNamePrefix}{config.FileNameSeparator}{slotIndex}{config.FileNameSeparator}{config.FileNameDefault}.gz");
+            $"{config.Folder}/{config.FileNamePrefix}{config.FileNameSeparator}{slotIndex}{config.FileNameSeparator}{config.FileNameDefault}.gz");
         pathEmergencyCompressed = Path.Combine(
             Application.persistentDataPath, 
-            $"{config.Path}/{config.FileNamePrefix}{config.FileNameSeparator}{slotIndex}{config.FileNameSeparator}{config.FileNameEmergency}.gz");
+            $"{config.Folder}/{config.FileNamePrefix}{config.FileNameSeparator}{slotIndex}{config.FileNameSeparator}{config.FileNameEmergency}.gz");
     }
 
     public bool TryWriteSaveData(SaveData saveData) 

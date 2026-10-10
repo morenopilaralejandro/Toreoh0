@@ -10,7 +10,7 @@ public class PersistenceConfig : ScriptableObject
     public int SaveSlotCount;
 
     [Header("Path")]
-    public string Path;
+    public string Folder;
     public string FileNamePrefix;
     public string FileNameSeparator;
     public string FileNameDefault;

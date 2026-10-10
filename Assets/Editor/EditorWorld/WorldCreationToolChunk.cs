@@ -76,7 +76,7 @@ public class WorldCreationToolChunk : WorldCreationTool<SceneRootChunk>
     {
         var scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Additive);
 
-        string id = $"{config.PrefixChunk}_{overworldData.OverworldId}_{chunkCoord.x}_{chunkCoord.y}";
+        string id = $"{config.PrefixChunk}_{overworldData.OverworldId}_{zoneData.ZoneId}_{chunkCoord.x}_{chunkCoord.y}";
         string sceneAddress = id;
         string scenePath = $"{config.SceneZoneFolder}/{sceneAddress}.unity";
         string chunkDataPath = $"{config.ChunkDataFolder}/{id}.asset";

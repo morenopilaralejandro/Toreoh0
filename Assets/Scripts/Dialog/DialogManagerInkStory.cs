@@ -36,7 +36,7 @@ public class DialogManagerInkStory
         }
     }
 
-    public void StartDialog(string storyId, string knotName)
+    public void StartDialog(string knotName, string storyId = "main")
     {
         currentStory = storyDict[storyId];
         currentStory.ChoosePathString(knotName);

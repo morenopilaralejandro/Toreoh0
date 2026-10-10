@@ -15,18 +15,353 @@ MonoBehaviour:
   m_GroupName: SceneZone
   m_GUID: 86c619b07b94d1299b5db1362565b24f
   m_SerializeEntries:
-  - m_GUID: 1690ac550318710acbfd58ff500b1e79
-    m_Address: scene_chunk_overworld-earth_0_0
+  - m_GUID: 06845fb66f5b2de6b9a2fccfb0204fe9
+    m_Address: scene_interior_zone_interior_cave_f0
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 312f4f362d07e23af876dddd9d1159bd
-    m_Address: scene_chunk_overworld-earth_1_0
+  - m_GUID: 0695a7bab07aabd04be3c52735bf2729
+    m_Address: scene_chunk_overworld_earth_zone_overworld_outskirts_-2_3
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ec73154c3e5be5d1d9512a584dc8dd90
-    m_Address: scene_interior_zone_interior_test_f0
+  - m_GUID: 0b4f314b689633efc9edf79195316be0
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_2_3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0ba323d56a459e48a946ba23c5e07328
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_-1_5
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0df89d8a674a728a185ccc116527891d
+    m_Address: scene_chunk_overworld_earth_zone_overworld_lake_2_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0e5d0bbd999c4fd9d8f532496f89a533
+    m_Address: scene_chunk_overworld_earth_zone_overworld_village_-1_-1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 15076feeaa55c189ea812bf180878d65
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_0_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1815b76460e5846d9b9ca8c6db93d02f
+    m_Address: scene_chunk_overworld_earth_zone_overworld_outskirts_-1_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1c3e5ec2e1802bff58a99c80a16cdfdf
+    m_Address: scene_interior_zone_interior_house_c
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 213498bf6071954428a4daeb59d46174
+    m_Address: scene_interior_zone_interior_final_burned
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 215c75ef6f75436948bc854681c1d368
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_-1_2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2279838c3b6f71b8c8c4a4f022a3351b
+    m_Address: scene_chunk_overworld_earth_zone_overworld_lake_2_0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 26b8b6ebb10b36499a16e810d05f8ceb
+    m_Address: scene_chunk_overworld_earth_zone_overworld_lake_3_-1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 27b300d6d87f4534aa72c51f8164160e
+    m_Address: scene_chunk_overworld_earth_zone_overworld_village_0_-1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2815f455b6811590fb3271a411e95fc8
+    m_Address: scene_interior_zone_interior_house_a_f1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2deba616b9af8b1e9861dc37f5ce288d
+    m_Address: scene_chunk_overworld_earth_zone_overworld_outskirts_-1_2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2f7751bacd79bc9ba815af215a71913b
+    m_Address: scene_interior_zone_interior_cave_f2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2fc5e14b609935779b8892208460120d
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_-2_4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 332d020dc198ac12c80b4b37fb49965b
+    m_Address: scene_chunk_overworld_earth_zone_overworld_lake_2_-1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3b2380db8c038ecd0a47624f0ecb203b
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_-1_3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3ed995dd323540013882e98fb0071ac5
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_0_2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 45835a62aa2a235528453ee8fe8e4580
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_1_5
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4666dd5cd1dc457b5bb770f1a09b972f
+    m_Address: scene_interior_zone_interior_house_b
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 467817b3039eb1bf88d351299e10be7f
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_0_3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 47e88046da595928d9f71e28f7dad71a
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_-2_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4f85912809cb8a287916021be7253a4f
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_1_-1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 52713ccd46a610e73bbad5d024bc7abc
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_2_2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5571eb28c5e6fc204b6b3a0c411327f0
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_-2_-1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5910425939f62f93fab42566521b2dd2
+    m_Address: scene_chunk_overworld_earth_zone_overworld_outskirts_0_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5ef93e9c4ad2ddf949ac792a16b4cd73
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_-1_-1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5f02a2517e86b241a99c8049f3b31d39
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_0_5
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6d095a7592cdf6230a2ab1aff80ecafb
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_-2_2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6e187a5a02de2ea7db574fdf22637792
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_-2_3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 70c74f09325253b05a568e2d084294e6
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_0_4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 71786df889446b853b610f2c96a9ff09
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_1_4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 788bd5f254c741ae68478b69c295e6f2
+    m_Address: scene_chunk_overworld_earth_zone_overworld_village_-1_0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7a484160f47bc505e887cbb8be67c8d1
+    m_Address: scene_chunk_overworld_earth_zone_overworld_outskirts_-3_2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7c616cad7edff82d28dabfb374ed89f3
+    m_Address: scene_chunk_overworld_earth_zone_overworld_lake_1_0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 827a5d07e11208baf8ca17f250b4ffc5
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_0_0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 843b67b892a121d17a2ffe7d57bba406
+    m_Address: scene_chunk_overworld_earth_zone_overworld_outskirts_0_3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 870e01466de8dd8e8b2fea2cd7a9dafe
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_2_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8acd4e630f5d6ecdeb67c8d51e340d61
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_1_0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 909c8f820cd0dd0d487fd0c52f8293a7
+    m_Address: scene_interior_zone_interior_final_burning
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 90a3fe287213c66468236af002dc6d66
+    m_Address: scene_chunk_overworld_earth_zone_overworld_outskirts_-3_0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 923c70bc0725a3986a8b113dae0ffb5f
+    m_Address: scene_chunk_overworld_earth_zone_overworld_lake_3_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9477addfc0cadd528875d9287e311a50
+    m_Address: scene_chunk_overworld_earth_zone_overworld_outskirts_-2_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 96ea40209800bd8d5bc6f1a110eb326f
+    m_Address: scene_chunk_overworld_earth_zone_overworld_lake_1_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 996adcb9e26946650aaf9dc526bcfe75
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_-1_0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 99e38b83d5d6c0e3bb07ee0eabea9256
+    m_Address: scene_chunk_overworld_earth_zone_overworld_village_0_0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a61c0307c1084a069a4c32a1bfb25f22
+    m_Address: scene_chunk_overworld_earth_zone_overworld_outskirts_1_2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a714907be9131f09692073d7b6ddecb0
+    m_Address: scene_interior_zone_interior_house_a_f0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ad7951e5da033c494930f4aeff213efc
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_-2_5
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: afb07aa3755c86207918ab468926dc3c
+    m_Address: scene_chunk_overworld_earth_zone_overworld_outskirts_-2_0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b1be13cac983c31b2b6d64a2d921b68d
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_2_-1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b4dc247fd206fce7daa4850d8e215169
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_0_-1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b7965f406c1ea066182f5e58810335a5
+    m_Address: scene_chunk_overworld_earth_zone_overworld_outskirts_-3_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bc150d78062437c74bf0318d81f089db
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_1_2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c02ae751c67845f93bfcfa8aa4633314
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_-1_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c0dd0e435d97e23cdbf909a160286233
+    m_Address: scene_chunk_overworld_earth_zone_overworld_outskirts_0_2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c46df8dac518bfa2382f3d074c437f8b
+    m_Address: scene_chunk_overworld_earth_zone_overworld_lake_3_0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cb920072a9fb8441ab80c3271af6d742
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_2_0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cc140403ff900d9adbc3a7e23e478740
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_-1_4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d513694b2846c5e9995d36a8a0f718a6
+    m_Address: scene_chunk_overworld_earth_zone_overworld_lake_1_-1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d6cb02a0109e5b9fd83427c01f1053fe
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_1_3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e50affb75f4169fd1b9a0905b238ad69
+    m_Address: scene_chunk_overworld_earth_zone_overworld_outskirts_-2_2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ef1003bdf51ed146bb074ce682add55a
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_1_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f307748f5a3be7ec8a088cbdef33275a
+    m_Address: scene_chunk_overworld_earth_zone_overworld_outskirts_1_3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f7dde59888e86519a82fbff9e225560c
+    m_Address: scene_interior_zone_interior_cave_f1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fc21c9f45b4e47f59a462ec3fc75b4b9
+    m_Address: scene_chunk_overworld_earth_zone_overworld_outskirts_-1_3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fdfc20a1fdae3b28dbb57b027b0ca2d5
+    m_Address: scene_chunk_overworld_earth_forest_zone_overworld_forest_-2_0
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

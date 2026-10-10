@@ -16,7 +16,7 @@ MonoBehaviour:
   IsSaveFileCompressionEnabled: 1
   IsPrettyPrint: 0
   SaveSlotCount: 3
-  Path: Save
+  Folder: Save
   FileNamePrefix: save_slot
   FileNameSeparator: '-'
   FileNameDefault: default
@@ -24,4 +24,4 @@ MonoBehaviour:
   FileNameTemp: temp
   SaveFormatVersion: 0
   FileSignature: 1297696595
-  GameIdetifier: com.Aremoreno.Toreoh0
+  GameIdetifier: com.aremoreno.toreoh0

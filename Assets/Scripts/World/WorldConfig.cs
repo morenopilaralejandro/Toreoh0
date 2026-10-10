@@ -23,6 +23,11 @@ public class WorldConfig : ScriptableObject
     public int StepBetweenEncountersBaseMin = 10;
     public int StepBetweenEncountersBaseMax = 30;
 
+    [Header("Debug")]
+    public bool IsDebugWorldEnabled;
+    public bool IsNoClipEnabled;
+    public ZoneData ZoneDataDebug;
+
     [Header("Editor Creation Tool")]
     public string SceneZoneFolder;
     public string ChunkDataFolder;

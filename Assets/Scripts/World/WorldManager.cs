@@ -69,15 +69,39 @@ public class WorldManager : MonoBehaviour
             worldFadeScreen
         );
 
-        WorldArgs.ZoneId = "zone_interior_test_f0";
-        WorldArgs.CharacterPosition = new Vector3(0f, 0f, 0f);
+        WorldArgs.ZoneId = "zone_overworld_village";
+        WorldArgs.CharacterPosition = Vector3.zero;
         WorldArgs.CharacterFacingDirection = Aremoreno.Enums.Animation.CharacterDirection.Down;
 
+        HandleWorldLoad();
         InitializeAsync();
     }
 
     public async void InitializeAsync() 
     {
         await ZoneLoader.LoadZoneFromUnloaded();
+    }
+
+    private void HandleWorldLoad()
+    {
+        if (DebugUtils.IsDevBuild && config.IsDebugWorldEnabled)
+            HandleWorldLoadDebug();
+        else
+            HandleWorldLoadStory();
+    }
+
+    private void HandleWorldLoadDebug()
+    {
+        WorldArgs.ZoneId = config.ZoneDataDebug.ZoneId;
+        WorldArgs.CharacterPosition = Vector3.zero;
+        WorldArgs.CharacterFacingDirection = Aremoreno.Enums.Animation.CharacterDirection.Down;
+    }
+
+    private void HandleWorldLoadStory()
+    {
+        // TODO evaluate flags to set the world args
+        WorldArgs.ZoneId = "zone_overworld_village";
+        WorldArgs.CharacterPosition = Vector3.zero;
+        WorldArgs.CharacterFacingDirection = Aremoreno.Enums.Animation.CharacterDirection.Down;
     }
 }

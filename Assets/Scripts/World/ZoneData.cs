@@ -9,6 +9,7 @@ public class ZoneData : ScriptableObject
     public string ZoneId;
     public ZoneType ZoneType;
     public AudioClip Bgm;
+    public bool HasDisplayName = true;
 
     [Header("Overworld")]
     public OverworldData OverworldData;

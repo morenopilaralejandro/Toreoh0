@@ -8,11 +8,13 @@ public static class WorldConstants
     public static float TILE_SIZE = 1f;
     public static float TILE_OFFSET = 0.5f;
     public static float INTERIOR_SIZE = 48f;
-    public static float CHUCK_STREAMING_UPDATE_INTERVAL = 2f;
-    public static int CHUCK_STREAMING_RADIUS = 2;
+    public static float CHUCK_STREAMING_UPDATE_INTERVAL = 1f;
+    public static int CHUCK_STREAMING_RADIUS = 1;
 
     // tag
     public static string TAG_CHARACTER_MAIN = "CharacterMain";
+    public static string TAG_TRANSITION = "CharacterMain";
+    public static string TAG_INTERACTABLE = "Interactable";
 
     // gizmos
     public static Color GizmosColorTransitionTrigger = Color.green;

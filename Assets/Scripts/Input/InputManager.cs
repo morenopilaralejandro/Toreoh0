@@ -65,7 +65,7 @@ public class InputManager : MonoBehaviour
         ScreenToWorldConverter.Initialize(config, Camera.main);
 
         MapBattle.Enable();
-        MapBattle.Enable();
+        MapWorld.Enable();
         MapDialog.Enable();
         MapNavigation.Enable();
     }

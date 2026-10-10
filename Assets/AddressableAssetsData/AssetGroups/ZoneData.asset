@@ -16,19 +16,97 @@ MonoBehaviour:
   m_GUID: df3b5f81202e582babdf7c967fbbc05a
   m_SerializeEntries:
   - m_GUID: 32baae7d85d3d51bca271982a635ef30
-    m_Address: Assets/Addressables/AddressablesZoneData/zone_overworld_test2.asset
+    m_Address: Assets/Addressables/AddressablesWorldZoneData/zone_overworld_test2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ZoneData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 33c33355e6a8f023c85ceb9613c548c7
+    m_Address: Assets/Addressables/AddressablesWorldZoneData/zone_interior_house_c.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ZoneData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 41672758214f4fed787816724a5e217c
+    m_Address: Assets/Addressables/AddressablesWorldZoneData/zone_interior_house_a_f1.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - ZoneData
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 501ca0c55ae8ae59dbc68e8daf90ac2d
-    m_Address: Assets/Addressables/AddressablesZoneData/zone_overworld_test1.asset
+    m_Address: Assets/Addressables/AddressablesWorldZoneData/zone_overworld_test1.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ZoneData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6e936b4ef3042858b800784c506cbc0d
+    m_Address: Assets/Addressables/AddressablesWorldZoneData/zone_overworld_outskirts.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ZoneData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7470efd9432c6f3f8aa398f64e612ab5
+    m_Address: Assets/Addressables/AddressablesWorldZoneData/zone_interior_final_burning.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ZoneData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 79c4322dd889e065892531c7e8414460
+    m_Address: Assets/Addressables/AddressablesWorldZoneData/zone_interior_house_a.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ZoneData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 844579f96b0ea40748a0895ed613fb73
+    m_Address: Assets/Addressables/AddressablesWorldZoneData/zone_overworld_forest.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ZoneData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8b8ecd755e3cf4657aafb1312f9133d1
+    m_Address: Assets/Addressables/AddressablesWorldZoneData/zone_overworld_village.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ZoneData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 931b03f335b953ea1821548d24e2895a
+    m_Address: Assets/Addressables/AddressablesWorldZoneData/zone_interior_cave_f2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ZoneData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9ea89988edb85fa1fab0e672891d4dae
+    m_Address: Assets/Addressables/AddressablesWorldZoneData/zone_interior_cave_f1.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ZoneData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aef02379f1b532aed8e7e337fec8f5a7
+    m_Address: Assets/Addressables/AddressablesWorldZoneData/zone_interior_cave_f0.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - ZoneData
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c2791a966da3cac16ab2515809e0ff79
-    m_Address: Assets/Addressables/AddressablesZoneData/zone_interior_test_f0.asset
+    m_Address: Assets/Addressables/AddressablesWorldZoneData/zone_interior_test_f0.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ZoneData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d12ffecfb720a86b3a8a55e1709b5ab7
+    m_Address: Assets/Addressables/AddressablesWorldZoneData/zone_interior_house_b.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ZoneData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ec6875d2fb417448ab2fa639dd29ed4e
+    m_Address: Assets/Addressables/AddressablesWorldZoneData/zone_overworld_lake.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ZoneData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: faaa0429497e69daeb8123961d79ad85
+    m_Address: Assets/Addressables/AddressablesWorldZoneData/zone_interior_final_burned.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - ZoneData

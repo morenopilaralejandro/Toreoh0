@@ -13,11 +13,531 @@ MonoBehaviour:
   m_Name: WorldSpawnPointRegistry
   m_EditorClassIdentifier: Assembly-CSharp::SpawnPointRegistry
   listSpawnPoint:
-  - SpawnPointId: test_interior_a
+  - SpawnPointId: spawn_house_a_a
     FacingDirection: 1
-    SpawnPosition: {x: 24.5, y: 17.5, z: 0}
-    ZoneId: zone_interior_test_f0
-  - SpawnPointId: test_interior_b
+    SpawnPosition: {x: 24.5, y: 20.5, z: 0}
+    ZoneId: zone_interior_house_a_f0
+  - SpawnPointId: spawn_house_a_1_b
+    FacingDirection: 3
+    SpawnPosition: {x: 22.5, y: 26.5, z: 0}
+    ZoneId: zone_interior_house_a_f0
+  - SpawnPointId: spawn_house_a_1_a
+    FacingDirection: 3
+    SpawnPosition: {x: 22.5, y: 26.5, z: 0}
+    ZoneId: zone_interior_house_a_f1
+  - SpawnPointId: spawn_house_b_a
+    FacingDirection: 1
+    SpawnPosition: {x: 24.5, y: 20.5, z: 0}
+    ZoneId: zone_interior_house_b
+  - SpawnPointId: spawn_house_c_a
+    FacingDirection: 1
+    SpawnPosition: {x: 24.5, y: 20.5, z: 0}
+    ZoneId: zone_interior_house_c
+  - SpawnPointId: spawn_house_a_b
     FacingDirection: 0
-    SpawnPosition: {x: 8.5, y: 7.5, z: 0}
-    ZoneId: zone_overworld_test1
+    SpawnPosition: {x: 4.5, y: 7.5, z: 0}
+    ZoneId: zone_overworld_village
+  - SpawnPointId: spawn_house_b_b
+    FacingDirection: 0
+    SpawnPosition: {x: 11.5, y: 9.5, z: 0}
+    ZoneId: zone_overworld_village
+  - SpawnPointId: spawn_house_c_b
+    FacingDirection: 0
+    SpawnPosition: {x: 6.5, y: 2.5, z: 0}
+    ZoneId: zone_overworld_village
+  - SpawnPointId: spawn_house_a_a
+    FacingDirection: 1
+    SpawnPosition: {x: 24.5, y: 20.5, z: 0}
+    ZoneId: zone_interior_house_a_f0
+  - SpawnPointId: spawn_house_a_1_b
+    FacingDirection: 3
+    SpawnPosition: {x: 22.5, y: 26.5, z: 0}
+    ZoneId: zone_interior_house_a_f0
+  - SpawnPointId: spawn_house_a_1_a
+    FacingDirection: 3
+    SpawnPosition: {x: 22.5, y: 26.5, z: 0}
+    ZoneId: zone_interior_house_a_f1
+  - SpawnPointId: spawn_house_b_a
+    FacingDirection: 1
+    SpawnPosition: {x: 24.5, y: 20.5, z: 0}
+    ZoneId: zone_interior_house_b
+  - SpawnPointId: spawn_house_c_a
+    FacingDirection: 1
+    SpawnPosition: {x: 24.5, y: 20.5, z: 0}
+    ZoneId: zone_interior_house_c
+  - SpawnPointId: spawn_house_a_b
+    FacingDirection: 0
+    SpawnPosition: {x: 4.5, y: 7.5, z: 0}
+    ZoneId: zone_overworld_village
+  - SpawnPointId: spawn_house_b_b
+    FacingDirection: 0
+    SpawnPosition: {x: 11.5, y: 9.5, z: 0}
+    ZoneId: zone_overworld_village
+  - SpawnPointId: spawn_house_c_b
+    FacingDirection: 0
+    SpawnPosition: {x: 6.5, y: 2.5, z: 0}
+    ZoneId: zone_overworld_village
+  - SpawnPointId: spawn_house_a_a
+    FacingDirection: 1
+    SpawnPosition: {x: 24.5, y: 20.5, z: 0}
+    ZoneId: zone_interior_house_a_f0
+  - SpawnPointId: spawn_house_a_1_b
+    FacingDirection: 3
+    SpawnPosition: {x: 22.5, y: 26.5, z: 0}
+    ZoneId: zone_interior_house_a_f0
+  - SpawnPointId: spawn_house_a_1_a
+    FacingDirection: 3
+    SpawnPosition: {x: 22.5, y: 26.5, z: 0}
+    ZoneId: zone_interior_house_a_f1
+  - SpawnPointId: spawn_house_b_a
+    FacingDirection: 1
+    SpawnPosition: {x: 24.5, y: 20.5, z: 0}
+    ZoneId: zone_interior_house_b
+  - SpawnPointId: spawn_house_c_a
+    FacingDirection: 1
+    SpawnPosition: {x: 24.5, y: 20.5, z: 0}
+    ZoneId: zone_interior_house_c
+  - SpawnPointId: spawn_forest_0_a
+    FacingDirection: 1
+    SpawnPosition: {x: 7.5, y: 0.5, z: 0}
+    ZoneId: zone_overworld_forest
+  - SpawnPointId: spawn_forest_0_b
+    FacingDirection: 0
+    SpawnPosition: {x: 7.5, y: 42.5, z: 0}
+    ZoneId: zone_overworld_outskirts
+  - SpawnPointId: spawn_house_a_b
+    FacingDirection: 0
+    SpawnPosition: {x: 4.5, y: 7.5, z: 0}
+    ZoneId: zone_overworld_village
+  - SpawnPointId: spawn_house_b_b
+    FacingDirection: 0
+    SpawnPosition: {x: 11.5, y: 9.5, z: 0}
+    ZoneId: zone_overworld_village
+  - SpawnPointId: spawn_house_c_b
+    FacingDirection: 0
+    SpawnPosition: {x: 6.5, y: 2.5, z: 0}
+    ZoneId: zone_overworld_village
+  - SpawnPointId: spawn_cave_0_a
+    FacingDirection: 1
+    SpawnPosition: {x: 27.5, y: 13.5, z: 0}
+    ZoneId: zone_interior_cave_f0
+  - SpawnPointId: spawn_cave_1_up_a
+    FacingDirection: 2
+    SpawnPosition: {x: 25.5, y: 35.5, z: 0}
+    ZoneId: zone_interior_cave_f0
+  - SpawnPointId: spawn_cave_1_mid_a
+    FacingDirection: 2
+    SpawnPosition: {x: 25.5, y: 34.5, z: 0}
+    ZoneId: zone_interior_cave_f0
+  - SpawnPointId: spawn_cave_1_down_a
+    FacingDirection: 2
+    SpawnPosition: {x: 25.5, y: 33.5, z: 0}
+    ZoneId: zone_interior_cave_f0
+  - SpawnPointId: spawn_cave_1_up_b
+    FacingDirection: 3
+    SpawnPosition: {x: 13.5, y: 19.5, z: 0}
+    ZoneId: zone_interior_cave_f1
+  - SpawnPointId: spawn_cave_1_mid_b
+    FacingDirection: 3
+    SpawnPosition: {x: 13.5, y: 18.5, z: 0}
+    ZoneId: zone_interior_cave_f1
+  - SpawnPointId: spawn_cave_1_down_b
+    FacingDirection: 3
+    SpawnPosition: {x: 13.5, y: 17.5, z: 0}
+    ZoneId: zone_interior_cave_f1
+  - SpawnPointId: spawn_cave_2_up_a
+    FacingDirection: 2
+    SpawnPosition: {x: 33.5, y: 25.5, z: 0}
+    ZoneId: zone_interior_cave_f1
+  - SpawnPointId: spawn_cave_2_mid_a
+    FacingDirection: 2
+    SpawnPosition: {x: 33.5, y: 24.5, z: 0}
+    ZoneId: zone_interior_cave_f1
+  - SpawnPointId: spawn_cave_2_down_a
+    FacingDirection: 2
+    SpawnPosition: {x: 33.5, y: 23.5, z: 0}
+    ZoneId: zone_interior_cave_f1
+  - SpawnPointId: spawn_cave_2_up_b
+    FacingDirection: 3
+    SpawnPosition: {x: 16.5, y: 19.5, z: 0}
+    ZoneId: zone_interior_cave_f2
+  - SpawnPointId: spawn_cave_2_mid_b
+    FacingDirection: 3
+    SpawnPosition: {x: 16.5, y: 18.5, z: 0}
+    ZoneId: zone_interior_cave_f2
+  - SpawnPointId: spawn_cave_2_down_b
+    FacingDirection: 3
+    SpawnPosition: {x: 16.5, y: 17.5, z: 0}
+    ZoneId: zone_interior_cave_f2
+  - SpawnPointId: spawn_final_b
+    FacingDirection: 0
+    SpawnPosition: {x: 23.5, y: 25.5, z: 0}
+    ZoneId: zone_interior_cave_f2
+  - SpawnPointId: spawn_house_a_a
+    FacingDirection: 1
+    SpawnPosition: {x: 24.5, y: 20.5, z: 0}
+    ZoneId: zone_interior_house_a_f0
+  - SpawnPointId: spawn_house_a_1_b
+    FacingDirection: 3
+    SpawnPosition: {x: 22.5, y: 26.5, z: 0}
+    ZoneId: zone_interior_house_a_f0
+  - SpawnPointId: spawn_house_a_1_a
+    FacingDirection: 3
+    SpawnPosition: {x: 22.5, y: 26.5, z: 0}
+    ZoneId: zone_interior_house_a_f1
+  - SpawnPointId: spawn_house_b_a
+    FacingDirection: 1
+    SpawnPosition: {x: 24.5, y: 20.5, z: 0}
+    ZoneId: zone_interior_house_b
+  - SpawnPointId: spawn_house_c_a
+    FacingDirection: 1
+    SpawnPosition: {x: 24.5, y: 20.5, z: 0}
+    ZoneId: zone_interior_house_c
+  - SpawnPointId: spawn_forest_0_a
+    FacingDirection: 1
+    SpawnPosition: {x: 7.5, y: 0.5, z: 0}
+    ZoneId: zone_overworld_forest
+  - SpawnPointId: spawn_cave_0_b
+    FacingDirection: 0
+    SpawnPosition: {x: -6.5, y: 69.5, z: 0}
+    ZoneId: zone_overworld_forest
+  - SpawnPointId: spawn_forest_0_b
+    FacingDirection: 0
+    SpawnPosition: {x: 7.5, y: 42.5, z: 0}
+    ZoneId: zone_overworld_outskirts
+  - SpawnPointId: spawn_house_a_b
+    FacingDirection: 0
+    SpawnPosition: {x: 4.5, y: 7.5, z: 0}
+    ZoneId: zone_overworld_village
+  - SpawnPointId: spawn_house_b_b
+    FacingDirection: 0
+    SpawnPosition: {x: 11.5, y: 9.5, z: 0}
+    ZoneId: zone_overworld_village
+  - SpawnPointId: spawn_house_c_b
+    FacingDirection: 0
+    SpawnPosition: {x: 6.5, y: 2.5, z: 0}
+    ZoneId: zone_overworld_village
+  - SpawnPointId: spawn_cave_0_a
+    FacingDirection: 1
+    SpawnPosition: {x: 27.5, y: 13.5, z: 0}
+    ZoneId: zone_interior_cave_f0
+  - SpawnPointId: spawn_cave_1_up_a
+    FacingDirection: 2
+    SpawnPosition: {x: 25.5, y: 35.5, z: 0}
+    ZoneId: zone_interior_cave_f0
+  - SpawnPointId: spawn_cave_1_mid_a
+    FacingDirection: 2
+    SpawnPosition: {x: 25.5, y: 34.5, z: 0}
+    ZoneId: zone_interior_cave_f0
+  - SpawnPointId: spawn_cave_1_down_a
+    FacingDirection: 2
+    SpawnPosition: {x: 25.5, y: 33.5, z: 0}
+    ZoneId: zone_interior_cave_f0
+  - SpawnPointId: spawn_cave_1_up_b
+    FacingDirection: 3
+    SpawnPosition: {x: 13.5, y: 19.5, z: 0}
+    ZoneId: zone_interior_cave_f1
+  - SpawnPointId: spawn_cave_1_mid_b
+    FacingDirection: 3
+    SpawnPosition: {x: 13.5, y: 18.5, z: 0}
+    ZoneId: zone_interior_cave_f1
+  - SpawnPointId: spawn_cave_1_down_b
+    FacingDirection: 3
+    SpawnPosition: {x: 13.5, y: 17.5, z: 0}
+    ZoneId: zone_interior_cave_f1
+  - SpawnPointId: spawn_cave_2_up_a
+    FacingDirection: 2
+    SpawnPosition: {x: 33.5, y: 25.5, z: 0}
+    ZoneId: zone_interior_cave_f1
+  - SpawnPointId: spawn_cave_2_mid_a
+    FacingDirection: 2
+    SpawnPosition: {x: 33.5, y: 24.5, z: 0}
+    ZoneId: zone_interior_cave_f1
+  - SpawnPointId: spawn_cave_2_down_a
+    FacingDirection: 2
+    SpawnPosition: {x: 33.5, y: 23.5, z: 0}
+    ZoneId: zone_interior_cave_f1
+  - SpawnPointId: spawn_cave_2_up_b
+    FacingDirection: 3
+    SpawnPosition: {x: 16.5, y: 19.5, z: 0}
+    ZoneId: zone_interior_cave_f2
+  - SpawnPointId: spawn_cave_2_mid_b
+    FacingDirection: 3
+    SpawnPosition: {x: 16.5, y: 18.5, z: 0}
+    ZoneId: zone_interior_cave_f2
+  - SpawnPointId: spawn_cave_2_down_b
+    FacingDirection: 3
+    SpawnPosition: {x: 16.5, y: 17.5, z: 0}
+    ZoneId: zone_interior_cave_f2
+  - SpawnPointId: spawn_final_b
+    FacingDirection: 0
+    SpawnPosition: {x: 23.5, y: 25.5, z: 0}
+    ZoneId: zone_interior_cave_f2
+  - SpawnPointId: spawn_final_burning_a
+    FacingDirection: 1
+    SpawnPosition: {x: 23.5, y: 17.5, z: 0}
+    ZoneId: zone_interior_final_burned
+  - SpawnPointId: spawn_final_burned_a
+    FacingDirection: 1
+    SpawnPosition: {x: 23.5, y: 17.5, z: 0}
+    ZoneId: zone_interior_final_burning
+  - SpawnPointId: spawn_house_a_a
+    FacingDirection: 1
+    SpawnPosition: {x: 24.5, y: 20.5, z: 0}
+    ZoneId: zone_interior_house_a_f0
+  - SpawnPointId: spawn_house_a_1_b
+    FacingDirection: 3
+    SpawnPosition: {x: 22.5, y: 26.5, z: 0}
+    ZoneId: zone_interior_house_a_f0
+  - SpawnPointId: spawn_house_a_1_a
+    FacingDirection: 3
+    SpawnPosition: {x: 22.5, y: 26.5, z: 0}
+    ZoneId: zone_interior_house_a_f1
+  - SpawnPointId: spawn_house_b_a
+    FacingDirection: 1
+    SpawnPosition: {x: 24.5, y: 20.5, z: 0}
+    ZoneId: zone_interior_house_b
+  - SpawnPointId: spawn_house_c_a
+    FacingDirection: 1
+    SpawnPosition: {x: 24.5, y: 20.5, z: 0}
+    ZoneId: zone_interior_house_c
+  - SpawnPointId: spawn_forest_0_a
+    FacingDirection: 1
+    SpawnPosition: {x: 7.5, y: 0.5, z: 0}
+    ZoneId: zone_overworld_forest
+  - SpawnPointId: spawn_cave_0_b
+    FacingDirection: 0
+    SpawnPosition: {x: -6.5, y: 69.5, z: 0}
+    ZoneId: zone_overworld_forest
+  - SpawnPointId: spawn_forest_0_b
+    FacingDirection: 0
+    SpawnPosition: {x: 7.5, y: 42.5, z: 0}
+    ZoneId: zone_overworld_outskirts
+  - SpawnPointId: spawn_house_a_b
+    FacingDirection: 0
+    SpawnPosition: {x: 4.5, y: 7.5, z: 0}
+    ZoneId: zone_overworld_village
+  - SpawnPointId: spawn_house_b_b
+    FacingDirection: 0
+    SpawnPosition: {x: 11.5, y: 9.5, z: 0}
+    ZoneId: zone_overworld_village
+  - SpawnPointId: spawn_house_c_b
+    FacingDirection: 0
+    SpawnPosition: {x: 6.5, y: 2.5, z: 0}
+    ZoneId: zone_overworld_village
+  - SpawnPointId: spawn_cave_0_a
+    FacingDirection: 1
+    SpawnPosition: {x: 27.5, y: 13.5, z: 0}
+    ZoneId: zone_interior_cave_f0
+  - SpawnPointId: spawn_cave_1_up_a
+    FacingDirection: 2
+    SpawnPosition: {x: 25.5, y: 35.5, z: 0}
+    ZoneId: zone_interior_cave_f0
+  - SpawnPointId: spawn_cave_1_mid_a
+    FacingDirection: 2
+    SpawnPosition: {x: 25.5, y: 34.5, z: 0}
+    ZoneId: zone_interior_cave_f0
+  - SpawnPointId: spawn_cave_1_down_a
+    FacingDirection: 2
+    SpawnPosition: {x: 25.5, y: 33.5, z: 0}
+    ZoneId: zone_interior_cave_f0
+  - SpawnPointId: spawn_cave_1_up_b
+    FacingDirection: 3
+    SpawnPosition: {x: 13.5, y: 19.5, z: 0}
+    ZoneId: zone_interior_cave_f1
+  - SpawnPointId: spawn_cave_1_mid_b
+    FacingDirection: 3
+    SpawnPosition: {x: 13.5, y: 18.5, z: 0}
+    ZoneId: zone_interior_cave_f1
+  - SpawnPointId: spawn_cave_1_down_b
+    FacingDirection: 3
+    SpawnPosition: {x: 13.5, y: 17.5, z: 0}
+    ZoneId: zone_interior_cave_f1
+  - SpawnPointId: spawn_cave_2_up_a
+    FacingDirection: 2
+    SpawnPosition: {x: 33.5, y: 25.5, z: 0}
+    ZoneId: zone_interior_cave_f1
+  - SpawnPointId: spawn_cave_2_mid_a
+    FacingDirection: 2
+    SpawnPosition: {x: 33.5, y: 24.5, z: 0}
+    ZoneId: zone_interior_cave_f1
+  - SpawnPointId: spawn_cave_2_down_a
+    FacingDirection: 2
+    SpawnPosition: {x: 33.5, y: 23.5, z: 0}
+    ZoneId: zone_interior_cave_f1
+  - SpawnPointId: spawn_cave_2_up_b
+    FacingDirection: 3
+    SpawnPosition: {x: 16.5, y: 19.5, z: 0}
+    ZoneId: zone_interior_cave_f2
+  - SpawnPointId: spawn_cave_2_mid_b
+    FacingDirection: 3
+    SpawnPosition: {x: 16.5, y: 18.5, z: 0}
+    ZoneId: zone_interior_cave_f2
+  - SpawnPointId: spawn_cave_2_down_b
+    FacingDirection: 3
+    SpawnPosition: {x: 16.5, y: 17.5, z: 0}
+    ZoneId: zone_interior_cave_f2
+  - SpawnPointId: spawn_final_b
+    FacingDirection: 0
+    SpawnPosition: {x: 23.5, y: 25.5, z: 0}
+    ZoneId: zone_interior_cave_f2
+  - SpawnPointId: spawn_final_burning_a
+    FacingDirection: 1
+    SpawnPosition: {x: 23.5, y: 17.5, z: 0}
+    ZoneId: zone_interior_final_burned
+  - SpawnPointId: spawn_final_burned_a
+    FacingDirection: 1
+    SpawnPosition: {x: 23.5, y: 17.5, z: 0}
+    ZoneId: zone_interior_final_burning
+  - SpawnPointId: spawn_house_a_a
+    FacingDirection: 1
+    SpawnPosition: {x: 24.5, y: 20.5, z: 0}
+    ZoneId: zone_interior_house_a_f0
+  - SpawnPointId: spawn_house_a_1_b
+    FacingDirection: 3
+    SpawnPosition: {x: 22.5, y: 26.5, z: 0}
+    ZoneId: zone_interior_house_a_f0
+  - SpawnPointId: spawn_house_a_1_a
+    FacingDirection: 3
+    SpawnPosition: {x: 22.5, y: 26.5, z: 0}
+    ZoneId: zone_interior_house_a_f1
+  - SpawnPointId: spawn_house_b_a
+    FacingDirection: 1
+    SpawnPosition: {x: 24.5, y: 20.5, z: 0}
+    ZoneId: zone_interior_house_b
+  - SpawnPointId: spawn_house_c_a
+    FacingDirection: 1
+    SpawnPosition: {x: 24.5, y: 20.5, z: 0}
+    ZoneId: zone_interior_house_c
+  - SpawnPointId: spawn_forest_0_a
+    FacingDirection: 1
+    SpawnPosition: {x: 7.5, y: 0.5, z: 0}
+    ZoneId: zone_overworld_forest
+  - SpawnPointId: spawn_cave_0_b
+    FacingDirection: 0
+    SpawnPosition: {x: -6.5, y: 69.5, z: 0}
+    ZoneId: zone_overworld_forest
+  - SpawnPointId: spawn_forest_0_b
+    FacingDirection: 0
+    SpawnPosition: {x: 7.5, y: 42.5, z: 0}
+    ZoneId: zone_overworld_outskirts
+  - SpawnPointId: spawn_house_a_b
+    FacingDirection: 0
+    SpawnPosition: {x: 4.5, y: 7.5, z: 0}
+    ZoneId: zone_overworld_village
+  - SpawnPointId: spawn_house_b_b
+    FacingDirection: 0
+    SpawnPosition: {x: 11.5, y: 9.5, z: 0}
+    ZoneId: zone_overworld_village
+  - SpawnPointId: spawn_house_c_b
+    FacingDirection: 0
+    SpawnPosition: {x: 6.5, y: 2.5, z: 0}
+    ZoneId: zone_overworld_village
+  - SpawnPointId: spawn_cave_0_a
+    FacingDirection: 1
+    SpawnPosition: {x: 27.5, y: 13.5, z: 0}
+    ZoneId: zone_interior_cave_f0
+  - SpawnPointId: spawn_cave_1_up_a
+    FacingDirection: 2
+    SpawnPosition: {x: 25.5, y: 35.5, z: 0}
+    ZoneId: zone_interior_cave_f0
+  - SpawnPointId: spawn_cave_1_mid_a
+    FacingDirection: 2
+    SpawnPosition: {x: 25.5, y: 34.5, z: 0}
+    ZoneId: zone_interior_cave_f0
+  - SpawnPointId: spawn_cave_1_down_a
+    FacingDirection: 2
+    SpawnPosition: {x: 25.5, y: 33.5, z: 0}
+    ZoneId: zone_interior_cave_f0
+  - SpawnPointId: spawn_cave_1_up_b
+    FacingDirection: 3
+    SpawnPosition: {x: 13.5, y: 19.5, z: 0}
+    ZoneId: zone_interior_cave_f1
+  - SpawnPointId: spawn_cave_1_mid_b
+    FacingDirection: 3
+    SpawnPosition: {x: 13.5, y: 18.5, z: 0}
+    ZoneId: zone_interior_cave_f1
+  - SpawnPointId: spawn_cave_1_down_b
+    FacingDirection: 3
+    SpawnPosition: {x: 13.5, y: 17.5, z: 0}
+    ZoneId: zone_interior_cave_f1
+  - SpawnPointId: spawn_cave_2_up_a
+    FacingDirection: 2
+    SpawnPosition: {x: 33.5, y: 25.5, z: 0}
+    ZoneId: zone_interior_cave_f1
+  - SpawnPointId: spawn_cave_2_mid_a
+    FacingDirection: 2
+    SpawnPosition: {x: 33.5, y: 24.5, z: 0}
+    ZoneId: zone_interior_cave_f1
+  - SpawnPointId: spawn_cave_2_down_a
+    FacingDirection: 2
+    SpawnPosition: {x: 33.5, y: 23.5, z: 0}
+    ZoneId: zone_interior_cave_f1
+  - SpawnPointId: spawn_cave_2_up_b
+    FacingDirection: 3
+    SpawnPosition: {x: 16.5, y: 19.5, z: 0}
+    ZoneId: zone_interior_cave_f2
+  - SpawnPointId: spawn_cave_2_mid_b
+    FacingDirection: 3
+    SpawnPosition: {x: 16.5, y: 18.5, z: 0}
+    ZoneId: zone_interior_cave_f2
+  - SpawnPointId: spawn_cave_2_down_b
+    FacingDirection: 3
+    SpawnPosition: {x: 16.5, y: 17.5, z: 0}
+    ZoneId: zone_interior_cave_f2
+  - SpawnPointId: spawn_final_b
+    FacingDirection: 0
+    SpawnPosition: {x: 23.5, y: 25.5, z: 0}
+    ZoneId: zone_interior_cave_f2
+  - SpawnPointId: spawn_final_burned_a
+    FacingDirection: 1
+    SpawnPosition: {x: 23.5, y: 17.5, z: 0}
+    ZoneId: zone_interior_final_burned
+  - SpawnPointId: spawn_final_burning_a
+    FacingDirection: 1
+    SpawnPosition: {x: 23.5, y: 17.5, z: 0}
+    ZoneId: zone_interior_final_burning
+  - SpawnPointId: spawn_house_a_a
+    FacingDirection: 1
+    SpawnPosition: {x: 24.5, y: 20.5, z: 0}
+    ZoneId: zone_interior_house_a_f0
+  - SpawnPointId: spawn_house_a_1_b
+    FacingDirection: 3
+    SpawnPosition: {x: 22.5, y: 26.5, z: 0}
+    ZoneId: zone_interior_house_a_f0
+  - SpawnPointId: spawn_house_a_1_a
+    FacingDirection: 3
+    SpawnPosition: {x: 22.5, y: 26.5, z: 0}
+    ZoneId: zone_interior_house_a_f1
+  - SpawnPointId: spawn_house_b_a
+    FacingDirection: 1
+    SpawnPosition: {x: 24.5, y: 20.5, z: 0}
+    ZoneId: zone_interior_house_b
+  - SpawnPointId: spawn_house_c_a
+    FacingDirection: 1
+    SpawnPosition: {x: 24.5, y: 20.5, z: 0}
+    ZoneId: zone_interior_house_c
+  - SpawnPointId: spawn_forest_0_a
+    FacingDirection: 1
+    SpawnPosition: {x: 7.5, y: 0.5, z: 0}
+    ZoneId: zone_overworld_forest
+  - SpawnPointId: spawn_cave_0_b
+    FacingDirection: 0
+    SpawnPosition: {x: -6.5, y: 69.5, z: 0}
+    ZoneId: zone_overworld_forest
+  - SpawnPointId: spawn_forest_0_b
+    FacingDirection: 0
+    SpawnPosition: {x: 7.5, y: 42.5, z: 0}
+    ZoneId: zone_overworld_outskirts
+  - SpawnPointId: spawn_house_a_b
+    FacingDirection: 0
+    SpawnPosition: {x: 4.5, y: 7.5, z: 0}
+    ZoneId: zone_overworld_village
+  - SpawnPointId: spawn_house_b_b
+    FacingDirection: 0
+    SpawnPosition: {x: 11.5, y: 9.5, z: 0}
+    ZoneId: zone_overworld_village
+  - SpawnPointId: spawn_house_c_b
+    FacingDirection: 0
+    SpawnPosition: {x: 6.5, y: 2.5, z: 0}
+    ZoneId: zone_overworld_village

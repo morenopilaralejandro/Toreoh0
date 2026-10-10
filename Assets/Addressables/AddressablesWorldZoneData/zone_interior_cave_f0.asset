@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfb61aa41aee37b949b5f1d6b13f9d5d, type: 3}
+  m_Name: zone_interior_cave_f0
+  m_EditorClassIdentifier: Assembly-CSharp::ZoneData
+  ZoneId: zone_interior_cave_f0
+  ZoneType: 1
+  Bgm: {fileID: 0}
+  OverworldData: {fileID: 0}
+  SceneAddressInterior: scene_interior_zone_interior_cave_f0
+  FieldData: {fileID: 0}
+  Encounters: []
+  SpawnPoints:
+  - SpawnPointId: spawn_cave_0_a
+    FacingDirection: 1
+    SpawnPosition: {x: 27.5, y: 13.5, z: 0}
+    ZoneId: zone_interior_cave_f0
+  - SpawnPointId: spawn_cave_1_up_a
+    FacingDirection: 2
+    SpawnPosition: {x: 25.5, y: 35.5, z: 0}
+    ZoneId: zone_interior_cave_f0
+  - SpawnPointId: spawn_cave_1_mid_a
+    FacingDirection: 2
+    SpawnPosition: {x: 25.5, y: 34.5, z: 0}
+    ZoneId: zone_interior_cave_f0
+  - SpawnPointId: spawn_cave_1_down_a
+    FacingDirection: 2
+    SpawnPosition: {x: 25.5, y: 33.5, z: 0}
+    ZoneId: zone_interior_cave_f0

@@ -21,6 +21,7 @@ public abstract class SceneRoot : MonoBehaviour
         );
 
     // spawn
+    #if UNITY_EDITOR 
     protected virtual void CollectSpawnPoints()
     {
         List<SpawnPointEntity> listSpawnPointEntity = new ();
@@ -31,6 +32,7 @@ public abstract class SceneRoot : MonoBehaviour
 
         EditorUtility.SetDirty(this);
     }
+    #endif
 
     // snap
     [ContextMenu("SnapTransforms")]
@@ -55,7 +57,7 @@ public abstract class SceneRoot : MonoBehaviour
     protected float SnapValue(float floatValue) => Mathf.Round(floatValue * 2) / 2;
 
     // gizmos
-    protected void OnDrawGizmos()
+    protected virtual void OnDrawGizmos()
     {
         GizmosUtils.DrawCube(
             fillColorFillDefault,

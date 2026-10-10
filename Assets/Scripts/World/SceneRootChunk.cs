@@ -26,6 +26,7 @@ public class SceneRootChunk : SceneRoot
     }
 
     // spawn
+    #if UNITY_EDITOR 
     [ContextMenu("CollectSpawnPoints")]
     protected override void CollectSpawnPoints() 
     {
@@ -33,11 +34,14 @@ public class SceneRootChunk : SceneRoot
         foreach (var spawnPoint in base.spawnPoints)
             ChunkData.ZoneData.SpawnPoints.Add(spawnPoint);
         EditorUtility.SetDirty(ChunkData.ZoneData);
+        
     }
+    #endif
 
     // snap
     private void SnapChunk() 
     {
+        if (ChunkData == null) return;
         Vector3 pos = new Vector3(
             ChunkData.ChunkCoord.x * WorldConstants.CHUCK_SIZE,
             ChunkData.ChunkCoord.y * WorldConstants.CHUCK_SIZE,
@@ -45,4 +49,16 @@ public class SceneRootChunk : SceneRoot
         );
         transform.position = pos;
     }
+
+    // Gizmos
+    #if UNITY_EDITOR 
+    protected override void OnDrawGizmos() 
+    {
+        base.OnDrawGizmos();
+        UnityEditor.Handles.Label(
+            center - (size / 2.20f),
+            ChunkData.ChunkId
+        );
+    }
+    #endif
 }

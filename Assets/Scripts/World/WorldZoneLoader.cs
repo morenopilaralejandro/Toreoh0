@@ -53,8 +53,8 @@ public class WorldZoneLoader
 
     private async Task LoadZoneAtPositionInterior(ZoneData zoneData, Vector3 pos, CharacterDirection facingDirection)
     {
-        await sceneLoader.LoadScenes(new string[] { zoneData.SceneAddressInterior });
         SetCharacter(pos, facingDirection);
+        await sceneLoader.LoadScenes(new string[] { zoneData.SceneAddressInterior });
         // state in interior
     }
 
@@ -98,6 +98,7 @@ public class WorldZoneLoader
     public async void TransitionToZone(string spawnPointId)
     {
         // if state is transitioning return
+        if(stateMachine.State == WorldState.Processing) return;
         stateMachine.SetState(WorldState.Processing);
         await fadeScreen.FadeIn();
         await UnloadCurrentZone();

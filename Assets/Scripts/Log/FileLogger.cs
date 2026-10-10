@@ -5,11 +5,13 @@ public class FileLogger
     private DebugConfig config;
     private FileWriter fileWriter;
     
-    public void Initialize(DebugConfig config) 
+    public FileLogger(DebugConfig config) 
     {
         this.config = config;
-        fileWriter = new FileWriter();
-        fileWriter.Initialize(config.FileLoggerPath);
+        fileWriter = new FileWriter(
+            IOUtils.PathCombinePersistent(config.FileLoggerFolder),
+            config.FileLoggerName
+        );
     }
 
     public void WriteToFile(string message, LogLevel logLevel) 

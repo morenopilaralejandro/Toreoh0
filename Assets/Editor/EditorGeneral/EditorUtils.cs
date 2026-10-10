@@ -36,7 +36,7 @@ public static class EditorUtils
     public static bool IsValidFolder(string path) => AssetDatabase.IsValidFolder(path);
     public static void SetDirty(Object target) => EditorUtility.SetDirty(target);
 
-    //asset
+    // asset
     public static bool IsExistingAssetPath(string path) => GetMainAssetTypeAtPath(path) != null;
     public static T LoadAssetAtPath<T>(string path) where T : Object => AssetDatabase.LoadAssetAtPath<T>(path);
     public static Object[] LoadAllAssetsAtPath(string path) => AssetDatabase.LoadAllAssetsAtPath(path);
@@ -45,7 +45,7 @@ public static class EditorUtils
     public static string GetAssetPath(string guid) => AssetDatabase.GUIDToAssetPath(guid);
     public static System.Type GetMainAssetTypeAtPath(string path) => AssetDatabase.GetMainAssetTypeAtPath(path);
 
-    //addresable
+    // addresable
     public static AddressableAssetSettings GetAddressableSettings() => AddressableAssetSettingsDefaultObject.Settings;
     public static AddressableAssetEntry GetAssetEntry(string guid) => GetAddressableSettings().FindAssetEntry(guid);
     public static AddressableAssetGroup GetAssetAddressableGroup(string guid) => GetAssetEntry(guid).parentGroup;

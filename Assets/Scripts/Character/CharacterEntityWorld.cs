@@ -6,6 +6,8 @@ using Aremoreno.Enums.World;
 public class CharacterEntityWorld : MonoBehaviour 
 {
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Collider2D colliderObstacles;
+    [SerializeField] private CharacterTriggerInteraction interactionComponent;
     private CharacterComponentStateMachineWorld StateMachineWorld;
 
     public void Awake() 
@@ -33,11 +35,27 @@ public class CharacterEntityWorld : MonoBehaviour
             SceneLoaderManager.Instance.UnloadGroup("SceneGroupData-World");
             SceneLoaderManager.Instance.LoadGroup("SceneGroupData-DebugMainMenu");
         }
+
+        if (InputManager.Instance.MapBattle.Tracker.GetDown(InputBattle.Pass)) 
+        {
+            if (colliderObstacles.enabled)
+                OnIsNoClipEnabledChanged(true);
+            else
+                OnIsNoClipEnabledChanged(false);
+        }
+
+        if (InputManager.Instance.MapWorld.Tracker.GetDown(InputWorld.Interact)) 
+        {
+            CustomLog.Warning("button pressed");
+            interactionComponent.PerformInteraction();
+        }
     }
 
     public void Teleport(Vector3 pos)
     {
+        rb.linearVelocity = Vector2.zero;
         rb.position = pos;
+        transform.position = pos;
         WorldEvents.RaiseCharacterTeleported(pos);
     }
 
@@ -45,4 +63,16 @@ public class CharacterEntityWorld : MonoBehaviour
     {
         
     }
+
+    private void OnEnable() 
+    {
+        WorldEvents.OnIsNoClipEnabledChanged += OnIsNoClipEnabledChanged;
+    }
+
+    private void OnDisable() 
+    {
+        WorldEvents.OnIsNoClipEnabledChanged -= OnIsNoClipEnabledChanged;
+    }
+
+    private void OnIsNoClipEnabledChanged(bool isEnabled) => colliderObstacles.enabled = !isEnabled;
 }

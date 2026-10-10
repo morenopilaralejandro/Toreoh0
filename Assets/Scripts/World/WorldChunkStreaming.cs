@@ -48,7 +48,7 @@ public class WorldChunkStreaming
     public async Task StartStreaming(OverworldData overworldData)
     {
         this.overworldData = overworldData;
-        lastCharacterChunkCoord = new Vector2Int(int.MinValue, int.MinValue);   
+        lastCharacterChunkCoord = new Vector2Int(int.MaxValue, int.MaxValue);   
         updateTimer = 0f;
 
         dictChunkData.Clear();

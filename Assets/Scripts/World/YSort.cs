@@ -7,13 +7,21 @@ public class YSort : MonoBehaviour
     [SerializeField] private SortingGroup sortingGroup;
     [SerializeField] private int offset;
     private Transform sortReference;
+    private WorldManager worldManager;
 
-    private void Awake()
+    private void Start()
     {
         sortReference = Camera.main.transform;
+        worldManager = WorldManager.Instance;
+        //worldManager.YSortComponent.Register(this);
     }
 
-    private void OnLateUpdate()
+    private void Destroy()
+    {
+        //worldManager?.YSortComponent.Unregister(this);
+    }
+
+    public void OnLateUpdateInternal()
     {
         float relativeY = sortPoint.position.y - sortReference.position.y;
         sortingGroup.sortingOrder = -(int)(relativeY * 10 + offset);

@@ -9,8 +9,7 @@ public static class CustomLog
     public static void Initialize(DebugConfig debugConfig) 
     {
         minimunLogLevel = debugConfig.MinimunLogLevel;
-        fileLogger = new FileLogger();
-        fileLogger.Initialize(debugConfig);
+        fileLogger = new FileLogger(debugConfig);
     }
 
     public static void Log(string message, LogLevel logLevel, UnityEngine.Object context = null) 
