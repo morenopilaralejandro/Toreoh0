@@ -14,17 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: AudioSfx
   m_GUID: 2d7f533ee16c552108ec5a88b4182b0c
-  m_SerializeEntries:
-  - m_GUID: 02cac04b983fc24f7bdb37a5973bf6e6
-    m_Address: sfx-menu_open
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 459fb75610128610a917b757de5470e0
-    m_Address: sfx-menu_close
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: fd8f0a373a4da231f8de6474b1779402, type: 2}
   m_SchemaSet:

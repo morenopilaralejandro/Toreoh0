@@ -46,7 +46,6 @@ public class CharacterEntityWorld : MonoBehaviour
 
         if (InputManager.Instance.MapWorld.Tracker.GetDown(InputWorld.Interact)) 
         {
-            CustomLog.Warning("button pressed");
             interactionComponent.PerformInteraction();
         }
     }

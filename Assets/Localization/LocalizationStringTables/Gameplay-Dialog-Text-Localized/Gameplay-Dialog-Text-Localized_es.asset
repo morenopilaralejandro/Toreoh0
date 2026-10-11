@@ -1,0 +1,447 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Gameplay-Dialog-Text-Localized_es
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 83b51093935333374b5ce3dfe724396e, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 123448598528
+    m_Localized: "S\xED"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123524096000
+    m_Localized: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123524096001
+    m_Localized: Comprar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123524096002
+    m_Localized: Vender
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290304
+    m_Localized: Salir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290305
+    m_Localized: Cancelar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290306
+    m_Localized: Volver
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290307
+    m_Localized: Jugar partido
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290308
+    m_Localized: Jugar senda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290309
+    m_Localized: Sobre ti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290310
+    m_Localized: Sobre este lugar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290311
+    m_Localized: Sobre el partido
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290312
+    m_Localized: Sobre tu equipo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290313
+    m_Localized: Rezar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290314
+    m_Localized: Confesarse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290315
+    m_Localized: "\xA1No te lo permitir\xE9!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290316
+    m_Localized: "Adi\xF3s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290317
+    m_Localized: Gracias
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290318
+    m_Localized: Es tu culpa.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290319
+    m_Localized: "\xA1Saludos!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290320
+    m_Localized: "\xBFQu\xE9 quieres?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290321
+    m_Localized: "\xBFQu\xE9 quieres?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290322
+    m_Localized: "\xBFEn qu\xE9 puedo ayudarte?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290323
+    m_Localized: Bienvenido.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290324
+    m_Localized: "\xA1Bienvenido!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290325
+    m_Localized: La paz sea contigo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290326
+    m_Localized: "\xA1Prep\xE1rate!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290327
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290328
+    m_Localized: Hola.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290329
+    m_Localized: Hola.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290330
+    m_Localized: Hola.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290331
+    m_Localized: "\xA1Hey!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290332
+    m_Localized: "\xA1Holi!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290333
+    m_Localized: Hola.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290334
+    m_Localized: Hola.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290335
+    m_Localized: Hola.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290336
+    m_Localized: Hola.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290337
+    m_Localized: "Buenos d\xEDas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290338
+    m_Localized: "Buenos d\xEDas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290339
+    m_Localized: "\xA1Buenos d\xEDas!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290340
+    m_Localized: "\xA1Buenos d\xEDas!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290341
+    m_Localized: "Buenos d\xEDas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290342
+    m_Localized: "Buenos d\xEDas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290343
+    m_Localized: "Buenos d\xEDas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290344
+    m_Localized: "Buenos d\xEDas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290345
+    m_Localized: Buenas tardes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290346
+    m_Localized: Buenas tardes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290347
+    m_Localized: "\xA1Buenas tardes!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290348
+    m_Localized: "\xA1Buenas tardes!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290349
+    m_Localized: Buenas tardes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290350
+    m_Localized: Buenas tardes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290351
+    m_Localized: Buenas tardes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290352
+    m_Localized: Buenas tardes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290353
+    m_Localized: Buenas noches.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290354
+    m_Localized: Buenas noches.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290355
+    m_Localized: "\xA1Buenas noches!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290356
+    m_Localized: "\xA1Buenas noches!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290357
+    m_Localized: Buenas noches.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290358
+    m_Localized: Buenas noches.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290359
+    m_Localized: Buenas noches.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290360
+    m_Localized: Buenas noches.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290361
+    m_Localized: "\xA1Ad\xEDos!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290362
+    m_Localized: "\xA1Cu\xEDdate!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290363
+    m_Localized: "\xA1Fuera de mi vista!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290364
+    m_Localized: "\xA1Vuelve pronto!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290365
+    m_Localized: Ve en paz.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290366
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290367
+    m_Localized: "Ad\xEDos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290368
+    m_Localized: "Ad\xEDos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290369
+    m_Localized: "Ad\xEDos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290370
+    m_Localized: "Ad\xEDos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290371
+    m_Localized: "Ad\xEDos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290372
+    m_Localized: "Ad\xEDos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290373
+    m_Localized: "Ad\xEDos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290374
+    m_Localized: "Ad\xEDos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290375
+    m_Localized: "Ad\xEDos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290376
+    m_Localized: "Ad\xEDos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290377
+    m_Localized: "\xA1Ad\xEDos!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290378
+    m_Localized: "\xA1Ad\xEDos!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290379
+    m_Localized: "Ad\xEDos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290380
+    m_Localized: "Ad\xEDos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290381
+    m_Localized: "Ad\xEDos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290382
+    m_Localized: "Ad\xEDos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290383
+    m_Localized: Hasta luego.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290384
+    m_Localized: Hasta luego.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290385
+    m_Localized: "\xA1Hasta luego!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290386
+    m_Localized: "\xA1Hasta luego!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290387
+    m_Localized: Hasta luego.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290388
+    m_Localized: Hasta luego.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290389
+    m_Localized: Hasta luego.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290390
+    m_Localized: Hasta luego.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290391
+    m_Localized: Cierras el cofre.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290392
+    m_Localized: "El cofre est\xE1 cerrado."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290393
+    m_Localized: Desbloqueas el cofre.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290394
+    m_Localized: Abres el cofre.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290395
+    m_Localized: Abres el cofre...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290396
+    m_Localized: "\xA1Obtuviste {chest_item_name}!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290397
+    m_Localized: "El cofre est\xE1 vac\xEDo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290398
+    m_Localized: Cierras  la puerta.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290399
+    m_Localized: "La puerta est\xE1 cerrada."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290400
+    m_Localized: Abres la puerta.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290401
+    m_Localized: "La pueta est\xE1 abierta."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290402
+    m_Localized: "abcdefghijklmn\xF1opqrstuvwxyz"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290403
+    m_Localized: "ABCDEFGHIJKLMN\xD1OPQRSTUVWXYZ"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290404
+    m_Localized: Test plain text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290405
+    m_Localized: Test hero name --{hero_name}--
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

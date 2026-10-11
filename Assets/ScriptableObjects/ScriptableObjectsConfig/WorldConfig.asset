@@ -28,7 +28,7 @@ MonoBehaviour:
   StepBetweenEncountersBaseMax: 30
   IsDebugWorldEnabled: 1
   IsNoClipEnabled: 1
-  ZoneDataDebug: {fileID: 11400000, guid: 8b8ecd755e3cf4657aafb1312f9133d1, type: 2}
+  ZoneDataDebug: {fileID: 11400000, guid: 931b03f335b953ea1821548d24e2895a, type: 2}
   SceneZoneFolder: Assets/Addressables/AddressablesWorldSceneZone
   ChunkDataFolder: Assets/Addressables/AddressablesWorldChunkData
   PrefixChunk: scene_chunk

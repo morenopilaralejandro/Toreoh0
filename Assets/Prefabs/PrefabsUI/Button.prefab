@@ -87,6 +87,8 @@ GameObject:
   - component: {fileID: 845205229967993081}
   - component: {fileID: 8560912917885667078}
   - component: {fileID: 7814506255443174610}
+  - component: {fileID: 1032429985381599000}
+  - component: {fileID: 4229123270637145060}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -197,6 +199,42 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1032429985381599000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3342418177145420596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e0e485819f38e4228d46b5197e63e56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectOnPointerEnter
+  selectable: {fileID: 7814506255443174610}
+--- !u!114 &4229123270637145060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3342418177145420596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96cb9c63affa05736973c97affc29539, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FeedbackAudioUIGeneric
+  enabledFlags: 768
+  pointerEnterSfx: 
+  pointerExitSfx: 
+  pointerDownSfx: 
+  pointerUpSfx: 
+  pointerClickSfx: 
+  beginDragSfx: 
+  endDragSfx: 
+  dropSfx: 
+  selectSfx: sfx-ui_select
+  submitSfx: sfx-ui_tap
 --- !u!1 &8680185212612279170
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,16 @@ MonoBehaviour:
   m_Name: LocalizationTableMappingConfig
   m_EditorClassIdentifier: Assembly-CSharp::LocalizationTableMappingConfig
   Mappings:
+  - Entity: 12
+    Field: 6
+    Style: 0
+    TableReference:
+      m_TableCollectionName: Gameplay-Dialog-Text-Localized
+  - Entity: 12
+    Field: 6
+    Style: 1
+    TableReference:
+      m_TableCollectionName: Gameplay-Dialog-Text-Romanized
   - Entity: 2
     Field: 2
     Style: 0
@@ -33,6 +43,16 @@ MonoBehaviour:
     Style: 1
     TableReference:
       m_TableCollectionName: Gameplay-Item-Name-Romanized
+  - Entity: 10
+    Field: 0
+    Style: 0
+    TableReference:
+      m_TableCollectionName: Gameplay-Npc-Name-Localized
+  - Entity: 10
+    Field: 0
+    Style: 1
+    TableReference:
+      m_TableCollectionName: Gameplay-Npc-Name-Romanized
   - Entity: 11
     Field: 0
     Style: 0

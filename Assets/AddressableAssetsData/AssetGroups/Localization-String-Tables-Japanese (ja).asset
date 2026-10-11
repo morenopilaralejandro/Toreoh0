@@ -27,14 +27,38 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-ja
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2ebbae6e2eb2293d5b318b6763e44413
+    m_Address: Gameplay-Dialog-Text-Localized_ja
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ja
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3576ebe2d44532ffe834fe1a6a3fe102
     m_Address: Gameplay-Zone-Name-Localized_ja
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-ja
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3dd540f4e8d995da7b61601c47956c9b
+    m_Address: Gameplay-Dialog-Text-Romanized_ja
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ja
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6625fd7309b44127bb3179504b89b9f8
     m_Address: Gameplay-Zone-Name-Romanized_ja
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ja
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8e30b75110682e73d974042b71561f68
+    m_Address: Gameplay-Npc-Name-Localized_ja
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ja
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8ec2cbbd09d49c964a054880863baea5
+    m_Address: Gameplay-Npc-Name-Romanized_ja
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-ja

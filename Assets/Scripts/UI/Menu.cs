@@ -23,8 +23,8 @@ public abstract class Menu : MonoBehaviour, IMenuClosable
     [SerializeField, Range(0f, 1f)] protected float dimmedAlpha = 0.5f;
 
     [Header("Audio")]
-    [SerializeField] protected string sfxOpen  = "sfx-menu_open";
-    [SerializeField] protected string sfxClose = "sfx-menu_close";
+    [SerializeField] protected string sfxOpen  = "sfx-ui_menu_open";
+    [SerializeField] protected string sfxClose = "sfx-ui_menu_close";
 
     protected MenuManager menuManager;
     protected InputManager inputManager;

@@ -45,6 +45,12 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 83b51093935333374b5ce3dfe724396e
+    m_Address: Assets/Localization/LocalizationStringTables/Gameplay-Dialog-Text-Localized/Gameplay-Dialog-Text-Localized
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8ee8f42b4049a47eb9f8ec8c045103fb
     m_Address: Assets/Localization/LocalizationStringTables/UI-Common-Romanized/UI-Common-Romanized
       Shared Data.asset
@@ -57,8 +63,26 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9830f0b8c38408957939fec9b356a920
+    m_Address: Assets/Localization/LocalizationStringTables/Gameplay-Npc-Name-Localized/Gameplay-Npc-Name-Localized
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: aaf44e918670e6a94a6ae206c6e43c59
     m_Address: Assets/Localization/LocalizationStringTables/Gameplay-Item-Description-Localized/Gameplay-Item-Description-Localized
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bd2dd91c1a7dbe6f98a93eb0edcefe85
+    m_Address: Assets/Localization/LocalizationStringTables/Gameplay-Npc-Name-Romanized/Gameplay-Npc-Name-Romanized
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d47a4053252a57d9ab73af6ffe43f0ac
+    m_Address: Assets/Localization/LocalizationStringTables/Gameplay-Dialog-Text-Romanized/Gameplay-Dialog-Text-Romanized
       Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
