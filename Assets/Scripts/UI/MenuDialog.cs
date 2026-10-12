@@ -1,17 +1,16 @@
 using UnityEngine;
+using Aremoreno.Enums.Input;
 
-public class MenuDialog : MonoBehaviour
+public class MenuDialog : Menu
 {
-    /*
-    // TODO inherit menu
-    [Header(UI References)]
-    [SerializeField] private DialogBox dialogBox;
+    [Header("UI References")]
+    [SerializeField] private DialogBoxUI dialogBox;
     [SerializeField] private DialogSpeakerPortraitUI speakerPortrait;
     [SerializeField] private DialogSpeakerNameUI speakerPortraitName;
 
     // Lifecycle
-    protected override void Open() => Clear();
-    protected override void Close() => Clear();
+    public override void OnOpened() => Clear();
+    public override void OnClosed() => Clear();
 
     public void Clear() 
     {
@@ -21,17 +20,17 @@ public class MenuDialog : MonoBehaviour
     }
 
     // Input
-    protected override void OnGainedInput() => InputManager.Instance.Dialog.Tracker.OnButtonDown += OnButtonDown;
-    protected override void OnLostInput() => InputManager.Instance.Dialog.Tracker.OnButtonDown -= OnButtonDown;
+    protected override void OnGainedInput() => InputManager.Instance.MapDialog.Tracker.OnButtonDown += OnButtonDown;
+    protected override void OnLostInput() => InputManager.Instance.MapDialog.Tracker.OnButtonDown -= OnButtonDown;
 
     private void OnButtonDown(InputDialog input)
     {
-        if (input = InputDialog.Continue) OnButtonContinueClicked();
+        if (input == InputDialog.Continue) OnButtonContinueClicked();
     }
 
     public void OnButtonContinueClicked() 
     {
-        dialogBox.OnButtonContinueClicked;
+        dialogBox.OnButtonContinueClicked();
     }
 
     // Event
@@ -51,5 +50,4 @@ public class MenuDialog : MonoBehaviour
 
     private void OnDialogStarted() => MenuManager.Instance.OpenMenu(this);
     private void OnDialogEnded() => RequestClose();
-    */
 }

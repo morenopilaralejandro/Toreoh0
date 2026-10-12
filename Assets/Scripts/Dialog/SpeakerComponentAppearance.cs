@@ -22,5 +22,6 @@ public class SpeakerComponentAppearance
                 HasPortrait = false;
                 break;
         }
+        HasPortrait = false;
     }
 }

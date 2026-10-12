@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
   m_TableCollectionName: Gameplay-Npc-Name-Localized
   m_TableCollectionNameGuidString: 9830f0b8c38408957939fec9b356a920
-  m_Entries: []
+  m_Entries:
+  - m_Id: 193690452369408
+    m_Key: npc-00000-test
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

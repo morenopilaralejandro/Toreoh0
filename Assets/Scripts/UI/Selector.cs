@@ -108,6 +108,7 @@ public abstract class Selector<TData, TListItem> : Menu, IMenuClosable where TLi
 
     protected virtual void Bind(TListItem listItem, TData data)
     {
+        //TODO listItem.SetScrollRect();
         listItem.SetData(data);
     }
 
