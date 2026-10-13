@@ -141,7 +141,7 @@ public abstract class Menu : MonoBehaviour, IMenuClosable
 
     public virtual void OnClosed() 
     {
-        if (!string.IsNullOrEmpty(sfxOpen))
+        if (!string.IsNullOrEmpty(sfxClose))
             _ = audioManager.SfxUI.Play(sfxClose);
     }
 

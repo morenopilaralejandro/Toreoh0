@@ -10,20 +10,21 @@ public class DialogManagerInkStory
     private DialogLocalizationBridge localizationBridge;
     private DialogCacheSpeaker speakerCache;
     private Story currentStory;
-    private List<DialogSerializableChoice> choices;
+    private List<DialogSerializableChoice> choices = new();
     public DialogStateMachine StateMachine { get; private set; }
 
     public void Initialize(
         DialogConfig config, 
         DialogGameDataProvider gameDataProvider, 
         DialogLocalizationBridge localizationBridge,
-        DialogCacheSpeaker speakerCache) 
+        DialogCacheSpeaker speakerCache)
     {
         this.config = config;
         this.gameDataProvider = gameDataProvider;
         this.localizationBridge = localizationBridge;
         this.speakerCache = speakerCache;
         StateMachine = new DialogStateMachine();
+        BuildDict();
     }
 
     private void BuildDict()
@@ -39,14 +40,16 @@ public class DialogManagerInkStory
     public void StartDialog(string knotName, string storyId = "main")
     {
         currentStory = storyDict[storyId];
+        //variablesComponent.SyncFromGameState(currentStory);
         currentStory.ChoosePathString(knotName);
+        DialogEvents.RaiseDialogStarted();
         StateMachine.SetState(DialogState.WaitingForContinue);
         ContinueDialog();
     }
 
     private void ContinueDialog() 
     {
-        if (StateMachine.State != DialogState.WaitingForContinue)
+        if (StateMachine.State != DialogState.WaitingForContinue) return;
         StateMachine.SetState(DialogState.Processing);
         if (currentStory.canContinue) 
         {
@@ -54,7 +57,12 @@ public class DialogManagerInkStory
             var tags = currentStory.currentTags;
             var line = DialogTagParser.ParseLine(text, tags);
             line.TextResolved = localizationBridge.ResolveDialogText(line);
+
             speakerCache.CacheCurrentSpeaker(line.SpeakerData);
+            if (!speakerCache.CurrentSpeaker.LocalizationComponent.IsResolved &&
+                speakerCache.CurrentSpeaker.LocalizationComponent.HasDisplayName)
+                speakerCache.CurrentSpeaker.LocalizationComponent.SetResolvedName(localizationBridge.ResolveSpeakerName(speakerCache.CurrentSpeaker));
+
             StateMachine.SetState(DialogState.WaitingForContinue);
             DialogEvents.RaiseLineReady(line, speakerCache.CurrentSpeaker);
         }
@@ -78,7 +86,7 @@ public class DialogManagerInkStory
         {
             var choiceInk = currentStory.currentChoices[i];
             var choiceTags = choiceInk.tags;
-            var choiceParsed = DialogTagParser.ParseChoice(choiceInk.text, choiceTags);
+            var choiceParsed = DialogTagParser.ParseChoice(choiceInk.text, choiceTags, i);
             choiceParsed.TextResolved = localizationBridge.ResolveChoiceText(choiceParsed);
             choices.Add(choiceParsed);
         }
@@ -91,6 +99,9 @@ public class DialogManagerInkStory
         if (StateMachine.State != DialogState.WaitingForChoice) return;
         StateMachine.SetState(DialogState.Processing);
         currentStory.ChooseChoiceIndex(choiceIndex);
+
+        if (currentStory.canContinue) currentStory.Continue();
+
         StateMachine.SetState(DialogState.WaitingForContinue);
         ContinueDialog();
     }

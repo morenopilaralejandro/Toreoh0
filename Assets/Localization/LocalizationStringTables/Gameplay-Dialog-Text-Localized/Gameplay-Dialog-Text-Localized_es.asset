@@ -403,7 +403,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 123528290396
-    m_Localized: "\xA1Obtuviste {chest_item_name}!"
+    m_Localized: "\xA1Obtuviste {chestItemName}!"
     m_Metadata:
       m_Items: []
   - m_Id: 123528290397
@@ -439,7 +439,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 123528290405
-    m_Localized: Test hero name --{hero_name}--
+    m_Localized: Test hero name --{heroName}--
     m_Metadata:
       m_Items: []
   references:

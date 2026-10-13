@@ -375,8 +375,8 @@ MonoBehaviour:
   isHiddenWhenCovered: 0
   isDimmedWhenCovered: 0
   dimmedAlpha: 0.5
-  sfxOpen: sfx-menu_open
-  sfxClose: sfx-menu_close
+  sfxOpen: sfx-ui_menu_open
+  sfxClose: sfx-ui_menu_close
 --- !u!224 &1055905468 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3689291835727572098, guid: 0194812fd513627f1a04812b557d5f66, type: 3}

@@ -3,20 +3,24 @@ using Ink.Runtime;
 public class DialogGameDataProvider
 {
     private DialogLocalizationBridge localizationBridge;
-
-    // variables
-    private string heroName; 
+    private AudioManager audioManager;
 
     // constructort
-    public DialogGameDataProvider() 
+    public DialogGameDataProvider(DialogLocalizationBridge localizationBridge) 
     {
-        // TODO pass managers
+        this.localizationBridge = localizationBridge;
+        audioManager = AudioManager.Instance;
     }
 
     // functions
-    public string GetHeroName() 
+    //public string GetHeroName() => "hero name";
+    public void PlaySfx(string sfxId) => _ = audioManager.Sfx.Play(sfxId);
+    public void SetCurrentChestItemAsArgument() => localizationBridge.SetArgument("chestItemName", localizationBridge.ResolveItemName("item-00000-test"));
+    //TODO get item from chest manager
+
+    public void OpenSubmenuTest(string id) 
     {
-        return "hero name";
+        
     }
 
     // Story
@@ -28,29 +32,16 @@ public class DialogGameDataProvider
     // BindExternalFunction
     public void BindExternalFunctions(Story story) 
     {
+        story.BindExternalFunction("PlaySfx", (string sfxId) => { PlaySfx(sfxId); });
+        story.BindExternalFunction("SetCurrentChestItemAsArgument", () => { SetCurrentChestItemAsArgument(); });
+        story.BindExternalFunction("OpenSubmenuTest", (string id) => { OpenSubmenuTest(id); });
+
+
         /*
-        story.BindExternalFunction("GetItemName", (string id)) =>
+        story.BindExternalFunction("OpenSubmenuShop", (string id) =>
         {
             return localizationBridge.ResolveItemName(id);
-        };
-
-
-        story.BindExternalFunction("GetCurrentChestItemName", (string id)) =>
-        {
-            // world manager chest system get current chest item -> set before chest dialog
-            return localizationBridge.ResolveItemName(id);
-        };
-
-        story.BindExternalFunction("OpenSubmenuShop", (string id)) =>
-        {
-            return localizationBridge.ResolveItemName(id);
-        };
+        });
         */
-    }
-
-    // SyncVariablesFromGameState
-    public void SyncVariablesFromGameState(Story story) 
-    {
-        story.variablesState["heroName"] = GetHeroName();
     }
 }

@@ -17,5 +17,5 @@ public class LocalizationComponentString
     }
 
     public string GetString(LocalizationField field) => localizedStrings[field].GetLocalizedString();
-    public void SetArguments(LocalizationField field, object args) => localizedStrings[field].Arguments = new object[] { args };
+    public void SetArguments(LocalizationField field, object[] args) => localizedStrings[field].Arguments = args;
 }

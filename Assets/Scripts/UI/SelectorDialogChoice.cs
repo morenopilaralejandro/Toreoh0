@@ -19,7 +19,7 @@ public class SelectorDialogChoice : Selector<DialogSerializableChoice, SelectorD
         else if (input == InputDialog.Cancel) OnButtonCancelClicked();
     }
 
-    public void OnButtonChooseClicked() 
+    public void OnButtonChooseClicked()
     {
         var choice = GetSelectedElement()?.Data;
         if (choice == null) return; 
@@ -27,15 +27,15 @@ public class SelectorDialogChoice : Selector<DialogSerializableChoice, SelectorD
         RequestClose();
     }
 
-    public void OnButtonCancelClicked() 
+    public void OnButtonCancelClicked()
     {
-        var choice = ScrollAdapter.PoolWrapper.Pool.ActiveElements[ScrollAdapter.PoolWrapper.Pool.CountActive - 1].Data;
+        var choice = ScrollAdapter.Pool.ActiveElements[ScrollAdapter.Pool.CountActive - 1].Data;
         DialogEvents.RaiseChoiceSelected(choice.ChoiceIndex);
         RequestClose();
     }
 
     // event
-    protected override void OnEnable() 
+    protected override void OnEnable()
     {
         base.OnEnable();
         DialogEvents.OnChoicesReady += OnChoicesReady;

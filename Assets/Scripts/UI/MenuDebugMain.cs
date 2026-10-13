@@ -13,6 +13,7 @@ public class MenuDebugMain : Menu
 
     public void OnButtonWorldClicked() 
     {
+        RequestClose();
         SceneLoaderManager.Instance.UnloadGroup("SceneGroupData-DebugMainMenu");
         SceneLoaderManager.Instance.LoadGroup("SceneGroupData-World");
     }

@@ -7,6 +7,7 @@ public class SelectorDialogChoiceListItem : SelectorListItem<DialogSerializableC
 
     public override void SetData(DialogSerializableChoice data)
     {
+        base.SetData(data);
         textChoice.text = data.TextResolved;
     }
 

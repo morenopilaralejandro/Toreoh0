@@ -32,7 +32,7 @@ public class ObjectPoolCustomList<T> : ObjectPoolCustom<T>
 
     public override void Dispose() 
     {
-        foreach(var element in list)
+        foreach(var element in new List<T>(list))
             Release(element);
     }
 

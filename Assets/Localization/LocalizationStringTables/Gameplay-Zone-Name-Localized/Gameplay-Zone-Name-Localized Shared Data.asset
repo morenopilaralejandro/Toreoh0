@@ -14,7 +14,71 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
   m_TableCollectionName: Gameplay-Zone-Name-Localized
   m_TableCollectionNameGuidString: 94c306db6ddb65559ada9129668b701c
-  m_Entries: []
+  m_Entries:
+  - m_Id: 2173849866870784
+    m_Key: zone_interior_cave_f0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2173849975922688
+    m_Key: zone_interior_cave_f1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2173849980116992
+    m_Key: zone_interior_cave_f2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2173849980116993
+    m_Key: zone_interior_final_burned
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2173849984311296
+    m_Key: zone_interior_final_burning
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2173849984311297
+    m_Key: zone_interior_house_a_f0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2173849984311298
+    m_Key: zone_interior_house_a_f1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2173849984311299
+    m_Key: zone_interior_house_b
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2173849984311300
+    m_Key: zone_interior_house_c
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2173849984311301
+    m_Key: zone_interior_test_f0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2173849984311302
+    m_Key: zone_overworld_forest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2173849984311303
+    m_Key: zone_overworld_lake
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2173849984311304
+    m_Key: zone_overworld_outskirts
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2173849984311305
+    m_Key: zone_overworld_test1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2173849984311306
+    m_Key: zone_overworld_test2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2173849984311307
+    m_Key: zone_overworld_village
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

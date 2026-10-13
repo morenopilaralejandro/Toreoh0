@@ -8,37 +8,42 @@ public abstract class Selector<TData, TListItem> : Menu, IMenuClosable where TLi
     [Header("Selector")]
     [SerializeField] protected Button buttonClose;
     [SerializeField] protected bool isCloseOnSelect = false;
-    public ScrollViewPoolAdapter<TListItem> ScrollAdapter;
+    [SerializeField] protected ScrollViewPoolAdapterUI uiScroll;
+    [SerializeField] protected ObjectPoolCustomListWrapperMonoBehaviourUI uiPool;
+    private ScrollViewPoolAdapter<TListItem> scrollAdapter;
 
     protected ISelectorSource <TData> source;
     protected ISelectorActionClick <TData> actionClick;
     protected ISelectorFilter <TData> filter;
 
+    public ScrollViewPoolAdapter<TListItem> ScrollAdapter => scrollAdapter;
+
     // override
-    protected override void Start() 
+    protected override void Awake() 
     {
-        ScrollAdapter = new ();
-        ScrollAdapter.Initialize(OnGetElement, OnReleaseElement);
+        scrollAdapter = new ();
+        scrollAdapter.Initialize(uiScroll, uiPool, CreateElement, OnGetElement, OnReleaseElement, OnDestroyElement);
+        base.Awake();
     }
 
     public override void Show()
     {
         base.Show();
         Refresh();
-        ScrollAdapter.SetScrollActive(true);
+        scrollAdapter.SetScrollActive(true);
     }
 
     public override void Hide() 
     {
-        ScrollAdapter.SetScrollActive(false);
-        ScrollAdapter.PoolWrapper.Pool.Dispose();
+        scrollAdapter.SetScrollActive(false);
+        scrollAdapter.Pool.Dispose();
         base.Hide();
     }
 
     public override void SetInteractable(bool isInteractable) 
     {
         base.SetInteractable(isInteractable);
-        ScrollAdapter.SetScrollActive(isInteractable);
+        scrollAdapter.SetScrollActive(isInteractable);
     }
 
     // selector
@@ -59,22 +64,22 @@ public abstract class Selector<TData, TListItem> : Menu, IMenuClosable where TLi
         Refresh();
     }
 
-    public void Refresh() => ScrollAdapter.Populate(source.Enumerate(), Bind);
+    public void Refresh() => scrollAdapter.Populate(source.Enumerate(), Bind);
 
     // element
     public void FocusElement(int index, bool isFallbackToButtonClose = true) 
     {
-        if ((index < 0 || ScrollAdapter.PoolWrapper.Pool.CountActive == 0) && isFallbackToButtonClose)
+        if ((index < 0 || scrollAdapter.Pool.CountActive == 0) && isFallbackToButtonClose)
         {
             if (buttonClose != null) SetDefaultSelectable(buttonClose);
             return;
         }
 
-        index = Mathf.Clamp(index, 0, ScrollAdapter.PoolWrapper.Pool.CountActive - 1); // fallback to first element
-        SetDefaultSelectable(ScrollAdapter.PoolWrapper.Pool.ActiveElements[index].Button);
+        index = Mathf.Clamp(index, 0, scrollAdapter.Pool.CountActive - 1); // fallback to first element
+        SetDefaultSelectable(scrollAdapter.Pool.ActiveElements[index].Button);
     }
 
-    public void FocusElement(TListItem element, bool isFallbackToButtonClose = true) => FocusElement(ScrollAdapter.PoolWrapper.Pool.ActiveElements.IndexOf(element), isFallbackToButtonClose);
+    public void FocusElement(TListItem element, bool isFallbackToButtonClose = true) => FocusElement(scrollAdapter.Pool.ActiveElements.IndexOf(element), isFallbackToButtonClose);
 
     public int GetSelectedIndex()
     {
@@ -82,17 +87,30 @@ public abstract class Selector<TData, TListItem> : Menu, IMenuClosable where TLi
         if (currentSelected == null) return -1;
         var element = currentSelected.GetComponent<TListItem>();
         if (element == null) return -1;
-        return ScrollAdapter.PoolWrapper.Pool.ActiveElements.IndexOf(element);
+        return scrollAdapter.Pool.ActiveElements.IndexOf(element);
     }
 
     public TListItem GetSelectedElement() 
     {
         int selectedIndex = GetSelectedIndex();
         if (selectedIndex < 0) return null;
-        return ScrollAdapter.PoolWrapper.Pool.ActiveElements[selectedIndex];
+        return scrollAdapter.Pool.ActiveElements[selectedIndex];
     } 
 
     // bind and pool method
+    protected virtual TListItem CreateElement()
+    {
+        var go = Instantiate(uiPool.Prefab, uiPool.TransformParent);
+        var element = go.GetComponent<TListItem>();
+        go.SetActive(false);
+        return element;
+    }
+
+    protected virtual void OnDestroyElement(TListItem element) 
+    {
+        Destroy(element.gameObject);
+    }
+
     protected virtual void OnGetElement(TListItem element) 
     {
         element.gameObject.SetActive(true);
@@ -108,7 +126,7 @@ public abstract class Selector<TData, TListItem> : Menu, IMenuClosable where TLi
 
     protected virtual void Bind(TListItem listItem, TData data)
     {
-        //TODO listItem.SetScrollRect();
+        listItem.SetScrollRect(ScrollAdapter.ScrollRect);
         listItem.SetData(data);
     }
 

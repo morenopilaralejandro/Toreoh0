@@ -12,11 +12,15 @@ public class CharacterComponentStateMachineWorld
     public void Subscribe()
     {
         WorldEvents.OnWorldStateChanged += OnWorldStateChanged;
+        UIEvents.OnMenuOpened += OnMenuOpened;
+        UIEvents.OnMenuClosedAll += OnMenuClosedAll;
     }
 
     public void Unsubscribe()
     {
         WorldEvents.OnWorldStateChanged -= OnWorldStateChanged;
+        UIEvents.OnMenuOpened -= OnMenuOpened;
+        UIEvents.OnMenuClosedAll -= OnMenuClosedAll;
     }
 
     private void OnWorldStateChanged(WorldState stateNew, WorldState stateOld)
@@ -34,5 +38,15 @@ public class CharacterComponentStateMachineWorld
                 SetState(WorldStateCharacter.Freeroam);
                 break;
         }
+    }
+
+    private void OnMenuOpened(Menu menu)
+    {
+        SetState(WorldStateCharacter.InMenu);
+    }
+
+    private void OnMenuClosedAll()
+    {
+        SetState(WorldStateCharacter.Freeroam);
     }
 }
