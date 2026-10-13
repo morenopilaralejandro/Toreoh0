@@ -32,9 +32,9 @@ public class WorldChunkStreaming
         this.character = character;
         this.sceneLoader = sceneLoader;
         this.zoneTracker = zoneTracker;
-        this.inverseChunkSize = 1f / WorldConstants.CHUCK_SIZE;
-        this.radius = WorldConstants.CHUCK_STREAMING_RADIUS;
-        this.updateInterval = WorldConstants.CHUCK_STREAMING_UPDATE_INTERVAL;
+        this.inverseChunkSize = 1f / WorldConstants.CHUNK_SIZE;
+        this.radius = WorldConstants.CHUNK_STREAMING_RADIUS;
+        this.updateInterval = WorldConstants.CHUNK_STREAMING_UPDATE_INTERVAL;
     }
 
     public void Update()

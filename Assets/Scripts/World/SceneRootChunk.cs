@@ -8,15 +8,15 @@ public class SceneRootChunk : SceneRoot
 
     protected override Vector3 size => 
         new Vector3(
-            WorldConstants.CHUCK_SIZE,
-            WorldConstants.CHUCK_SIZE,
+            WorldConstants.CHUNK_SIZE,
+            WorldConstants.CHUNK_SIZE,
             1f
         );
 
     protected override Vector3 center => 
         new Vector3(
-            (ChunkData.ChunkCoord.x + WorldConstants.TILE_OFFSET) * WorldConstants.CHUCK_SIZE,
-            (ChunkData.ChunkCoord.y + WorldConstants.TILE_OFFSET) * WorldConstants.CHUCK_SIZE,
+            (ChunkData.ChunkCoord.x + WorldConstants.TILE_OFFSET) * WorldConstants.CHUNK_SIZE,
+            (ChunkData.ChunkCoord.y + WorldConstants.TILE_OFFSET) * WorldConstants.CHUNK_SIZE,
             0f
         );
 
@@ -43,8 +43,8 @@ public class SceneRootChunk : SceneRoot
     {
         if (ChunkData == null) return;
         Vector3 pos = new Vector3(
-            ChunkData.ChunkCoord.x * WorldConstants.CHUCK_SIZE,
-            ChunkData.ChunkCoord.y * WorldConstants.CHUCK_SIZE,
+            ChunkData.ChunkCoord.x * WorldConstants.CHUNK_SIZE,
+            ChunkData.ChunkCoord.y * WorldConstants.CHUNK_SIZE,
             0f
         );
         transform.position = pos;

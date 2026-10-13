@@ -3,13 +3,13 @@ using UnityEngine;
 public static class WorldConstants 
 {
     // chunkStreaming
-    public static float CHUCK_SIZE = 16f;
+    public static float CHUNK_SIZE = 16f;
     public static float TILES_PER_CHUNK = 16f;
     public static float TILE_SIZE = 1f;
     public static float TILE_OFFSET = 0.5f;
     public static float INTERIOR_SIZE = 48f;
-    public static float CHUCK_STREAMING_UPDATE_INTERVAL = 1f;
-    public static int CHUCK_STREAMING_RADIUS = 1;
+    public static float CHUNK_STREAMING_UPDATE_INTERVAL = 1f;
+    public static int CHUNK_STREAMING_RADIUS = 1;
 
     // tag
     public static string TAG_CHARACTER_MAIN = "CharacterMain";

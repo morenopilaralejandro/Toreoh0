@@ -15,8 +15,136 @@ MonoBehaviour:
   m_TableCollectionName: UI-Common-Localized
   m_TableCollectionNameGuidString: 735824408b5855db8be90f3ec8f1c914
   m_Entries:
-  - m_Id: 217828827136
-    m_Key: test1
+  - m_Id: 8378817762304000
+    m_Key: metadata_app_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817888133120
+    m_Key: button_back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817888133121
+    m_Key: button_next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817888133122
+    m_Key: button_continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817892327424
+    m_Key: button_yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817892327425
+    m_Key: button_no
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817892327426
+    m_Key: button_confirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817892327427
+    m_Key: button_cancel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817892327428
+    m_Key: button_open
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817892327429
+    m_Key: button_close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817892327430
+    m_Key: button_create
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817892327431
+    m_Key: button_delete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817892327432
+    m_Key: button_filter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817892327433
+    m_Key: button_search
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817892327434
+    m_Key: button_reset
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817892327435
+    m_Key: button_apply
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817892327436
+    m_Key: button_menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817892327437
+    m_Key: button_change
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817892327438
+    m_Key: text_gameover
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817892327439
+    m_Key: text_loading
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817892327440
+    m_Key: text_loading_suspense
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817896521728
+    m_Key: text_credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817896521729
+    m_Key: symbol_plus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817896521730
+    m_Key: symbol_minus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817896521731
+    m_Key: symbol_infinity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817896521732
+    m_Key: symbol_parenthesis_open
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817896521733
+    m_Key: symbol_parenthesis_close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817896521734
+    m_Key: symbol_brackets_square_open
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817896521735
+    m_Key: symbol_brackets_square_close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817896521736
+    m_Key: symbol_brackets_curly_open
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817896521737
+    m_Key: symbol_brackets_curly_close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817896521738
+    m_Key: symbol_less
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8378817896521739
+    m_Key: symbol_greater
     m_Metadata:
       m_Items: []
   m_Metadata:

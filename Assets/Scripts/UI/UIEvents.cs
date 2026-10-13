@@ -21,4 +21,8 @@ public static class UIEvents
     public static event Action OnMenuClosedAll;
     public static void RaiseMenuClosedAll()
         => OnMenuClosedAll?.Invoke();
+
+    public static event Action OnMenuTestOpenRequested;
+    public static void RaiseMenuTestOpenRequested()
+        => OnMenuTestOpenRequested?.Invoke();
 }

@@ -52,6 +52,12 @@ public abstract class Menu : MonoBehaviour, IMenuClosable
         audioManager = AudioManager.Instance;
     }
 
+    protected virtual void OnDestroy()
+    {
+        if (menuManager != null && menuManager.IsMenuOpened(this)) 
+            RequestClose();
+    }
+
     protected virtual void OnEnable() 
     {
         UIEvents.OnSelectableSelected += OnSelectableSelected;
@@ -93,31 +99,26 @@ public abstract class Menu : MonoBehaviour, IMenuClosable
     public void SetVisible(bool isVisible) 
     {
         foreach (var canvasGroup in canvasGroupList)
-            canvasGroup.alpha = isVisible ? 1f : 0f;
+            UIUtils.SetCanvasGroupVisible(canvasGroup, isVisible);
     }
 
     public void SetAlpha(float alpha) 
     {
         foreach (var canvasGroup in canvasGroupList)
-            canvasGroup.alpha = alpha;
+            UIUtils.SetCanvasGroupAlpha(canvasGroup, alpha);
     }
 
     public void SetActive(bool isActive) 
     {
-        foreach (var go in gameObjectList)
-            go.SetActive(isActive);
+        foreach (var go in gameObjectList) 
+            go?.SetActive(isActive);
     }
-
 
     // interactability
     public virtual void SetInteractable(bool isInteractable)
     {
         foreach (var canvasGroup in canvasGroupList) 
-        {
-            if (canvasGroup == null) return;
-            canvasGroup.interactable = isInteractable;
-            canvasGroup.blocksRaycasts = isInteractable;
-        }
+            UIUtils.SetCanvasGroupInteractable(canvasGroup, isInteractable);
 
         if (isHiddenWhenNotInterable) SetVisible(isInteractable);
         if (isInteractable && !wasInteractable) OnGainedInput();

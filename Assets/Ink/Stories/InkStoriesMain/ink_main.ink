@@ -1,5 +1,6 @@
 EXTERNAL PlaySfx(sfxId)
-EXTERNAL OpenSubmenuTest(id)
+EXTERNAL SetCurrentChestItemAsArgument()
+EXTERNAL OpenSubmenu(menuId, contextId)
 
 INCLUDE ink_chest_open.ink
 INCLUDE ink_chest_empty.ink

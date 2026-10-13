@@ -18,9 +18,14 @@ public class DialogGameDataProvider
     public void SetCurrentChestItemAsArgument() => localizationBridge.SetArgument("chestItemName", localizationBridge.ResolveItemName("item-00000-test"));
     //TODO get item from chest manager
 
-    public void OpenSubmenuTest(string id) 
+    public void OpenSubmenu(string menuId, string contextId) 
     {
-        
+        switch(menuId) 
+        {
+            case "test":
+                UIEvents.RaiseMenuTestOpenRequested();
+                break;
+        }
     }
 
     // Story
@@ -34,7 +39,7 @@ public class DialogGameDataProvider
     {
         story.BindExternalFunction("PlaySfx", (string sfxId) => { PlaySfx(sfxId); });
         story.BindExternalFunction("SetCurrentChestItemAsArgument", () => { SetCurrentChestItemAsArgument(); });
-        story.BindExternalFunction("OpenSubmenuTest", (string id) => { OpenSubmenuTest(id); });
+        story.BindExternalFunction("OpenSubmenu", (string menuId, string contextId) => { OpenSubmenu(menuId, contextId); });
 
 
         /*
