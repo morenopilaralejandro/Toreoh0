@@ -162,7 +162,7 @@ public abstract class Menu : MonoBehaviour, IMenuClosable
     public void SetDefaultSelectable(Selectable selectable, bool focusImmediately = true)
     {
         defaultSelectable = selectable;
-        if(!inputManager.ControlSchemeTracker.ShouldAutoFocus) return;
+        if(!inputManager.ControlSchemeTracker.ShouldAutoFocus()) return;
         if (focusImmediately && selectable != null)
         {
             EventSystem.current.SetSelectedGameObject(selectable.gameObject);
@@ -172,7 +172,7 @@ public abstract class Menu : MonoBehaviour, IMenuClosable
 
     protected virtual void SetDefaultFocus() 
     {
-        if(!inputManager.ControlSchemeTracker.ShouldAutoFocus) return;
+        if(!inputManager.ControlSchemeTracker.ShouldAutoFocus()) return;
         isRestoringFocus = true;
         if (hasMemory && lastSelected != null)
         {

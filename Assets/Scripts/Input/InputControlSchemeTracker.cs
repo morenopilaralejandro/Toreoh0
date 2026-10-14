@@ -8,11 +8,14 @@ public class InputControlSchemeTracker
     public ControlScheme PreviousControlScheme { get; private set; }
     private Dictionary<string, ControlScheme> map;
     private PlayerInput playerInput;
+    private InputConfig config;
 
     public void Initialize(
+        InputConfig config,
         PlayerInput playerInput,
         List<InputControlSchemeMapping> mappings) 
     {
+        this.config = config;
         BuildMap(mappings);
         playerInput.onControlsChanged += OnControlsChanged;
         // OnControlsChanged(playerInput);
@@ -40,7 +43,14 @@ public class InputControlSchemeTracker
             map[mapping.ControlSchemeName] = mapping.ControlScheme;
     }
 
-    public bool ShouldAutoFocus => CurrentControlScheme != ControlScheme.Touch;
+    public bool ShouldAutoFocus()
+    {
+        #if UNITY_EDITOR || DEVELOPMENT_BUILD
+            return !config.IsDebugTouchInput;
+        #else
+            return CurrentControlScheme != ControlScheme.Touch;
+        #endif
+    }
 
     // event
     /*

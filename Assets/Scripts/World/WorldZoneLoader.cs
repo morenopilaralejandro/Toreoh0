@@ -95,7 +95,7 @@ public class WorldZoneLoader
         stateMachine.SetState(WorldState.Idle);
     }
 
-    public async void TransitionToZone(string spawnPointId)
+    public async Task TransitionToZone(string spawnPointId)
     {
         // if state is transitioning return
         if(stateMachine.State == WorldState.Processing) return;

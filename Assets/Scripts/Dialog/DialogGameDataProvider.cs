@@ -4,18 +4,26 @@ public class DialogGameDataProvider
 {
     private DialogLocalizationBridge localizationBridge;
     private AudioManager audioManager;
+    private StoryManager storyManager;
 
     // constructort
     public DialogGameDataProvider(DialogLocalizationBridge localizationBridge) 
     {
         this.localizationBridge = localizationBridge;
         audioManager = AudioManager.Instance;
+        storyManager = StoryManager.Instance;
     }
 
     // functions
     //public string GetHeroName() => "hero name";
     public void PlaySfx(string sfxId) => _ = audioManager.Sfx.Play(sfxId);
-    public void SetCurrentChestItemAsArgument() => localizationBridge.SetArgument("chestItemName", localizationBridge.ResolveItemName("item-00000-test"));
+    public void SetCurrentChestItemAsArgument() => 
+        localizationBridge.SetArgument(
+            "chestItemName", 
+            localizationBridge.ResolveItemName(
+                storyManager.ChestTracker.CurrentOpeningChestId
+            )
+        );
     //TODO get item from chest manager
 
     public void OpenSubmenu(string menuId, string contextId) 

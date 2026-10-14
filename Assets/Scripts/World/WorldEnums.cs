@@ -27,4 +27,12 @@ namespace Aremoreno.Enums.World
         CharacterInTrigger,
         Transitioning
     }
+
+    public enum ChestState
+    {
+        Closed,
+        Locked,
+        Unlocked,
+        Opened
+    }
 }

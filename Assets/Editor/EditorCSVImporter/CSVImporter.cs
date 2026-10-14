@@ -63,10 +63,10 @@ public class CSVImporter : EditorWindow
             var instance = ScriptableObject.CreateInstance(scriptableObjectType);
             foreach (var fieldMapping in data.FieldMappings)
             {
-                int columnIndex = columnMap[fieldMapping.ColumnName];
+                int columnIndex = columnMap[fieldMapping.ColumnName.Trim()];
                 string valueRaw = values[columnIndex].Trim();
                 object valueParsed = ParseValue(valueRaw, fieldMapping, parserType);
-                FieldInfo field = scriptableObjectType.GetField(fieldMapping.FieldName);
+                FieldInfo field = scriptableObjectType.GetField(fieldMapping.FieldName.Trim());
                 field.SetValue(instance, valueParsed);
             }            
             FieldInfo idField = scriptableObjectType.GetField(data.IdFieldName);

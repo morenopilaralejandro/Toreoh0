@@ -59,7 +59,7 @@ public class InputManager : MonoBehaviour
         Locker.Initialize(playerInput, maps);
 
         ControlSchemeTracker = new InputControlSchemeTracker();
-        ControlSchemeTracker.Initialize(playerInput, config.ControlSchemeMappings);
+        ControlSchemeTracker.Initialize(config, playerInput, config.ControlSchemeMappings);
 
         ScreenToWorldConverter = new ScreenToWorldConverter();
         ScreenToWorldConverter.Initialize(config, Camera.main);

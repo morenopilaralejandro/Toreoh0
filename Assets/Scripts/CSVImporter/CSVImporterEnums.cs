@@ -17,6 +17,7 @@ namespace Aremoreno.Enums.CSVImporter
     public enum EnumGenericType 
     {
         None,
-        InputBattle
+        InputBattle,
+        ChestState
     }
 }

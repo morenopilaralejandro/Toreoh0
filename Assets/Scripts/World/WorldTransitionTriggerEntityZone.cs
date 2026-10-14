@@ -7,6 +7,6 @@ public class WorldTransitionTriggerEntityZone : WorldTransitionTriggerEntity
     protected override void Transition() 
     {
         base.Transition();
-        worldManager.ZoneLoader.TransitionToZone(spawnPointId);
+        _ = worldManager.ZoneLoader.TransitionToZone(spawnPointId);
     }
 }
