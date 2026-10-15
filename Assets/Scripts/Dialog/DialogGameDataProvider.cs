@@ -2,11 +2,12 @@ using Ink.Runtime;
 
 public class DialogGameDataProvider
 {
+    // field
     private DialogLocalizationBridge localizationBridge;
     private AudioManager audioManager;
     private StoryManager storyManager;
 
-    // constructort
+    // constructor
     public DialogGameDataProvider(DialogLocalizationBridge localizationBridge) 
     {
         this.localizationBridge = localizationBridge;
@@ -17,6 +18,7 @@ public class DialogGameDataProvider
     // functions
     //public string GetHeroName() => "hero name";
     public void PlaySfx(string sfxId) => _ = audioManager.Sfx.Play(sfxId);
+    public void ClearArguments() => localizationBridge.ClearArguments();
     public void SetCurrentChestItemAsArgument() => 
         localizationBridge.SetArgument(
             "chestItemName", 
@@ -24,7 +26,6 @@ public class DialogGameDataProvider
                 storyManager.ChestTracker.CurrentOpeningChestId
             )
         );
-    //TODO get item from chest manager
 
     public void OpenSubmenu(string menuId, string contextId) 
     {
@@ -42,10 +43,11 @@ public class DialogGameDataProvider
     // get variable
     // set variable
     
-    // BindExternalFunction
+    // bind
     public void BindExternalFunctions(Story story) 
     {
         story.BindExternalFunction("PlaySfx", (string sfxId) => { PlaySfx(sfxId); });
+        story.BindExternalFunction("ClearArguments", () => { ClearArguments(); });
         story.BindExternalFunction("SetCurrentChestItemAsArgument", () => { SetCurrentChestItemAsArgument(); });
         story.BindExternalFunction("OpenSubmenu", (string menuId, string contextId) => { OpenSubmenu(menuId, contextId); });
 

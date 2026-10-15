@@ -1,4 +1,5 @@
 EXTERNAL PlaySfx(sfxId)
+EXTERNAL ClearArguments()
 EXTERNAL SetCurrentChestItemAsArgument()
 EXTERNAL OpenSubmenu(menuId, contextId)
 

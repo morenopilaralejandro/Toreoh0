@@ -61,10 +61,9 @@ public class DialogLocalizationBridge
     // args
     public void SetArgument(string argKey, object argVal) => dictArguments[argKey] = argVal;
     public void ClearArguments() => dictArguments.Clear();
-    private void SetArguments(LocalizationField field) 
+    private void SetArguments(LocalizationField field)
     {
         if(dictArguments.Count == 0) return;
         localizationComponent.SetArguments(field, new object[] { dictArguments });
-        ClearArguments();
     }
 }

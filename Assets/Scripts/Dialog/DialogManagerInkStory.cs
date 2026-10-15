@@ -47,6 +47,15 @@ public class DialogManagerInkStory
         ContinueDialog();
     }
 
+
+    /*
+        When reading a line it first tries to execute all the 
+        binded functions above that line.
+
+        At the end of the file, when there are no more lines, the text is empty
+            so call .Continue() to execute the functions 
+            but dont parse the empty line (return early)
+    */
     private void ContinueDialog() 
     {
         if (StateMachine.State != DialogState.WaitingForContinue) return;
@@ -54,6 +63,14 @@ public class DialogManagerInkStory
         if (currentStory.canContinue) 
         {
             string text = currentStory.Continue();
+
+            if (string.IsNullOrEmpty(text))
+            {
+                StateMachine.SetState(DialogState.WaitingForContinue);
+                ContinueDialog();
+                return;
+            }
+
             var tags = currentStory.currentTags;
             var line = DialogTagParser.ParseLine(text, tags);
             line.TextResolved = localizationBridge.ResolveDialogText(line);

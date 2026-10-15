@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: es
   m_SharedData: {fileID: 11400000, guid: 83b51093935333374b5ce3dfe724396e, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 4751560738420555878
   m_TableData:
   - m_Id: 123448598528
     m_Localized: "S\xED"
@@ -405,7 +406,8 @@ MonoBehaviour:
   - m_Id: 123528290396
     m_Localized: "\xA1Obtuviste {chestItemName}!"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 4751560738420555878
   - m_Id: 123528290397
     m_Localized: "El cofre est\xE1 vac\xEDo."
     m_Metadata:
@@ -444,4 +446,10 @@ MonoBehaviour:
       m_Items: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 4751560738420555878
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 123528290396

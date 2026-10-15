@@ -15,7 +15,11 @@ public class SceneLoaderOperationsAddressable : SceneLoaderOperations
     public override IEnumerator Load(string scene) 
     {
         base.Load(scene);
-        yield return LoadAsync(scene);
+
+        Task task = LoadAsync(scene);
+        while (!task.IsCompleted)
+            yield return null;
+
         yield return base.AwaitSceneObjectLoaders(scene);
         registry.SetState(scene, SceneState.Loaded);
     }
@@ -23,7 +27,11 @@ public class SceneLoaderOperationsAddressable : SceneLoaderOperations
     public override IEnumerator Unload(string scene) 
     {
         base.Unload(scene);
-        yield return UnloadAsync(scene);
+
+        Task task = UnloadAsync(scene);
+        while (!task.IsCompleted)
+            yield return null;
+
         registry.SetState(scene, SceneState.Unloaded);
     }
 

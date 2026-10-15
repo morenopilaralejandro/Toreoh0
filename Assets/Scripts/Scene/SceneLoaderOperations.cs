@@ -44,10 +44,11 @@ public abstract class SceneLoaderOperations : ISceneLoaderOperations
             .SelectMany(go => go.GetComponentsInChildren<IAsyncSceneLoader>())
             .ToList();
 
-        if (loaders.Count > 0) 
-        {
-            var task = loaders.Select(l => l.LoadAsync()).ToList();
-            while (task.Any(t => !t.IsCompleted)) yield return null;
-        }
+        if (loaders.Count == 0) yield break;
+        var tasks = loaders.Select(l => l.LoadAsync()).ToList();
+
+        foreach (var task in tasks)
+            while (!task.IsCompleted)
+                yield return null;
     }
 }
