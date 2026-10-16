@@ -4,7 +4,7 @@ public class StoryManager : MonoBehaviour
 {
     public static StoryManager Instance { get; private set; }
 
-    public StoryManagerPersistence PersistenceComponent { get; private set; }
+    public StoryManagerComponentPersistence PersistenceComponent { get; private set; }
     public ChestTracker ChestTracker { get; private set; }
 
     private void Awake() 

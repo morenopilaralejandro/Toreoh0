@@ -1,14 +1,8 @@
-[System.SerializeField]
+[System.Serializable]
 public class ItemStorageSlot
 {
     public Item Item;
-    public int Count;
-
-    public ItemStorageSlot(Item item, int amount = 1)
-    {
-        Item = item;
-        Count = amount;
-    }
+    public int Count = 1;
 
     public void AddCount(int amount) 
     {

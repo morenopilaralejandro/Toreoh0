@@ -47,7 +47,7 @@ public abstract class Selector<TData, TListItem> : Menu, IMenuClosable where TLi
     }
 
     // selector
-    public void Open(ISelectorSource <TData> source, ISelectorActionClick <TData> actionClick, ISelectorFilter <TData> filter = null)
+    public void Open(ISelectorSource<TData> source, ISelectorActionClick<TData> actionClick, ISelectorFilter<TData> filter = null)
     {
         this.source = source;
         this.actionClick = actionClick;

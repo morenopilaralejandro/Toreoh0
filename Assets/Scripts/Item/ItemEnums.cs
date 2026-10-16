@@ -3,7 +3,9 @@ namespace Aremoreno.Enums.Item
     public enum CurrencyType 
     {
         Gold,
-        TrainingPoint
+        Premium,
+        ExpertTokens,
+        TrainingPoints
     }
 
     public enum ItemCategory 

@@ -22,7 +22,25 @@ public static class UIEvents
     public static void RaiseMenuClosedAll()
         => OnMenuClosedAll?.Invoke();
 
+    // menu open requested
     public static event Action OnMenuTestOpenRequested;
     public static void RaiseMenuTestOpenRequested()
         => OnMenuTestOpenRequested?.Invoke();
+
+    public static event Action OnMenuSideOpenRequested;
+    public static void RaiseMenuSideOpenRequested()
+        => OnMenuSideOpenRequested?.Invoke();
+
+    public static event Action OnMenuDebugWorldOpenRequested;
+    public static void RaiseMenuDebugWorldOpenRequested()
+        => OnMenuDebugWorldOpenRequested?.Invoke();
+
+    // selector open requested
+    public static event Action<ISelectorSource, ISelectorActionClick, ISelectorFilter> 
+        OnSelectorItemStorageSlogBagOpenRequested;
+    public static void RaiseSelectorItemStorageSlogBagOpenRequested(
+        ISelectorSource<ItemStorageSlot> source, 
+        ISelectorActionClick<ItemStorageSlot> actionClick, 
+        ISelectorFilter<ItemStorageSlot> filter)
+        => OnSelectorItemStorageSlogBagOpenRequested?.Invoke();
 }

@@ -1,0 +1,2 @@
+ItemId,ItemCategory,ItemUsageContext,ItemSpriteType,ColorGeneric,PriceBuyExpertTokens,PriceBuyGold,PriceSellGold,IsSellable,IsDiscardable,IsStackable,MaxStack,Placeholder
+item-important-00000-test,Important,None,Basic,Orange,0,0,0,FALSE,FALSE,FALSE,1,placeholder

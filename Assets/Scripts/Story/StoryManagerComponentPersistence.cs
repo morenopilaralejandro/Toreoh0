@@ -1,8 +1,8 @@
-public class StoryManagerPersistence
+public class StoryManagerComponentPersistence
 {
     private StoryManager storyManager;
 
-    public StoryManagerPersistence(StoryManager storyManager)
+    public StoryManagerComponentPersistence(StoryManager storyManager)
     {
         this.storyManager = storyManager;
     }

@@ -1,0 +1,2 @@
+ItemId,ItemCategory,ItemUsageContext,ItemSpriteType,ColorGeneric,PriceBuyExpertTokens,PriceBuyGold,PriceSellGold,IsSellable,IsDiscardable,IsStackable,MaxStack,RecoveryHp,RecoveryMp
+item-recovery-00000-test,Recovery,None,Basic,Orange,0,100,100,TRUE,FALSE,TRUE,999,10,10

@@ -1,4 +1,4 @@
-public class SelectorDialogChoiceAction : ISelectorActionClick<DialogSerializableChoice>
+public class SelectorDialogChoiceActionClick : ISelectorActionClick<DialogSerializableChoice>
 {
     public void Execute(DialogSerializableChoice obj, IMenuClosable menu)
     {

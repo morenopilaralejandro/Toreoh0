@@ -17,7 +17,10 @@ namespace Aremoreno.Enums.CSVImporter
     public enum EnumGenericType 
     {
         None,
-        InputBattle,
-        ChestState
+        ChestState,
+        ColorGeneric,
+        ItemCategory,
+        ItemSpriteType,
+        ItemUsageContext
     }
 }

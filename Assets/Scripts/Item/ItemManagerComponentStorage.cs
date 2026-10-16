@@ -1,7 +1,7 @@
+using System.Collections.Generic;
+
 public class ItemManagerComponentStorage
 {
-    /*
-
     //fields
     private List<ItemStorageSlot> listMaterial = new();
     private List<ItemStorageSlot> listMisc = new();
@@ -12,10 +12,12 @@ public class ItemManagerComponentStorage
     private Dictionary<ItemStorageSlot, List<ItemStorageSlot>> dictCategory;
     public IReadOnlyDictionary<ItemStorageSlot, List<ItemStorageSlot>> DictCategory => dictCategory;
     private ItemStorageSlot cachedSlot;
+    private ItemConfig config;
 
     // constructor
-    public ItemManagerComponentStorage() 
+    public ItemManagerComponentStorage(ItemConfig config)
     {
+        this.config = config;
         dictCategory = new Dictionary<ItemStorageSlot, List<ItemStorageSlot>>
         {
             { ItemCategory.Material, listMaterial },
@@ -48,18 +50,15 @@ public class ItemManagerComponentStorage
         SortCategoryByItemId(item.ItemCategory);
     }
 
-    public void SortCategoryByItemId(ItemCategory itemCategory) 
+    public void SortCategoryByItemId(ItemCategory itemCategory) => dictCategory[itemCategory] = SortByItemId(dictCategory[itemCategory]);
+    public List<ItemStorageSlot> SortByItemId(List<ItemStorageSlot> list) => list.OrderBy(slot => slot.Item.ItemId);
+    public void SortAllByItemId() 
     {
-        List<ItemStorageSlot> orderedList = dictCategory[itemCategory]
-            .OrderBy(slot => slot.Item.ItemId)
-        dictCategory[itemCategory] = orderedList;
+        foreach (var list in DictCategory.Values) 
+            list = SortByItemId(list);
     }
 
-
     // add
-
-    // TODO add over load for item id and item data
-
     public void Add(ItemData itemData, int count = 1) => Add(ItemFactory.Create(itemData), count);
     public void Add(string itemId, int count = 1) => Add(ItemFactory.CreateById(itemId), count);
     public void Add(Item item, int count = 1)
@@ -72,8 +71,6 @@ public class ItemManagerComponentStorage
             cachedSlot.AddCount(count);
         ItemEvents.RaiseStorageUpdated();
     }
-
-
 
     private bool TryAddToSystem(Item item) 
     {
@@ -125,39 +122,6 @@ public class ItemManagerComponentStorage
             return cachedSlot.Count;
     }
 
-    // buy
-
-    void Buy(Item item, int amount, CurrencyType currencyType)
-
-    void Sell(Item item, int amount, CurrencyType currencyType)
-
-    // consume materials
-    public bool HasEnoughMaterial(List<MaterialRequirement> materialRequirements)
-    {
-        foreach(var materialRequirement in materialRequirements)
-            if (!HasEnoughOfItem(materialRequirement.ItemId, materialRequirement.Amount))
-                return false;
-        return true;
-    }
-
-    public void ConsumeMaterialRequirement(List<MaterialRequirement> materialRequirements)
-    {
-       foreach(var materialRequirement in materialRequirements)
-            Remove(materialRequirement.ItemId, materialRequirement.Amount);
-    }
-
-    // use
-    void UseItemOnCharacter() 
-    {
-        switch (item)
-        {
-            case ItemRecovery itemRecovery:
-                break;
-            case ItemMove itemMove:
-                break;
-        }
-    }
-
     // persistence
     public void Clear()
     {
@@ -165,13 +129,13 @@ public class ItemManagerComponentStorage
             list.Clear();
     }
 
-    public void InitializeOnNewGame()
+    public void InitializeForNewGame()
     {
         Clear();
-
-        debug
-        addAFromDatabase
-        addFromDefaultConfig
+        if (DebugUtils.IsDevBuild && config.IsDebugStorage)
+            AddFromDatabase();
+        else
+            AddFromDefaultConfig();
     }
 
     private void AddFromDatabase()
@@ -182,17 +146,17 @@ public class ItemManagerComponentStorage
 
     private void AddFromDefaultConfig()
     {
-        foreach (var data in config.ListDefaultItemData)
+        foreach (var data in config.ListStartingItemData)
             Add(ItemFactory.Create(data), data.MaxStack);
     }
 
     public ItemManagerComponentStorageSaveData Export() 
     {
         ItemManagerComponentStorageSaveData saveData = new();
-        saveData.ListStorageSlot = new ();
+        saveData.ListItemStorageSlot = new ();
         foreach (var list in DictCategory.Values)
             foreach (var slot in list)
-                saveData.ListStorageSlot.Add(
+                saveData.ListItemStorageSlot.Add(
                     new ItemStorageSlotSaveData 
                     {
                         ItemId = slot.Item.ItemId,
@@ -200,17 +164,18 @@ public class ItemManagerComponentStorage
                         Count = slot.Count
                     }
                 );
-        return saveData.
+        return saveData;
     }
 
     public void Import(ItemManagerComponentStorageSaveData saveData) 
     {
         Clear();
-        foreach (var saveDataItemStorageSlot in saveData.ListStorageSlot)
-            Add()
+        foreach (var saveDataItemStorageSlot in saveData.ListItemStorageSlot)
+        {
+            Item item = ItemFactory.CreateById(saveDataItemStorageSlot.ItemId);
+            ItemStorageSlot slot = new ItemStorageSlot(item, saveDataItemStorageSlot.Count);
+            dictCategory[saveDataItemStorageSlot.ItemCategory].Add(slot);
+        }
+        SortAllByItemId();
     }
-
-
-
-    */
 }

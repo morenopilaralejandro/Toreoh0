@@ -16,4 +16,5 @@ MonoBehaviour:
   HasLoadingScreen: 1
   Scenes:
   - {fileID: 11400000, guid: 55a637dd9c051e5e9b6d00c7e88cf0ee, type: 2}
+  - {fileID: 11400000, guid: eddcb00df750c8fc781f2852d67f0569, type: 2}
   - {fileID: 11400000, guid: d51467a9f2afb9b18a6c9cab44121747, type: 2}

@@ -51,7 +51,9 @@ namespace Aremoreno.Enums.Input
 
     public enum InputNavigation 
     {
-        Back
+        Back,
+        ShortcutBagNext,
+        ShortcutBagPrevious
     }
 
     /*

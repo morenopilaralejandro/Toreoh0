@@ -32,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ScenesUI/SceneWorldUI.unity
     guid: 808299756dc1b176cbfd9328998f2ed0
+  - enabled: 1
+    path: Assets/Scenes/ScenesUI/SceneDebugWorldUI.unity
+    guid: b94658a80ffad52cfb9f1a6418de9ada
   m_configObjects:
     com.unity.adaptivePerformance.basic.provider_settings: {fileID: 11400000, guid: b8af9ae6712e711fa848047a7421583e, type: 2}
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 4dab92d3e12dc18e28fa1e064e7daefb, type: 2}

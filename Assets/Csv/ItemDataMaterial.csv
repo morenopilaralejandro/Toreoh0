@@ -1,0 +1,2 @@
+ItemId,ItemCategory,ItemUsageContext,ItemSpriteType,ColorGeneric,PriceBuyExpertTokens,PriceBuyGold,PriceSellGold,IsSellable,IsDiscardable,IsStackable,MaxStack,Placeholder
+item-material-00000-test,Material,None,Basic,Orange,0,100,100,TRUE,FALSE,TRUE,999,placeholder

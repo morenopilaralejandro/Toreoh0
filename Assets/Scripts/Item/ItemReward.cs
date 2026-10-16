@@ -2,5 +2,5 @@
 public class ItemReward
 {
     public string ItemId;
-    public int Quantity = 1;
+    public int Count = 1;
 }

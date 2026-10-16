@@ -51,7 +51,7 @@ public class SelectorDialogChoice : Selector<DialogSerializableChoice, SelectorD
     {
         Open(
             new SelectorDialogChoiceSource(choices),
-            new SelectorDialogChoiceAction(),
+            new SelectorDialogChoiceActionClick(),
             null
         );
     }
