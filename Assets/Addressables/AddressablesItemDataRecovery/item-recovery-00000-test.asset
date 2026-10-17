@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4723dd696a4aa48ae815b350ec92b81e, type: 3}
+  m_Name: item-recovery-00000-test
+  m_EditorClassIdentifier: Assembly-CSharp::ItemDataRecovery
+  ItemId: item-recovery-00000-test
+  ItemCategory: 3
+  ItemUsageContext: 4
+  ItemSpriteType: 0
+  ColorGeneric: 10
+  PriceBuyExpertTokens: 0
+  PriceBuyGold: 100
+  PriceSellGold: 100
+  IsSellable: 1
+  IsDiscardable: 0
+  IsStackable: 1
+  MaxStack: 999
+  RecoveryHp: 10
+  RecoveryMp: 10

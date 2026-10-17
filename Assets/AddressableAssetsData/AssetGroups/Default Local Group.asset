@@ -26,6 +26,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6d671acaaec701b35bd465068c78ff52
+    m_Address: sprite-item-basic
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c6e89bab6a1c185b3a77ac980857675a
     m_Address: Assets/Addressables/AddressablesSceneGroupData/SceneGroupData.asset
     m_ReadOnly: 0

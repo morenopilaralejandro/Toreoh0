@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 public class ItemManagerComponentUsage
 {
-    void UseItemOnCharacter()
+    public void UseItemOnCharacter(Item item)
     {
         switch (item)
         {

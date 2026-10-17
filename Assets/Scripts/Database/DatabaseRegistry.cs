@@ -7,6 +7,7 @@ public class DatabaseRegistry
     public Database<ZoneData> ZoneData;
     public Database<NpcData> NpcData;
     public Database<ChestData> ChestData;
+    public Database<ItemData> ItemData;
 
     // Constructor
     public DatabaseRegistry() 
@@ -22,6 +23,7 @@ public class DatabaseRegistry
         ZoneData = new Database<ZoneData>("ZoneData", _ => _.ZoneId);
         NpcData = new Database<NpcData>("NpcData", _ => _.NpcId);
         ChestData = new Database<ChestData>("ChestData", _ => _.ChestId);
+        ItemData = new Database<ItemData>("ItemData", _ => _.ItemId);
     }
 
     public IEnumerable<IAsyncDatabase> GetAllDatabases() 
@@ -30,6 +32,7 @@ public class DatabaseRegistry
         yield return ZoneData;
         yield return NpcData;
         yield return ChestData;
+        yield return ItemData;
     }
 
 }

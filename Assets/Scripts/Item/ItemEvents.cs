@@ -1,5 +1,5 @@
 using System;
-using 
+using Aremoreno.Enums.Item;
 
 public static class ItemEvents 
 {

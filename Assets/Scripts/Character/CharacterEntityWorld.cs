@@ -36,14 +36,6 @@ public class CharacterEntityWorld : MonoBehaviour
             SceneLoaderManager.Instance.LoadGroup("SceneGroupData-DebugMainMenu");
         }
 
-        if (InputManager.Instance.MapBattle.Tracker.GetDown(InputBattle.Pass)) 
-        {
-            if (colliderObstacles.enabled)
-                OnIsNoClipEnabledChanged(true);
-            else
-                OnIsNoClipEnabledChanged(false);
-        }
-
         if (InputManager.Instance.MapWorld.Tracker.GetDown(InputWorld.Interact)) 
         {
             interactionComponent.PerformInteraction();

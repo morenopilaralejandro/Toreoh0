@@ -1,22 +1,24 @@
 using UnityEngine;
-using TMPro;
 
 public class SelectorItemStorageSlotBagListItem : SelectorListItem<ItemStorageSlot>
 {
-    [SerializeField] private TMP_Text textChoice;
-    [SerializeField] private TMP_Text textChoice;
-    [SerializeField] private TMP_Text textChoice;
+    [SerializeField] private ItemUI itemUI;
 
     public override void SetData(ItemStorageSlot data)
     {
         base.SetData(data);
-        textChoice.text = data.TextResolved;
+        _ =  itemUI.SetAsync(data.Item, data.Count);
+        OnSelected += HandleOnSelected;
     }
 
     public override void Clear()
     {
-        textChoice.text = string.Empty;
+        itemUI.Clear();
+        OnSelected -= HandleOnSelected;
     }
 
-    // TODO select event to update the description
+    private void HandleOnSelected(SelectorListItem<ItemStorageSlot> listItem) 
+    {
+        UIEvents.RaiseItemOverviewUpdateRequested(listItem.Data.Item);
+    }
 }

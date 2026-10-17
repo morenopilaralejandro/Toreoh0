@@ -1,4 +1,6 @@
+using UnityEngine;
 using System.Collections.Generic;
+using Aremoreno.Enums.Item;
 
 public class ItemManagerComponentProcess
 {
@@ -16,14 +18,14 @@ public class ItemManagerComponentProcess
     // buy
     public void Buy(Item item, int count, CurrencyType currencyType) 
     {
-        int total = item.GetPriceBuy(currencyType) * count;
+        int total = item.ShopComponent.GetPriceBuy(currencyType) * count;
         currencyComponent.Remove(currencyType, total);
         storageComponent.Add(item, count);
     }
 
     public void Sell(Item item, int count, CurrencyType currencyType) 
     {
-        int total = item.GetPriceSell(currencyType) * count;
+        int total = item.ShopComponent.GetPriceSell(currencyType) * count;
         currencyComponent.Add(currencyType, total);
         storageComponent.Remove(item, count);
     }
@@ -32,7 +34,7 @@ public class ItemManagerComponentProcess
     public bool HasEnoughMaterial(List<MaterialRequirement> materialRequirements)
     {
         foreach(var materialRequirement in materialRequirements)
-            if (!HasEnoughOfItem(materialRequirement.ItemId, materialRequirement.Amount))
+            if (!storageComponent.HasEnoughOfItem(materialRequirement.ItemId, materialRequirement.Count))
                 return false;
         return true;
     }
@@ -40,7 +42,7 @@ public class ItemManagerComponentProcess
     public void ConsumeMaterialRequirement(List<MaterialRequirement> materialRequirements)
     {
        foreach(var materialRequirement in materialRequirements)
-            Remove(materialRequirement.ItemId, materialRequirement.Amount);
+            storageComponent.Remove(materialRequirement.ItemId, materialRequirement.Count);
     }
 
     // drop
@@ -50,7 +52,7 @@ public class ItemManagerComponentProcess
         foreach (var drop in drops)
         {
             if(Random.value > drop.DropChance) continue;
-            int count = Random.Range(drop.QuantityMin, drop.QuantityMax + 1);
+            int count = Random.Range(drop.CountMin, drop.CountMax + 1);
             rewards.Add(new ItemReward 
             {
                 ItemId = drop.ItemId,
@@ -70,6 +72,6 @@ public class ItemManagerComponentProcess
     public void AddRewards(List<ItemReward> rewards)
     {
         foreach (var reward in rewards)
-            Add(reward.ItemId, reward.Count);
+            storageComponent.Add(reward.ItemId, reward.Count);
     }
 }

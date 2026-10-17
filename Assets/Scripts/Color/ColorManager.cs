@@ -4,8 +4,7 @@ public class ColorManager : MonoBehaviour
 {
     public static ColorManager Instance { get; private set; }
 
-    [Header("Config")]
-    [SerializeField] private ColorConfig Palettes;
+    public ColorConfig Palettes;
 
     private void Awake() 
     {

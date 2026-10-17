@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Aremoreno.Enums.Item;
 
@@ -5,9 +6,9 @@ public class ItemManagerComponentCurrency
 {
     //fields
     private ItemConfig config;
-    private Dictionary<CurrencyType, int> dictMapping = new();
+    private Dictionary<CurrencyType, CurrencyMapping> dictMapping = new();
     private Dictionary<CurrencyType, int> dictCurrency = new();
-    public IReadOnlyDictionary<CurrencyType, int> dictCurrency => dictCurrency;
+    public IReadOnlyDictionary<CurrencyType, int> DictCurrency => dictCurrency;
 
     // constructor
     public ItemManagerComponentCurrency(ItemConfig config)
@@ -47,7 +48,7 @@ public class ItemManagerComponentCurrency
         ItemEvents.RaiseCurrencyUpdated(currencyType, dictCurrency[currencyType]);
     }
 
-    public void Get(CurrencyType currencyType) => dictCurrency[currencyType];
+    public int Get(CurrencyType currencyType) => dictCurrency[currencyType];
     public void Set(CurrencyType currencyType, int count) => dictCurrency[currencyType] = count;
     public bool HasEnoughOfCurrency(CurrencyType currencyType, int count) => dictCurrency[currencyType] >= count;
 
@@ -76,6 +77,6 @@ public class ItemManagerComponentCurrency
     {
         Clear();
         foreach (var kvp in saveData.ListCurrency)
-            dictCurrency[kvp.Key] = kvp.Value;
+            dictCurrency[kvp.Key] = kvp.Val;
     }
 }

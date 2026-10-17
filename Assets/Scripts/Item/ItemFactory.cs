@@ -2,7 +2,6 @@ using Aremoreno.Enums.Item;
 
 public static class ItemFactory
 {
-    /*
     public static Item Create(ItemData data) 
     {
         switch(data)
@@ -27,9 +26,10 @@ public static class ItemFactory
                 return new ItemWeapon(itemDataWeapon);
             case ItemDataArmor itemDataArmor:
                 return new ItemArmor(itemDataArmor);
+            default:
+                return null;
         }
     }
 
-    public static Item CreateById(string id) => Create(DatabaseManager.Instace.DatabaseRegistry.ItemData.Get(id));
-    */
+    public static Item CreateById(string id) => Create(DatabaseManager.Instance.DatabaseRegistry.ItemData.Get(id));
 }

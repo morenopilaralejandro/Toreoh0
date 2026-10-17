@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: chest-00000-test
   m_EditorClassIdentifier: Assembly-CSharp::ChestData
   ChestId: chest-00000-test
-  ItemId: item-00000-test
+  ItemId: item-material-00000-test
   DefaultState: 0

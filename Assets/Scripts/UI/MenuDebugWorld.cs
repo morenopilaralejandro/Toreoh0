@@ -5,8 +5,16 @@ public class MenuDebugWorld : Menu
 {
     //[Header("UI References")]
     //[SerializeField] private DialogBoxUI dialogBox;
+    [SerializeField] private WorldConfig config;
+    private bool isNoClipEnabled;
 
     // Lifecycle
+    protected override void Start() 
+    {
+        isNoClipEnabled = config.IsNoClipEnabled;
+        WorldEvents.RaiseIsNoClipEnabledChanged(isNoClipEnabled);
+        base.Start();
+    }
 
     // Input
     protected override void OnGainedInput() => InputManager.Instance.MapNavigation.Tracker.OnButtonDown += OnButtonDown;
@@ -29,7 +37,9 @@ public class MenuDebugWorld : Menu
 
     public void OnButtonNoClipClicked()
     {
-
+        isNoClipEnabled = !isNoClipEnabled;
+        WorldEvents.RaiseIsNoClipEnabledChanged(isNoClipEnabled);
+        RequestClose();
     }
 
     public void OnButtonToDebugClicked() 

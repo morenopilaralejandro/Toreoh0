@@ -2,7 +2,7 @@ public class ItemComponentArmor
 {
     public string ReferenceId;
 
-    public ItemComponentInventory(ItemArmorData data) 
+    public ItemComponentArmor(ItemDataArmor data) 
     {
         ReferenceId = data.ReferenceId;
     }

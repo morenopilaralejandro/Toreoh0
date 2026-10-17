@@ -11,6 +11,8 @@ public class SelectorItemStorageSlotBagSourceFromStorageByCategory : ISelectorSo
         ItemCategory = itemCategory;
     }
 
-    public IEnumerable<DialogSerializableChoice> Enumerate() 
+    public void SetItemCategory(ItemCategory itemCategory) => ItemCategory = itemCategory;
+
+    public IEnumerable<ItemStorageSlot> Enumerate() 
         => ItemManager.Instance.StorageComponent.GetItemsByCategory(ItemCategory);
 }

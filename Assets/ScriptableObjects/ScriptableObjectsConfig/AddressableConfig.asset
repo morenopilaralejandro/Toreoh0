@@ -15,4 +15,5 @@ MonoBehaviour:
   CacheLruSize: 10
   SeparatorPathMain: '-'
   SeparatorPathSub: _
-  PathCharacterPortrait: character-portrait
+  PathCharacterPortrait: sprite-character-portrait
+  PathItemIcon: sprite-item

@@ -2,7 +2,7 @@ public class ItemComponentImportant
 {
     public string Placeholder;
 
-    public ItemComponentInventory(ItemImportantData data)
+    public ItemComponentImportant(ItemDataImportant data)
     {
         Placeholder = data.Placeholder;
     }

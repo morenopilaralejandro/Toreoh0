@@ -1,3 +1,4 @@
+using UnityEngine;
 using Aremoreno.Enums.Color;
 using Aremoreno.Enums.Item;
 
@@ -13,6 +14,6 @@ public class ItemComponentAppearance
         ItemSpriteType = data.ItemSpriteType;
         ColorGeneric = data.ColorGeneric;
         Color = ColorManager.Instance.Palettes.Color.Get(ColorGeneric);
-        AddressIcon = AddressableBuilder.GetItemIconAddress(data.ItemSpriteType.ToString());
+        AddressIcon = AddressableBuilder.GetItemIconAddress(data.ItemSpriteType.ToString().ToLower());
     }
 }

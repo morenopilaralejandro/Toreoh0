@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ItemManager : MonoBehaviour
 {
-    public static DatabaseManager Instance { get; private set; }
+    public static ItemManager Instance { get; private set; }
 
     [SerializeField] private ItemConfig config;    
 
@@ -21,6 +21,8 @@ public class ItemManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        Initialize();
     }
 
     private void OnDestroy() 
@@ -30,11 +32,11 @@ public class ItemManager : MonoBehaviour
 
     private void Initialize()
     {
-        StorageComponent = new ItemManagerComponentStorage();
-        CurrencyComponent = new ItemManagerComponentCurrency();
-        UsageComponent = new ItemManagerComponentStorage();
-        ProcessComponent = new ItemManagerComponentStorage();
-        PersistenceComponent = new ItemManagerComponentStorage(this);
+        StorageComponent = new ItemManagerComponentStorage(config);
+        CurrencyComponent = new ItemManagerComponentCurrency(config);
+        UsageComponent = new ItemManagerComponentUsage();
+        ProcessComponent = new ItemManagerComponentProcess(StorageComponent, CurrencyComponent);
+        PersistenceComponent = new ItemManagerComponentPersistence(this);
         PersistenceComponent.Subscribe();
     }
 }

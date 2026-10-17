@@ -2,7 +2,7 @@ public class ItemComponentMaterial
 {
     public string Placeholder;
 
-    public ItemComponentInventory(ItemMaterialData data)
+    public ItemComponentMaterial(ItemDataMaterial data)
     {
         Placeholder = data.Placeholder;
     }

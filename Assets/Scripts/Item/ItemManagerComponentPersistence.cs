@@ -11,7 +11,7 @@ public class ItemManagerComponentPersistence
     {
         return new ItemManagerSaveData 
         {
-            ItemManagerComponentStorageSaveData = itemManager.StorageComponent.Export()
+            ItemManagerComponentStorageSaveData = itemManager.StorageComponent.Export(),
             ItemManagerComponentCurrencySaveData = itemManager.CurrencyComponent.Export()
         };
     }

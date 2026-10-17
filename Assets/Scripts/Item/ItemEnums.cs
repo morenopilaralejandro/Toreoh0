@@ -12,7 +12,7 @@ namespace Aremoreno.Enums.Item
     {
         // basic
         Material,
-        Mics,
+        Misc,
         Important,
         Recovery,
         // reference other systems

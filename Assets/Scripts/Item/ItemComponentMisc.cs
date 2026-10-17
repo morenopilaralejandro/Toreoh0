@@ -2,7 +2,7 @@ public class ItemComponentMisc
 {
     public string Placeholder;
 
-    public ItemComponentInventory(ItemMiscData data)
+    public ItemComponentMisc(ItemDataMisc data)
     {
         Placeholder = data.Placeholder;
     }

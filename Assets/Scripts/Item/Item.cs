@@ -6,7 +6,7 @@ public class Item
     public ItemComponentInventory InventoryComponent;
     public ItemComponentShop ShopComponent;
 
-    public Item(ItemData ItemData)
+    public Item(ItemData data)
     {
         AttributesComponent = new ItemComponentAttributes(data);
         LocalizationComponent = new ItemComponentLocalization(data);

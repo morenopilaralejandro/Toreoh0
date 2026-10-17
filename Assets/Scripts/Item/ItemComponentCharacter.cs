@@ -2,7 +2,7 @@ public class ItemComponentCharacter
 {
     public string ReferenceId;
 
-    public ItemComponentInventory(ItemCharacterData data) 
+    public ItemComponentCharacter(ItemDataCharacter data) 
     {
         ReferenceId = data.ReferenceId;
     }

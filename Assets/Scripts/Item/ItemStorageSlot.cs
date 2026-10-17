@@ -7,8 +7,8 @@ public class ItemStorageSlot
     public void AddCount(int amount) 
     {
         Count += amount;
-        if (Count > Item.MaxStack)
-            Count = Item.MaxStack;
+        if (Count > Item.InventoryComponent.MaxStack)
+            Count = Item.InventoryComponent.MaxStack;
     }
 
     public void RemoveCount(int amount) 

@@ -1,3 +1,5 @@
+using Aremoreno.Enums.Item;
+
 public class ItemComponentInventory
 {
     public ItemUsageContext ItemUsageContext;

@@ -31,9 +31,6 @@ public class DialogManager : MonoBehaviour
 
     private void Initialize() 
     {
-        PersistenceComponent = new DialogManagerPersistence(this);
-        PersistenceComponent.Subscribe();
-
         CacheSpeaker = new DialogCacheSpeaker();
         CacheSpeaker.Initialize(config);
 
@@ -43,6 +40,11 @@ public class DialogManager : MonoBehaviour
         InkStoryComponent = new DialogManagerInkStory();
         InkStoryComponent.Initialize(config, gameDataProvider, LocalizationBridge, CacheSpeaker);
         InkStoryComponent.Subscribe();
+
+        ViewedTracker = new DialogViewedTracker();
+
+        PersistenceComponent = new DialogManagerPersistence(this);
+        PersistenceComponent.Subscribe();
     }
 
     private void OnDestroy() 

@@ -28,7 +28,7 @@ public class StoryManager : MonoBehaviour
 
     private void Initialize() 
     {
-        PersistenceComponent = new StoryManagerPersistence(this);
+        PersistenceComponent = new StoryManagerComponentPersistence(this);
 
         ChestTracker = new ChestTracker();
     }

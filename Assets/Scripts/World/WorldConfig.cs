@@ -24,8 +24,8 @@ public class WorldConfig : ScriptableObject
     public int StepBetweenEncountersBaseMax = 30;
 
     [Header("Debug")]
-    public bool IsDebugWorldEnabled;
     public bool IsNoClipEnabled;
+    public bool IsDebugWorldEnabled;
     public ZoneData ZoneDataDebug;
 
     [Header("Editor Creation Tool")]

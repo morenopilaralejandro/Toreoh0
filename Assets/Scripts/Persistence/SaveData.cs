@@ -5,4 +5,5 @@ public class SaveData
     public PlayTimeSaveData PlayTimeSaveData;
     public DialogManagerSaveData DialogManagerSaveData;
     public StoryManagerSaveData StoryManagerSaveData;
+    public ItemManagerSaveData ItemManagerSaveData;
 }

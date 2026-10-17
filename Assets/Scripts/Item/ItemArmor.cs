@@ -2,7 +2,7 @@ public class ItemArmor : Item
 {
     public ItemComponentArmor ArmorComponent;
 
-    public ItemArmor(ItemArmorData data) : base(data)
+    public ItemArmor(ItemDataArmor data) : base(data)
     {
         ArmorComponent = new ItemComponentArmor(data);
     }

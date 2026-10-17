@@ -1,6 +1,6 @@
 using UnityEngine;
-using Aremoreno.Enum.Color;
-using Aremoreno.Enum.Item;
+using Aremoreno.Enums.Color;
+using Aremoreno.Enums.Item;
 
 [CreateAssetMenu(fileName = "ItemData", menuName = "ScriptableObject/Item/ItemData")]
 public class ItemData : ScriptableObject

@@ -2,7 +2,7 @@ public class ItemComponentWeapon
 {
     public string ReferenceId;
 
-    public ItemComponentInventory(ItemWeaponData data) 
+    public ItemComponentWeapon(ItemDataWeapon data) 
     {
         ReferenceId = data.ReferenceId;
     }

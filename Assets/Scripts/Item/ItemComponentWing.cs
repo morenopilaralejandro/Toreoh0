@@ -2,7 +2,7 @@ public class ItemComponentWing
 {
     public string ReferenceId;
 
-    public ItemComponentInventory(ItemWingData data) 
+    public ItemComponentWing(ItemDataWing data) 
     {
         ReferenceId = data.ReferenceId;
     }

@@ -3,7 +3,7 @@ public class ItemComponentRecovery
     public int RecoveryHp;
     public int RecoveryMp;
 
-    public ItemComponentInventory(ItemRecoveryData data)
+    public ItemComponentRecovery(ItemDataRecovery data)
     {
         RecoveryHp = data.RecoveryHp;
         RecoveryMp = data.RecoveryMp;

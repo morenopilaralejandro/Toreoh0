@@ -55,7 +55,7 @@ public static class CSVImporterParser
             string[] subparts = part.Trim().Split(config.DelimiterSub);
             var itemReward = new ItemReward();
             itemReward.ItemId = ParseString(subparts[0]);
-            itemReward.Quantity = ParseInt(subparts[1]);
+            itemReward.Count = ParseInt(subparts[1]);
             list.Add(itemReward);
         }
         return list;

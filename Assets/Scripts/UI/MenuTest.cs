@@ -17,10 +17,7 @@ public class MenuTest : Menu
         if (input == InputNavigation.Back) OnButtonBackClicked();
     }
 
-    public void OnButtonBackClicked() 
-    {
-        RequestClose();
-    }
+    public void OnButtonBackClicked() => RequestClose();
 
     public void OnButtonToDebugClicked() 
     {

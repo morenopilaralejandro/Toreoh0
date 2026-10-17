@@ -36,11 +36,20 @@ public static class UIEvents
         => OnMenuDebugWorldOpenRequested?.Invoke();
 
     // selector open requested
-    public static event Action<ISelectorSource, ISelectorActionClick, ISelectorFilter> 
-        OnSelectorItemStorageSlogBagOpenRequested;
+    public static event Action<
+        ISelectorSource<ItemStorageSlot>, 
+        ISelectorActionClick<ItemStorageSlot>, 
+        ISelectorFilter<ItemStorageSlot>
+    > OnSelectorItemStorageSlogBagOpenRequested;
     public static void RaiseSelectorItemStorageSlogBagOpenRequested(
         ISelectorSource<ItemStorageSlot> source, 
         ISelectorActionClick<ItemStorageSlot> actionClick, 
         ISelectorFilter<ItemStorageSlot> filter)
-        => OnSelectorItemStorageSlogBagOpenRequested?.Invoke();
+        => OnSelectorItemStorageSlogBagOpenRequested?
+            .Invoke(source, actionClick, filter);
+
+    // overview
+    public static event Action<Item> OnItemOverviewUpdateRequested;
+    public static void RaiseItemOverviewUpdateRequested(Item item)
+        => OnItemOverviewUpdateRequested?.Invoke(item);
 }

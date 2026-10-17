@@ -33,6 +33,7 @@ public class ChestComponentInteractable : InteractableMonoBehaviour
             case ChestState.Closed:
                 knotName = WorldConstants.CHEST_DIALOG_KNOT_OPEN;
                 chestTracker.SetCurrentOpeningChestId(chestEntity.Chest.AttributesComponent.ChestId);
+                ItemManager.Instance.StorageComponent.Add(chestEntity.Chest.ContentComponent.ItemId);
                 chestEntity.Open();
                 break;
         }
