@@ -3,5 +3,6 @@ public class SelectorItemStorageSlotBagActionClickUse : ISelectorActionClick<Ite
     public void Execute(ItemStorageSlot obj, IMenuClosable menu)
     {
         // DialogEvents.RaiseChoiceSelected(obj.ChoiceIndex);
+        CustomLog.Error($"[SelectorItemStorageSlotBagActionClickUse] {obj.Item.AttributesComponent.ItemId}");
     }
 }

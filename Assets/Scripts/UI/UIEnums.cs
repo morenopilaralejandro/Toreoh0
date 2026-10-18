@@ -23,4 +23,16 @@ namespace Aremoreno.Enums.UI
         Select = 1 << 8,
         Submit = 1 << 9
     }
+
+    public enum BagMode 
+    {
+        Default,
+        Sell
+    }
+
+    public enum AmountPickerMode 
+    {
+        Buy,
+        Sell
+    }
 }

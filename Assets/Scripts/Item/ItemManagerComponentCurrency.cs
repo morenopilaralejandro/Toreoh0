@@ -29,7 +29,7 @@ public class ItemManagerComponentCurrency
         int minValue = dictMapping[currencyType].MinValue; 
         int maxValue = dictMapping[currencyType].MaxValue;
         int currentValue = dictCurrency[currencyType];
-        dictCurrency[currencyType] = Math.Clamp(currentValue, maxValue, maxValue);
+        dictCurrency[currencyType] = Math.Clamp(currentValue, minValue, maxValue);
     }
 
 

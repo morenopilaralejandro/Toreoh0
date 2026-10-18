@@ -8,8 +8,11 @@ public abstract class Selector<TData, TListItem> : Menu, IMenuClosable where TLi
     [Header("Selector")]
     [SerializeField] protected Button buttonClose;
     [SerializeField] protected bool isCloseOnSelect = false;
+    [SerializeField] protected bool isExecuteOnClick = false;
     [SerializeField] protected ScrollViewPoolAdapterUI uiScroll;
     [SerializeField] protected ObjectPoolCustomListWrapperMonoBehaviourUI uiPool;
+    protected TListItem lastSelectedElement;
+    protected int lastSelectedElementIndex;
     private ScrollViewPoolAdapter<TListItem> scrollAdapter;
 
     protected ISelectorSource <TData> source;
@@ -46,6 +49,18 @@ public abstract class Selector<TData, TListItem> : Menu, IMenuClosable where TLi
         scrollAdapter.SetScrollActive(isInteractable);
     }
 
+    protected override void OnSelectableSelected(GameObject go) 
+    {
+        base.OnSelectableSelected(go);
+        if (!IsInteractable()) return;
+        if (go == null) return;
+        if (!go.transform.IsChildOf(transform)) return;
+        TListItem element = go.GetComponent<TListItem>();
+        if (element == null) return;
+        lastSelectedElement = element;
+        lastSelectedElementIndex = scrollAdapter.Pool.ActiveElements.IndexOf(lastSelectedElement);
+    }
+
     // selector
     public void Open(ISelectorSource<TData> source, ISelectorActionClick<TData> actionClick, ISelectorFilter<TData> filter = null)
     {
@@ -80,6 +95,7 @@ public abstract class Selector<TData, TListItem> : Menu, IMenuClosable where TLi
     }
 
     public void FocusElement(TListItem element, bool isFallbackToButtonClose = true) => FocusElement(scrollAdapter.Pool.ActiveElements.IndexOf(element), isFallbackToButtonClose);
+    public void FocusElementLast(bool isFallbackToButtonClose = true) => FocusElement(scrollAdapter.Pool.ActiveElements.IndexOf(lastSelectedElement), isFallbackToButtonClose);
 
     public int GetSelectedIndex()
     {
@@ -114,7 +130,9 @@ public abstract class Selector<TData, TListItem> : Menu, IMenuClosable where TLi
     protected virtual void OnGetElement(TListItem element) 
     {
         element.gameObject.SetActive(true);
-        element.OnClicked += OnClicked;
+        if (isExecuteOnClick || inputManager.ControlSchemeTracker.IsExecuteOnClick())
+            element.OnClicked += OnClicked;
+        element.transform.SetAsLastSibling();
     }
 
     protected virtual void OnReleaseElement(TListItem element) 
@@ -133,6 +151,7 @@ public abstract class Selector<TData, TListItem> : Menu, IMenuClosable where TLi
     // list item events
     protected void OnClicked(SelectorListItem<TData> element) 
     {
+        if (element == null) return;
         actionClick?.Execute(element.Data, this);
         if (isCloseOnSelect) RequestClose();
     }

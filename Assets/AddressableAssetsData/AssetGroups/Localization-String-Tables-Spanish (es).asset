@@ -33,8 +33,20 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2eb070f39ec7bf1bcb30fe6a9222320f
+    m_Address: Gameplay-Shop-Name-Romanized_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 508590ea1c8b2f70cbc87f4c1ea88771
     m_Address: Gameplay-Zone-Name-Localized_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 587a6c3f1208d9d58bd121cb016eb3b7
+    m_Address: Gameplay-Shop-Name-Localized_es
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es

@@ -63,6 +63,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-ja
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a45d55681fd0af280ac5c711b11ec5d2
+    m_Address: Gameplay-Shop-Name-Localized_ja
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ja
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: badb68de1b1ac438187faaf4febef3b5
     m_Address: Gameplay-Item-Description-Romanized_ja
     m_ReadOnly: 1
@@ -77,6 +83,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e19791203dcaf1112bb4c64cecf2967e
     m_Address: Gameplay-Item-Description-Localized_ja
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ja
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f4cc0a1a56b360f7c84f24a386706f2a
+    m_Address: Gameplay-Shop-Name-Romanized_ja
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-ja

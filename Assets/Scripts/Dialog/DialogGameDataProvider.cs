@@ -7,12 +7,24 @@ public class DialogGameDataProvider
     private AudioManager audioManager;
     private StoryManager storyManager;
 
+    private Shop shop;
+
     // constructor
     public DialogGameDataProvider(DialogLocalizationBridge localizationBridge) 
     {
         this.localizationBridge = localizationBridge;
         audioManager = AudioManager.Instance;
         storyManager = StoryManager.Instance;
+    }
+
+    // helper
+    private void TryCacheShop(string shopId)
+    {
+        if (shop != null && shop.AttributesComponent.ShopId == shopId) return;
+        if (string.IsNullOrEmpty(shopId))
+            shop = null;    
+        else
+            shop = ShopFactory.CreateById(shopId);
     }
 
     // functions
@@ -34,6 +46,20 @@ public class DialogGameDataProvider
             case "test":
                 UIEvents.RaiseMenuTestOpenRequested();
                 break;
+            case "buy":
+                TryCacheShop(contextId);
+                UIEvents.RaiseSelectorItemShopOpenRequested(
+                    new SelectorItemShopSource(shop), 
+                    new SelectorItemShopActionClickBuy(shop),
+                    null);
+                break;
+            case "sell":
+                TryCacheShop(contextId);
+                UIEvents.RaiseSelectorItemStorageSlotBagOpenRequested(
+                    null, 
+                    new SelectorItemStorageSlotBagActionClickSell(shop),
+                    null);
+                break;
         }
     }
 
@@ -42,7 +68,7 @@ public class DialogGameDataProvider
     // set flag
     // get variable
     // set variable
-    
+
     // bind
     public void BindExternalFunctions(Story story) 
     {

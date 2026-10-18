@@ -8,17 +8,16 @@ public class SelectorItemStorageSlotBag : Selector<ItemStorageSlot, SelectorItem
 {
     // fields
     [Header("IU")]
-    [SerializeField] private TMP_Text textGold;
+    [SerializeField] private CurrencyUI currencyUI;
     [SerializeField] private ItemConfig config;
 
     private int currentItemCategoryIndex = 0;
     private Dictionary<ItemCategory, int> dictSelectedIndex = new ();
-    private ItemCategory itemCategoryPrevious;
 
     // override
     protected override void Awake() 
     {
-        itemCategoryPrevious = config.ItemCategoryDefaultBag;
+        currentItemCategoryIndex = GetOrderIndex(config.ItemCategoryDefaultBag);
         foreach (var itemCategory in config.ItemCategoryOrderBag)
             dictSelectedIndex[itemCategory] = 0;
         base.Awake();
@@ -26,23 +25,20 @@ public class SelectorItemStorageSlotBag : Selector<ItemStorageSlot, SelectorItem
 
     public override void Show() 
     {
-        source = new SelectorItemStorageSlotBagSourceFromStorageByCategory(itemCategoryPrevious);
+        source = new SelectorItemStorageSlotBagSourceFromStorageByCategory(GetOrderCategory(currentItemCategoryIndex));
         base.Show();
     }
 
     public override void OnOpened() 
     {
-        textGold.text = ItemManager.Instance.CurrencyComponent.Get(CurrencyType.Gold).ToString();
+        currencyUI.SetData();
         UIEvents.RaiseItemOverviewUpdateRequested(null);
         base.OnOpened();
     }
 
     public override void OnClosed() 
     {
-        if (source is SelectorItemStorageSlotBagSourceFromStorageByCategory sourceItemCatrory)
-            itemCategoryPrevious = sourceItemCatrory.ItemCategory;
-        dictSelectedIndex[itemCategoryPrevious] = GetSelectedIndex();
-        currentItemCategoryIndex = GetOrderIndex(itemCategoryPrevious);
+        dictSelectedIndex[GetOrderCategory(currentItemCategoryIndex)] = lastSelectedElementIndex;
         base.OnClosed();
     }
 
@@ -73,7 +69,7 @@ public class SelectorItemStorageSlotBag : Selector<ItemStorageSlot, SelectorItem
         currentItemCategoryIndex++;
         if (currentItemCategoryIndex >= config.ItemCategoryOrderBag.Length)
             currentItemCategoryIndex = 0;
-        RefreshBag(config.ItemCategoryOrderBag[currentItemCategoryIndex]);
+        RefreshBag(GetOrderCategory(currentItemCategoryIndex));
     }
 
     public void OnButtonShortcutBagPreviousClicked()
@@ -81,7 +77,7 @@ public class SelectorItemStorageSlotBag : Selector<ItemStorageSlot, SelectorItem
         currentItemCategoryIndex--;
         if (currentItemCategoryIndex < 0)
             currentItemCategoryIndex = config.ItemCategoryOrderBag.Length - 1;
-        RefreshBag(config.ItemCategoryOrderBag[currentItemCategoryIndex]);
+        RefreshBag(GetOrderCategory(currentItemCategoryIndex));
     }
 
     public void OnButtonCategoryRecoveryClicked() => RefreshBag(ItemCategory.Recovery);
@@ -90,34 +86,41 @@ public class SelectorItemStorageSlotBag : Selector<ItemStorageSlot, SelectorItem
     public void OnButtonCategoryMiscClicked() => RefreshBag(ItemCategory.Misc);
     public void OnButtonCategoryImportantClicked() => RefreshBag(ItemCategory.Important);
 
+    public void OnButtonConfirmClicked()
+    {
+        OnClicked(lastSelectedElement);
+    }
+
     // helper
     private int GetOrderIndex(ItemCategory itemCategory) => System.Array.IndexOf(config.ItemCategoryOrderBag, itemCategory);
+    private ItemCategory GetOrderCategory(int index) => config.ItemCategoryOrderBag[index];
 
     // logic
 
     private void RefreshBag(ItemCategory itemCategory)
     {
         if (!menuManager.IsMenuOpened(this)) return;
+        currentItemCategoryIndex = GetOrderIndex(itemCategory);
+        source = new SelectorItemStorageSlotBagSourceFromStorageByCategory(itemCategory);
+        Refresh();
     }
 
     // event
     protected override void OnEnable()
     {
         base.OnEnable();
-        UIEvents.OnSelectorItemStorageSlogBagOpenRequested += OnSelectorItemStorageSlogBagOpenRequested;
+        UIEvents.OnSelectorItemStorageSlotBagOpenRequested += OnSelectorItemStorageSlotBagOpenRequested;
         ItemEvents.OnStorageUpdated += OnStorageUpdated;
-        ItemEvents.OnCurrencyUpdated += OnCurrencyUpdated;
     }
 
     protected override void OnDisable() 
     {
         base.OnDisable();
-        UIEvents.OnSelectorItemStorageSlogBagOpenRequested -= OnSelectorItemStorageSlogBagOpenRequested;
+        UIEvents.OnSelectorItemStorageSlotBagOpenRequested -= OnSelectorItemStorageSlotBagOpenRequested;
         ItemEvents.OnStorageUpdated -= OnStorageUpdated;
-        ItemEvents.OnCurrencyUpdated -= OnCurrencyUpdated;
     }
 
-    private void OnSelectorItemStorageSlogBagOpenRequested(
+    private void OnSelectorItemStorageSlotBagOpenRequested(
         ISelectorSource<ItemStorageSlot> source, 
         ISelectorActionClick<ItemStorageSlot> actionClick, 
         ISelectorFilter<ItemStorageSlot> filter) 
@@ -128,17 +131,7 @@ public class SelectorItemStorageSlotBag : Selector<ItemStorageSlot, SelectorItem
     private void OnStorageUpdated() 
     {
         if (!menuManager.IsMenuOpened(this)) return;
-        RefreshBag(itemCategoryPrevious);
-    }
-
-    private void OnCurrencyUpdated(CurrencyType currencyType, int count) 
-    {
-        if (!menuManager.IsMenuOpened(this)) return;
-        switch (currencyType)
-        {
-            case CurrencyType.Gold:
-                textGold.text = count.ToString();
-                break;
-        }
+        UIEvents.RaiseItemOverviewUpdateRequested(null);
+        RefreshBag(GetOrderCategory(currentItemCategoryIndex));
     }
 }

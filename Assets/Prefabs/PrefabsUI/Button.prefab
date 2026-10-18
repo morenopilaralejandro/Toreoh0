@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 7814506255443174610}
   - component: {fileID: 1032429985381599000}
   - component: {fileID: 4229123270637145060}
+  - component: {fileID: 1691878375132032076}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -235,6 +236,18 @@ MonoBehaviour:
   dropSfx: 
   selectSfx: sfx-ui_select
   submitSfx: sfx-ui_tap
+--- !u!114 &1691878375132032076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3342418177145420596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae06c23882207f93ba9fb092347642ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuSelectable
 --- !u!1 &8680185212612279170
 GameObject:
   m_ObjectHideFlags: 0

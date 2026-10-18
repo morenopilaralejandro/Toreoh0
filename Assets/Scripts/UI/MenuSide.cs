@@ -29,8 +29,8 @@ public class MenuSide : Menu
 
     public void OnButtonBagClicked() 
     {
-        UIEvents.RaiseSelectorItemStorageSlogBagOpenRequested(
-            null,
+        UIEvents.RaiseSelectorItemStorageSlotBagOpenRequested(
+            null, 
             new SelectorItemStorageSlotBagActionClickUse(),
             null);
     }

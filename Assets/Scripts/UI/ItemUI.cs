@@ -53,5 +53,6 @@ public class ItemUI : MonoBehaviour
         if (textDescription != null) textDescription.text = item.LocalizationComponent.ItemDescription;
         if (textCountOwned != null) textCountOwned.text = countOwned.ToString();
         if (textCountRequired != null) textCountRequired.text = countRequired.ToString();
+        if (imageIcon != null) imageIcon.color = item.AppearanceComponent.Color;
     }
 }

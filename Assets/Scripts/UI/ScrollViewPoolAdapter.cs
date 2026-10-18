@@ -59,4 +59,9 @@ public class ScrollViewPoolAdapter<TListItem> where TListItem : MonoBehaviour
         if (scrollAuto == null) return;
         scrollAuto.Deactivate();
     }
+
+    public void ScrollTo(GameObject gameObject, bool isInstantForced = false)
+    {
+        scrollAuto.ScrollTo(gameObject.transform as RectTransform, isInstantForced);
+    }
 }

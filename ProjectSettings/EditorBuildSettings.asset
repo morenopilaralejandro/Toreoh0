@@ -35,6 +35,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ScenesUI/SceneDebugWorldUI.unity
     guid: b94658a80ffad52cfb9f1a6418de9ada
+  - enabled: 1
+    path: Assets/Scenes/ScenesUI/SceneSaveUI.unity
+    guid: ff87fa76f4db6119c9d1f1985e90aadc
+  - enabled: 1
+    path: Assets/Scenes/ScenesUI/SceneMainMenuUI.unity
+    guid: f5ba6aa03fc023ce0b7547079c1d425e
   m_configObjects:
     com.unity.adaptivePerformance.basic.provider_settings: {fileID: 11400000, guid: b8af9ae6712e711fa848047a7421583e, type: 2}
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 4dab92d3e12dc18e28fa1e064e7daefb, type: 2}

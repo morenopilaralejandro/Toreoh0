@@ -1414,17 +1414,6 @@ public partial class @InputActionsGame: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""3a5fed2c-b560-4e1d-bc5a-09e0424d2ad0"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Interact"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""3e35ce6f-24fc-4cca-8c41-fb10154c7ef9"",
                     ""path"": ""<Keyboard>/enter"",
                     ""interactions"": """",

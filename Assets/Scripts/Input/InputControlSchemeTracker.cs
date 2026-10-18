@@ -52,6 +52,15 @@ public class InputControlSchemeTracker
         #endif
     }
 
+    public bool IsExecuteOnClick()
+    {
+        #if UNITY_EDITOR || DEVELOPMENT_BUILD
+            return !config.IsDebugTouchInput;
+        #else
+            return CurrentControlScheme != ControlScheme.Touch;
+        #endif
+    }
+
     // event
     /*
 

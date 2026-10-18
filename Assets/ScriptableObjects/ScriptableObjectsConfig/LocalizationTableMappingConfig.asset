@@ -53,6 +53,16 @@ MonoBehaviour:
     Style: 1
     TableReference:
       m_TableCollectionName: Gameplay-Npc-Name-Romanized
+  - Entity: 1
+    Field: 0
+    Style: 0
+    TableReference:
+      m_TableCollectionName: Gameplay-Shop-Name-Localized
+  - Entity: 1
+    Field: 0
+    Style: 1
+    TableReference:
+      m_TableCollectionName: Gameplay-Shop-Name-Romanized
   - Entity: 11
     Field: 0
     Style: 0

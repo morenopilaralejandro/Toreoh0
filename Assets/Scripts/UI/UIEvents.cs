@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using Aremoreno.Enums.Item;
 using Aremoreno.Enums.UI;
 
 public static class UIEvents 
@@ -35,17 +36,33 @@ public static class UIEvents
     public static void RaiseMenuDebugWorldOpenRequested()
         => OnMenuDebugWorldOpenRequested?.Invoke();
 
+    public static event Action<AmountPickerMode, Item, int, int, int, CurrencyType> OnMenuAmountPickerItemOpenRequested;
+    public static void RaiseMenuAmountPickerItemOpenRequested(AmountPickerMode amountPickerMode, Item item, int countCurrent, int countMin, int countMax, CurrencyType currencyType)
+        => OnMenuAmountPickerItemOpenRequested?.Invoke(amountPickerMode, item, countCurrent, countMin, countMax, currencyType);
+
     // selector open requested
     public static event Action<
         ISelectorSource<ItemStorageSlot>, 
         ISelectorActionClick<ItemStorageSlot>, 
         ISelectorFilter<ItemStorageSlot>
-    > OnSelectorItemStorageSlogBagOpenRequested;
-    public static void RaiseSelectorItemStorageSlogBagOpenRequested(
+    > OnSelectorItemStorageSlotBagOpenRequested;
+    public static void RaiseSelectorItemStorageSlotBagOpenRequested(
         ISelectorSource<ItemStorageSlot> source, 
         ISelectorActionClick<ItemStorageSlot> actionClick, 
         ISelectorFilter<ItemStorageSlot> filter)
-        => OnSelectorItemStorageSlogBagOpenRequested?
+        => OnSelectorItemStorageSlotBagOpenRequested?
+            .Invoke(source, actionClick, filter);
+
+    public static event Action<
+        ISelectorSource<Item>, 
+        ISelectorActionClick<Item>, 
+        ISelectorFilter<Item>
+    > OnSelectorItemShopOpenRequested;
+    public static void RaiseSelectorItemShopOpenRequested(
+        ISelectorSource<Item> source, 
+        ISelectorActionClick<Item> actionClick, 
+        ISelectorFilter<Item> filter)
+        => OnSelectorItemShopOpenRequested?
             .Invoke(source, actionClick, filter);
 
     // overview

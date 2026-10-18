@@ -4,19 +4,18 @@ using System.Threading.Tasks;
 public class OverviewItem : MonoBehaviour
 {
     [SerializeField] private CanvasGroup canvasGroup;
-    [SerializeField] private CanvasGroup canvasGroupIcon;
     [SerializeField] private ItemUI itemUI;
 
     private async Task SetData(Item item) 
     {
-        await itemUI.SetAsync(item);
-        UIUtils.SetCanvasGroupVisible(canvasGroupIcon, true);
+        await itemUI.SetAsync(item, ItemManager.Instance.StorageComponent.GetItemCount(item));
+        UIUtils.SetCanvasGroupAlpha(canvasGroup, 1f);
     }
 
     private void Clear() 
     {
         itemUI.Clear();
-        UIUtils.SetCanvasGroupVisible(canvasGroupIcon, false);
+        UIUtils.SetCanvasGroupAlpha(canvasGroup, 0f);
     }
 
     private void OnEnable()

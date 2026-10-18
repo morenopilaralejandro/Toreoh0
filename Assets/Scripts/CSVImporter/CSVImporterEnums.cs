@@ -21,6 +21,7 @@ namespace Aremoreno.Enums.CSVImporter
         ColorGeneric,
         ItemCategory,
         ItemSpriteType,
-        ItemUsageContext
+        ItemUsageContext,
+        CurrencyType
     }
 }
