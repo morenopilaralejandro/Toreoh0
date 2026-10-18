@@ -43,6 +43,7 @@ public class LocalizationTableMappingGenerator : EditorWindow
         mappingConfig.Mappings = new ();
         ProcessStringTables();
         ProcessAssetTables();
+        EditorUtils.SetDirty(mappingConfig);
     }
 
     private void ProcessStringTables()

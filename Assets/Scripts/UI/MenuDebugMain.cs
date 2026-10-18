@@ -10,4 +10,11 @@ public class MenuDebugMain : Menu
     {
         CustomLog.Error("test");
     }
+
+    public void OnButtonWorldClicked() 
+    {
+        PersistenceEvents.RaiseNewGameStarted();
+        SceneLoaderManager.Instance.UnloadGroup("SceneGroupData-DebugMainMenu");
+        SceneLoaderManager.Instance.LoadGroup("SceneGroupData-World");
+    }
 }

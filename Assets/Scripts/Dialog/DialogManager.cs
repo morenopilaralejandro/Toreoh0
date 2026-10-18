@@ -6,8 +6,8 @@ public class DialogManager : MonoBehaviour
 
     [SerializeField] private DialogConfig config;
     private DialogGameDataProvider gameDataProvider;
-    private DialogLocalizationBridge localizationBridge;
 
+    public DialogLocalizationBridge LocalizationBridge { get; private set; }
     public DialogViewedTracker ViewedTracker { get; private set; }
     public DialogManagerPersistence PersistenceComponent { get; private set; }
     public DialogManagerInkStory InkStoryComponent { get; private set; }
@@ -31,18 +31,20 @@ public class DialogManager : MonoBehaviour
 
     private void Initialize() 
     {
-        PersistenceComponent = new DialogManagerPersistence(this);
-        PersistenceComponent.Subscribe();
-
         CacheSpeaker = new DialogCacheSpeaker();
         CacheSpeaker.Initialize(config);
 
-        gameDataProvider = new DialogGameDataProvider();
-        localizationBridge = new DialogLocalizationBridge();
+        LocalizationBridge = new DialogLocalizationBridge();
+        gameDataProvider = new DialogGameDataProvider(LocalizationBridge);
 
         InkStoryComponent = new DialogManagerInkStory();
-        InkStoryComponent.Initialize(config, gameDataProvider, localizationBridge, CacheSpeaker);
+        InkStoryComponent.Initialize(config, gameDataProvider, LocalizationBridge, CacheSpeaker);
         InkStoryComponent.Subscribe();
+
+        ViewedTracker = new DialogViewedTracker();
+
+        PersistenceComponent = new DialogManagerPersistence(this);
+        PersistenceComponent.Subscribe();
     }
 
     private void OnDestroy() 

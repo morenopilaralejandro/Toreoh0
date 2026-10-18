@@ -37,6 +37,7 @@ public class SceneSetupGroupManager : EditorWindow
     private void Save() 
     {
         data.SceneSetupArray = EditorSceneManager.GetSceneManagerSetup();
+        EditorUtils.SetDirty(data);
     }
 
     private void Load() 

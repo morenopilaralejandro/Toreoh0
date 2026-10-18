@@ -8,7 +8,7 @@ public static class DialogTagParser
     private const string DefaultSpeakerCompoundKey = "system";
 
     private const int PrefixLengthLocalizationKey = 4; // loc:
-    private const int PrefixLengthSpeaker = 4; // speaker:
+    private const int PrefixLengthSpeaker = 8; // speaker:
 
     private static readonly char[] tagSeparator = { ':' };
 
@@ -40,10 +40,11 @@ public static class DialogTagParser
         return line;
     }
 
-    public static DialogSerializableChoice ParseChoice(string textRaw, List<string> tags)
+    public static DialogSerializableChoice ParseChoice(string textRaw, List<string> tags, int choiceIndex)
     {
         DialogSerializableChoice choice = new DialogSerializableChoice 
         {
+            ChoiceIndex = choiceIndex,
             TextRaw = textRaw,
             TextResolved = DefaultString,
             LocalizationKey = DefaultString

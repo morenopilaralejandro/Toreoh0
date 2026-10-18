@@ -4,12 +4,12 @@ using System.IO;
 public class FileWriter
 {
     private StreamWriter streamWriter;
-    private string path;
 
-    public void Initialize(string path)
+    public FileWriter(string pathFolder, string pathFileName)
     {
-        this.path = Path.Combine(Application.persistentDataPath, path);
-        streamWriter = new StreamWriter(this.path, true) { AutoFlush = true };
+        IOUtils.CreateDirectory(pathFolder);
+        string pathFull = IOUtils.PathCombine(pathFolder, pathFileName);
+        streamWriter = new StreamWriter(pathFull, true) { AutoFlush = true };
     }
 
     public void WriteToFile(string message) 

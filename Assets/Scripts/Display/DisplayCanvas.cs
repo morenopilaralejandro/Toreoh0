@@ -6,6 +6,7 @@ public class DisplayCanvas : MonoBehaviour
     public DisplayScreen DisplayScreen;
     [SerializeField] private Canvas canvas;
     [SerializeField] private RectTransform rectTransformDebug;
+    [SerializeField] private string sortingLayerName;
 
     private void Awake() 
     {
@@ -31,5 +32,6 @@ public class DisplayCanvas : MonoBehaviour
         canvas.renderMode = RenderMode.ScreenSpaceCamera;
         canvas.worldCamera = DisplayManager.Instance.GetCamera(DisplayScreen);
         canvas.targetDisplay = DisplayManager.Instance.GetTargetDisplay(DisplayScreen);;
+        canvas.sortingLayerName = sortingLayerName;
     }
 }

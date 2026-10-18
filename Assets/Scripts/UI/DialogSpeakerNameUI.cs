@@ -25,4 +25,9 @@ public class DialogSpeakerNameUI : MonoBehaviour
         else
             textName.text = string.Empty;
     }
+
+    public void Clear() 
+    {
+        textName.text = string.Empty;
+    }
 }

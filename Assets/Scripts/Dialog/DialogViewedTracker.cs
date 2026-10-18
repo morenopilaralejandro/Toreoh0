@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 public class DialogViewedTracker
 {
-    private HashSet<string> viewedDialogsHashSet;
+    private HashSet<string> viewedDialogsHashSet = new ();
     
     public void MarkAsViewed(string dialogId) => viewedDialogsHashSet.Add(dialogId);
     public void HasViewed(string dialogId) => viewedDialogsHashSet.Contains(dialogId);

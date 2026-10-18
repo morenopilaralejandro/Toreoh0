@@ -15,11 +15,20 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: 4cef6991fe93563c8a102d091f3ae764
   m_SerializeEntries:
-  - m_GUID: c6e89bab6a1c185b3a77ac980857675a
-    m_Address: Assets/Addressables/AddressablesSceneGroupData/SceneGroupData.asset
+  - m_GUID: 6c404cea2dd7585ad8ba0a8b6cd50a70
+    m_Address: sprite-chest-opened
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - SceneGroupData
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6d671acaaec701b35bd465068c78ff52
+    m_Address: sprite-item-basic
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cda146b5ae67df0e5925aaf41465d05d
+    m_Address: sprite-chest-closed
+    m_ReadOnly: 0
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: fd8f0a373a4da231f8de6474b1779402, type: 2}

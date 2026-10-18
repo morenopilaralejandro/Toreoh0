@@ -1,0 +1,107 @@
+Key,English(en),Japanese(ja),Spanish(es)
+choice_yes,Test,テスト,Sí
+choice_no,,,No
+choice_buy,,,Comprar
+choice_sell,,,Vender
+choice_leave,,,Salir
+choice_cancel,,,Cancelar
+choice_back,,,Volver
+choice_match,,,Jugar partido
+choice_road,,,Jugar senda
+choice_about_you,,,Sobre ti
+choice_about_place,,,Sobre este lugar
+choice_about_match,,,Sobre el partido
+choice_about_team,,,Sobre tu equipo
+choice_pray,,,Rezar
+choice_confess,,,Confesarse
+choice_unforgivable,,,¡No te lo permitiré!
+choice_goodbye,,,Adiós
+choice_thanks,,,Gracias
+choice_blame,,,Es tu culpa.
+greeting_greetings,,,¡Saludos!
+greeting_what_default,,,¿Qué quieres?
+greeting_what_angry,,,¿Qué quieres?
+greeting_how,,,¿En qué puedo ayudarte?
+greeting_welcome_default,,,Bienvenido.
+greeting_welcome_happy,,,¡Bienvenido!
+greeting_holy,,,La paz sea contigo.
+greeting_prepare,,,¡Prepárate!
+greeting_suspense,,,...
+greeting_hi,,,Hola.
+greeting_hello_default_male,,,Hola.
+greeting_hello_default_female,,,Hola.
+greeting_hello_happy_male,,,¡Hey!
+greeting_hello_happy_female,,,¡Holi!
+greeting_hello_angry_male,,,Hola.
+greeting_hello_angry_female,,,Hola.
+greeting_hello_sad_male,,,Hola.
+greeting_hello_sad_female,,,Hola.
+greeting_morning_default_male,,,Buenos días.
+greeting_morning_default_female,,,Buenos días.
+greeting_morning_happy_male,,,¡Buenos días!
+greeting_morning_happy_female,,,¡Buenos días!
+greeting_morning_angry_male,,,Buenos días.
+greeting_morning_angry_female,,,Buenos días.
+greeting_morning_sad_male,,,Buenos días.
+greeting_morning_sad_female,,,Buenos días.
+greeting_evening_default_male,,,Buenas tardes.
+greeting_evening_default_female,,,Buenas tardes.
+greeting_evening_happy_male,,,¡Buenas tardes!
+greeting_evening_happy_female,,,¡Buenas tardes!
+greeting_evening_angry_male,,,Buenas tardes.
+greeting_evening_angry_female,,,Buenas tardes.
+greeting_evening_sad_male,,,Buenas tardes.
+greeting_evening_sad_female,,,Buenas tardes.
+greeting_night_default_male,,,Buenas noches.
+greeting_night_default_female,,,Buenas noches.
+greeting_night_happy_male,,,¡Buenas noches!
+greeting_night_happy_female,,,¡Buenas noches!
+greeting_night_angry_male,,,Buenas noches.
+greeting_night_angry_female,,,Buenas noches.
+greeting_night_sad_male,,,Buenas noches.
+greeting_night_sad_female,,,Buenas noches.
+farewell_farewell,,,¡Adíos!
+farewell_care,,,¡Cuídate!
+farewell_out,,,¡Fuera de mi vista!
+farewell_come,,,¡Vuelve pronto!
+farewell_holy,,,Ve en paz.
+farewell_suspense,,,...
+farewell_goodbye_default_male,,,Adíos.
+farewell_goodbye_default_female,,,Adíos.
+farewell_goodbye_happy_male,,,Adíos.
+farewell_goodbye_happy_female,,,Adíos.
+farewell_goodbye_angry_male,,,Adíos.
+farewell_goodbye_angry_female,,,Adíos.
+farewell_goodbye_sad_male,,,Adíos.
+farewell_goodbye_sad_female,,,Adíos.
+farewell_bye_default_male,,,Adíos.
+farewell_bye_default_female,,,Adíos.
+farewell_bye_happy_male,,,¡Adíos!
+farewell_bye_happy_female,,,¡Adíos!
+farewell_bye_angry_male,,,Adíos.
+farewell_bye_angry_female,,,Adíos.
+farewell_bye_sad_male,,,Adíos.
+farewell_bye_sad_female,,,Adíos.
+farewell_later_default_male,,,Hasta luego.
+farewell_later_default_female,,,Hasta luego.
+farewell_later_happy_male,,,¡Hasta luego!
+farewell_later_happy_female,,,¡Hasta luego!
+farewell_later_angry_male,,,Hasta luego.
+farewell_later_angry_female,,,Hasta luego.
+farewell_later_sad_male,,,Hasta luego.
+farewell_later_sad_female,,,Hasta luego.
+chest_close,,,Cierras el cofre.
+chest_closed,,,El cofre está cerrado.
+chest_unlock,,,Desbloqueas el cofre.
+chest_open,,,Abres el cofre.
+chest_open_suspense,,,Abres el cofre...
+chest_found,,,¡Obtuviste {chest_item_name}!
+chest_empty,,,El cofre está vacío.
+door_close,,,Cierras  la puerta.
+door_closed,,,La puerta está cerrada.
+door_open,,,Abres la puerta.
+door_opened,,,La pueta está abierta.
+dialog_test_0,abcdefghijklmnñopqrstuvwxyz,abcdefghijklmnñopqrstuvwxyz,abcdefghijklmnñopqrstuvwxyz
+dialog_test_1,ABCDEFGHIJKLMNÑOPQRSTUVWXYZ,ABCDEFGHIJKLMNÑOPQRSTUVWXYZ,ABCDEFGHIJKLMNÑOPQRSTUVWXYZ
+dialog_test_plain,,,Test plain text
+dialog_test_hero_name,,,Test hero name --{hero_name}--

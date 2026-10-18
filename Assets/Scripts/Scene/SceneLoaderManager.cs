@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Threading.Tasks;
 
 public class SceneLoaderManager : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class SceneLoaderManager : MonoBehaviour
 
     private void Initialize() 
     {
-        ISceneLoaderRegistry registry = new SceneLoaderRegistryGroup();
+        ISceneLoaderRegistry registry = new SceneLoaderRegistryDefault();
         sceneLoader = new SceneLoader(
             registry,
             new SceneLoaderOperationsDefault(registry),
@@ -68,7 +69,7 @@ public class SceneLoaderManager : MonoBehaviour
 
     // Load by id
     public void LoadGroup(string sceneGroupId) => LoadGroup(sceneLoader.DatabaseManager.DatabaseRegistry.SceneGroupData.Get(sceneGroupId));
-    public void UnloadGroupGroup(string sceneGroupId) => UnloadGroup(sceneLoader.DatabaseManager.DatabaseRegistry.SceneGroupData.Get(sceneGroupId));
+    public void UnloadGroup(string sceneGroupId) => UnloadGroup(sceneLoader.DatabaseManager.DatabaseRegistry.SceneGroupData.Get(sceneGroupId));
 
     // Coroutines
     private IEnumerator ExecuteLoad(SceneLoaderContext context)
@@ -81,5 +82,19 @@ public class SceneLoaderManager : MonoBehaviour
     private IEnumerator ExecuteUnload(SceneLoaderContext context)
     {
         yield return context.UnloadScenes();
+    }
+
+    // Helper
+    public Task StartCoroutineAsync(IEnumerator coroutine) 
+    {
+        var tcs = new TaskCompletionSource<bool>();
+        StartCoroutine(CoroutineWrapperAsync(coroutine, tcs));
+        return tcs.Task;
+    }
+
+    private IEnumerator CoroutineWrapperAsync(IEnumerator coroutine, TaskCompletionSource<bool> tcs)
+    {
+        yield return StartCoroutine(coroutine);
+        tcs.SetResult(true);
     }
 }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e6b9e9c5c27bdcfa941ba98dfb5946, type: 3}
   m_Name: CSVImporterData-ItemDataMaterial
   m_EditorClassIdentifier: Assembly-CSharp::CSVImporterData
-  CSVFileName: ItemMaterial - Data
+  CSVFileName: ItemDataMaterial
   OutputFolder: AddressablesItemDataMaterial
   ScriptableObjectTypeName: ItemDataMaterial
   AssetNamePrefix: 
@@ -26,23 +26,47 @@ MonoBehaviour:
     FieldName: ItemId
     ColumnName: ItemId
     EnumGenericType: 0
+  - SerializableFieldCustom: 5
+    FieldName: ItemCategory
+    ColumnName: ItemCategory
+    EnumGenericType: 3
+  - SerializableFieldCustom: 5
+    FieldName: ItemUsageContext
+    ColumnName: ItemUsageContext
+    EnumGenericType: 5
+  - SerializableFieldCustom: 5
+    FieldName: ColorGeneric
+    ColumnName: ColorGeneric
+    EnumGenericType: 2
   - SerializableFieldCustom: 2
-    FieldName: TestInt
-    ColumnName: TestInt
+    FieldName: PriceBuyExpertTokens
+    ColumnName: PriceBuyExpertTokens
     EnumGenericType: 0
-  - SerializableFieldCustom: 3
-    FieldName: TestFloat
-    ColumnName: TestFloat
+  - SerializableFieldCustom: 2
+    FieldName: PriceBuyGold
+    ColumnName: PriceBuyGold
+    EnumGenericType: 0
+  - SerializableFieldCustom: 2
+    FieldName: PriceSellGold
+    ColumnName: PriceSellGold
     EnumGenericType: 0
   - SerializableFieldCustom: 4
-    FieldName: TestBool
-    ColumnName: TestBool
+    FieldName: IsSellable
+    ColumnName: IsSellable
     EnumGenericType: 0
-  - SerializableFieldCustom: 5
-    FieldName: TestInputBattle
-    ColumnName: TestInputBattle
-    EnumGenericType: 1
-  - SerializableFieldCustom: 7
-    FieldName: TestItemRewardList
-    ColumnName: TestItemRewardList
+  - SerializableFieldCustom: 4
+    FieldName: IsDiscardable
+    ColumnName: IsDiscardable
+    EnumGenericType: 0
+  - SerializableFieldCustom: 4
+    FieldName: IsStackable
+    ColumnName: IsStackable
+    EnumGenericType: 0
+  - SerializableFieldCustom: 2
+    FieldName: MaxStack
+    ColumnName: MaxStack
+    EnumGenericType: 0
+  - SerializableFieldCustom: 0
+    FieldName: Placeholder
+    ColumnName: Placeholder
     EnumGenericType: 0

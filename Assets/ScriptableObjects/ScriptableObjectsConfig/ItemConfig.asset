@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b65c4c66453da67bebd035ef80f2a537, type: 3}
+  m_Name: ItemConfig
+  m_EditorClassIdentifier: Assembly-CSharp::ItemConfig
+  IsDebugStorage: 1
+  IsDebugCurrency: 0
+  ItemCategoryDefaultBag: 3
+  ItemCategoryOrderBag: 0300000006000000000000000100000002000000
+  ListCurrencyMapping:
+  - CurrencyType: 0
+    MinValue: 0
+    MaxValue: 9999999
+    DefaultValue: 0
+  - CurrencyType: 1
+    MinValue: 0
+    MaxValue: 9999999
+    DefaultValue: 0
+  - CurrencyType: 2
+    MinValue: 0
+    MaxValue: 9999999
+    DefaultValue: 0
+  - CurrencyType: 3
+    MinValue: 0
+    MaxValue: 9999999
+    DefaultValue: 0
+  ListStartingItemData: []

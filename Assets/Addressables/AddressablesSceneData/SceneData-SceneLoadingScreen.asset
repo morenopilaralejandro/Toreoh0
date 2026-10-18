@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SceneData-SceneLoadingScreen
   m_EditorClassIdentifier: Assembly-CSharp::SceneData
   SceneName: SceneLoadingScreen
-  IsDebugOnly: 1
+  IsDebugOnly: 0
   HasLoadingScreen: 0

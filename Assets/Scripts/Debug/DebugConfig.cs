@@ -10,5 +10,6 @@ public class DebugConfig : ScriptableObject
     [Header("Log")]
     public LogLevel MinimunLogLevel;
     public bool IsFileLoggerEnable;
-    public string FileLoggerPath;
+    public string FileLoggerFolder;
+    public string FileLoggerName;
 }

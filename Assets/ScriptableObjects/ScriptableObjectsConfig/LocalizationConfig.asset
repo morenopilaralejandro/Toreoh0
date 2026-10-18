@@ -17,4 +17,4 @@ MonoBehaviour:
   TableNameSeparator: 45
   FontAtlasPath: Assets/Localization/LocalizationFontAtlas
   FontAtlasFileName: FontAtlasCharacters.txt
-  ExtraAtlasCharacters: 20002d005f002e002c003a003b002200230025002f003000310032003300340035003600370038003900
+  ExtraAtlasCharacters: 20002d005f002e002c003a003b00220023002a0025002f002b003000310032003300340035003600370038003900

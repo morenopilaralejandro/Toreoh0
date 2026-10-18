@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogConfig
   StoryMappings:
   - InkStoryId: main
-    InkStoryJson: {fileID: 0}
+    InkStoryJson: {fileID: 4900000, guid: 19bbc213872e056eb93d3e3f3f5769a7, type: 3}
   CacheSpeakerCapacity: 5
   SmartStringArgumentRegexPattern: \{(\w+)\}

@@ -74,12 +74,10 @@ public static class AddressableLoader
         if (assets.TryGetValue(address, out var refAsset)) 
         {
             refAsset.RefCount--;
-            if (refAsset.RefCount <= 0) 
-            {
-                Addressables.Release(refAsset);
-                assets.Remove(address);
-                cacheLru.Remove(address);
-            }
+            if (refAsset.RefCount > 0) return;
+            Addressables.Release(refAsset.Handle);
+            assets.Remove(address);
+            cacheLru.Remove(address);
         }
     }
 

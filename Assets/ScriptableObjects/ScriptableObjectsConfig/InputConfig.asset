@@ -19,3 +19,5 @@ MonoBehaviour:
     ControlScheme: 1
   - ControlSchemeName: Touch
     ControlScheme: 2
+  GroundY: 0
+  IsDebugTouchInput: 1

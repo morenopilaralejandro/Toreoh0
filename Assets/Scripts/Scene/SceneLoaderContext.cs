@@ -1,21 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class SceneLoaderContext 
 {
     public string Id;
-    public IReadOnlyList<SceneData> ScenesToLoad { get; private set; }
-    public IReadOnlyList<SceneData> ScenesToUnload { get; private set; }
+    public IEnumerable<string> ScenesToLoad { get; private set; }
+    public IEnumerable<string> ScenesToUnload { get; private set; }
 
     private ISceneLoaderOperations operations;
     private string loadingScreenSceneName;
 
     public SceneLoaderContext(
         string id,
-        IReadOnlyList<SceneData> scenesToLoad,
-        IReadOnlyList<SceneData> scenesToUnload,
+        IEnumerable<string> scenesToLoad,
+        IEnumerable<string> scenesToUnload,
         ISceneLoaderOperations operations,
-        string loadingScreenSceneName = "SceneLoadingScreen") 
+        string loadingScreenSceneName = "SceneLoadingScreen")
     {
         this.Id = id;
         ScenesToLoad = scenesToLoad;
@@ -24,18 +25,25 @@ public class SceneLoaderContext
         this.loadingScreenSceneName = loadingScreenSceneName;
     }
 
-    public IEnumerator LoadScenes() 
+    // load
+    public IEnumerator LoadScenes()
     {
         foreach (var scene in ScenesToLoad) 
-            yield return operations.Load(scene.SceneName);
+            yield return operations.Load(scene);
     }
 
-    public IEnumerator UnloadScenes() 
+    public IEnumerator UnloadScenes()
     {
-        foreach (var scene in ScenesToUnload ?? new List<SceneData>()) 
-            yield return operations.Load(scene.SceneName);
+        foreach (var scene in ScenesToUnload ?? new List<string>()) 
+            yield return operations.Unload(scene);
     }
 
+    public IEnumerator UnloadAll()
+    {
+        yield return operations.UnloadAll();
+    }
+
+    // loadingScreen
     public IEnumerator LoadLoadingScreen()
     {
         yield return operations.Load(loadingScreenSceneName);
@@ -46,5 +54,5 @@ public class SceneLoaderContext
         yield return operations.Unload(loadingScreenSceneName);
     }
 
-    public bool HasSceneToUnload => ScenesToUnload != null && ScenesToUnload.Count > 0;
+    public bool HasSceneToUnload => ScenesToUnload != null && ScenesToUnload.Count() > 0;
 }

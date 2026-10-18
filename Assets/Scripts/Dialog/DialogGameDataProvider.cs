@@ -2,21 +2,65 @@ using Ink.Runtime;
 
 public class DialogGameDataProvider
 {
+    // field
     private DialogLocalizationBridge localizationBridge;
+    private AudioManager audioManager;
+    private StoryManager storyManager;
 
-    // variables
-    private string heroName; 
+    private Shop shop;
 
-    // constructort
-    public DialogGameDataProvider() 
+    // constructor
+    public DialogGameDataProvider(DialogLocalizationBridge localizationBridge) 
     {
-        // TODO pass managers
+        this.localizationBridge = localizationBridge;
+        audioManager = AudioManager.Instance;
+        storyManager = StoryManager.Instance;
+    }
+
+    // helper
+    private void TryCacheShop(string shopId)
+    {
+        if (shop != null && shop.AttributesComponent.ShopId == shopId) return;
+        if (string.IsNullOrEmpty(shopId))
+            shop = null;    
+        else
+            shop = ShopFactory.CreateById(shopId);
     }
 
     // functions
-    public string GetHeroName() 
+    //public string GetHeroName() => "hero name";
+    public void PlaySfx(string sfxId) => _ = audioManager.Sfx.Play(sfxId);
+    public void ClearArguments() => localizationBridge.ClearArguments();
+    public void SetCurrentChestItemAsArgument() => 
+        localizationBridge.SetArgument(
+            "chestItemName", 
+            localizationBridge.ResolveItemName(
+                storyManager.ChestTracker.CurrentOpeningChestId
+            )
+        );
+
+    public void OpenSubmenu(string menuId, string contextId) 
     {
-        return "hero name";
+        switch(menuId) 
+        {
+            case "test":
+                UIEvents.RaiseMenuTestOpenRequested();
+                break;
+            case "buy":
+                TryCacheShop(contextId);
+                UIEvents.RaiseSelectorItemShopOpenRequested(
+                    new SelectorItemShopSource(shop), 
+                    new SelectorItemShopActionClickBuy(shop),
+                    null);
+                break;
+            case "sell":
+                TryCacheShop(contextId);
+                UIEvents.RaiseSelectorItemStorageSlotBagOpenRequested(
+                    null, 
+                    new SelectorItemStorageSlotBagActionClickSell(shop),
+                    null);
+                break;
+        }
     }
 
     // Story
@@ -24,33 +68,21 @@ public class DialogGameDataProvider
     // set flag
     // get variable
     // set variable
-    
-    // BindExternalFunction
+
+    // bind
     public void BindExternalFunctions(Story story) 
     {
+        story.BindExternalFunction("PlaySfx", (string sfxId) => { PlaySfx(sfxId); });
+        story.BindExternalFunction("ClearArguments", () => { ClearArguments(); });
+        story.BindExternalFunction("SetCurrentChestItemAsArgument", () => { SetCurrentChestItemAsArgument(); });
+        story.BindExternalFunction("OpenSubmenu", (string menuId, string contextId) => { OpenSubmenu(menuId, contextId); });
+
+
         /*
-        story.BindExternalFunction("GetItemName", (string id)) =>
+        story.BindExternalFunction("OpenSubmenuShop", (string id) =>
         {
             return localizationBridge.ResolveItemName(id);
-        };
-
-
-        story.BindExternalFunction("GetCurrentChestItemName", (string id)) =>
-        {
-            // world manager chest system get current chest item -> set before chest dialog
-            return localizationBridge.ResolveItemName(id);
-        };
-
-        story.BindExternalFunction("OpenSubmenuShop", (string id)) =>
-        {
-            return localizationBridge.ResolveItemName(id);
-        };
+        });
         */
-    }
-
-    // SyncVariablesFromGameState
-    public void SyncVariablesFromGameState(Story story) 
-    {
-        story.variablesState["heroName"] = GetHeroName();
     }
 }

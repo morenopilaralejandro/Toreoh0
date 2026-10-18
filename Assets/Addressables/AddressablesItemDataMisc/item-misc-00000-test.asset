@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ceb834242d00ce3d94dc7b4bc472f77, type: 3}
+  m_Name: item-misc-00000-test
+  m_EditorClassIdentifier: Assembly-CSharp::ItemDataMisc
+  ItemId: item-misc-00000-test
+  ItemCategory: 1
+  ItemUsageContext: 4
+  ItemSpriteType: 0
+  ColorGeneric: 10
+  PriceBuyExpertTokens: 0
+  PriceBuyGold: 0
+  PriceSellGold: 0
+  IsSellable: 0
+  IsDiscardable: 0
+  IsStackable: 0
+  MaxStack: 1
+  Placeholder: placeholder

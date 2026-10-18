@@ -14,7 +14,7 @@ public class SpeakerComponentLocalization
     }
 
     public void SetResolvedName(string name) 
-    { 
+    {
         ResolvedName = name;
         IsResolved = true;
     }

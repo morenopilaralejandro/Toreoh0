@@ -97,7 +97,7 @@ public class MenuManager : MonoBehaviour
     private void CloseMenuInternal(Menu menu) 
     {
         hashSetPendingClose.Remove(menu);
-        menu.SetInteractable(menu);
+        menu.SetInteractable(false);
         menu.Hide();
         menu.OnClosed();
         UIEvents.RaiseMenuClosed(menu);

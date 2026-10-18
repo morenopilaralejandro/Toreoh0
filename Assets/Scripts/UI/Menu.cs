@@ -23,8 +23,8 @@ public abstract class Menu : MonoBehaviour, IMenuClosable
     [SerializeField, Range(0f, 1f)] protected float dimmedAlpha = 0.5f;
 
     [Header("Audio")]
-    [SerializeField] protected string sfxOpen  = "sfx-menu_open";
-    [SerializeField] protected string sfxClose = "sfx-menu_close";
+    [SerializeField] protected string sfxOpen  = "sfx-ui_menu_open";
+    [SerializeField] protected string sfxClose = "sfx-ui_menu_close";
 
     protected MenuManager menuManager;
     protected InputManager inputManager;
@@ -50,6 +50,12 @@ public abstract class Menu : MonoBehaviour, IMenuClosable
         menuManager = MenuManager.Instance;
         inputManager = InputManager.Instance;
         audioManager = AudioManager.Instance;
+    }
+
+    protected virtual void OnDestroy()
+    {
+        if (menuManager != null && menuManager.IsMenuOpened(this)) 
+            RequestClose();
     }
 
     protected virtual void OnEnable() 
@@ -93,30 +99,26 @@ public abstract class Menu : MonoBehaviour, IMenuClosable
     public void SetVisible(bool isVisible) 
     {
         foreach (var canvasGroup in canvasGroupList)
-            canvasGroup.alpha = isVisible ? 1f : 0f;
+            UIUtils.SetCanvasGroupVisible(canvasGroup, isVisible);
     }
 
     public void SetAlpha(float alpha) 
     {
         foreach (var canvasGroup in canvasGroupList)
-            canvasGroup.alpha = alpha;
+            UIUtils.SetCanvasGroupAlpha(canvasGroup, alpha);
     }
 
     public void SetActive(bool isActive) 
     {
-        foreach (var go in gameObjectList)
-            go.SetActive(isActive);
+        foreach (var go in gameObjectList) 
+            go?.SetActive(isActive);
     }
-
 
     // interactability
     public virtual void SetInteractable(bool isInteractable)
     {
         foreach (var canvasGroup in canvasGroupList) 
-        {
-            canvasGroup.interactable = isInteractable;
-            canvasGroup.blocksRaycasts = isInteractable;
-        }
+            UIUtils.SetCanvasGroupInteractable(canvasGroup, isInteractable);
 
         if (isHiddenWhenNotInterable) SetVisible(isInteractable);
         if (isInteractable && !wasInteractable) OnGainedInput();
@@ -140,7 +142,7 @@ public abstract class Menu : MonoBehaviour, IMenuClosable
 
     public virtual void OnClosed() 
     {
-        if (!string.IsNullOrEmpty(sfxOpen))
+        if (!string.IsNullOrEmpty(sfxClose))
             _ = audioManager.SfxUI.Play(sfxClose);
     }
 
@@ -160,7 +162,7 @@ public abstract class Menu : MonoBehaviour, IMenuClosable
     public void SetDefaultSelectable(Selectable selectable, bool focusImmediately = true)
     {
         defaultSelectable = selectable;
-        if(!inputManager.ControlSchemeTracker.ShouldAutoFocus) return;
+        if(!inputManager.ControlSchemeTracker.ShouldAutoFocus()) return;
         if (focusImmediately && selectable != null)
         {
             EventSystem.current.SetSelectedGameObject(selectable.gameObject);
@@ -170,7 +172,7 @@ public abstract class Menu : MonoBehaviour, IMenuClosable
 
     protected virtual void SetDefaultFocus() 
     {
-        if(!inputManager.ControlSchemeTracker.ShouldAutoFocus) return;
+        if(!inputManager.ControlSchemeTracker.ShouldAutoFocus()) return;
         isRestoringFocus = true;
         if (hasMemory && lastSelected != null)
         {

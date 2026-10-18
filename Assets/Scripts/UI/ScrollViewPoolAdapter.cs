@@ -3,29 +3,39 @@ using UnityEngine.UI;
 using System;
 using System.Collections.Generic;
 
-public class ScrollViewPoolAdapter<TListItem> : MonoBehaviour where TListItem : MonoBehaviour
+public class ScrollViewPoolAdapter<TListItem> where TListItem : MonoBehaviour
 {
-    [SerializeField] private ScrollRect scrollRect;
-    [SerializeField] private ScrollViewAuto scrollAuto;
-    [SerializeField] private RectTransform rectTrasformLayout;
+    private ScrollRect scrollRect;
+    private ScrollViewAuto scrollAuto;
+    private RectTransform rectTrasformLayout;
 
-    public ObjectPoolCustomListWrapperMonoBehaviour<TListItem> PoolWrapper { get; private set; }
+    public ObjectPoolCustomList<TListItem> Pool { get; private set; }
+    public ScrollRect ScrollRect => scrollRect;
 
-    public void Initialize(Action<TListItem> actionOnGet, Action<TListItem> actionOnRelease) 
+    public void Initialize(
+        ScrollViewPoolAdapterUI uiScroll,
+        ObjectPoolCustomListWrapperMonoBehaviourUI uiPool,
+        Func<TListItem> createFunc,
+        Action<TListItem> actionOnGet, 
+        Action<TListItem> actionOnRelease,
+        Action<TListItem> actionOnDestroy)
     {
-        PoolWrapper.Initialize(actionOnGet, actionOnRelease);
+        scrollRect = uiScroll.ScrollRect;
+        scrollAuto = uiScroll.ScrollAuto;
+        rectTrasformLayout = uiScroll.RectTrasformLayout;
+        Pool = new ObjectPoolCustomList<TListItem>(createFunc, actionOnGet, actionOnRelease, actionOnDestroy, uiPool.DefaultCapacity);
     }
 
     public void Clear() 
     {
-        PoolWrapper.Pool.Dispose();
+        Pool.Dispose();
     }
 
     public void Populate<TData>(IEnumerable<TData> dataCollection, Action<TListItem, TData> bind) 
     {
         Clear();
         foreach (var data in dataCollection)
-            bind(PoolWrapper.Pool.Get(), data);
+            bind(Pool.Get(), data);
         LayoutRebuilder.ForceRebuildLayoutImmediate(rectTrasformLayout);
     }
 
@@ -48,5 +58,10 @@ public class ScrollViewPoolAdapter<TListItem> : MonoBehaviour where TListItem : 
     {
         if (scrollAuto == null) return;
         scrollAuto.Deactivate();
+    }
+
+    public void ScrollTo(GameObject gameObject, bool isInstantForced = false)
+    {
+        scrollAuto.ScrollTo(gameObject.transform as RectTransform, isInstantForced);
     }
 }

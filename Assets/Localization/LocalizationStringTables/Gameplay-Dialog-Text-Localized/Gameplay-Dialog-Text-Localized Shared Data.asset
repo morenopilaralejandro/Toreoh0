@@ -1,0 +1,452 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Gameplay-Dialog-Text-Localized Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: Gameplay-Dialog-Text-Localized
+  m_TableCollectionNameGuidString: 83b51093935333374b5ce3dfe724396e
+  m_Entries:
+  - m_Id: 123448598528
+    m_Key: choice_yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123524096000
+    m_Key: choice_no
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123524096001
+    m_Key: choice_buy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123524096002
+    m_Key: choice_sell
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290304
+    m_Key: choice_leave
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290305
+    m_Key: choice_cancel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290306
+    m_Key: choice_back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290307
+    m_Key: choice_match
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290308
+    m_Key: choice_road
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290309
+    m_Key: choice_about_you
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290310
+    m_Key: choice_about_place
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290311
+    m_Key: choice_about_match
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290312
+    m_Key: choice_about_team
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290313
+    m_Key: choice_pray
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290314
+    m_Key: choice_confess
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290315
+    m_Key: choice_unforgivable
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290316
+    m_Key: choice_goodbye
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290317
+    m_Key: choice_thanks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290318
+    m_Key: choice_blame
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290319
+    m_Key: greeting_greetings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290320
+    m_Key: greeting_what_default
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290321
+    m_Key: greeting_what_angry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290322
+    m_Key: greeting_how
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290323
+    m_Key: greeting_welcome_default
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290324
+    m_Key: greeting_welcome_happy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290325
+    m_Key: greeting_holy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290326
+    m_Key: greeting_prepare
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290327
+    m_Key: greeting_suspense
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290328
+    m_Key: greeting_hi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290329
+    m_Key: greeting_hello_default_male
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290330
+    m_Key: greeting_hello_default_female
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290331
+    m_Key: greeting_hello_happy_male
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290332
+    m_Key: greeting_hello_happy_female
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290333
+    m_Key: greeting_hello_angry_male
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290334
+    m_Key: greeting_hello_angry_female
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290335
+    m_Key: greeting_hello_sad_male
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290336
+    m_Key: greeting_hello_sad_female
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290337
+    m_Key: greeting_morning_default_male
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290338
+    m_Key: greeting_morning_default_female
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290339
+    m_Key: greeting_morning_happy_male
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290340
+    m_Key: greeting_morning_happy_female
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290341
+    m_Key: greeting_morning_angry_male
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290342
+    m_Key: greeting_morning_angry_female
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290343
+    m_Key: greeting_morning_sad_male
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290344
+    m_Key: greeting_morning_sad_female
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290345
+    m_Key: greeting_evening_default_male
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290346
+    m_Key: greeting_evening_default_female
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290347
+    m_Key: greeting_evening_happy_male
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290348
+    m_Key: greeting_evening_happy_female
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290349
+    m_Key: greeting_evening_angry_male
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290350
+    m_Key: greeting_evening_angry_female
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290351
+    m_Key: greeting_evening_sad_male
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290352
+    m_Key: greeting_evening_sad_female
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290353
+    m_Key: greeting_night_default_male
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290354
+    m_Key: greeting_night_default_female
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290355
+    m_Key: greeting_night_happy_male
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290356
+    m_Key: greeting_night_happy_female
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290357
+    m_Key: greeting_night_angry_male
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290358
+    m_Key: greeting_night_angry_female
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290359
+    m_Key: greeting_night_sad_male
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290360
+    m_Key: greeting_night_sad_female
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290361
+    m_Key: farewell_farewell
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290362
+    m_Key: farewell_care
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290363
+    m_Key: farewell_out
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290364
+    m_Key: farewell_come
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290365
+    m_Key: farewell_holy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290366
+    m_Key: farewell_suspense
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290367
+    m_Key: farewell_goodbye_default_male
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290368
+    m_Key: farewell_goodbye_default_female
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290369
+    m_Key: farewell_goodbye_happy_male
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290370
+    m_Key: farewell_goodbye_happy_female
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290371
+    m_Key: farewell_goodbye_angry_male
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290372
+    m_Key: farewell_goodbye_angry_female
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290373
+    m_Key: farewell_goodbye_sad_male
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290374
+    m_Key: farewell_goodbye_sad_female
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290375
+    m_Key: farewell_bye_default_male
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290376
+    m_Key: farewell_bye_default_female
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290377
+    m_Key: farewell_bye_happy_male
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290378
+    m_Key: farewell_bye_happy_female
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290379
+    m_Key: farewell_bye_angry_male
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290380
+    m_Key: farewell_bye_angry_female
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290381
+    m_Key: farewell_bye_sad_male
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290382
+    m_Key: farewell_bye_sad_female
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290383
+    m_Key: farewell_later_default_male
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290384
+    m_Key: farewell_later_default_female
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290385
+    m_Key: farewell_later_happy_male
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290386
+    m_Key: farewell_later_happy_female
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290387
+    m_Key: farewell_later_angry_male
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290388
+    m_Key: farewell_later_angry_female
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290389
+    m_Key: farewell_later_sad_male
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290390
+    m_Key: farewell_later_sad_female
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290391
+    m_Key: chest_close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290392
+    m_Key: chest_closed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290393
+    m_Key: chest_unlock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290394
+    m_Key: chest_open
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290395
+    m_Key: chest_open_suspense
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290396
+    m_Key: chest_found
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290397
+    m_Key: chest_empty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290398
+    m_Key: door_close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290399
+    m_Key: door_closed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290400
+    m_Key: door_open
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290401
+    m_Key: door_opened
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290402
+    m_Key: dialog_test_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290403
+    m_Key: dialog_test_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290404
+    m_Key: dialog_test_plain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123528290405
+    m_Key: dialog_test_hero_name
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 4751560653039992925
+  references:
+    version: 2
+    RefIds:
+    - rid: 4751560653039992925
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1791747930769

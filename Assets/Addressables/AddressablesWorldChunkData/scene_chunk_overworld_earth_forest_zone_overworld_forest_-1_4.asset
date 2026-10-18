@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c05600875e664ed4a7426396b8a56ae, type: 3}
+  m_Name: scene_chunk_overworld_earth_forest_zone_overworld_forest_-1_4
+  m_EditorClassIdentifier: Assembly-CSharp::ChunkData
+  ChunkId: scene_chunk_overworld_earth_forest_zone_overworld_forest_-1_4
+  ZoneData: {fileID: 11400000, guid: 844579f96b0ea40748a0895ed613fb73, type: 2}
+  ChunkCoord: {x: -1, y: 4}
+  SceneAddressChunk: scene_chunk_overworld_earth_forest_zone_overworld_forest_-1_4

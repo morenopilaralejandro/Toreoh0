@@ -15,14 +15,314 @@ MonoBehaviour:
   m_GroupName: ItemData
   m_GUID: a3f393564d9c202c083b4a3354f25956
   m_SerializeEntries:
-  - m_GUID: cedfbcfec39c5b38891c9be5f9a50b2c
-    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-00001-test.asset
+  - m_GUID: 0255427b8ed3f58879dfdd7052609534
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00046.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - ItemData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d7a95fe56507a6db0971c8b1b2cbbfca
-    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-00000-test.asset
+  - m_GUID: 038095a6b9dbfc4afb0e629cf1efab06
+    m_Address: Assets/Addressables/AddressablesItemDataImportant/item-important-00000-test.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 09a288a8ea4d926cc8c869dc0017c47a
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00013.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0e7c2ff6e04692035948179d03d13907
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00009.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1026f8a6ddeba6e78adfb1ee90e5b606
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00004.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1087eefce0a06db10bb5ef728591aea1
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00047.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1a15f274c7251227bb07f986b361c874
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00021.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1b5d505d6a247656680e9d4155b7da12
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00033.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2a4fd587d6d262ebfa3c32e4240845e8
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00024.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2ec7d1211b6e92414ab5ca8c66a4e827
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00015.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 32d82a67472bffd258baa1cb557905ca
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00000-test.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 339cee76b66e7de0787fad5c9c5df523
+    m_Address: Assets/Addressables/AddressablesItemDataMisc/item-misc-00000-test.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3c74b3467735860d3926593d275cbf5f
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00038.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3c79dfcd4f1082e3ead0a066939cd786
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00023.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 408d375fac4246f0ebe9ccc10422606e
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00042.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 435709c5fd56ff05893353019062d43b
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00008.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 499530ba9c24c6f469661e15949938a9
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00022.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4ba36fcb5cf0317b390f318f3edb60fe
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00028.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5074deea9548ccd3e8ea3d86d12cafa9
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00002.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 547692ad9fabff279af254a26da11c49
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00020.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 561a4aa99a9b4febfa1ca89a1274ae3b
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00014.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 685630cdb817bcd8eb66363980915153
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00036.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7103b50a14cbb6063a0c5ef82767374e
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00003.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 74727cf2dbcfc5bc4936c9f289a5b328
+    m_Address: Assets/Addressables/AddressablesItemDataRecovery/item-recovery-00000-test.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 75d9f160126ad0d88b26fa4d76eb7649
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00007.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7bb05c68d1f249c5d9b6f43a06892a2d
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00025.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7f3270ea8e4198000a7c84d52f89c951
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00005.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 81e8b913ca5755a21b4f975e7fd01bf1
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00029.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 859d22709026eb2fe93bbce646be30e8
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00018.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 869ed55a4abe3d7e5aa9a7082cd5e6be
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00012.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 88dcbde8b8ac4947a8d4218aacb061b2
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00017.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8c2840e52546385b9801c121a6924b6a
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00016.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 93aa3c3d471d4eaeaba7e43081d8bbc6
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00034.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 993f6935c6c669ab1ba1a097c85cd724
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00026.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a3139ff9d833d050cb6efb67a20db11e
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00039.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a6ec5cdd9ce0c976ab9a63bf0a19d563
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00019.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a86f967ad4db12d25b20fcd05ea842a2
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00011.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bd69fd507e5383e119a19367643d03a9
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00037.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bf5c6721600021008b394794e43ff987
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00001.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c24819d24543404a0ad473f964cec2f5
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00044.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c404a77f325aef592bde7fafdd38ee22
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00041.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c6ba001d27026fc8181996220cb74e00
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00031.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d487283b86da1f145b616065e7e6ef87
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00027.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d581bb922d8114ae4bf3a14af21c30c8
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00045.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d72525bc1ba3a3c68aa302525893f09c
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00043.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e0d8d1dbe292d35b9bfbd7c6b9bd81f6
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00010.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e3fe5be0f2ad5aebca9a6ab5cd471efb
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00030.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e43144e6e58873a06ab440515ba498ca
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00035.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e6c0f655e797794d0ba3ac4ebc1c986a
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00032.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ea5ec0b4ac12a2c68a6456d308d40e07
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00040.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f95f1ede2c79beaf18dbedbeb823d292
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00006.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fa272d6494c83b4c7ab0605d487d2c30
+    m_Address: Assets/Addressables/AddressablesItemDataMaterial/item-material-00048.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - ItemData

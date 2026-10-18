@@ -1,0 +1,40 @@
+namespace Aremoreno.Enums.Item
+{
+    public enum CurrencyType 
+    {
+        Gold,
+        Premium,
+        ExpertTokens,
+        TrainingPoints
+    }
+
+    public enum ItemCategory 
+    {
+        // basic
+        Material,
+        Misc,
+        Important,
+        Recovery,
+        // reference other systems
+        Recipe,
+        Character,
+        Move,
+        Wing,
+        Weapon,
+        Armor
+    }
+
+    public enum ItemSpriteType 
+    {
+        Basic
+    }
+
+    public enum ItemUsageContext 
+    {
+        Any,
+        Battle,
+        Overworld,
+        Passive,
+        None
+    }
+}

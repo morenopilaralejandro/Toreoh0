@@ -6,13 +6,21 @@ public static class UIUtils
 {
     public static void SetCanvasGroupVisible(CanvasGroup canvasGroup, bool isVisible)
     {
+        if (canvasGroup == null) return;
         canvasGroup.alpha = isVisible ? 1f : 0f;
         canvasGroup.interactable = isVisible;
         canvasGroup.blocksRaycasts = isVisible;
     }
 
+    public static void SetCanvasGroupAlpha(CanvasGroup canvasGroup, float alpha)
+    {
+        if (canvasGroup == null) return;
+        canvasGroup.alpha = alpha;
+    }
+
     public static void SetCanvasGroupInteractable(CanvasGroup canvasGroup, bool isInteractable)
     {
+        if (canvasGroup == null) return;
         canvasGroup.interactable = isInteractable;
         canvasGroup.blocksRaycasts = isInteractable;
     }

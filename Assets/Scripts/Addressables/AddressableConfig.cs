@@ -10,4 +10,5 @@ public class AddressableConfig : ScriptableObject
     public string SeparatorPathMain;
     public string SeparatorPathSub;
     public string PathCharacterPortrait;
+    public string PathItemIcon;
 }

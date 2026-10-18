@@ -1,0 +1,143 @@
+using UnityEngine;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+public class WorldChunkStreaming
+{
+    private CharacterEntityWorld character;
+    private WorldSceneLoader sceneLoader;
+    private WorldZoneTracker zoneTracker;
+
+    private OverworldData overworldData;
+    private bool isActive;
+    private bool isUpdating;
+    private float updateTimer;
+    private float updateInterval;
+    private float inverseChunkSize;
+    private int radius;
+    private Vector2Int lastCharacterChunkCoord;
+
+    private readonly Dictionary<string, ChunkData> dictChunkData = new ();
+    private readonly Dictionary<Vector2Int, ChunkData> dictChunkCoord = new ();
+    private readonly HashSet<string> hashSetSceneLoaded = new ();
+    private readonly HashSet<string> hashSetSceneDesired = new ();
+    private readonly List<string> listScenePendingLoad = new ();
+    private readonly List<string> listSetScenePendingUnload = new ();
+
+    public WorldChunkStreaming(
+        CharacterEntityWorld character,
+        WorldSceneLoader sceneLoader,
+        WorldZoneTracker zoneTracker)
+    {
+        this.character = character;
+        this.sceneLoader = sceneLoader;
+        this.zoneTracker = zoneTracker;
+        this.inverseChunkSize = 1f / WorldConstants.CHUNK_SIZE;
+        this.radius = WorldConstants.CHUNK_STREAMING_RADIUS;
+        this.updateInterval = WorldConstants.CHUNK_STREAMING_UPDATE_INTERVAL;
+    }
+
+    public void Update()
+    {
+        if (!isActive || overworldData == null) return;
+        updateTimer += Time.deltaTime;
+        if (updateTimer >= updateInterval)
+            _ = UpdateChunksAroundCharacter();
+    }
+
+    public async Task StartStreaming(OverworldData overworldData)
+    {
+        this.overworldData = overworldData;
+        lastCharacterChunkCoord = new Vector2Int(int.MaxValue, int.MaxValue);   
+        updateTimer = 0f;
+
+        dictChunkData.Clear();
+        dictChunkCoord.Clear();
+
+        List<ChunkData> chunks = overworldData.Chunks;
+        for (int i = 0, count = chunks.Count; i < count; i++)
+        {
+            ChunkData chunk = chunks[i];
+            dictChunkData[chunk.ChunkId] = chunk;
+            dictChunkCoord[chunk.ChunkCoord] = chunk;
+        }
+
+        await UpdateChunksAroundCharacter();
+        isActive = true;
+    }
+
+    public void StopStreaming() 
+    {
+        isActive = false;
+        overworldData = null;
+        hashSetSceneLoaded.Clear();
+        hashSetSceneDesired.Clear();
+    }
+
+    public async Task UpdateChunksAroundCharacter() 
+    {
+        updateTimer = 0;
+        if (character == null) return;
+        if (isUpdating) return;
+        isUpdating = true;
+
+        Vector3 pos = character.transform.position;
+        int xCurrent = Mathf.FloorToInt(pos.x * inverseChunkSize);
+        int yCurrent = Mathf.FloorToInt(pos.y * inverseChunkSize);
+        if (xCurrent == lastCharacterChunkCoord.x && yCurrent == lastCharacterChunkCoord.y) 
+        {   
+            isUpdating = false;
+            return;
+        }
+        lastCharacterChunkCoord.x = xCurrent;
+        lastCharacterChunkCoord.y = yCurrent;
+        if (dictChunkCoord.TryGetValue(lastCharacterChunkCoord, out ChunkData lastChunk))
+            zoneTracker.SetZone(lastChunk.ZoneData);
+
+        // determine disired
+        hashSetSceneDesired.Clear();
+        for (int xDelta = -radius; xDelta <= radius; xDelta++) 
+        {
+            for (int yDelta = -radius; yDelta <= radius; yDelta++) 
+            {
+                Vector2Int calculatedChunkCoord = new Vector2Int(xCurrent + xDelta, yCurrent + yDelta);
+                ChunkData chunk;
+                if (dictChunkCoord.TryGetValue(calculatedChunkCoord, out chunk))
+                    hashSetSceneDesired.Add(chunk.SceneAddressChunk);
+            }
+        }
+
+        // determine unload
+        listSetScenePendingUnload.Clear();
+        foreach (string loaded in hashSetSceneLoaded)
+        {
+            if (!hashSetSceneDesired.Contains(loaded))
+                listSetScenePendingUnload.Add(loaded);
+        }
+
+        // determine load
+        listScenePendingLoad.Clear();
+        foreach (string desired in hashSetSceneDesired) 
+        {
+            if (!hashSetSceneLoaded.Contains(desired))
+                listScenePendingLoad.Add(desired); 
+        }
+
+        await PerformSceneOperations();
+    }
+
+    private async Task PerformSceneOperations() 
+    {
+        // perform unload
+        foreach (string scene in listSetScenePendingUnload) 
+            hashSetSceneLoaded.Remove(scene);
+        await sceneLoader.UnloadScenes(listSetScenePendingUnload);
+
+        // perform load
+        foreach (string scene in listScenePendingLoad) 
+            hashSetSceneLoaded.Add(scene);
+        await sceneLoader.LoadScenes(listScenePendingLoad);
+
+        isUpdating = false;
+    }
+}

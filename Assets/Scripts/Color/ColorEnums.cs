@@ -16,7 +16,7 @@ namespace Aremoreno.Enums.Color
         Yellow,
         Pink,
         Purple,
-        Viole,
+        Violet,
         Brown
     }
 }

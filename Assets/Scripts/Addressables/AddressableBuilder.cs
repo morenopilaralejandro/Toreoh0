@@ -24,4 +24,7 @@ public static class AddressableBuilder
 
     public static string GetCharacterPortraitAddress(string id) =>
         BuildAddress(config.PathCharacterPortrait, id);
+
+    public static string GetItemIconAddress(string id) =>
+        BuildAddress(config.PathItemIcon, id);
 }

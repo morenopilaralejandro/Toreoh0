@@ -15,13 +15,38 @@ MonoBehaviour:
   m_GroupName: AudioSfx
   m_GUID: 2d7f533ee16c552108ec5a88b4182b0c
   m_SerializeEntries:
-  - m_GUID: 02cac04b983fc24f7bdb37a5973bf6e6
-    m_Address: sfx-menu_open
+  - m_GUID: 25f0bc31877b73e0f9ecf7ba41477647
+    m_Address: sfx-chest_open
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 459fb75610128610a917b757de5470e0
-    m_Address: sfx-menu_close
+  - m_GUID: 65bee6a35a8e3e9f9bed04d93233caf9
+    m_Address: sfx-ui_select
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ae53605a6e5c2402c89a0c6d98536e7c
+    m_Address: sfx-ui_change
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: af1ebd35293708567ac39d6b88d15604
+    m_Address: sfx-ui_menu_close
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bdf45d2d4e33594399499bfa66f92715
+    m_Address: sfx-ui_tap
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c55d97e94fae91c0e8e9338f2600dea6
+    m_Address: sfx-ui_scroll
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f40fd3cc9b6174aa29b3405d725f5edb
+    m_Address: sfx-ui_menu_open
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

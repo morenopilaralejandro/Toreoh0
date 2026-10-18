@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f34ea5b96b538c43b0231da13070d60, type: 3}
+  m_Name: SceneGroupData-World
+  m_EditorClassIdentifier: Assembly-CSharp::SceneGroupData
+  SceneGroupId: SceneGroupData-World
+  HasLoadingScreen: 1
+  Scenes:
+  - {fileID: 11400000, guid: 55a637dd9c051e5e9b6d00c7e88cf0ee, type: 2}
+  - {fileID: 11400000, guid: eddcb00df750c8fc781f2852d67f0569, type: 2}
+  - {fileID: 11400000, guid: d51467a9f2afb9b18a6c9cab44121747, type: 2}
+  - {fileID: 11400000, guid: e939b9f50eb0fff78ae967f0e9d407a8, type: 2}
