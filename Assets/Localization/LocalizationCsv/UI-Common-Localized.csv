@@ -1,5 +1,6 @@
 Key,English(en),Japanese(ja),Spanish(es)
 metadata_app_name,Toreoh Jinga vs Crossnera,テスト,Toreoh Jinga vs Crossnera
+metadata_copyright,,,2026 Aremoreno
 button_back,,,Volver
 button_next,,,Siguiente
 button_continue,,,Continuar
@@ -17,10 +18,16 @@ button_reset,,,Reset
 button_apply,,,Aplicar
 button_menu,,,Menú
 button_change,,,Cambiar
+button_quit,,,Salir
 text_gameover,,,Game Over
 text_loading,,,Cargando
 text_loading_suspense,,,Cargando...
-text_credits,,,"<size=64px><b>Toreoh Jinga vs Crossnera</b></size>
+text_settings,,,Ajustes
+text_settings_language,,,Idioma
+text_settings_sfx,,,Vol. Efectos
+text_settings_bgm,,,Vol. Música
+text_credits,,,Créditos
+text_credits_value,,,"<size=64px><b>Toreoh Jinga vs Crossnera</b></size>
   
 Desarrollado por Aremoreno  
 
@@ -28,6 +35,11 @@ Desarrollado por Aremoreno
 
 
 <size=64px><b>Gracias por jugar</b></size>"
+text_story,,,Modo historia
+text_story_new,,,Partida nueva
+text_story_continue,,,Continuar
+text_story_save,,,Guardar
+text_story_confirm,,,¿Quieres sobrescribir los datos guardados?
 symbol_plus,+,+,+
 symbol_minus,-,-,-
 symbol_infinity,∞,∞,∞
@@ -39,3 +51,4 @@ symbol_brackets_curly_open,{,{,{
 symbol_brackets_curly_close,},},}
 symbol_less,<,<,<
 symbol_greater,>,>,>
+text_battle,,,Luchar

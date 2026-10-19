@@ -103,8 +103,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8378817896521728
-    m_Localized: "<size=64px><b>Toreoh Jinga vs Crossnera</b></size>\n  \nDesarrollado
-      por Aremoreno  \n\n\n\n\n<size=64px><b>Gracias por jugar</b></size>"
+    m_Localized: "Cr\xE9ditos"
     m_Metadata:
       m_Items: []
   - m_Id: 8378817896521729
@@ -149,6 +148,59 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8378817896521739
     m_Localized: '>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10490670999150592
+    m_Localized: Ajustes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10490671057870848
+    m_Localized: Idioma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10490671057870849
+    m_Localized: Vol. Efectos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10490671057870850
+    m_Localized: "Vol. M\xFAsica"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10490671062065152
+    m_Localized: "<size=64px><b>Toreoh Jinga vs Crossnera</b></size>\n  \nDesarrollado
+      por Aremoreno  \n\n\n\n\n<size=64px><b>Gracias por jugar</b></size>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10510561537957888
+    m_Localized: 2026 Aremoreno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10510561596678144
+    m_Localized: Salir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10510561600872448
+    m_Localized: Modo historia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10510561600872449
+    m_Localized: Partida nueva
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10510561600872450
+    m_Localized: Continuar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10510561600872451
+    m_Localized: Guardar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10510561600872452
+    m_Localized: "\xBFQuieres sobrescribir los datos guardados?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10510561600872453
+    m_Localized: Luchar
     m_Metadata:
       m_Items: []
   references:

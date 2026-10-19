@@ -36,7 +36,7 @@ EditorBuildSettings:
     path: Assets/Scenes/ScenesUI/SceneDebugWorldUI.unity
     guid: b94658a80ffad52cfb9f1a6418de9ada
   - enabled: 1
-    path: Assets/Scenes/ScenesUI/SceneSaveUI.unity
+    path: Assets/Scenes/ScenesUI/ScenePersistenceUI.unity
     guid: ff87fa76f4db6119c9d1f1985e90aadc
   - enabled: 1
     path: Assets/Scenes/ScenesUI/SceneMainMenuUI.unity

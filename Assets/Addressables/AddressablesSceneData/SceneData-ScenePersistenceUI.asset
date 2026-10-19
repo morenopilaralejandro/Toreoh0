@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7997a1fe5f27342e98b4f2b9d8544498, type: 3}
-  m_Name: SceneData-SceneSaveUI
+  m_Name: SceneData-ScenePersistenceUI
   m_EditorClassIdentifier: Assembly-CSharp::SceneData
-  SceneName: SceneSaveUI
+  SceneName: ScenePersistenceUI
   IsDebugOnly: 0
   HasLoadingScreen: 0

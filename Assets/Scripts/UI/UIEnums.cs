@@ -35,4 +35,10 @@ namespace Aremoreno.Enums.UI
         Buy,
         Sell
     }
+
+    public enum PersistenceMode 
+    {
+        Load,
+        Save
+    }
 }

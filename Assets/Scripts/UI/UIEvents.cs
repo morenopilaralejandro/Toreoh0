@@ -40,6 +40,10 @@ public static class UIEvents
     public static void RaiseMenuAmountPickerItemOpenRequested(AmountPickerMode amountPickerMode, Item item, int countCurrent, int countMin, int countMax, CurrencyType currencyType)
         => OnMenuAmountPickerItemOpenRequested?.Invoke(amountPickerMode, item, countCurrent, countMin, countMax, currencyType);
 
+    public static event Action<PersistenceMode> OnMenuPersistenceOpenRequested;
+    public static void RaiseMenuPersistenceOpenRequested(PersistenceMode persistenceMode)
+        => OnMenuPersistenceOpenRequested?.Invoke(persistenceMode);
+
     // selector open requested
     public static event Action<
         ISelectorSource<ItemStorageSlot>, 

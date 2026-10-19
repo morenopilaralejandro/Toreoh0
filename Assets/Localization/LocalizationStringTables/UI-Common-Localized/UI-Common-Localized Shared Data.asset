@@ -19,6 +19,10 @@ MonoBehaviour:
     m_Key: metadata_app_name
     m_Metadata:
       m_Items: []
+  - m_Id: 10510561537957888
+    m_Key: metadata_copyright
+    m_Metadata:
+      m_Items: []
   - m_Id: 8378817888133120
     m_Key: button_back
     m_Metadata:
@@ -87,6 +91,10 @@ MonoBehaviour:
     m_Key: button_change
     m_Metadata:
       m_Items: []
+  - m_Id: 10510561596678144
+    m_Key: button_quit
+    m_Metadata:
+      m_Items: []
   - m_Id: 8378817892327438
     m_Key: text_gameover
     m_Metadata:
@@ -99,8 +107,48 @@ MonoBehaviour:
     m_Key: text_loading_suspense
     m_Metadata:
       m_Items: []
+  - m_Id: 10490670999150592
+    m_Key: text_settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10490671057870848
+    m_Key: text_settings_language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10490671057870849
+    m_Key: text_settings_sfx
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10490671057870850
+    m_Key: text_settings_bgm
+    m_Metadata:
+      m_Items: []
   - m_Id: 8378817896521728
     m_Key: text_credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10490671062065152
+    m_Key: text_credits_value
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10510561600872448
+    m_Key: text_story
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10510561600872449
+    m_Key: text_story_new
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10510561600872450
+    m_Key: text_story_continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10510561600872451
+    m_Key: text_story_save
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10510561600872452
+    m_Key: text_story_confirm
     m_Metadata:
       m_Items: []
   - m_Id: 8378817896521729
@@ -145,6 +193,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8378817896521739
     m_Key: symbol_greater
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10510561600872453
+    m_Key: text_battle
     m_Metadata:
       m_Items: []
   m_Metadata:
