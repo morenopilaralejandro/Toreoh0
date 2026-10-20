@@ -22,10 +22,5 @@ public class MenuCredits : Menu
         if (input == InputNavigation.Back) OnButtonBackClicked();
     }
 
-    public void OnButtonBackClicked()
-    {
-        RequestClose();
-        SceneLoaderManager.Instance.UnloadGroup("SceneGroupData-Credits");
-        SceneLoaderManager.Instance.LoadGroup("SceneGroupData-MainMenu");
-    }
+    public void OnButtonBackClicked() => SceneLoaderManager.Instance.ReplaceGroup("SceneGroupData-MainMenu");
 }

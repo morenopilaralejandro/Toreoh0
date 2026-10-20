@@ -13,7 +13,6 @@ public class MenuMain : Menu
         menuManager.OpenMenu(this);
     }
 
-
     // Input
     protected override void OnGainedInput() => InputManager.Instance.MapNavigation.Tracker.OnButtonDown += OnButtonDown;
     protected override void OnLostInput() => InputManager.Instance.MapNavigation.Tracker.OnButtonDown -= OnButtonDown;
@@ -23,49 +22,15 @@ public class MenuMain : Menu
         //if (input == InputNavigation.Back) OnButtonBackClicked();
     }
 
-    //public void OnButtonBackClicked() => RequestClose();
-
-    /*
-    public void OnButtonStoryClicked()
-    {
-        RequestClose();
-        SceneLoaderManager.Instance.UnloadGroup("SceneGroupData-World");
-        SceneLoaderManager.Instance.LoadGroup("SceneGroupData-DebugMainMenu");
-    }
-    */
-
     public void OnButtonStoryClicked()
     {
 
         // TODO event save
 
-        /*
-        RequestClose();
-        SceneLoaderManager.Instance.UnloadGroup("SceneGroupData-MainMenu");
-        SceneLoaderManager.Instance.LoadGroup("SceneGroupData-World");
-        */
     }
 
-    public void OnButtonBattleClicked()
-    {
-        RequestClose();
-        SceneLoaderManager.Instance.UnloadGroup("SceneGroupData-MainMenu");
-        SceneLoaderManager.Instance.LoadGroup("SceneGroupData-Battle");
-    }
-
-    public void OnButtonSettingsClicked()
-    {
-        RequestClose();
-        SceneLoaderManager.Instance.UnloadGroup("SceneGroupData-MainMenu");
-        SceneLoaderManager.Instance.LoadGroup("SceneGroupData-Settings");
-    }
-
-    public void OnButtonCreditsClicked()
-    {
-        RequestClose();
-        SceneLoaderManager.Instance.UnloadGroup("SceneGroupData-MainMenu");
-        SceneLoaderManager.Instance.LoadGroup("SceneGroupData-Credits");
-    }
-
+    public void OnButtonBattleClicked() => SceneLoaderManager.Instance.ReplaceGroup("SceneGroupData-Battle");
+    public void OnButtonSettingsClicked() => SceneLoaderManager.Instance.ReplaceGroup("SceneGroupData-Settings");
+    public void OnButtonCreditsClicked() => SceneLoaderManager.Instance.ReplaceGroup("SceneGroupData-Credits");
     public void OnButtonQuitClicked() => Application.Quit();
 }

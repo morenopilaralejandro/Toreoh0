@@ -9,13 +9,8 @@ public class MenuDebugMain : Menu
     public void OnButtonWorldClicked()
     {
         PersistenceEvents.RaiseNewGameStarted();
-        SceneLoaderManager.Instance.UnloadGroup("SceneGroupData-DebugMainMenu");
-        SceneLoaderManager.Instance.LoadGroup("SceneGroupData-World");
+        SceneLoaderManager.Instance.ReplaceGroup("SceneGroupData-World");
     }
 
-    public void OnButtonMainClicked()
-    {
-        SceneLoaderManager.Instance.UnloadGroup("SceneGroupData-DebugMainMenu");
-        SceneLoaderManager.Instance.LoadGroup("SceneGroupData-MainMenu");
-    }
+    public void OnButtonMainClicked() => SceneLoaderManager.Instance.ReplaceGroup("SceneGroupData-MainMenu");
 }

@@ -238,8 +238,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FeedbackAudioUIToggle
   toggle: {fileID: 5086938316037301266}
-  onSfx: 
-  offSfx: 
+  onSfx: sfx-ui_tap
+  offSfx: sfx-ui_change
 --- !u!1 &9221737916556404468
 GameObject:
   m_ObjectHideFlags: 0

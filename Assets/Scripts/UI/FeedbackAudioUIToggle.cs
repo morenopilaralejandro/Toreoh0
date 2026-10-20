@@ -4,8 +4,8 @@ using UnityEngine.UI;
 public class FeedbackAudioUIToggle : MonoBehaviour
 {
     [SerializeField] private Toggle toggle;
-    [SerializeField] private string onSfx = "";
-    [SerializeField] private string offSfx = "";
+    [SerializeField] private string onSfx = "sfx-ui_tap";
+    [SerializeField] private string offSfx = "sfx-ui_change";
 
     private void Awake() 
     {

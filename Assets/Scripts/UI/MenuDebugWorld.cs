@@ -42,12 +42,7 @@ public class MenuDebugWorld : Menu
         RequestClose();
     }
 
-    public void OnButtonToDebugClicked() 
-    {
-        RequestClose();
-        SceneLoaderManager.Instance.UnloadGroup("SceneGroupData-World");
-        SceneLoaderManager.Instance.LoadGroup("SceneGroupData-DebugMainMenu");
-    }
+    public void OnButtonToDebugClicked() => SceneLoaderManager.Instance.ReplaceGroup("SceneGroupData-DebugMainMenu");
 
     // Event
     protected override void OnEnable() 

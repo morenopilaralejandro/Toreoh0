@@ -4,8 +4,10 @@ using UnityEngine;
 public class SettingsConfig : ScriptableObject
 {
     [Header("Path")]
-    public string SettingsFilePath;
-    public string SettingsFileName;
+    public string Folder;
+    public string FileName;
+    public bool IsCompressionEnabled;
+    public bool IsPrettyPrint;
 
     [Header("Preset")]
     public Settings PresetDefault;
