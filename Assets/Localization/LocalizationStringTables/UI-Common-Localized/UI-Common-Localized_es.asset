@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 8378817762304000
-    m_Localized: Toreoh Jinga vs Crossnera
+    m_Localized: Toreoh Jinga VS Crossnera
     m_Metadata:
       m_Items: []
   - m_Id: 8378817888133120
@@ -167,7 +167,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10490671062065152
-    m_Localized: "<size=64px><b>Toreoh Jinga vs Crossnera</b></size>\n  \nDesarrollado
+    m_Localized: "<size=64px><b>Toreoh Jinga VS Crossnera</b></size>\n  \nDesarrollado
       por Aremoreno  \n\n\n\n\n<size=64px><b>Gracias por jugar</b></size>"
     m_Metadata:
       m_Items: []
@@ -201,6 +201,30 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 10510561600872453
     m_Localized: Luchar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10930839170588672
+    m_Localized: Voltear pantallas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10930839262863360
+    m_Localized: "Detecci\xF3n auto"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10930839267057664
+    m_Localized: Modo por defecto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10930839267057665
+    m_Localized: Guardado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11184034711085056
+    m_Localized: Pantalla individual
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11184034757222400
+    m_Localized: Pantalla doble
     m_Metadata:
       m_Items: []
   references:

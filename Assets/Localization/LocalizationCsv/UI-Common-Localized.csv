@@ -1,5 +1,5 @@
 Key,English(en),Japanese(ja),Spanish(es)
-metadata_app_name,Toreoh Jinga vs Crossnera,テスト,Toreoh Jinga vs Crossnera
+metadata_app_name,Toreoh Jinga vs Crossnera,テスト,Toreoh Jinga VS Crossnera
 metadata_copyright,,,2026 Aremoreno
 button_back,,,Volver
 button_next,,,Siguiente
@@ -26,8 +26,13 @@ text_settings,,,Ajustes
 text_settings_language,,,Idioma
 text_settings_sfx,,,Vol. Efectos
 text_settings_bgm,,,Vol. Música
+text_settings_display_flip,,,Voltear pantallas
+text_settings_display_auto,,,Detección auto
+text_settings_display_mode,,,Modo por defecto
+text_settings_display_mode_single,,,Pantalla individual
+text_settings_display_mode_double,,,Pantalla doble
 text_credits,,,Créditos
-text_credits_value,,,"<size=64px><b>Toreoh Jinga vs Crossnera</b></size>
+text_credits_value,,,"<size=64px><b>Toreoh Jinga VS Crossnera</b></size>
   
 Desarrollado por Aremoreno  
 
@@ -39,6 +44,7 @@ text_story,,,Modo historia
 text_story_new,,,Partida nueva
 text_story_continue,,,Continuar
 text_story_save,,,Guardar
+text_story_save_slot,,,Guardado
 text_story_confirm,,,¿Quieres sobrescribir los datos guardados?
 symbol_plus,+,+,+
 symbol_minus,-,-,-

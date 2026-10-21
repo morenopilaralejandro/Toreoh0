@@ -48,6 +48,7 @@ public class SettingsManagerComponentSetter
         SettingsEvents.RaiseIsDisplayAutoDetectChanged(isDisplayAutoDetect);
     }
 
+    public void SetDisplayMode(int index) =>  SetDisplayMode((DisplayMode) index);
     public void SetDisplayMode(DisplayMode displayMode) 
     {
         manager.Settings.Common.DisplayMode = displayMode;

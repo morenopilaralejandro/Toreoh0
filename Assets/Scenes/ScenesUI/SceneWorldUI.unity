@@ -3310,7 +3310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9195514ed45c88a0d94ab55baabd5513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogBoxUI
-  typeWritter: {fileID: 768980307}
+  typeWriter: {fileID: 768980307}
   continueIndicator: {fileID: 336783496}
 --- !u!114 &768980307
 MonoBehaviour:
@@ -6067,6 +6067,14 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 394520825486518857, guid: 7697e4e9bb2efee34902147596bd3ecc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535075823164931070, guid: 7697e4e9bb2efee34902147596bd3ecc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2425994543948458406, guid: 7697e4e9bb2efee34902147596bd3ecc, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
@@ -6077,6 +6085,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3019562131235840459, guid: 7697e4e9bb2efee34902147596bd3ecc, type: 3}
       propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3019562131235840459, guid: 7697e4e9bb2efee34902147596bd3ecc, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4460181539831744117, guid: 7697e4e9bb2efee34902147596bd3ecc, type: 3}
@@ -6181,6 +6193,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7713090001292247698, guid: 7697e4e9bb2efee34902147596bd3ecc, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7713090001292247698, guid: 7697e4e9bb2efee34902147596bd3ecc, type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8950572299876402908, guid: 7697e4e9bb2efee34902147596bd3ecc, type: 3}

@@ -4,20 +4,20 @@ using UnityEngine.UI;
 public class DialogBoxUI : MonoBehaviour
 {
     [Header("UI References")]
-    [SerializeField] private TypeWritterUI typeWritter;
+    [SerializeField] private TypeWriterUI typeWriter;
     [SerializeField] private CanvasGroup continueIndicator;
 
     public void Clear() 
     {
-        typeWritter.Clear();
+        typeWriter.Clear();
         UIUtils.SetCanvasGroupVisible(continueIndicator, false);
     }
 
     //Input
     public void OnButtonContinueClicked() 
     {
-        if (typeWritter.IsTyping)
-            typeWritter.RequestSkip();
+        if (typeWriter.IsTyping)
+            typeWriter.RequestSkip();
         else
             DialogEvents.RaiseContinueRequested();
     }
@@ -26,22 +26,22 @@ public class DialogBoxUI : MonoBehaviour
     private void OnEnable() 
     {
         DialogEvents.OnLineReady += OnLineReady;
-        typeWritter.OnTypeWritterEnded += OnTypeWritterEnded;
+        typeWriter.OnTypeWriterEnded += OnTypeWriterEnded;
     }
 
     private void OnDisable() 
     {
         DialogEvents.OnLineReady -= OnLineReady;
-        typeWritter.OnTypeWritterEnded -= OnTypeWritterEnded;
+        typeWriter.OnTypeWriterEnded -= OnTypeWriterEnded;
     }
 
     private void OnLineReady(DialogSerializableLine line, Speaker speaker) 
     {
         UIUtils.SetCanvasGroupVisible(continueIndicator, false);
-        typeWritter.StartTypeWritter(line.TextResolved); 
+        typeWriter.StartTypeWriter(line.TextResolved); 
     }
 
-    private void OnTypeWritterEnded() 
+    private void OnTypeWriterEnded() 
     {
         UIUtils.SetCanvasGroupVisible(continueIndicator, true);
     }

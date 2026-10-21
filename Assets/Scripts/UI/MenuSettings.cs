@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using Aremoreno.Enums.Input;
 
 public class MenuSettings : Menu
@@ -10,6 +11,7 @@ public class MenuSettings : Menu
     [Header("UI References - Video")]
     [SerializeField] private Toggle toggleScreenFlipped;
     [SerializeField] private Toggle toggleDisplayAutoDetect;
+    [SerializeField] private TMP_Dropdown dropdownDisplayMode;
 
     private Settings cachedSettings;
     private SettingsManager settingsManager;
@@ -19,6 +21,7 @@ public class MenuSettings : Menu
     {
         base.Start();
         settingsManager = SettingsManager.Instance;
+        AddListeners();
         menuManager.OpenMenu(this);
     }
 
@@ -26,7 +29,6 @@ public class MenuSettings : Menu
     {
         cachedSettings = settingsManager.CopyComponent.GetCopy();
         SetValues();
-        AddListeners();
     }
 
     // Input
@@ -52,18 +54,21 @@ public class MenuSettings : Menu
     }
 
     // Input settings
+    private void SetValues() 
+    {
+        sliderBgm.SetValueWithoutNotify(cachedSettings.Common.VolumeBgm);
+        sliderSfx.SetValueWithoutNotify(cachedSettings.Common.VolumeSfx);
+        toggleScreenFlipped.SetIsOnWithoutNotify(cachedSettings.Common.IsScreenFlipped);
+        toggleDisplayAutoDetect.SetIsOnWithoutNotify(cachedSettings.Common.IsDisplayAutoDetect);
+        dropdownDisplayMode.SetValueWithoutNotify((int) cachedSettings.Common.DisplayMode);
+    }
+
     private void AddListeners() 
     {
         sliderBgm.onValueChanged.AddListener(settingsManager.SetterComponent.SetVolumeBgm);
         sliderSfx.onValueChanged.AddListener(settingsManager.SetterComponent.SetVolumeSfx);
         toggleScreenFlipped.onValueChanged.AddListener(settingsManager.SetterComponent.SetIsScreenFlipped);
-        //toggleDisplayAutoDetect.onValueChanged.AddListener(settingsManager.SetIsDisplayAutoDetect);
-    }
-
-    private void SetValues() 
-    {
-        sliderBgm.value = cachedSettings.Common.VolumeBgm;
-        sliderSfx.value = cachedSettings.Common.VolumeSfx;
-        toggleScreenFlipped.isOn = cachedSettings.Common.IsScreenFlipped;
+        toggleDisplayAutoDetect.onValueChanged.AddListener(settingsManager.SetterComponent.SetIsDisplayAutoDetect);
+        dropdownDisplayMode.onValueChanged.AddListener(settingsManager.SetterComponent.SetDisplayMode);
     }
 }

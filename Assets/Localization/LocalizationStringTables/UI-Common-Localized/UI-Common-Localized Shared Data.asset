@@ -123,6 +123,26 @@ MonoBehaviour:
     m_Key: text_settings_bgm
     m_Metadata:
       m_Items: []
+  - m_Id: 10930839170588672
+    m_Key: text_settings_display_flip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10930839262863360
+    m_Key: text_settings_display_auto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10930839267057664
+    m_Key: text_settings_display_mode
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11184034711085056
+    m_Key: text_settings_display_mode_single
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11184034757222400
+    m_Key: text_settings_display_mode_double
+    m_Metadata:
+      m_Items: []
   - m_Id: 8378817896521728
     m_Key: text_credits
     m_Metadata:
@@ -145,6 +165,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 10510561600872451
     m_Key: text_story_save
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10930839267057665
+    m_Key: text_story_save_slot
     m_Metadata:
       m_Items: []
   - m_Id: 10510561600872452

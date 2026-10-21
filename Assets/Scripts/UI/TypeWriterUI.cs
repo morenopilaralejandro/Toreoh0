@@ -4,7 +4,7 @@ using TMPro;
 using System;
 using System.Collections;
 
-public class TypeWritterUI : MonoBehaviour 
+public class TypeWriterUI : MonoBehaviour 
 {
     [SerializeField] TMP_Text text;
     [SerializeField] private AudioClip writterSfxClip;
@@ -12,10 +12,10 @@ public class TypeWritterUI : MonoBehaviour
     [SerializeField] private float writterPauseDurationDefault = 0.03f;
     [SerializeField] private float writterPauseDurationSkip = 0.005f;
 
-    private Coroutine typeWritterCoroutine;
+    private Coroutine typeWriterCoroutine;
     private bool isTyping;
     private bool isSkipRequested;
-    public event Action OnTypeWritterEnded;
+    public event Action OnTypeWriterEnded;
 
     public bool IsTyping => isTyping;
 
@@ -23,7 +23,7 @@ public class TypeWritterUI : MonoBehaviour
 
     public void RequestSkip() => isSkipRequested = true;
 
-    private IEnumerator TypeWritterEffect(string stringValue)
+    private IEnumerator TypeWriterEffect(string stringValue)
     {
         isTyping = true;
         isSkipRequested = false;
@@ -53,26 +53,26 @@ public class TypeWritterUI : MonoBehaviour
             yield return new WaitForSeconds(pauseDuration);
         }
         isTyping = false;
-        OnTypeWritterEnded.Invoke();
+        OnTypeWriterEnded.Invoke();
         // event to set continue indicator visible and raise display text complete
     }
 
-    public void StartTypeWritter(string stringValue) 
+    public void StartTypeWriter(string stringValue) 
     {
         Clear();
-        typeWritterCoroutine = StartCoroutine(TypeWritterEffect(stringValue));
+        typeWriterCoroutine = StartCoroutine(TypeWriterEffect(stringValue));
     }
 
-    public void StopTypeWritter() 
+    public void StopTypeWriter() 
     {
-        if (typeWritterCoroutine == null) return;
-        StopCoroutine(typeWritterCoroutine);
-        typeWritterCoroutine = null;
+        if (typeWriterCoroutine == null) return;
+        StopCoroutine(typeWriterCoroutine);
+        typeWriterCoroutine = null;
     }
 
     public void Clear() 
     {
-        StopTypeWritter();
+        StopTypeWriter();
         text.text = string.Empty;
         text.maxVisibleCharacters = 0;
         isTyping = false;

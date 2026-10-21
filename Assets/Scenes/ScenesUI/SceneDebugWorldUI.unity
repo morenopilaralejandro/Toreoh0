@@ -355,7 +355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1131901988802585748, guid: 449aa504144bf96b7b1037daeb93651d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 395
+      value: 704
       objectReference: {fileID: 0}
     - target: {fileID: 1131901988802585748, guid: 449aa504144bf96b7b1037daeb93651d, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1026,6 +1026,14 @@ PrefabInstance:
     - target: {fileID: 3723212104338793021, guid: 0194812fd513627f1a04812b557d5f66, type: 3}
       propertyPath: m_Name
       value: DebugWorldStaticCanvasBottom
+      objectReference: {fileID: 0}
+    - target: {fileID: 4090981616984024292, guid: 0194812fd513627f1a04812b557d5f66, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4090981616984024292, guid: 0194812fd513627f1a04812b557d5f66, type: 3}
+      propertyPath: m_ChildAlignment
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6495572610085335397, guid: 0194812fd513627f1a04812b557d5f66, type: 3}
       propertyPath: m_Enabled
