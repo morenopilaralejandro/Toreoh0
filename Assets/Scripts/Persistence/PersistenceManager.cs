@@ -5,9 +5,9 @@ public class PersistenceManager : MonoBehaviour
     public static PersistenceManager Instance { get; private set; }
 
     [SerializeField] private PersistenceConfig config;
-    public SaveSlot[] SaveSlots;
-    public SaveSlot SaveSlotAuto;
     public PlayTimeTracker PlayTimeTracker;
+    public PersistenceManagerComponentSaveSlots SaveSlotsComponent;
+    public PersistenceManagerComponentAutoSave AutoSaveComponent;
 
     private void Awake() 
     {
@@ -35,11 +35,7 @@ public class PersistenceManager : MonoBehaviour
         PlayTimeTracker = new PlayTimeTracker();
         PlayTimeTracker.Subscribe();
 
-        SaveSlots = new SaveSlot[config.SaveSlotCount];
-        for (int i = 0; i < SaveSlots.Length; i++)
-            SaveSlots[i] = new SaveSlot(i, config);
-
-        SaveSlots[0].SetIsAutoSave(true);
-        SaveSlotAuto = SaveSlots[0];
+        SaveSlotsComponent = new PersistenceManagerComponentSaveSlots(config);
+        AutoSaveComponent = new PersistenceManagerComponentAutoSave(SaveSlotsComponent.SaveSlots[0]);
     }
 }

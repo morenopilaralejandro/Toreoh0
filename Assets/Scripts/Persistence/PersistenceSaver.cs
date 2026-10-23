@@ -25,8 +25,10 @@ public class PersistenceSaver
         {
             SaveDataHeader = CreateHeader(),
             PlayTimeSaveData = PersistenceManager.Instance.PlayTimeTracker.Export(),
-            DialogManagerSaveData = DialogManager.Instance.PersistenceComponent.Export()
-            //system export
+            DialogManagerSaveData = DialogManager.Instance.PersistenceComponent.Export(),
+            StoryManagerSaveData = StoryManager.Instance.PersistenceComponent.Export(),
+            ItemManagerSaveData = ItemManager.Instance.PersistenceComponent.Export(),
+            WorldManagerSaveData = WorldArgs.Export()
         };
     }
 

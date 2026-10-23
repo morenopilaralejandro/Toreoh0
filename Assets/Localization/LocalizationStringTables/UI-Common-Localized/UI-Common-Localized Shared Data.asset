@@ -99,14 +99,6 @@ MonoBehaviour:
     m_Key: text_gameover
     m_Metadata:
       m_Items: []
-  - m_Id: 8378817892327439
-    m_Key: text_loading
-    m_Metadata:
-      m_Items: []
-  - m_Id: 8378817892327440
-    m_Key: text_loading_suspense
-    m_Metadata:
-      m_Items: []
   - m_Id: 10490670999150592
     m_Key: text_settings
     m_Metadata:
@@ -163,6 +155,18 @@ MonoBehaviour:
     m_Key: text_story_continue
     m_Metadata:
       m_Items: []
+  - m_Id: 11297148584599552
+    m_Key: text_story_load
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11297925902376960
+    m_Key: text_story_loading
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11297925902376961
+    m_Key: text_story_loading_suspense
+    m_Metadata:
+      m_Items: []
   - m_Id: 10510561600872451
     m_Key: text_story_save
     m_Metadata:
@@ -171,8 +175,20 @@ MonoBehaviour:
     m_Key: text_story_save_slot
     m_Metadata:
       m_Items: []
+  - m_Id: 11213093239267328
+    m_Key: text_story_saving
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11213093272821760
+    m_Key: text_story_saving_suspense
+    m_Metadata:
+      m_Items: []
   - m_Id: 10510561600872452
     m_Key: text_story_confirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11636261980479488
+    m_Key: text_story_play_time
     m_Metadata:
       m_Items: []
   - m_Id: 8378817896521729

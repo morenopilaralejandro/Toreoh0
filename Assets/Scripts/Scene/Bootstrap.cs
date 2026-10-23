@@ -21,6 +21,7 @@ public class Bootstrap : MonoBehaviour
 
         SceneManager.LoadScene("SceneSystem", LoadSceneMode.Additive);
         SceneManager.LoadScene("SceneCameraMain", LoadSceneMode.Additive);
+        SceneManager.LoadScene("SceneCommonUI", LoadSceneMode.Additive);
         // SceneManager.LoadScene("LightingGlobal", LoadSceneMode.Additive);
 
         await Addressables.InitializeAsync().Task;

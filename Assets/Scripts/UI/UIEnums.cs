@@ -2,10 +2,18 @@ using System;
 
 namespace Aremoreno.Enums.UI
 {
-    public enum MenuPlaceholder
+    public enum MenuStateBasic
     {
+        Idle,
+        WaitingForConfirm,
+        WaitingForSelection
+    }
+
+    public enum MenuStateTeam
+    {
+        Idle,
         Moving,
-        Replacing
+        Replacing,
     }
 
     [Flags]
@@ -24,21 +32,11 @@ namespace Aremoreno.Enums.UI
         Submit = 1 << 9
     }
 
-    public enum BagMode 
+    public enum DialogConfrimMessageType
     {
-        Default,
-        Sell
+        OverwriteSaveData
     }
 
-    public enum AmountPickerMode 
-    {
-        Buy,
-        Sell
-    }
-
-    public enum PersistenceMode 
-    {
-        Load,
-        Save
-    }
+    public enum BagMode { Default, Sell }
+    public enum AmountPickerMode { Buy, Sell }
 }

@@ -35,6 +35,16 @@ public class MenuSide : Menu
             null);
     }
 
+    public void OnButtonSaveClicked() 
+    {
+        UIEvents.RaiseSelectorSaveSlotOpenRequested(
+            new SelectorSaveSlotSource(), 
+            new SelectorSaveSlotActionClickSave(),
+            null);
+    }
+
+    public void OnButtonExitClicked() => SceneLoaderManager.Instance.ReplaceGroup("SceneGroupData-MainMenu");
+
     // Event
     protected override void OnEnable() 
     {

@@ -7,6 +7,7 @@ public class PersistenceWriter
     private FileWriterJson defaultWriter;
     private FileWriterJson emergencyWriter;
     private FileWriterJson tempWriter;
+    public bool HasSaveData;
 
     public PersistenceWriter(int slotIndex, PersistenceConfig config)
     {
@@ -36,6 +37,8 @@ public class PersistenceWriter
             isCompressionEnabled : false,
             isPrettyPrint : config.IsPrettyPrint
         );
+
+        HasSaveData = false;
     }
 
     public bool TryWriteSaveData(SaveData saveData) 
@@ -49,7 +52,10 @@ public class PersistenceWriter
     {
         tempWriter.WriteAllJson(saveData);
         // create emergency from previous save data
-        IOUtils.Copy(defaultWriter.PathUncompressed, emergencyWriter.PathUncompressed);
+        if (config.IsSaveFileCompressionEnabled)
+            IOUtils.Copy(defaultWriter.PathCompressed, emergencyWriter.PathCompressed);
+        else 
+            IOUtils.Copy(defaultWriter.PathUncompressed, emergencyWriter.PathUncompressed);
         // replace default save with temp
         IOUtils.Copy(tempWriter.PathUncompressed, defaultWriter.PathUncompressed);
         IOUtils.Delete(tempWriter.PathUncompressed);
@@ -65,11 +71,11 @@ public class PersistenceWriter
         return saveData != null;
     }
 
-    //public bool HasSaveData() => File.Exists(pathDefault) || File.Exists(pathEmergency); Fast version
-
+    //public bool HasSaveData() => File.Exists(defaultWriter.PathUncompressed) || File.Exists(emergencyWriter.PathUncompressed);
     public bool TryGetLastSaveData(out SaveData saveData, bool needsValidation = true)
     {
         saveData = null;
+        HasSaveData = false;
 
         if(config.IsSaveFileCompressionEnabled) 
         {
@@ -80,7 +86,15 @@ public class PersistenceWriter
         if (!TryReadSaveDataAtPath(defaultWriter, out saveData))
             if (!TryReadSaveDataAtPath(emergencyWriter, out saveData)) 
                 return false;
+
+        if(config.IsSaveFileCompressionEnabled) 
+        {
+            IOUtils.Delete(defaultWriter.PathUncompressed);
+            IOUtils.Delete(emergencyWriter.PathUncompressed);
+        }
+
         if (needsValidation && (saveData == null || !PersistenceValidator.IsValidSaveData(saveData))) return false;
+        HasSaveData = true;
         return true;
     }
 }

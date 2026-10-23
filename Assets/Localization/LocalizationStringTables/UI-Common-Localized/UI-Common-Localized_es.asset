@@ -94,14 +94,6 @@ MonoBehaviour:
     m_Localized: Game Over
     m_Metadata:
       m_Items: []
-  - m_Id: 8378817892327439
-    m_Localized: Cargando
-    m_Metadata:
-      m_Items: []
-  - m_Id: 8378817892327440
-    m_Localized: Cargando...
-    m_Metadata:
-      m_Items: []
   - m_Id: 8378817896521728
     m_Localized: "Cr\xE9ditos"
     m_Metadata:
@@ -225,6 +217,30 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 11184034757222400
     m_Localized: Pantalla doble
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11213093239267328
+    m_Localized: Guardando
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11213093272821760
+    m_Localized: Guardando...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11297148584599552
+    m_Localized: Cargar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11297925902376960
+    m_Localized: Cargando
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11297925902376961
+    m_Localized: Cargando...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11636261980479488
+    m_Localized: Tiempo
     m_Metadata:
       m_Items: []
   references:

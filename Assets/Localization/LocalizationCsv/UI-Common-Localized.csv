@@ -20,8 +20,6 @@ button_menu,,,Menú
 button_change,,,Cambiar
 button_quit,,,Salir
 text_gameover,,,Game Over
-text_loading,,,Cargando
-text_loading_suspense,,,Cargando...
 text_settings,,,Ajustes
 text_settings_language,,,Idioma
 text_settings_sfx,,,Vol. Efectos
@@ -43,9 +41,15 @@ Desarrollado por Aremoreno
 text_story,,,Modo historia
 text_story_new,,,Partida nueva
 text_story_continue,,,Continuar
+text_story_load,,,Cargar
+text_story_loading,,,Cargando
+text_story_loading_suspense,,,Cargando...
 text_story_save,,,Guardar
 text_story_save_slot,,,Guardado
+text_story_saving,,,Guardando
+text_story_saving_suspense,,,Guardando...
 text_story_confirm,,,¿Quieres sobrescribir los datos guardados?
+text_story_play_time,,,Tiempo
 symbol_plus,+,+,+
 symbol_minus,-,-,-
 symbol_infinity,∞,∞,∞

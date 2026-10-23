@@ -3,39 +3,13 @@ using UnityEngine.Localization;
 using UnityEngine.Localization.Components;
 using Aremoreno.Enums.Localization;
 
-public class LocalizationComponentUIText : MonoBehaviour 
+public class LocalizationComponentUIText : LocalizationComponentUI 
 {
     [SerializeField] private LocalizeStringEvent localizeStringEvent;
-    [SerializeField] private LocalizedString stringLocalized;
-    [SerializeField] private LocalizedString stringRomanized;
 
-    private void ApplyLocalizationStyle(LocalizationStyle style) 
+    protected override void ApplyLocalizationStyle(LocalizationStyle style)
     {
-        switch (style)
-        {
-            case LocalizationStyle.Localized:
-                localizeStringEvent.StringReference = stringLocalized;
-                break;
-            case LocalizationStyle.Romanized:
-                localizeStringEvent.StringReference = stringRomanized;
-                break;
-        }
-    }
-
-    // event
-    private void OnEnable() 
-    {
-        SettingsEvents.OnLocalizationStyleChanged += OnLocalizationStyleChanged;
-        ApplyLocalizationStyle(SettingsManager.Instance.Settings.Common.LocalizationStyle);
-    }
-
-    private void OnDisable() 
-    {
-        SettingsEvents.OnLocalizationStyleChanged -= OnLocalizationStyleChanged;
-    }
-
-    private void OnLocalizationStyleChanged(LocalizationStyle style)
-    {
-        ApplyLocalizationStyle(style);
+        if (dictReferenceString.TryGetValue(style, out var localizedString))
+            localizeStringEvent.StringReference = localizedString;
     }
 }

@@ -54,7 +54,7 @@ public class MenuSettings : Menu
     }
 
     // Input settings
-    private void SetValues() 
+    private void SetValues()
     {
         sliderBgm.SetValueWithoutNotify(cachedSettings.Common.VolumeBgm);
         sliderSfx.SetValueWithoutNotify(cachedSettings.Common.VolumeSfx);
@@ -63,7 +63,7 @@ public class MenuSettings : Menu
         dropdownDisplayMode.SetValueWithoutNotify((int) cachedSettings.Common.DisplayMode);
     }
 
-    private void AddListeners() 
+    private void AddListeners()
     {
         sliderBgm.onValueChanged.AddListener(settingsManager.SetterComponent.SetVolumeBgm);
         sliderSfx.onValueChanged.AddListener(settingsManager.SetterComponent.SetVolumeSfx);

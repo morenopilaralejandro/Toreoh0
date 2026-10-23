@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class PersistenceLoader
 {
     private PersistenceConfig config;
@@ -14,6 +16,7 @@ public class PersistenceLoader
         PersistenceEvents.RaiseGameLoadStarted();
         SaveData saveData = null;
         writer.TryGetLastSaveData(out saveData);
+        WorldArgs.Import(saveData.WorldManagerSaveData);
         PersistenceEvents.RaiseGameLoadEnded(saveData);
     }
 }

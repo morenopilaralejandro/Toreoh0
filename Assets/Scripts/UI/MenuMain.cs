@@ -24,9 +24,10 @@ public class MenuMain : Menu
 
     public void OnButtonStoryClicked()
     {
-
-        // TODO event save
-
+        UIEvents.RaiseSelectorSaveSlotOpenRequested(
+            new SelectorSaveSlotSource(), 
+            new SelectorSaveSlotActionClickLoad(),
+            null);
     }
 
     public void OnButtonBattleClicked() => SceneLoaderManager.Instance.ReplaceGroup("SceneGroupData-Battle");

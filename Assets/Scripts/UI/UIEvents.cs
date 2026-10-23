@@ -1,6 +1,8 @@
 using UnityEngine;
 using System;
+using System.Collections.Generic;
 using Aremoreno.Enums.Item;
+using Aremoreno.Enums.Persistence;
 using Aremoreno.Enums.UI;
 
 public static class UIEvents 
@@ -40,10 +42,6 @@ public static class UIEvents
     public static void RaiseMenuAmountPickerItemOpenRequested(AmountPickerMode amountPickerMode, Item item, int countCurrent, int countMin, int countMax, CurrencyType currencyType)
         => OnMenuAmountPickerItemOpenRequested?.Invoke(amountPickerMode, item, countCurrent, countMin, countMax, currencyType);
 
-    public static event Action<PersistenceMode> OnMenuPersistenceOpenRequested;
-    public static void RaiseMenuPersistenceOpenRequested(PersistenceMode persistenceMode)
-        => OnMenuPersistenceOpenRequested?.Invoke(persistenceMode);
-
     // selector open requested
     public static event Action<
         ISelectorSource<ItemStorageSlot>, 
@@ -69,8 +67,53 @@ public static class UIEvents
         => OnSelectorItemShopOpenRequested?
             .Invoke(source, actionClick, filter);
 
+    public static event Action<
+        ISelectorSource<SaveSlot>, 
+        ISelectorActionClick<SaveSlot>, 
+        ISelectorFilter<SaveSlot>
+    > OnSelectorSaveSlotOpenRequested;
+    public static void RaiseSelectorSaveSlotOpenRequested(
+        ISelectorSource<SaveSlot> source, 
+        ISelectorActionClick<SaveSlot> actionClick, 
+        ISelectorFilter<SaveSlot> filter)
+        => OnSelectorSaveSlotOpenRequested?
+            .Invoke(source, actionClick, filter);
+
+    public static event Action OnSelectorSaveSlotCloseRequested;
+    public static void RaiseSelectorSaveSlotCloseRequested()
+        => OnSelectorSaveSlotCloseRequested?.Invoke();
+
     // overview
     public static event Action<Item> OnItemOverviewUpdateRequested;
     public static void RaiseItemOverviewUpdateRequested(Item item)
         => OnItemOverviewUpdateRequested?.Invoke(item);
+
+    public static event Action<SaveData> OnSaveDataOverviewUpdateRequested;
+    public static void RaiseSaveDataOverviewUpdateRequested(SaveData saveData)
+        => OnSaveDataOverviewUpdateRequested?.Invoke(saveData);
+
+    // confirm dialog
+    public static event Action<List<LocalizationReferenceStyleMapping>> OnDialogConfirmOpenRequested;
+    public static void RaiseDialogConfirmOpenRequested(List<LocalizationReferenceStyleMapping> listMappingReference)
+        => OnDialogConfirmOpenRequested?.Invoke(listMappingReference);
+
+    public static event Action<DialogConfrimMessageType> OnDialogConfirmOpenRequestedByMessageType;
+    public static void RaiseDialogConfirmOpenRequestedByMessageType(DialogConfrimMessageType messageType)
+        => OnDialogConfirmOpenRequestedByMessageType?.Invoke(messageType);
+
+    public static event Action OnDialogConfirmOpened;
+    public static void RaiseDialogConfirmOpened()
+        => OnDialogConfirmOpened?.Invoke();
+
+    public static event Action OnDialogConfirmConfirmed;
+    public static void RaiseDialogConfirmConfirmed()
+        => OnDialogConfirmConfirmed?.Invoke();
+
+    public static event Action OnDialogConfirmCanceled;
+    public static void RaiseDialogConfirmCanceled()
+        => OnDialogConfirmCanceled?.Invoke();
+
+    public static event Action<object> OnSelectorListItemSelectionConfirmed;
+    public static void RaiseSelectorListItemSelectionConfirmed(object listItem)
+        => OnSelectorListItemSelectionConfirmed?.Invoke(listItem);
 }
