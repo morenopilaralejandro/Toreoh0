@@ -61,6 +61,12 @@ public class SettingsManagerComponentSetter
         SettingsEvents.RaiseControlSchemeCustomChanged(controlSchemeCustom);
     }
 
+    public void SetControlSchemeCustom(bool isAutoSaveEnabled) 
+    {
+        manager.Settings.Common.IsAutoSaveEnabled = isAutoSaveEnabled;
+        SettingsEvents.RaiseIsAutoSaveEnabledChanged(isAutoSaveEnabled);
+    }
+
     // Control Traditional
 
     // Control Touch

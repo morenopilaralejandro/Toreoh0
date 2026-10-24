@@ -11,18 +11,21 @@ public class StoryManagerComponentPersistence
     {
         return new StoryManagerSaveData 
         {
-            ChestSystemSaveData = storyManager.ChestTracker.Export()
+            ChestSystemSaveData = storyManager.ChestTracker.Export(),
+            StoryFlagsSystemSaveData = storyManager.Flags.Export()
         };
     }
 
     public void Import(SaveData saveData) 
     {
         storyManager.ChestTracker.Import(saveData.StoryManagerSaveData.ChestSystemSaveData);
+        storyManager.Flags.Import(saveData.StoryManagerSaveData.StoryFlagsSystemSaveData);
     }
 
     public void InitializeForNewGame() 
     {
         storyManager.ChestTracker.Clear();
+        storyManager.Flags.InitializeForNewGame();
     }
 
     // event

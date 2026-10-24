@@ -14,9 +14,18 @@ public static class WorldArgs
     public static void SetFromWorld() 
     {
         if (WorldManager.Instance == null) return;
+        ZoneId = WorldManager.Instance.ZoneTracker.ZoneCurrent.ZoneId;
         CharacterPosition = WorldManager.Instance.CharacterMain.transform.position;
         CharacterFacingDirection = CharacterDirection.Up;
         Hour = 0;
+    }
+
+
+    public static void SetFromSpawnPoint(SpawnPoint spawnPoint)
+    {
+        WorldArgs.ZoneId = spawnPoint.ZoneId;
+        WorldArgs.CharacterPosition = spawnPoint.SpawnPosition;
+        WorldArgs.CharacterFacingDirection = spawnPoint.FacingDirection;
     }
 
     // persistence

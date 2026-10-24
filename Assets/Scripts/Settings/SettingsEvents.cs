@@ -41,6 +41,11 @@ public static class SettingsEvents
     public static void RaiseDisplayModeChanged(DisplayMode displayMode) 
         => OnDisplayModeChanged?.Invoke(displayMode);
 
+    // general
+    public static event Action<bool> OnIsAutoSaveEnabledChanged;
+    public static void RaiseIsAutoSaveEnabledChanged(bool isAutoSaveEnabled) 
+        => OnIsAutoSaveEnabledChanged?.Invoke(isAutoSaveEnabled);
+
     // input
     public static event Action<ControlSchemeCustom> OnControlSchemeCustomChanged;
     public static void RaiseControlSchemeCustomChanged(ControlSchemeCustom controlSchemeCustom) 

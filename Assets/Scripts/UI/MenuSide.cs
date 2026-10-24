@@ -37,6 +37,7 @@ public class MenuSide : Menu
 
     public void OnButtonSaveClicked() 
     {
+        WorldArgs.SetFromWorld();
         UIEvents.RaiseSelectorSaveSlotOpenRequested(
             new SelectorSaveSlotSource(), 
             new SelectorSaveSlotActionClickSave(),

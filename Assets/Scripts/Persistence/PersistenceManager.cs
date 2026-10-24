@@ -5,6 +5,7 @@ public class PersistenceManager : MonoBehaviour
     public static PersistenceManager Instance { get; private set; }
 
     [SerializeField] private PersistenceConfig config;
+    [SerializeField] private WorldConfig configWorld;
     public PlayTimeTracker PlayTimeTracker;
     public PersistenceManagerComponentSaveSlots SaveSlotsComponent;
     public PersistenceManagerComponentAutoSave AutoSaveComponent;
@@ -26,6 +27,7 @@ public class PersistenceManager : MonoBehaviour
     private void OnDestroy() 
     {
         PlayTimeTracker?.Unsubscribe();
+        AutoSaveComponent?.Unsubscribe();
     }
 
     private void Initialize() 
@@ -37,5 +39,6 @@ public class PersistenceManager : MonoBehaviour
 
         SaveSlotsComponent = new PersistenceManagerComponentSaveSlots(config);
         AutoSaveComponent = new PersistenceManagerComponentAutoSave(SaveSlotsComponent.SaveSlots[0]);
+        AutoSaveComponent.Subscribe();
     }
 }

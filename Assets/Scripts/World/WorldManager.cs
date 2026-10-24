@@ -12,9 +12,10 @@ public class WorldManager : MonoBehaviour
 
     public WorldComponentStateMachine StateMachine { get; private set; }
     public WorldZoneLoader ZoneLoader { get; private set; }
-    private WorldZoneTracker zoneTracker;
+    public WorldZoneTracker ZoneTracker;
     private WorldChunkStreaming chunkStreaming;
     private WorldSceneLoader sceneLoader;
+    private WorldManagerComponentSpawn SpawnComponent;
 
     private void Awake() 
     {
@@ -26,7 +27,6 @@ public class WorldManager : MonoBehaviour
         Instance = this;
         // DontDestroyOnLoad(gameObject);
 
-        if (DatabaseManager.Instance == null) return;
         Initialize();
     }
 
@@ -42,20 +42,22 @@ public class WorldManager : MonoBehaviour
 
     private void Initialize()
     {
+        if (DatabaseManager.Instance == null) return;
+
         SpawnPointRegistry.Initialize();
 
         worldFadeScreen.Initialize(SceneLoaderManager.Instance);
 
         StateMachine = new WorldComponentStateMachine();
 
-        zoneTracker = new WorldZoneTracker(AudioManager.Instance);
+        ZoneTracker = new WorldZoneTracker(AudioManager.Instance);
 
         sceneLoader = new WorldSceneLoader(SceneLoaderManager.Instance);
 
         chunkStreaming = new WorldChunkStreaming(
             CharacterMain,
             sceneLoader,
-            zoneTracker
+            ZoneTracker
         );
 
         ZoneLoader = new WorldZoneLoader(
@@ -63,17 +65,14 @@ public class WorldManager : MonoBehaviour
             CharacterMain, 
             chunkStreaming, 
             sceneLoader, 
-            zoneTracker, 
+            ZoneTracker, 
             SpawnPointRegistry,
             StateMachine,
             worldFadeScreen
         );
 
-        WorldArgs.ZoneId = "zone_overworld_village";
-        WorldArgs.CharacterPosition = Vector3.zero;
-        WorldArgs.CharacterFacingDirection = Aremoreno.Enums.Animation.CharacterDirection.Down;
+        SpawnComponent = new WorldManagerComponentSpawn(config, SpawnPointRegistry, StoryManager.Instance);
 
-        HandleWorldLoad();
         InitializeAsync();
     }
 
@@ -100,8 +99,10 @@ public class WorldManager : MonoBehaviour
     private void HandleWorldLoadStory()
     {
         // TODO evaluate flags to set the world args
+        /*
         WorldArgs.ZoneId = "zone_overworld_village";
         WorldArgs.CharacterPosition = Vector3.zero;
         WorldArgs.CharacterFacingDirection = Aremoreno.Enums.Animation.CharacterDirection.Down;
+        */
     }
 }

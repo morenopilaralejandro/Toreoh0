@@ -18,7 +18,8 @@ public class SettingsManagerComponentCopy
             IsScreenFlipped = manager.Settings.Common.IsScreenFlipped,
             IsDisplayAutoDetect = manager.Settings.Common.IsDisplayAutoDetect,
             DisplayMode = manager.Settings.Common.DisplayMode,
-            ControlSchemeCustom = manager.Settings.Common.ControlSchemeCustom
+            ControlSchemeCustom = manager.Settings.Common.ControlSchemeCustom,
+            IsAutoSaveEnabled = manager.Settings.Common.IsAutoSaveEnabled,
         };
 
         SettingsControlTraditional controlTraditional = new SettingsControlTraditional 
