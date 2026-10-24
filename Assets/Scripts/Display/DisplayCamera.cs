@@ -24,7 +24,7 @@ public class DisplayCamera : MonoBehaviour
 
     private void OnDisplayRefreshRequested()
     {
-        if (DisplayManager.Instance == null) return;
+        if (DisplayManager.Instance == null || CameraObject == null) return;
         CameraObject.targetDisplay = DisplayManager.Instance.GetTargetDisplay(DisplayScreen);
         CameraObject.rect = DisplayManager.Instance.GetRect(DisplayScreen);
     }

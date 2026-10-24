@@ -128,5 +128,7 @@ public class DisplayManager : MonoBehaviour
         IsScreenFlipped = settings.Common.IsScreenFlipped;
         IsDisplayAutoDetect = settings.Common.IsDisplayAutoDetect;
         DisplayModeDefault = settings.Common.DisplayMode;
+        CheckAutoDetect();
+        CacheDisplay();
     }
 }

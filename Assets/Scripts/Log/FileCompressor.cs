@@ -15,7 +15,7 @@ public static class FileCompressor
     {
         using (FileStream srcStream = new FileStream(srcPath, FileMode.Open))
             using (FileStream dstStream = new FileStream(dstPath, FileMode.Create))
-                using (GZipStream gZipStream = new GZipStream(dstStream, CompressionMode.Decompress))
+                using (GZipStream gZipStream = new GZipStream(srcStream, CompressionMode.Decompress))
                     gZipStream.CopyTo(dstStream);
     }
     

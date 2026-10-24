@@ -19,7 +19,7 @@ public class MenuTest : Menu
 
     public void OnButtonBackClicked() => RequestClose();
 
-    public void OnButtonToDebugClicked() 
+    public void OnButtonToDebugClicked()
     {
         RequestClose();
         SceneLoaderManager.Instance.UnloadGroup("SceneGroupData-World");
@@ -27,7 +27,7 @@ public class MenuTest : Menu
     }
 
     // Event
-    protected override void OnEnable() 
+    protected override void OnEnable()
     {
         base.OnEnable();
         UIEvents.OnMenuTestOpenRequested += OnMenuTestOpenRequested;

@@ -19,6 +19,9 @@ public class WorldConfig : ScriptableObject
     public float WalkSpeed = 2f;
     public float RunSpeed = 4f;
 
+    [Header("World")]
+    public string SpawnPointIdDefault;
+   
     [Header("Encounter")]
     public int StepBetweenEncountersBaseMin = 10;
     public int StepBetweenEncountersBaseMax = 30;

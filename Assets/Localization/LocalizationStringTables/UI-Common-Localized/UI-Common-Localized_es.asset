@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 8378817762304000
-    m_Localized: Toreoh Jinga vs Crossnera
+    m_Localized: Toreoh Jinga VS Crossnera
     m_Metadata:
       m_Items: []
   - m_Id: 8378817888133120
@@ -94,17 +94,8 @@ MonoBehaviour:
     m_Localized: Game Over
     m_Metadata:
       m_Items: []
-  - m_Id: 8378817892327439
-    m_Localized: Cargando
-    m_Metadata:
-      m_Items: []
-  - m_Id: 8378817892327440
-    m_Localized: Cargando...
-    m_Metadata:
-      m_Items: []
   - m_Id: 8378817896521728
-    m_Localized: "<size=64px><b>Toreoh Jinga vs Crossnera</b></size>\n  \nDesarrollado
-      por Aremoreno  \n\n\n\n\n<size=64px><b>Gracias por jugar</b></size>"
+    m_Localized: "Cr\xE9ditos"
     m_Metadata:
       m_Items: []
   - m_Id: 8378817896521729
@@ -149,6 +140,139 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8378817896521739
     m_Localized: '>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10490670999150592
+    m_Localized: Ajustes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12310300726140928
+    m_Localized: Guardado auto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10490671057870849
+    m_Localized: Vol. Efectos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10490671057870850
+    m_Localized: "Vol. M\xFAsica"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10490671062065152
+    m_Localized: "<size=64px><b>Toreoh Jinga VS Crossnera</b></size>\n  \nDesarrollado
+      por Aremoreno  \n\n\n\n\n<size=64px><b>Gracias por jugar</b></size>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10510561537957888
+    m_Localized: 2026 Aremoreno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10510561596678144
+    m_Localized: Salir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10510561600872448
+    m_Localized: Modo historia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10510561600872449
+    m_Localized: Partida nueva
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10510561600872450
+    m_Localized: Continuar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10510561600872451
+    m_Localized: Guardar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10510561600872452
+    m_Localized: "\xBFQuieres sobrescribir los datos guardados?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10510561600872453
+    m_Localized: Luchar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10930839170588672
+    m_Localized: Voltear pantallas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10930839262863360
+    m_Localized: "Detecci\xF3n auto"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10930839267057664
+    m_Localized: Modo por defecto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10930839267057665
+    m_Localized: Guardado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11184034711085056
+    m_Localized: Pantalla individual
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11184034757222400
+    m_Localized: Pantalla doble
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11213093239267328
+    m_Localized: Guardando
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11213093272821760
+    m_Localized: Guardando...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11297148584599552
+    m_Localized: Cargar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11297925902376960
+    m_Localized: Cargando
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11297925902376961
+    m_Localized: Cargando...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11636261980479488
+    m_Localized: Tiempo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12307822391599104
+    m_Localized: Idioma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12307822433542144
+    m_Localized: Estilo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12307822433542145
+    m_Localized: Localizado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12307822433542146
+    m_Localized: Romanizado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12319295427846144
+    m_Localized: Sin Datos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12320843386068992
+    m_Localized: AUTO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12328188375736320
+    m_Localized: Salir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12328188400902144
+    m_Localized: "\xBFVolver al men\xFA principal?"
     m_Metadata:
       m_Items: []
   references:

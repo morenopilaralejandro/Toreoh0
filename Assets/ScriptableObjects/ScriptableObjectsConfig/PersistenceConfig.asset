@@ -15,7 +15,7 @@ MonoBehaviour:
   IsAutoSaveEnabled: 0
   IsSaveFileCompressionEnabled: 1
   IsPrettyPrint: 0
-  SaveSlotCount: 3
+  SaveSlotCount: 4
   Folder: Save
   FileNamePrefix: save_slot
   FileNameSeparator: '-'

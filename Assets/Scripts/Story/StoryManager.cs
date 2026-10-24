@@ -4,8 +4,9 @@ public class StoryManager : MonoBehaviour
 {
     public static StoryManager Instance { get; private set; }
 
-    public StoryManagerComponentPersistence PersistenceComponent { get; private set; }
     public ChestTracker ChestTracker { get; private set; }
+    public StorySystemFlags Flags;
+    public StoryManagerComponentPersistence PersistenceComponent { get; private set; }
 
     private void Awake() 
     {
@@ -28,8 +29,10 @@ public class StoryManager : MonoBehaviour
 
     private void Initialize() 
     {
-        PersistenceComponent = new StoryManagerComponentPersistence(this);
-
         ChestTracker = new ChestTracker();
+        Flags = new StorySystemFlags();
+
+        PersistenceComponent = new StoryManagerComponentPersistence(this);
+        PersistenceComponent.Subscribe();
     }
 }

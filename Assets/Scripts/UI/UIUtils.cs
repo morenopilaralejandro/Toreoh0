@@ -18,6 +18,12 @@ public static class UIUtils
         canvasGroup.alpha = alpha;
     }
 
+    public static void SetCanvasGroupAlpha(CanvasGroup canvasGroup, bool isVisible)
+    {
+        if (canvasGroup == null) return;
+        canvasGroup.alpha = isVisible ? 1f : 0f;
+    }
+
     public static void SetCanvasGroupInteractable(CanvasGroup canvasGroup, bool isInteractable)
     {
         if (canvasGroup == null) return;

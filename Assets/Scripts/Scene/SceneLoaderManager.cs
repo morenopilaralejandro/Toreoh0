@@ -8,6 +8,7 @@ public class SceneLoaderManager : MonoBehaviour
     public static SceneLoaderManager Instance { get; private set; }
         
     private SceneLoader sceneLoader;
+    private SceneGroupData cachedSceneGroupData;
 
     // Lifecycle
     private void Awake() 
@@ -41,6 +42,8 @@ public class SceneLoaderManager : MonoBehaviour
     // Load by data
     private void LoadGroup(SceneGroupData sceneGroupData) 
     {
+        cachedSceneGroupData = sceneGroupData;
+
         sceneLoader.Strategy = sceneGroupData.HasLoadingScreen 
             ? new SceneLoaderStrategyLoadingScreen()
             : new SceneLoaderStrategyDirect();
@@ -67,9 +70,27 @@ public class SceneLoaderManager : MonoBehaviour
         StartCoroutine(ExecuteUnload(context));
     }
 
+    private void ReplaceGroup(SceneGroupData sceneGroupData) 
+    {
+        sceneLoader.Strategy = sceneGroupData.HasLoadingScreen 
+            ? new SceneLoaderStrategyLoadingScreen()
+            : new SceneLoaderStrategyDirect();
+
+        SceneLoaderContext context = new SceneLoaderContext(
+            id : sceneGroupData.SceneGroupId,
+            scenesToLoad : sceneGroupData.GetValidScenes(),
+            scenesToUnload : cachedSceneGroupData.GetValidScenes(),
+            operations : sceneLoader.Operations
+        );
+
+        cachedSceneGroupData = sceneGroupData;
+        StartCoroutine(ExecuteLoad(context));
+    }
+
     // Load by id
     public void LoadGroup(string sceneGroupId) => LoadGroup(sceneLoader.DatabaseManager.DatabaseRegistry.SceneGroupData.Get(sceneGroupId));
     public void UnloadGroup(string sceneGroupId) => UnloadGroup(sceneLoader.DatabaseManager.DatabaseRegistry.SceneGroupData.Get(sceneGroupId));
+    public void ReplaceGroup(string sceneGroupId) => ReplaceGroup(sceneLoader.DatabaseManager.DatabaseRegistry.SceneGroupData.Get(sceneGroupId));
 
     // Coroutines
     private IEnumerator ExecuteLoad(SceneLoaderContext context)

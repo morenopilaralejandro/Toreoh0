@@ -24,10 +24,11 @@ MonoBehaviour:
   IntractionRange: 0.75
   WalkSpeed: 2
   RunSpeed: 4
+  SpawnPointIdDefault: spawn_house_a_default
   StepBetweenEncountersBaseMin: 10
   StepBetweenEncountersBaseMax: 30
-  IsDebugWorldEnabled: 1
   IsNoClipEnabled: 1
+  IsDebugWorldEnabled: 0
   ZoneDataDebug: {fileID: 11400000, guid: 8b8ecd755e3cf4657aafb1312f9133d1, type: 2}
   SceneZoneFolder: Assets/Addressables/AddressablesWorldSceneZone
   ChunkDataFolder: Assets/Addressables/AddressablesWorldChunkData

@@ -320,7 +320,11 @@ MonoBehaviour:
   - SpawnPointId: spawn_house_a_1_a
     FacingDirection: 3
     SpawnPosition: {x: 22.5, y: 26.5, z: 0}
-    ZoneId: 
+    ZoneId: zone_interior_house_a_f1
+  - SpawnPointId: spawn_house_a_default
+    FacingDirection: 0
+    SpawnPosition: {x: 24.5, y: 23.5, z: 0}
+    ZoneId: zone_interior_house_a_f1
   ListSnappableTransforms:
   - {fileID: 842560612}
   - {fileID: 187847724}
@@ -377,6 +381,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 677153564}
+  - {fileID: 883052790}
   m_Father: {fileID: 782430782}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &853038426
@@ -5252,6 +5257,76 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1524795689095144128, guid: d32383d934f4af2d2a04e41202a7376d, type: 3}
   m_PrefabInstance: {fileID: 853038426}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &883052789
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 842560612}
+    m_Modifications:
+    - target: {fileID: 1224270220248743757, guid: 457c4a742896068a9b4eacb90fa317d6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 24.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1224270220248743757, guid: 457c4a742896068a9b4eacb90fa317d6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 23.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1224270220248743757, guid: 457c4a742896068a9b4eacb90fa317d6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1224270220248743757, guid: 457c4a742896068a9b4eacb90fa317d6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1224270220248743757, guid: 457c4a742896068a9b4eacb90fa317d6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1224270220248743757, guid: 457c4a742896068a9b4eacb90fa317d6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1224270220248743757, guid: 457c4a742896068a9b4eacb90fa317d6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1224270220248743757, guid: 457c4a742896068a9b4eacb90fa317d6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1224270220248743757, guid: 457c4a742896068a9b4eacb90fa317d6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1224270220248743757, guid: 457c4a742896068a9b4eacb90fa317d6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2190753765664415473, guid: 457c4a742896068a9b4eacb90fa317d6, type: 3}
+      propertyPath: m_Name
+      value: SpawnPointEntityDefualt
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023190658314836571, guid: 457c4a742896068a9b4eacb90fa317d6, type: 3}
+      propertyPath: SpawnPointId
+      value: spawn_house_a_default
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023190658314836571, guid: 457c4a742896068a9b4eacb90fa317d6, type: 3}
+      propertyPath: FacingDirection
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 457c4a742896068a9b4eacb90fa317d6, type: 3}
+--- !u!4 &883052790 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1224270220248743757, guid: 457c4a742896068a9b4eacb90fa317d6, type: 3}
+  m_PrefabInstance: {fileID: 883052789}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1935207941
 GameObject:

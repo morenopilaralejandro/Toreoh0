@@ -21,4 +21,8 @@ public static class PersistenceEvents
     public static event Action OnNewGameStarted;
     public static void RaiseNewGameStarted()
         => OnNewGameStarted?.Invoke();
+
+    public static event Action OnAutoSaveRequested;
+    public static void RaiseAutoSaveRequested()
+        => OnAutoSaveRequested?.Invoke();
 }

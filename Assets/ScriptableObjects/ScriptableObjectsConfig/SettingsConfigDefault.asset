@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43aff0149c311c6b1b15d4cbe2800b44, type: 3}
   m_Name: SettingsConfigDefault
   m_EditorClassIdentifier: Assembly-CSharp::SettingsConfig
-  SettingsFilePath: Settings
-  SettingsFileName: settings
+  Folder: Settings
+  FileName: settings
+  IsCompressionEnabled: 0
+  IsPrettyPrint: 1
   PresetDefault:
     Common:
       LocaleIndex: 2

@@ -1,5 +1,6 @@
 Key,English(en),Japanese(ja),Spanish(es)
-metadata_app_name,Toreoh Jinga vs Crossnera,テスト,Toreoh Jinga vs Crossnera
+metadata_app_name,Toreoh Jinga vs Crossnera,テスト,Toreoh Jinga VS Crossnera
+metadata_copyright,,,2026 Aremoreno
 button_back,,,Volver
 button_next,,,Siguiente
 button_continue,,,Continuar
@@ -17,10 +18,23 @@ button_reset,,,Reset
 button_apply,,,Aplicar
 button_menu,,,Menú
 button_change,,,Cambiar
+button_quit,,,Salir
 text_gameover,,,Game Over
-text_loading,,,Cargando
-text_loading_suspense,,,Cargando...
-text_credits,,,"<size=64px><b>Toreoh Jinga vs Crossnera</b></size>
+text_settings,,,Ajustes
+text_settings_sfx,,,Vol. Efectos
+text_settings_bgm,,,Vol. Música
+text_settings_display_flip,,,Voltear pantallas
+text_settings_display_auto,,,Detección auto
+text_settings_display_mode,,,Modo por defecto
+text_settings_display_mode_single,,,Pantalla individual
+text_settings_display_mode_double,,,Pantalla doble
+text_settings_localization_language,,,Idioma
+text_settings_localization_style,,,Estilo
+text_settings_localization_style_localized,,,Localizado
+text_settings_localization_style_romanized,,,Romanizado
+text_settings_save_auto,,,Guardado auto
+text_credits,,,Créditos
+text_credits_value,,,"<size=64px><b>Toreoh Jinga VS Crossnera</b></size>
   
 Desarrollado por Aremoreno  
 
@@ -28,6 +42,22 @@ Desarrollado por Aremoreno
 
 
 <size=64px><b>Gracias por jugar</b></size>"
+text_story,,,Modo historia
+text_story_new,,,Partida nueva
+text_story_continue,,,Continuar
+text_story_load,,,Cargar
+text_story_loading,,,Cargando
+text_story_loading_suspense,,,Cargando...
+text_story_save,,,Guardar
+text_story_save_slot,,,Guardado
+text_story_saving,,,Guardando
+text_story_saving_suspense,,,Guardando...
+text_story_confirm,,,¿Quieres sobrescribir los datos guardados?
+text_story_play_time,,,Tiempo
+text_story_no_data,,,Sin Datos
+text_story_auto,,,AUTO
+text_side_exit,,,Salir
+text_side_exit_confirm,,,¿Volver al menú principal?
 symbol_plus,+,+,+
 symbol_minus,-,-,-
 symbol_infinity,∞,∞,∞
@@ -39,3 +69,4 @@ symbol_brackets_curly_open,{,{,{
 symbol_brackets_curly_close,},},}
 symbol_less,<,<,<
 symbol_greater,>,>,>
+text_battle,,,Luchar

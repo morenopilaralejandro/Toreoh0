@@ -21,9 +21,10 @@ public class PlayTimeTracker
 
     public PlayTimeSaveData Export() 
     {
+        TimestampSave = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
         return new PlayTimeSaveData 
         {
-            TimestampSave = DateTimeOffset.UtcNow.ToUnixTimeSeconds(),
+            TimestampSave = TimestampSave,
             TimestampCreation = TimestampCreation,
             PlayTimeSeconds = GetCurrentPlayTimeSeconds()
         };

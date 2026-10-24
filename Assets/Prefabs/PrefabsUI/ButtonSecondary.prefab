@@ -24,6 +24,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButtonSecondary
       objectReference: {fileID: 0}
+    - target: {fileID: 3772736557473272239, guid: 92f3841905b7f9673a2528146d38c03f, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 8378817888133120
+      objectReference: {fileID: 0}
+    - target: {fileID: 3772736557473272239, guid: 92f3841905b7f9673a2528146d38c03f, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:735824408b5855db8be90f3ec8f1c914
+      objectReference: {fileID: 0}
     - target: {fileID: 6261721229642676255, guid: 92f3841905b7f9673a2528146d38c03f, type: 3}
       propertyPath: m_Color.b
       value: 0.11372549

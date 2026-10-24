@@ -303,19 +303,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1131901988802585748, guid: 449aa504144bf96b7b1037daeb93651d, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1131901988802585748, guid: 449aa504144bf96b7b1037daeb93651d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1131901988802585748, guid: 449aa504144bf96b7b1037daeb93651d, type: 3}
-      propertyPath: m_AnchorMin.x
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1131901988802585748, guid: 449aa504144bf96b7b1037daeb93651d, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131901988802585748, guid: 449aa504144bf96b7b1037daeb93651d, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1131901988802585748, guid: 449aa504144bf96b7b1037daeb93651d, type: 3}
       propertyPath: m_SizeDelta.x
@@ -355,11 +355,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1131901988802585748, guid: 449aa504144bf96b7b1037daeb93651d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 704
       objectReference: {fileID: 0}
     - target: {fileID: 1131901988802585748, guid: 449aa504144bf96b7b1037daeb93651d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -66
       objectReference: {fileID: 0}
     - target: {fileID: 1131901988802585748, guid: 449aa504144bf96b7b1037daeb93651d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -688,6 +688,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1309163514}
     m_Modifications:
+    - target: {fileID: 1761331242816011118, guid: 962e4a2f39463ff05a63f151b74d95e9, type: 3}
+      propertyPath: m_text
+      value: Debug Main
+      objectReference: {fileID: 0}
     - target: {fileID: 2307374654428153540, guid: 962e4a2f39463ff05a63f151b74d95e9, type: 3}
       propertyPath: m_Name
       value: ButtonPrimary (1)
@@ -771,6 +775,34 @@ PrefabInstance:
     - target: {fileID: 6965334868006154414, guid: 962e4a2f39463ff05a63f151b74d95e9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7067663574560381218, guid: 962e4a2f39463ff05a63f151b74d95e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7067663574560381218, guid: 962e4a2f39463ff05a63f151b74d95e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7067663574560381218, guid: 962e4a2f39463ff05a63f151b74d95e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 676118919}
+    - target: {fileID: 7067663574560381218, guid: 962e4a2f39463ff05a63f151b74d95e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7067663574560381218, guid: 962e4a2f39463ff05a63f151b74d95e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnButtonToDebugClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 7067663574560381218, guid: 962e4a2f39463ff05a63f151b74d95e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MenuDebugWorld, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7067663574560381218, guid: 962e4a2f39463ff05a63f151b74d95e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -995,6 +1027,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: DebugWorldStaticCanvasBottom
       objectReference: {fileID: 0}
+    - target: {fileID: 4090981616984024292, guid: 0194812fd513627f1a04812b557d5f66, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4090981616984024292, guid: 0194812fd513627f1a04812b557d5f66, type: 3}
+      propertyPath: m_ChildAlignment
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6495572610085335397, guid: 0194812fd513627f1a04812b557d5f66, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1195,7 +1235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7645254872459164646, guid: 1ff231f6b3db5a31794b2cf84a048f6c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 96
+      value: 352
       objectReference: {fileID: 0}
     - target: {fileID: 7645254872459164646, guid: 1ff231f6b3db5a31794b2cf84a048f6c, type: 3}
       propertyPath: m_AnchoredPosition.y

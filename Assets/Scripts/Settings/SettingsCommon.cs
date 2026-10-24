@@ -15,5 +15,7 @@ public class SettingsCommon
     public bool IsDisplayAutoDetect = true;
     public DisplayMode DisplayMode = DisplayMode.SingleScreen;
 
+    public bool IsAutoSaveEnabled = true;
+
     public ControlSchemeCustom ControlSchemeCustom = ControlSchemeCustom.Traditional;
 }

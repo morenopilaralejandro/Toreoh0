@@ -33,6 +33,7 @@ public class ChestEntity : MonoBehaviour, IAsyncSceneLoader
         _ = appearanceComponent.SetAsync(Chest.StateMachineComponent.State);
     }
 
+    #if UNITY_EDITOR 
     private void OnDrawGizmos() 
     {
         if (data == null) return;
@@ -41,4 +42,5 @@ public class ChestEntity : MonoBehaviour, IAsyncSceneLoader
             $"{data.ChestId}[{data.ItemId}]"
         );
     }
+    #endif
 }
