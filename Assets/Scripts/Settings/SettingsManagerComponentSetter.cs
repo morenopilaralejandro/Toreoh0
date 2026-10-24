@@ -30,7 +30,8 @@ public class SettingsManagerComponentSetter
         SettingsEvents.RaiseLanguageChanged(localeIndex);
     }
 
-    public void SetLocalizationStyle(LocalizationStyle style) 
+    public void SetLocalizationStyle(int index) =>  SetLocalizationStyle((LocalizationStyle) index);
+    public void SetLocalizationStyle(LocalizationStyle style)
     {
         manager.Settings.Common.LocalizationStyle = style;
         SettingsEvents.RaiseLocalizationStyleChanged(style);
@@ -61,7 +62,7 @@ public class SettingsManagerComponentSetter
         SettingsEvents.RaiseControlSchemeCustomChanged(controlSchemeCustom);
     }
 
-    public void SetControlSchemeCustom(bool isAutoSaveEnabled) 
+    public void SetIsAutoSaveEnabled(bool isAutoSaveEnabled) 
     {
         manager.Settings.Common.IsAutoSaveEnabled = isAutoSaveEnabled;
         SettingsEvents.RaiseIsAutoSaveEnabledChanged(isAutoSaveEnabled);

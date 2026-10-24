@@ -413,6 +413,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButtonSecondary
       objectReference: {fileID: 0}
+    - target: {fileID: 3498193650260911895, guid: 1ff231f6b3db5a31794b2cf84a048f6c, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 8378817892327427
+      objectReference: {fileID: 0}
     - target: {fileID: 7540665661283177066, guid: 1ff231f6b3db5a31794b2cf84a048f6c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1165,6 +1169,14 @@ PrefabInstance:
     - target: {fileID: 2307374654428153540, guid: 962e4a2f39463ff05a63f151b74d95e9, type: 3}
       propertyPath: m_Name
       value: ButtonPrimary
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196410868158868575, guid: 962e4a2f39463ff05a63f151b74d95e9, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 8378817892327426
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196410868158868575, guid: 962e4a2f39463ff05a63f151b74d95e9, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:735824408b5855db8be90f3ec8f1c914
       objectReference: {fileID: 0}
     - target: {fileID: 6965334868006154414, guid: 962e4a2f39463ff05a63f151b74d95e9, type: 3}
       propertyPath: m_Pivot.x

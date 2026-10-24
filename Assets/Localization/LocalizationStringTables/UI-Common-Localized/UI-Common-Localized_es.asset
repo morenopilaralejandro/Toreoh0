@@ -146,8 +146,8 @@ MonoBehaviour:
     m_Localized: Ajustes
     m_Metadata:
       m_Items: []
-  - m_Id: 10490671057870848
-    m_Localized: Idioma
+  - m_Id: 12310300726140928
+    m_Localized: Guardado auto
     m_Metadata:
       m_Items: []
   - m_Id: 10490671057870849
@@ -241,6 +241,38 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 11636261980479488
     m_Localized: Tiempo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12307822391599104
+    m_Localized: Idioma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12307822433542144
+    m_Localized: Estilo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12307822433542145
+    m_Localized: Localizado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12307822433542146
+    m_Localized: Romanizado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12319295427846144
+    m_Localized: Sin Datos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12320843386068992
+    m_Localized: AUTO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12328188375736320
+    m_Localized: Salir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12328188400902144
+    m_Localized: "\xBFVolver al men\xFA principal?"
     m_Metadata:
       m_Items: []
   references:

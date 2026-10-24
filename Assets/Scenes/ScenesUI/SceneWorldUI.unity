@@ -682,6 +682,46 @@ MonoBehaviour:
   dimmedAlpha: 0.5
   sfxOpen: sfx-ui_menu_open
   sfxClose: sfx-ui_menu_close
+  listMappingReferenceConfirmExit:
+  - Style: 0
+    LocalizedString:
+      m_TableReference:
+        m_TableCollectionName: GUID:735824408b5855db8be90f3ec8f1c914
+      m_TableEntryReference:
+        m_KeyId: 12328188400902144
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    LocalizedSprite:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+  - Style: 1
+    LocalizedString:
+      m_TableReference:
+        m_TableCollectionName: GUID:735824408b5855db8be90f3ec8f1c914
+      m_TableEntryReference:
+        m_KeyId: 12328188400902144
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    LocalizedSprite:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+  references:
+    version: 2
+    RefIds: []
 --- !u!225 &160496592
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1350,7 +1390,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1535075823164931070, guid: 7697e4e9bb2efee34902147596bd3ecc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.000061035156
+      value: 0.00012207031
       objectReference: {fileID: 0}
     - target: {fileID: 2425994543948458406, guid: 7697e4e9bb2efee34902147596bd3ecc, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1362,6 +1402,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3019562131235840459, guid: 7697e4e9bb2efee34902147596bd3ecc, type: 3}
       propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3019562131235840459, guid: 7697e4e9bb2efee34902147596bd3ecc, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4460181539831744117, guid: 7697e4e9bb2efee34902147596bd3ecc, type: 3}
@@ -1478,7 +1522,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7713090001292247698, guid: 7697e4e9bb2efee34902147596bd3ecc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.000061035156
+      value: 0.00012207031
       objectReference: {fileID: 0}
     - target: {fileID: 8950572299876402908, guid: 7697e4e9bb2efee34902147596bd3ecc, type: 3}
       propertyPath: m_AnchorMax.x

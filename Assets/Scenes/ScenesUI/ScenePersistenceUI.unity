@@ -136,6 +136,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButtonPrimary
       objectReference: {fileID: 0}
+    - target: {fileID: 4196410868158868575, guid: 962e4a2f39463ff05a63f151b74d95e9, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 10510561600872449
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196410868158868575, guid: 962e4a2f39463ff05a63f151b74d95e9, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:735824408b5855db8be90f3ec8f1c914
+      objectReference: {fileID: 0}
     - target: {fileID: 6965334868006154414, guid: 962e4a2f39463ff05a63f151b74d95e9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -247,13 +255,33 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2307374654428153540, guid: 962e4a2f39463ff05a63f151b74d95e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 347115284}
   m_SourcePrefab: {fileID: 100100000, guid: 962e4a2f39463ff05a63f151b74d95e9, type: 3}
 --- !u!224 &347115282 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6965334868006154414, guid: 962e4a2f39463ff05a63f151b74d95e9, type: 3}
   m_PrefabInstance: {fileID: 347115281}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &347115283 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2307374654428153540, guid: 962e4a2f39463ff05a63f151b74d95e9, type: 3}
+  m_PrefabInstance: {fileID: 347115281}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &347115284
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347115283}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!224 &380281154 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5680458756715261043, guid: c253754f61d7310aaa0e198a7bba9c22, type: 3}
@@ -1263,6 +1291,7 @@ MonoBehaviour:
     TransformParent: {fileID: 1331563670}
     DefaultCapacity: 4
   canvasGroupPanelSaving: {fileID: 1374259566}
+  canvasGroupButtonNew: {fileID: 347115284}
   textLocalizationComponent: {fileID: 1283204806}
   localizationMappingSave:
   - Style: 0

@@ -9,6 +9,12 @@ namespace Aremoreno.Enums.UI
         WaitingForSelection
     }
 
+    public enum MenuStateConfirm
+    {
+        Idle,
+        WaitingForConfirm
+    }
+
     public enum MenuStateTeam
     {
         Idle,

@@ -12,6 +12,12 @@ public class MenuSettings : Menu
     [SerializeField] private Toggle toggleScreenFlipped;
     [SerializeField] private Toggle toggleDisplayAutoDetect;
     [SerializeField] private TMP_Dropdown dropdownDisplayMode;
+    [Header("UI References - Language")]
+    [SerializeField] private TMP_Dropdown dropdownLanguage;
+    [SerializeField] private TMP_Dropdown dropdownLocalizationStyle;
+    [Header("UI References - General")]
+    [SerializeField] private Toggle toggleIsAutoSaveEnabled;
+
 
     private Settings cachedSettings;
     private SettingsManager settingsManager;
@@ -61,6 +67,9 @@ public class MenuSettings : Menu
         toggleScreenFlipped.SetIsOnWithoutNotify(cachedSettings.Common.IsScreenFlipped);
         toggleDisplayAutoDetect.SetIsOnWithoutNotify(cachedSettings.Common.IsDisplayAutoDetect);
         dropdownDisplayMode.SetValueWithoutNotify((int) cachedSettings.Common.DisplayMode);
+        dropdownLanguage.SetValueWithoutNotify(cachedSettings.Common.LocaleIndex);
+        dropdownLocalizationStyle.SetValueWithoutNotify((int) cachedSettings.Common.LocalizationStyle);
+        toggleIsAutoSaveEnabled.SetIsOnWithoutNotify(cachedSettings.Common.IsAutoSaveEnabled);
     }
 
     private void AddListeners()
@@ -70,5 +79,8 @@ public class MenuSettings : Menu
         toggleScreenFlipped.onValueChanged.AddListener(settingsManager.SetterComponent.SetIsScreenFlipped);
         toggleDisplayAutoDetect.onValueChanged.AddListener(settingsManager.SetterComponent.SetIsDisplayAutoDetect);
         dropdownDisplayMode.onValueChanged.AddListener(settingsManager.SetterComponent.SetDisplayMode);
+        dropdownLanguage.onValueChanged.AddListener(settingsManager.SetterComponent.SetLanguage);
+        dropdownLocalizationStyle.onValueChanged.AddListener(settingsManager.SetterComponent.SetLocalizationStyle);
+        toggleIsAutoSaveEnabled.onValueChanged.AddListener(settingsManager.SetterComponent.SetIsAutoSaveEnabled);
     }
 }

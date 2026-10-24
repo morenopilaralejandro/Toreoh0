@@ -103,10 +103,6 @@ MonoBehaviour:
     m_Key: text_settings
     m_Metadata:
       m_Items: []
-  - m_Id: 10490671057870848
-    m_Key: text_settings_language
-    m_Metadata:
-      m_Items: []
   - m_Id: 10490671057870849
     m_Key: text_settings_sfx
     m_Metadata:
@@ -133,6 +129,26 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 11184034757222400
     m_Key: text_settings_display_mode_double
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12307822391599104
+    m_Key: text_settings_localization_language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12307822433542144
+    m_Key: text_settings_localization_style
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12307822433542145
+    m_Key: text_settings_localization_style_localized
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12307822433542146
+    m_Key: text_settings_localization_style_romanized
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12310300726140928
+    m_Key: text_settings_save_auto
     m_Metadata:
       m_Items: []
   - m_Id: 8378817896521728
@@ -189,6 +205,22 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 11636261980479488
     m_Key: text_story_play_time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12319295427846144
+    m_Key: text_story_no_data
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12320843386068992
+    m_Key: text_story_auto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12328188375736320
+    m_Key: text_side_exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12328188400902144
+    m_Key: text_side_exit_confirm
     m_Metadata:
       m_Items: []
   - m_Id: 8378817896521729

@@ -8,6 +8,7 @@ public class SelectorSaveSlot : Selector<SaveSlot, SelectorSaveSlotListItem>
     // fields
     [Header("UI")]
     [SerializeField] private CanvasGroup canvasGroupPanelSaving;
+    [SerializeField] private CanvasGroup canvasGroupButtonNew;
     [SerializeField] private LocalizationComponentUIText textLocalizationComponent;
     [SerializeField] private List<LocalizationReferenceStyleMapping> localizationMappingSave;
     [SerializeField] private List<LocalizationReferenceStyleMapping> localizationMappingLoad;
@@ -19,9 +20,11 @@ public class SelectorSaveSlot : Selector<SaveSlot, SelectorSaveSlotListItem>
         switch (actionClick)
         {
             case SelectorSaveSlotActionClickSave save:
+                UIUtils.SetCanvasGroupVisible(canvasGroupButtonNew, false);
                 textLocalizationComponent.SetData(localizationMappingSave);
                 break;
             case SelectorSaveSlotActionClickLoad load:
+                UIUtils.SetCanvasGroupVisible(canvasGroupButtonNew, true);
                 textLocalizationComponent.SetData(localizationMappingLoad);
                 break;             
         }
