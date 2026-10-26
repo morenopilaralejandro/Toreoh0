@@ -646,7 +646,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 274a8aedf049aab039de8944d8088bce, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2549,7 +2549,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 15c19146c46eb3d0dacce72a10f46a25, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3549,7 +3549,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: c5228a77a4acdf823b84c8ba76908138, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3830,7 +3830,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 5da2b9fd325a26c7789f6289c5f52d26, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4489,6 +4489,10 @@ PrefabInstance:
     - target: {fileID: 3077577996191174028, guid: 1ff231f6b3db5a31794b2cf84a048f6c, type: 3}
       propertyPath: m_Name
       value: ButtonSecondaryAudio
+      objectReference: {fileID: 0}
+    - target: {fileID: 5922652657785802407, guid: 1ff231f6b3db5a31794b2cf84a048f6c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7540665661283177066, guid: 1ff231f6b3db5a31794b2cf84a048f6c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

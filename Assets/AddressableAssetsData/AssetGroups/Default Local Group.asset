@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: 4cef6991fe93563c8a102d091f3ae764
   m_SerializeEntries:
+  - m_GUID: 1f2d8697cf6b2584dbf7d04906f8d932
+    m_Address: Assets/Addressables/AddressablesFieldData/FieldData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6c404cea2dd7585ad8ba0a8b6cd50a70
     m_Address: sprite-chest-opened
     m_ReadOnly: 0

@@ -1,7 +1,9 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Field", menuName = "ScriptableObject/Field/FieldData")]
+[CreateAssetMenu(fileName = "FieldData", menuName = "ScriptableObject/Field/FieldData")]
 public class FieldData : ScriptableObject
 {
     public string FieldId;
+    public string BarrierId;
+    public string ProtectObstacleId;
 }

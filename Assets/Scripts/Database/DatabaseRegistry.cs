@@ -9,6 +9,11 @@ public class DatabaseRegistry
     public Database<ChestData> ChestData;
     public Database<ItemData> ItemData;
     public Database<ShopData> ShopData;
+    public Database<FieldData> FieldData;
+    public Database<ProtectObstacleData> ProtectObstacleData;
+    public Database<FormationCoordData> FormationCoordData;
+    //public Database<FormationData> FormationData;
+    public Database<BarrierData> BarrierData;
 
     // Constructor
     public DatabaseRegistry() 
@@ -26,6 +31,11 @@ public class DatabaseRegistry
         ChestData = new Database<ChestData>("ChestData", _ => _.ChestId);
         ItemData = new Database<ItemData>("ItemData", _ => _.ItemId);
         ShopData = new Database<ShopData>("ShopData", _ => _.ShopId);
+        FieldData = new Database<FieldData>("FieldData", _ => _.FieldId);
+        ProtectObstacleData = new Database<ProtectObstacleData>("ProtectObstacleData", _ => _.ProtectObstacleId);
+        FormationCoordData = new Database<FormationCoordData>("FormationCoordData", _ => _.FormationCoordId);
+        //FormationData = new Database<FormationData>("FormationData", _ => _.FormationId);
+        BarrierData = new Database<BarrierData>("BarrierData", _ => _.BarrierId);
     }
 
     public IEnumerable<IAsyncDatabase> GetAllDatabases() 
@@ -36,6 +46,11 @@ public class DatabaseRegistry
         yield return ChestData;
         yield return ItemData;
         yield return ShopData;
+        yield return FieldData;
+        yield return ProtectObstacleData;
+        yield return FormationCoordData;
+        //yield return FormationData;
+        //yield return BarrierData;
     }
 
 }

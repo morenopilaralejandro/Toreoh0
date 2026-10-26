@@ -44,6 +44,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ScenesUI/SceneMainMenuUI.unity
     guid: f5ba6aa03fc023ce0b7547079c1d425e
+  - enabled: 1
+    path: Assets/Scenes/ScenesSystem/SceneBattleSystem.unity
+    guid: 9e4c329da895efca69a92c0c67e3ac1d
+  - enabled: 1
+    path: Assets/Scenes/ScenesUI/SceneDebugBattleUI.unity
+    guid: 1506d7a913c781f429b4e456bcf16e75
+  - enabled: 1
+    path: Assets/Scenes/ScenesUI/SceneBattleUI.unity
+    guid: 44fb72222824b420180aa67a2eb2ec3a
+  - enabled: 1
+    path: Assets/Scenes/ScenesEnvironment/SceneBattleMap.unity
+    guid: a44fdea99cc068381af807ee5a778eda
   m_configObjects:
     com.unity.adaptivePerformance.basic.provider_settings: {fileID: 11400000, guid: b8af9ae6712e711fa848047a7421583e, type: 2}
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 4dab92d3e12dc18e28fa1e064e7daefb, type: 2}
