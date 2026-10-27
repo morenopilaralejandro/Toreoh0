@@ -27,4 +27,7 @@ public static class AddressableBuilder
 
     public static string GetItemIconAddress(string id) =>
         BuildAddress(config.PathItemIcon, id);
+
+    public static string GetProtectObstacleSpriteAddress(string id, string state) =>
+        BuildAddress(config.PathProtectObstacleSprite, id, state);
 }

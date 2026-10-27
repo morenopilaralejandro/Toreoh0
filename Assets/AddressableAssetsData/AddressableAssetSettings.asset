@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 4cef6991fe93563c8a102d091f3ae764
   m_currentHash:
     serializedVersion: 2
-    Hash: 00000000000000000000000000000000
+    Hash: f80d7075de561bb94351dc57a18d2a15
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_CatalogRequestsTimeout: 0
@@ -62,6 +62,7 @@ MonoBehaviour:
   m_overridePlayerVersion: '[UnityEditor.PlayerSettings.bundleVersion]'
   m_GroupAssets:
   - {fileID: 11400000, guid: 5b61eaa14920a02d9844892ed19c9e3c, type: 2}
+  - {fileID: 11400000, guid: 28460caf2e8708de8be5a4328d8457ae, type: 2}
   - {fileID: 11400000, guid: 5f70bae5e1b8b86388d075a4eace2f38, type: 2}
   - {fileID: 11400000, guid: 7cc490b0831d9e019ae51705a0652211, type: 2}
   - {fileID: 11400000, guid: 7caaac5e777ed84b5bcd96bf9f3acc38, type: 2}
@@ -136,6 +137,7 @@ MonoBehaviour:
     - FieldData
     - ProtectObstacleData
     - BarrierData
+    - CapturePortalData
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: e2eb207bdb412270db2eb7bccad87051, type: 2}

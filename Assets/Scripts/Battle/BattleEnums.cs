@@ -42,4 +42,33 @@ namespace Aremoreno.Enums.Battle
         home -> south, east
         away -> north, west
     */
+
+    public enum BattleState
+    {
+        Idle,
+        Processing,
+        InCutscene,
+        Paused,
+        Ended
+    }
+
+    public enum BattlePhase
+    {
+        Varas,
+        Banderillas,
+        Muerte,
+        Capture
+    }
+
+    public enum ProtectObstacleState
+    {
+        Allright,
+        Damaged,
+        Wrecked
+    }
+
+    public enum BarrierType 
+    {
+        LineMedium
+    }
 }

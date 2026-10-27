@@ -12,5 +12,11 @@ public class MenuDebugMain : Menu
         SceneLoaderManager.Instance.ReplaceGroup("SceneGroupData-World");
     }
 
+    public void OnButtonBattleClicked()
+    {
+        BattleArgs.SetForTest();
+        SceneLoaderManager.Instance.ReplaceGroup("SceneGroupData-Battle");
+    }
+
     public void OnButtonMainClicked() => SceneLoaderManager.Instance.ReplaceGroup("SceneGroupData-MainMenu");
 }

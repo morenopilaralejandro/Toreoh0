@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 using Aremoreno.Enums.Battle;
 
 [CreateAssetMenu(fileName = "BattleConfig", menuName = "ScriptableObject/Battle/BattleConfig")]
@@ -9,6 +10,35 @@ public class BattleConfig : ScriptableObject
     public bool IsDamageBoostEnable;
     public float DamageBoost;
     public bool IsDebugCatchEnable;
+
+    [Header("Field")]
+    public int CountBarrier;
+    public int CountCapturePortal;
+    public int CountProtectObstacle;
+
+    [Header("SpawnContainer")]
+    public Vector3 SpawnContainerBarrier;
+    public Vector3 SpawnContainerProtectObstacle;
+
+    [Header("Coords")]
+    public List<FormationCoordData> ListCoordProtectObstacles;
+    public List<BarrierSpawnPositionMapping> ListCoordBarrier;
+    public List<CharacterSpawnPositionMapping> ListCoordCharacter;
+
+    [Header ("Barrier")]
+    public List<BarrierTypeMapping> ListBarrierTypeMapping;
+
+    public Dictionary<BattleSide, CharacterSpawnPositionMapping> DictListCoordCharacterSpawn = new();
+    public Dictionary<BarrierType, BarrierTypeMapping> DictBarrierTypeMapping = new();
+    
+    public void Initialize() 
+    {
+        foreach (var mapping in ListCoordCharacter)
+            DictListCoordCharacterSpawn[mapping.BattleSide] = mapping;
+
+        foreach (var mapping in ListBarrierTypeMapping)
+            DictBarrierTypeMapping[mapping.BarrierType] = mapping;
+    }
 }
 
 /*

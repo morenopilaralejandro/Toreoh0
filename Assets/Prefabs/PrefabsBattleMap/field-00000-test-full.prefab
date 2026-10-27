@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5303525005961475066, guid: a5606392d06fd9b948c5d2e701bc71df, type: 3}
       propertyPath: m_Name
-      value: battlemap-00001-city-full
+      value: field-00000-test-full
       objectReference: {fileID: 0}
     - target: {fileID: 6450793518489442983, guid: a5606392d06fd9b948c5d2e701bc71df, type: 3}
       propertyPath: m_Tiles.Array.size
@@ -2145,7 +2145,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 302431796, guid: d90bd864c84a261259c6a69830995646, type: 3}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4830062243296708201, guid: a5606392d06fd9b948c5d2e701bc71df, type: 3}
+    - {fileID: 3423385619337915458, guid: a5606392d06fd9b948c5d2e701bc71df, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5606392d06fd9b948c5d2e701bc71df, type: 3}
