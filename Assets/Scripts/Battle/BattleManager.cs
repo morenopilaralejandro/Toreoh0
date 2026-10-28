@@ -5,6 +5,8 @@ public class BattleManager : MonoBehaviour, IAsyncSceneLoader
 {
     public static BattleManager Instance { get; private set; }
     [SerializeField] private BattleConfig config;
+    [SerializeField] private Transform parentTileMap;
+    [SerializeField] private Transform parentProtectObstacle;
 
     public Battle Battle;
 
@@ -19,25 +21,22 @@ public class BattleManager : MonoBehaviour, IAsyncSceneLoader
         //DontDestroyOnLoad(gameObject);
     }
 
-    public void Initialize() 
+    private void OnDestroy()
     {
-
+        Battle?.Dispose();
     }
 
     public async Task LoadAsync() 
     {
-        config.Initialize();
-        Initialize();
-        // obstacles
+        Battle = new Battle(config, parentTileMap, parentProtectObstacle);
+        await Battle.FieldComponent.LoadAsync();
         // characters etc
     }
 
-    // Instantiate
-
+    // Instantiate - Move to address manager if not working
     public Object InstantiateGameObject(Object prefab) => Instantiate(prefab);
     public Object InstantiateGameObject(Object prefab, Transform parent) => Instantiate(prefab, parent);
     public Object InstantiateGameObject(Object prefab, Vector3 pos, Quaternion rot) => Instantiate(prefab, pos, rot);
     public Object InstantiateGameObject(Object prefab, Vector3 pos, Quaternion rot, Transform parent) => Instantiate(prefab, pos, rot, parent);
     public void DestroyGameObject(Object go, float time = 0.0f) => Destroy(go, time);
-    
 }

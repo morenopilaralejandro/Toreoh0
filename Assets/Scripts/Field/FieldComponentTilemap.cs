@@ -1,12 +1,26 @@
-public class FieldComponentTilemap : mono
+using UnityEngine;
+using System.Threading.Tasks;
+
+public class FieldComponentTilemap
 {
-    turn this into a mono behaviour
-    and clear the binding on destroy
+    private Field field;
+    private Transform parentTileMap;
+    private readonly AddressableBinding<GameObject> binding = new();
 
-    get the prefab as async with binding GameObject
+    public FieldComponentTilemap(Field field, Transform parentTileMap)
+    {
+        this.field = field;
+        this.parentTileMap = parentTileMap;
+    }
 
+    public void Clear()
+    {
+        binding.CancelAndRelease();
+    }
 
-    transform spawn poit
-
-
+    public async Task SetAsync() 
+    {
+        var prefab = await binding.LoadAssetAsync(field.AppearanceComponent.AddressFieldTileMap);
+        BattleManager.Instance.InstantiateGameObject(prefab, parentTileMap);
+    }
 }

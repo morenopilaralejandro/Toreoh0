@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 098326903574f9cd286fe8dea7536d5e, type: 3}
   m_Name: FieldData
   m_EditorClassIdentifier: Assembly-CSharp::FieldData
-  FieldId: 
+  FieldId: field-00000-test-full
   BarrierId: 
-  ProtectObstacleId: 
+  ProtectObstacleId: protect_object-00000-test

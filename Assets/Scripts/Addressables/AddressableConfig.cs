@@ -12,4 +12,5 @@ public class AddressableConfig : ScriptableObject
     public string PathCharacterPortrait;
     public string PathItemIcon;
     public string PathProtectObstacleSprite;
+    public string PathFieldTileMap;
 }

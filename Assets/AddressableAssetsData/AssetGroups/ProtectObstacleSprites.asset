@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: ProtectObstacleSprites
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: ProtectObstacleSprites
+  m_GUID: 5a4e0bdc4acd82abdabd9d1556150808
+  m_SerializeEntries:
+  - m_GUID: 0515c232ac98ab4ae913bbf87069e25c
+    m_Address: sprite-protect_object-00000-test-wrecked
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: beeefdc223d58f5458ea85ee7015750f
+    m_Address: sprite-protect_object-00000-test-allright
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: fd8f0a373a4da231f8de6474b1779402, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 79580c1fea9ea562392291bda2baa505, type: 2}
+    - {fileID: 11400000, guid: 076121e5e970aa0d79f4a40dce7b093f, type: 2}

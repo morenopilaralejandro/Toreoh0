@@ -1,24 +1,43 @@
+using UnityEngine;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
 public class FieldComponentProtectObstacle
 {
     private Field field;
+    private Transform parentProtectObstacle;
+    private readonly AddressableBinding<GameObject> binding = new();
+    public List<ProtectObstacle> ListProtectObstacle = new ();
 
-    binding
-
-    turn this into a mono behaviour and crear the binding on destroy
-    this is a task
-
-
-    public FieldComponentProtectObstacle(Field field)
+    public FieldComponentProtectObstacle(Field field, Transform parentProtectObstacle)
     {
         this.field = field;
-        
+        this.parentProtectObstacle = parentProtectObstacle;
+    }
+
+    public void Clear()
+    {
+        ListProtectObstacle.Clear();
+        binding.CancelAndRelease();
+    }
+
+    public async Task LoadAsync()
+    {
+        var prefab = await binding.LoadAssetAsync("prefab-ProtectObstacleEntity");
         var listFormationCoord = field.FormationComponent.Formation.CoordsComponent.ListFormationCoord;
+        var data = DatabaseManager.Instance.DatabaseRegistry.ProtectObstacleData.Get(field.AttributesComponent.ProtectObstacleId);
 
         for (int i = 1; i < listFormationCoord.Count; i++) 
         {
-            //Instance() ProtectObstacle
-            Instance
-            await protectObstacleEntity LoadAsync
+            var go = BattleManager.Instance.InstantiateGameObject(
+                prefab, 
+                listFormationCoord[i].PositionComponent.FormationCoordPosition,
+                Quaternion.identity, 
+                parentProtectObstacle) as GameObject;
+            var entity = go.GetComponent<ProtectObstacleEntity>();
+            ListProtectObstacle.Add(entity.ProtectObstacle);
+            entity.Initialize(data);
+            await entity.LoadAsync();
         }
     }
 }

@@ -30,4 +30,7 @@ public static class AddressableBuilder
 
     public static string GetProtectObstacleSpriteAddress(string id, string state) =>
         BuildAddress(config.PathProtectObstacleSprite, id, state);
+
+    public static string GetFieldTileMapAddress(string id) =>
+        BuildAddress(config.PathFieldTileMap, id);
 }

@@ -7,6 +7,7 @@ public class DisplayCanvas : MonoBehaviour
     [SerializeField] private Canvas canvas;
     [SerializeField] private RectTransform rectTransformDebug;
     [SerializeField] private string sortingLayerName;
+    [SerializeField] private float planeDistance = 0.1f;
 
     private void Awake() 
     {
@@ -33,5 +34,6 @@ public class DisplayCanvas : MonoBehaviour
         canvas.worldCamera = DisplayManager.Instance.GetCamera(DisplayScreen);
         canvas.targetDisplay = DisplayManager.Instance.GetTargetDisplay(DisplayScreen);;
         canvas.sortingLayerName = sortingLayerName;
+        canvas.planeDistance = planeDistance;
     }
 }

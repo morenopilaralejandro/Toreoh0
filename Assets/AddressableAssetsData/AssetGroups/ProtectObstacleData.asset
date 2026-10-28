@@ -14,7 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: ProtectObstacleData
   m_GUID: bf76153a41bd9cf129e5f4f8b004ccd6
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: ef9f66446b116c2d8977bda3b5f586ad
+    m_Address: Assets/Addressables/AddressablesFieldDataProtectObstacle/protect_object-00000-test.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ProtectObstacleData
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: fd8f0a373a4da231f8de6474b1779402, type: 2}
   m_SchemaSet:

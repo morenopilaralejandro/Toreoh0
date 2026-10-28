@@ -16,10 +16,6 @@ public class BattleConfig : ScriptableObject
     public int CountCapturePortal;
     public int CountProtectObstacle;
 
-    [Header("SpawnContainer")]
-    public Vector3 SpawnContainerBarrier;
-    public Vector3 SpawnContainerProtectObstacle;
-
     [Header("Coords")]
     public List<FormationCoordData> ListCoordProtectObstacles;
     public List<BarrierSpawnPositionMapping> ListCoordBarrier;

@@ -9,9 +9,7 @@ public static class RandomUtils
         var random = new Random();
         HashSet<int> hashSet = new HashSet<int>(count);
         while (hashSet.Count < count) 
-        {
             hashSet.Add(random.Next(min, max));
-        }
         return hashSet;
     }
 }

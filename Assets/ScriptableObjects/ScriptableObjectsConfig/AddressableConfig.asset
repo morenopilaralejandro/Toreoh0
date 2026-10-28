@@ -17,3 +17,5 @@ MonoBehaviour:
   SeparatorPathSub: _
   PathCharacterPortrait: sprite-character-portrait
   PathItemIcon: sprite-item
+  PathProtectObstacleSprite: sprite
+  PathFieldTileMap: tilemap
