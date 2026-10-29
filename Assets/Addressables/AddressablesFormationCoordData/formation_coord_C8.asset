@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: formation_coord_C8
   m_EditorClassIdentifier: Assembly-CSharp::FormationCoordData
   FormationCoordId: C8
-  FormationCoordPositionX: -0.5
+  FormationCoordPositionX: 0.5
   FormationCoordPositionY: -4.5
   FormationCoordPositionZ: 0

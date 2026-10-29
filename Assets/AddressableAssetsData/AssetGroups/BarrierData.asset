@@ -14,7 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: BarrierData
   m_GUID: 20d98e78f5fd3c8a991a45f467428cb4
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 0efb74c9d37197cedabc7810da1f71cd
+    m_Address: Assets/Addressables/AddressablesFieldDataBarrier/barrier-00000-test.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - BarrierData
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: fd8f0a373a4da231f8de6474b1779402, type: 2}
   m_SchemaSet:

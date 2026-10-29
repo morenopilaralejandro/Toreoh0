@@ -15,7 +15,9 @@ public class DatabaseRegistry
     //public Database<FormationData> FormationData;
     public Database<FormationBarrierData> FormationBarrierData;
     public Database<BarrierData> BarrierData;
-    public Database<CapturePortalData> CapturePortalData;
+    //public Database<CapturePortalData> CapturePortalData;
+    public Database<CharacterData> CharacterData;
+    public Database<TeamData> TeamData;
 
     // Constructor
     public DatabaseRegistry() 
@@ -39,7 +41,9 @@ public class DatabaseRegistry
         //FormationData = new Database<FormationData>("FormationData", _ => _.FormationId);
         FormationBarrierData = new Database<FormationBarrierData>("FormationBarrierData", _ => _.FormationBarrierId);
         BarrierData = new Database<BarrierData>("BarrierData", _ => _.BarrierId);
-        CapturePortalData = new Database<CapturePortalData>("CapturePortalData", _ => _.CapturePortalId);
+        //CapturePortalData = new Database<CapturePortalData>("CapturePortalData", _ => _.CapturePortalId);
+        CharacterData = new Database<CharacterData>("CharacterData", _ => _.CharacterId);
+        TeamData = new Database<TeamData>("TeamData", _ => _.TeamId);
     }
 
     public IEnumerable<IAsyncDatabase> GetAllDatabases() 
@@ -56,7 +60,9 @@ public class DatabaseRegistry
         //yield return FormationData;
         yield return FormationBarrierData;
         yield return BarrierData;
-        yield return CapturePortalData;
+        //yield return CapturePortalData;
+        yield return CharacterData;
+        yield return TeamData;
     }
 
 }

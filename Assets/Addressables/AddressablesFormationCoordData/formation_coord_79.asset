@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FormationCoordData
   FormationCoordId: 79
   FormationCoordPositionX: 1.5
-  FormationCoordPositionY: 1.5
+  FormationCoordPositionY: 0.5
   FormationCoordPositionZ: 0

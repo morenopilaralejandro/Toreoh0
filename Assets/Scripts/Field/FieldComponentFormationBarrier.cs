@@ -20,12 +20,12 @@ public class FieldComponentFormationBarrier
         Add(formationBarrierData.BarrierId3, formationBarrierData.CoordId3, formationBarrierData.RotationZ3);
     }
 
-    private void Add(string barrierId, string formationCoordId, float rotY)
+    private void Add(string barrierId, string formationCoordId, float rotZ)
     {
         ListBarrierId.Add(barrierId);
         var formationCoordData = DatabaseManager.Instance.DatabaseRegistry.FormationCoordData.Get(formationCoordId);
         var coord = new FormationCoord(formationCoordData);
-        coord.RotationComponent.SetRotationEuler(0f, rotY, 0f);
+        coord.RotationComponent.SetRotationEuler(0f, 0f, rotZ);
         Formation.CoordsComponent.ListFormationCoord.Add(coord);
     }
 }

@@ -16,12 +16,12 @@ MonoBehaviour:
   m_GUID: 5a4e0bdc4acd82abdabd9d1556150808
   m_SerializeEntries:
   - m_GUID: 0515c232ac98ab4ae913bbf87069e25c
-    m_Address: sprite-protect_object-00000-test-wrecked
+    m_Address: sprite-protect_obstacle-00000-test-wrecked
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: beeefdc223d58f5458ea85ee7015750f
-    m_Address: sprite-protect_object-00000-test-allright
+    m_Address: sprite-protect_obstacle-00000-test-allright
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

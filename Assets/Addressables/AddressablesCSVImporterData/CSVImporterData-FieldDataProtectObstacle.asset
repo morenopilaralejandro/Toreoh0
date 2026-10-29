@@ -23,18 +23,10 @@ MonoBehaviour:
     - ProtectObstacleData
   FieldMappings:
   - SerializableFieldCustom: 0
-    FieldName: FormationCoordId
-    ColumnName: FormationCoordId
+    FieldName: ProtectObstacleId
+    ColumnName: ProtectObstacleId
     EnumGenericType: 0
-  - SerializableFieldCustom: 3
-    FieldName: FormationCoordPositionX
-    ColumnName: FormationCoordPositionX
-    EnumGenericType: 0
-  - SerializableFieldCustom: 3
-    FieldName: FormationCoordPositionY
-    ColumnName: FormationCoordPositionY
-    EnumGenericType: 0
-  - SerializableFieldCustom: 3
-    FieldName: FormationCoordPositionZ
-    ColumnName: FormationCoordPositionZ
+  - SerializableFieldCustom: 0
+    FieldName: SfxAddress
+    ColumnName: SfxAddress
     EnumGenericType: 0

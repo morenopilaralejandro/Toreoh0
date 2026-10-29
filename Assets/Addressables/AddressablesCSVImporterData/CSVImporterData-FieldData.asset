@@ -23,18 +23,14 @@ MonoBehaviour:
     - FieldData
   FieldMappings:
   - SerializableFieldCustom: 0
-    FieldName: FormationCoordId
-    ColumnName: FormationCoordId
+    FieldName: FieldId
+    ColumnName: FieldId
     EnumGenericType: 0
   - SerializableFieldCustom: 3
-    FieldName: FormationCoordPositionX
-    ColumnName: FormationCoordPositionX
+    FieldName: ProtectObstacleId
+    ColumnName: ProtectObstacleId
     EnumGenericType: 0
   - SerializableFieldCustom: 3
-    FieldName: FormationCoordPositionY
-    ColumnName: FormationCoordPositionY
-    EnumGenericType: 0
-  - SerializableFieldCustom: 3
-    FieldName: FormationCoordPositionZ
-    ColumnName: FormationCoordPositionZ
+    FieldName: FormationBarrierId
+    ColumnName: FormationBarrierId
     EnumGenericType: 0

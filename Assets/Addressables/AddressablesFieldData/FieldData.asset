@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: FieldData
   m_EditorClassIdentifier: Assembly-CSharp::FieldData
   FieldId: field-00000-test-full
-  ProtectObstacleId: protect_object-00000-test
+  ProtectObstacleId: protect_obstacle-00000-test
   FormationBarrierId: 'formation_barrier-00000-test '

@@ -4,6 +4,7 @@ public class Battle
 {
     public BattleComponentConfig ConfigComponent;
     public BattleComponentField FieldComponent;
+    public BattleComponentCharacter CharacterComponent;
 
     public Battle(
         BattleConfig battleConfig, 
@@ -18,5 +19,6 @@ public class Battle
     public void Dispose() 
     {
         FieldComponent.Dispose();
+        CharacterComponent.Dispose();
     }
 }

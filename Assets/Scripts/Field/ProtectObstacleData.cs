@@ -4,4 +4,5 @@ using UnityEngine;
 public class ProtectObstacleData : ScriptableObject
 {
     public string ProtectObstacleId;
+    public string SfxAddress;
 }

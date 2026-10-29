@@ -16,7 +16,7 @@ MonoBehaviour:
   m_GUID: 390cb09e40fb67485a89258a5e50cb63
   m_SerializeEntries:
   - m_GUID: 0e02ef16b5b6f691e8fd79b2ed73bb9f
-    m_Address: BarrierEntityLineMedium
+    m_Address: BarrierEntity-LineMedium
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

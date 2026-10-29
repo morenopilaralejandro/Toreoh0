@@ -63,6 +63,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - FormationCoordData
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 094165799f6311328b32bfbf1048dfc4
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_04.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0993af355f83eb066a3284039c7f3bba
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_0F.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 09c14bce44643885f891c40a5f5202f8
     m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_E7.asset
     m_ReadOnly: 0
@@ -99,6 +111,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - FormationCoordData
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1198cd03823c2b9d68313483c7c91bce
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_20.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1220f6acd487abd6eab902d5b006f353
     m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_E5.asset
     m_ReadOnly: 0
@@ -117,8 +135,20 @@ MonoBehaviour:
     m_SerializedLabels:
     - FormationCoordData
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 12cf5344f805c36959a80b2e77478ea6
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_B0.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 16c38c1a5921726c2a7fd43094f14dc3
     m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_EF.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 177abc1bbc89c99b2a3506686989e847
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_00.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - FormationCoordData
@@ -141,8 +171,20 @@ MonoBehaviour:
     m_SerializedLabels:
     - FormationCoordData
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 23543bc7af3f3936a972335e1275ebe6
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_03.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 23e2ef2ba45cb89568c42c6ecc09c6ed
     m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_4B.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 24d3093db59ebc9f19f050deb64db688
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_40.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - FormationCoordData
@@ -161,6 +203,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 262253923d58177048fdecea3a1bd206
     m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_31.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 26cddb6a0d7a0d24a91bd11d2beb7b3e
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_D0.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - FormationCoordData
@@ -191,6 +239,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2b33981ab8aa89a749ae5176d3ef412f
     m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_88.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2d2b1f597470fbdeea5ccc1447548fec
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_02.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - FormationCoordData
@@ -317,6 +371,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4454e4526009c41d5a7699ca828d942c
     m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_F4.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 469bcd9dce820b1668554400845e97fe
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_01.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - FormationCoordData
@@ -453,6 +513,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - FormationCoordData
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a8f9f6d7b4a97360802c1b54d6c9831
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_80.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5ab35495c238c8164984adf621b677bc
     m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_5F.asset
     m_ReadOnly: 0
@@ -537,6 +603,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - FormationCoordData
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6e4b14fee8269f8848531bff98a4eac6
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_07.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 71d16c70d2eba0b0899ab4e333e360ef
     m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_49.asset
     m_ReadOnly: 0
@@ -569,6 +641,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7c3adc2056867eadfbbbb896f7dfa386
     m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_71.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7c78508b9728f0a86a440dc0e6af38da
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_08.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - FormationCoordData
@@ -635,6 +713,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 838ed097ad9f07d80b83343a5697e113
     m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_72.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 848ec05c2923c8056b41199a59f09b98
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_60.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - FormationCoordData
@@ -747,6 +831,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - FormationCoordData
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8fcc7245524e30197ba7aa472d1ef4bc
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_A0.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 90ec8f5bc80f4884ea27bd653e36dd87
     m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_45.asset
     m_ReadOnly: 0
@@ -755,6 +845,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 91e91aae36cb2d3b8b945066f025ec21
     m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_F2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 93ddefad900ea99ce985b8e3d35ecc5f
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_0C.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - FormationCoordData
@@ -909,6 +1005,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - FormationCoordData
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b0599513d4c5b26738eebb76e4a5fb18
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_10.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b08ff2329f593a3338643821a00cf221
     m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_ED.asset
     m_ReadOnly: 0
@@ -923,6 +1025,18 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b10b211cb90f14110bf7de2a793da082
     m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_3B.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b142b795d4709dd8c89be809fce7b5f0
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_C0.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b30a422f098e11c00ab0df4eef14fe06
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_F0.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - FormationCoordData
@@ -945,8 +1059,20 @@ MonoBehaviour:
     m_SerializedLabels:
     - FormationCoordData
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b79a5cda2a918b1c4b7f45d760b92893
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_05.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b91aa526fa1d1be8fa3326cc6af45d57
     m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_74.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bb7e70d780afb2876bfab556871f1782
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_70.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - FormationCoordData
@@ -987,6 +1113,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - FormationCoordData
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bfcbbcc09891afe64aa0e0b22fff86df
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_0A.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c15496fffdec7f7d694d8cc11b736878
     m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_CD.asset
     m_ReadOnly: 0
@@ -1007,6 +1139,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c286c929452d7b06e8e8798c8e5a43df
     m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_B6.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c33566d9eaf84809cbb617ed718fe9c9
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_90.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - FormationCoordData
@@ -1095,6 +1233,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - FormationCoordData
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cf1dd243c97c692d9a60ae71ab9f7fce
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_0D.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d0588c14fc0fa5fd8a0fb83337dd4f1f
     m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_DC.asset
     m_ReadOnly: 0
@@ -1113,6 +1257,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - FormationCoordData
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d1bf6b3a6c6def52e823e2d2fd69c579
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_50.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d32b277d323020081b106254fe2cc360
     m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_D6.asset
     m_ReadOnly: 0
@@ -1125,6 +1275,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - FormationCoordData
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d4571bee5e24067fa9caea3f0dbe6012
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_06.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d46658ac88fab01b09aeb54c43e2f064
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_30.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d5bbad9d7563eb747ba3a3d4be21ff2b
     m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_5D.asset
     m_ReadOnly: 0
@@ -1133,6 +1295,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d78a2e326b22eebbda0a484c198afe01
     m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_C2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d88f4a719912579128c3858df7fd7d9d
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_0E.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - FormationCoordData
@@ -1167,6 +1335,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - FormationCoordData
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e1317cfc82ed81b1a8e98b2987d0f4fc
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_E0.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e2ef3935200a370fbba2697f17663068
     m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_8E.asset
     m_ReadOnly: 0
@@ -1193,6 +1367,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e623f242cc35492c590ad5f754d87fd8
     m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_A5.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e62802b95c3141eb4b49728fb6ec3830
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_0B.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - FormationCoordData
@@ -1319,6 +1499,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fca9b95db7df5796187e5bde9a4d3179
     m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_1C.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FormationCoordData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fcef43f7e6ccc3f0191db4ebd932af9a
+    m_Address: Assets/Addressables/AddressablesFormationCoordData/formation_coord_09.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - FormationCoordData

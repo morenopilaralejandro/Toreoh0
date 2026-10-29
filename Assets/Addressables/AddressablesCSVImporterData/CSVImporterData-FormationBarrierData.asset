@@ -12,29 +12,65 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e6b9e9c5c27bdcfa941ba98dfb5946, type: 3}
   m_Name: CSVImporterData-FormationBarrierData
   m_EditorClassIdentifier: Assembly-CSharp::CSVImporterData
-  CSVFileName: FormationCoordData
-  OutputFolder: AddressablesFormationCoordData
-  ScriptableObjectTypeName: FormationCoordData
-  AssetNamePrefix: formation_coord_
-  IdFieldName: FormationCoordId
-  AddressableGroup: 75120bec9953b35ce9ad75f4c0082355
+  CSVFileName: FormationBarrierData
+  OutputFolder: AddressablesFormationBarrierData
+  ScriptableObjectTypeName: FormationBarrierData
+  AssetNamePrefix: 
+  IdFieldName: 'FormationBarrierId '
+  AddressableGroup: e3a7e39b6d4f855dbbd727f9db603677
   AddressableLabels:
     LabelList:
-    - FormationCoordData
+    - FormationBarrierData
   FieldMappings:
   - SerializableFieldCustom: 0
-    FieldName: FormationCoordId
-    ColumnName: FormationCoordId
+    FieldName: FormationBarrierId
+    ColumnName: FormationBarrierId
+    EnumGenericType: 0
+  - SerializableFieldCustom: 0
+    FieldName: BarrierId0
+    ColumnName: BarrierId0
+    EnumGenericType: 0
+  - SerializableFieldCustom: 0
+    FieldName: CoordId0
+    ColumnName: CoordId0
     EnumGenericType: 0
   - SerializableFieldCustom: 3
-    FieldName: FormationCoordPositionX
-    ColumnName: FormationCoordPositionX
+    FieldName: RotationZ0
+    ColumnName: RotationZ0
+    EnumGenericType: 0
+  - SerializableFieldCustom: 0
+    FieldName: BarrierId1
+    ColumnName: BarrierId1
+    EnumGenericType: 0
+  - SerializableFieldCustom: 0
+    FieldName: CoordId1
+    ColumnName: CoordId1
     EnumGenericType: 0
   - SerializableFieldCustom: 3
-    FieldName: FormationCoordPositionY
-    ColumnName: FormationCoordPositionY
+    FieldName: RotationZ1
+    ColumnName: RotationZ1
+    EnumGenericType: 0
+  - SerializableFieldCustom: 0
+    FieldName: BarrierId2
+    ColumnName: BarrierId2
+    EnumGenericType: 0
+  - SerializableFieldCustom: 0
+    FieldName: CoordId2
+    ColumnName: CoordId2
     EnumGenericType: 0
   - SerializableFieldCustom: 3
-    FieldName: FormationCoordPositionZ
-    ColumnName: FormationCoordPositionZ
+    FieldName: RotationZ2
+    ColumnName: RotationZ2
+    EnumGenericType: 0
+  - SerializableFieldCustom: 0
+    FieldName: BarrierId3
+    ColumnName: BarrierId3
+    EnumGenericType: 0
+  - SerializableFieldCustom: 0
+    FieldName: CoordId3
+    ColumnName: CoordId3
+    EnumGenericType: 0
+  - SerializableFieldCustom: 3
+    FieldName: RotationZ3
+    ColumnName: RotationZ3
     EnumGenericType: 0

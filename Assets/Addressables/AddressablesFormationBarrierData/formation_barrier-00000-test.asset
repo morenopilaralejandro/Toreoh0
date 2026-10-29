@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: formation_barrier-00000-test
   m_EditorClassIdentifier: Assembly-CSharp::FormationBarrierData
   FormationBarrierId: 'formation_barrier-00000-test '
-  BarrierId0: 
-  CoordId0: 
-  RotationY0: 0
-  BarrierId1: 
-  CoordId1: 
-  RotationY1: 0
-  BarrierId2: 
-  CoordId2: 
-  RotationY2: 0
-  BarrierId3: 
-  CoordId3: 
-  RotationY3: 0
+  BarrierId0: barrier-00000-test
+  CoordId0: D8
+  RotationZ0: 0
+  BarrierId1: barrier-00000-test
+  CoordId1: 28
+  RotationZ1: 0
+  BarrierId2: barrier-00000-test
+  CoordId2: 72
+  RotationZ2: 90
+  BarrierId3: barrier-00000-test
+  CoordId3: 7D
+  RotationZ3: 90

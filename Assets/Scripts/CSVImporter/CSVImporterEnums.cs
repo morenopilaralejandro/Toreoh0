@@ -22,6 +22,7 @@ namespace Aremoreno.Enums.CSVImporter
         ItemCategory,
         ItemSpriteType,
         ItemUsageContext,
-        CurrencyType
+        CurrencyType,
+        BarrierType
     }
 }
