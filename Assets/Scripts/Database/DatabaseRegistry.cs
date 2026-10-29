@@ -13,6 +13,7 @@ public class DatabaseRegistry
     public Database<ProtectObstacleData> ProtectObstacleData;
     public Database<FormationCoordData> FormationCoordData;
     //public Database<FormationData> FormationData;
+    public Database<FormationBarrierData> FormationBarrierData;
     public Database<BarrierData> BarrierData;
     public Database<CapturePortalData> CapturePortalData;
 
@@ -36,6 +37,7 @@ public class DatabaseRegistry
         ProtectObstacleData = new Database<ProtectObstacleData>("ProtectObstacleData", _ => _.ProtectObstacleId);
         FormationCoordData = new Database<FormationCoordData>("FormationCoordData", _ => _.FormationCoordId);
         //FormationData = new Database<FormationData>("FormationData", _ => _.FormationId);
+        FormationBarrierData = new Database<FormationBarrierData>("FormationBarrierData", _ => _.FormationBarrierId);
         BarrierData = new Database<BarrierData>("BarrierData", _ => _.BarrierId);
         CapturePortalData = new Database<CapturePortalData>("CapturePortalData", _ => _.CapturePortalId);
     }
@@ -52,6 +54,7 @@ public class DatabaseRegistry
         yield return ProtectObstacleData;
         yield return FormationCoordData;
         //yield return FormationData;
+        yield return FormationBarrierData;
         yield return BarrierData;
         yield return CapturePortalData;
     }

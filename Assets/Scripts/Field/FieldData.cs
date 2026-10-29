@@ -4,6 +4,6 @@ using UnityEngine;
 public class FieldData : ScriptableObject
 {
     public string FieldId;
-    public string BarrierId;
     public string ProtectObstacleId;
+    public string FormationBarrierId;
 }

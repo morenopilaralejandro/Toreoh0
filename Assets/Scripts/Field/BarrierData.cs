@@ -6,6 +6,6 @@ public class BarrierData : ScriptableObject
 {
     public string BarrierId;
     public BarrierType BarrierType;
-    // get sprite by id
+    public string SpriteAddress;
     public string SfxAddress;
 }

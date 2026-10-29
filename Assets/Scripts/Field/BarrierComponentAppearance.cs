@@ -4,6 +4,6 @@ public class BarrierComponentAppearance
 
     public BarrierComponentAppearance(BarrierData data) 
     {
-        //AddressProtectObstacleSprite = AddressableBuilder.GetItemIconAddress(data.ItemSpriteType.ToString().ToLower());
+        AddressSprite = data.SpriteAddress;
     }
 }

@@ -13,4 +13,5 @@ public class AddressableConfig : ScriptableObject
     public string PathItemIcon;
     public string PathProtectObstacleSprite;
     public string PathFieldTileMap;
+    public string PathBarrierPrefab;
 }

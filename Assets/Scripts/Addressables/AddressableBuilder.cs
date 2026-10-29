@@ -33,4 +33,7 @@ public static class AddressableBuilder
 
     public static string GetFieldTileMapAddress(string id) =>
         BuildAddress(config.PathFieldTileMap, id);
+
+    public static string GetBarrierPrefabAddress(string id) =>
+        BuildAddress(config.PathBarrierPrefab, id);
 }

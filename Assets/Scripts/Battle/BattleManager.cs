@@ -7,6 +7,7 @@ public class BattleManager : MonoBehaviour, IAsyncSceneLoader
     [SerializeField] private BattleConfig config;
     [SerializeField] private Transform parentTileMap;
     [SerializeField] private Transform parentProtectObstacle;
+    [SerializeField] private Transform parentBarrier;
 
     public Battle Battle;
 
@@ -28,7 +29,7 @@ public class BattleManager : MonoBehaviour, IAsyncSceneLoader
 
     public async Task LoadAsync() 
     {
-        Battle = new Battle(config, parentTileMap, parentProtectObstacle);
+        Battle = new Battle(config, parentTileMap, parentProtectObstacle, parentBarrier);
         await Battle.FieldComponent.LoadAsync();
         // characters etc
     }

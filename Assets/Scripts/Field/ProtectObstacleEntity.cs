@@ -16,4 +16,9 @@ public class ProtectObstacleEntity : MonoBehaviour
     {
         await AppearanceComponentBattle.SetAsync();
     }
+
+    public void OnDestroy()
+    {
+        AppearanceComponentBattle.Clear();
+    }
 }

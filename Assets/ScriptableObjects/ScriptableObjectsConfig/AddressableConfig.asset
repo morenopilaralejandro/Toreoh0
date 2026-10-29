@@ -19,3 +19,4 @@ MonoBehaviour:
   PathItemIcon: sprite-item
   PathProtectObstacleSprite: sprite
   PathFieldTileMap: tilemap
+  PathBarrierPrefab: BarrierEntity

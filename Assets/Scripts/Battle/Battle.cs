@@ -8,10 +8,11 @@ public class Battle
     public Battle(
         BattleConfig battleConfig, 
         Transform tileMapParent,
-        Transform protectObstacleParent)
+        Transform parentProtectObstacle,
+        Transform parentBarrier)
     {
         ConfigComponent = new BattleComponentConfig(battleConfig);
-        FieldComponent = new BattleComponentField(this, tileMapParent, protectObstacleParent);
+        FieldComponent = new BattleComponentField(this, tileMapParent, parentProtectObstacle, parentBarrier);
     }
 
     public void Dispose() 

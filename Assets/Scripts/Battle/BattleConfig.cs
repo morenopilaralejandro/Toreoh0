@@ -18,50 +18,50 @@ public class BattleConfig : ScriptableObject
 
     [Header("Coords")]
     public List<FormationCoordData> ListCoordProtectObstacles;
-    public List<BarrierSpawnPositionMapping> ListCoordBarrier;
     public List<CharacterSpawnPositionMapping> ListCoordCharacter;
 
-    [Header ("Barrier")]
-    public List<BarrierTypeMapping> ListBarrierTypeMapping;
-
     public Dictionary<BattleSide, CharacterSpawnPositionMapping> DictListCoordCharacterSpawn = new();
-    public Dictionary<BarrierType, BarrierTypeMapping> DictBarrierTypeMapping = new();
     
     public void Initialize() 
     {
         foreach (var mapping in ListCoordCharacter)
             DictListCoordCharacterSpawn[mapping.BattleSide] = mapping;
-
-        foreach (var mapping in ListBarrierTypeMapping)
-            DictBarrierTypeMapping[mapping.BarrierType] = mapping;
     }
 }
 
 /*
 protected obstacles
-33
-3D
+22
+2D
 
-55
-5B
+44
+4B
 
-77
-79
+66
+69
 
 ---
 
-97
+96
 99
 
-B5
+B4
 BB
 
-D3
+D2
 DD
+
 
 spawn positions
 south B8
-north 58
-west  95
-east  8B
+north 47
+west  84
+east  7B
+
+barriers
+south D8
+north 28
+west  72
+east  7D
+
 */
