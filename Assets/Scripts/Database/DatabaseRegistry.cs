@@ -18,6 +18,10 @@ public class DatabaseRegistry
     //public Database<CapturePortalData> CapturePortalData;
     public Database<CharacterData> CharacterData;
     public Database<TeamData> TeamData;
+    public Database<MoveData> MoveData;
+    public Database<WingData> WingData;
+    public Database<ArmorData> ArmorData;
+    public Database<WeaponData> WeaponData;
 
     // Constructor
     public DatabaseRegistry() 
@@ -44,6 +48,10 @@ public class DatabaseRegistry
         //CapturePortalData = new Database<CapturePortalData>("CapturePortalData", _ => _.CapturePortalId);
         CharacterData = new Database<CharacterData>("CharacterData", _ => _.CharacterId);
         TeamData = new Database<TeamData>("TeamData", _ => _.TeamId);
+        MoveData = new Database<MoveData>("MoveData", _ => _.MoveId);
+        WingData = new Database<WingData>("WingData", _ => _.WingId);
+        ArmorData = new Database<ArmorData>("ArmorData", _ => _.ArmorId);
+        WeaponData = new Database<WeaponData>("WeaponData", _ => _.WeaponId);
     }
 
     public IEnumerable<IAsyncDatabase> GetAllDatabases() 
@@ -63,6 +71,9 @@ public class DatabaseRegistry
         //yield return CapturePortalData;
         yield return CharacterData;
         yield return TeamData;
+        yield return MoveData;
+        yield return WingData;
+        yield return ArmorData;
+        yield return WeaponData;
     }
-
 }

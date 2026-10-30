@@ -63,7 +63,9 @@ MonoBehaviour:
   m_GroupAssets:
   - {fileID: 11400000, guid: 5b61eaa14920a02d9844892ed19c9e3c, type: 2}
   - {fileID: 11400000, guid: 28460caf2e8708de8be5a4328d8457ae, type: 2}
+  - {fileID: 11400000, guid: d86ce71f88089580993cba3be44c0009, type: 2}
   - {fileID: 11400000, guid: 5f70bae5e1b8b86388d075a4eace2f38, type: 2}
+  - {fileID: 11400000, guid: 87480786326b6326aabf4b7a77754018, type: 2}
   - {fileID: 11400000, guid: 7cc490b0831d9e019ae51705a0652211, type: 2}
   - {fileID: 11400000, guid: 7caaac5e777ed84b5bcd96bf9f3acc38, type: 2}
   - {fileID: 11400000, guid: f8ce85ec5427d0757b010720e9124cef, type: 2}
@@ -82,6 +84,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e2efd907cb2691fc381f2ae4c354ee90, type: 2}
   - {fileID: 11400000, guid: d4dfaff2a46d9ef67b2e8e9ef5f3c010, type: 2}
   - {fileID: 11400000, guid: dc9d655b5f198a810a51249bd82311f9, type: 2}
+  - {fileID: 11400000, guid: 34c78fc9173b5cc94bab66b8a96d0705, type: 2}
   - {fileID: 11400000, guid: 78fc7f6c9c30702d4b5cff4bc84deb10, type: 2}
   - {fileID: 11400000, guid: 0bbd653b33c9db8b0a4667683b0edf60, type: 2}
   - {fileID: 11400000, guid: c1b1d3ffd61854cbfaa8b494f3dc6dda, type: 2}
@@ -90,6 +93,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ee91a179c332b45c8be916112fdba5b9, type: 2}
   - {fileID: 11400000, guid: 0a2b322438eb6fb32821ad7feb3ec899, type: 2}
   - {fileID: 11400000, guid: 36b68655c5aa5f7949e1d9d3e960715c, type: 2}
+  - {fileID: 11400000, guid: e156f2f6aeed871e7b270e948c2a3338, type: 2}
   m_BuildSettings:
     m_LogResourceManagerExceptions: 1
     m_BundleBuildPath: Temp/com.unity.addressables/AssetBundles
@@ -148,6 +152,10 @@ MonoBehaviour:
     - CapturePortalData
     - FormationBarrierData
     - TeamData
+    - MoveData
+    - WingData
+    - ArmorData
+    - WeaponData
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: e2eb207bdb412270db2eb7bccad87051, type: 2}

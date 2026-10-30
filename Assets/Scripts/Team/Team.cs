@@ -1,22 +1,13 @@
 public class Team 
 {
-    public TeamComponentAttributes AttributesComponent;
+    public TeamComponentAttributes TeamComponentAttributes;
+    public TeamComponentPersistence TeamComponentPersistence;
+    public TeamComponentSide TeamComponentSide;
 
-    public Team(TeamData data) 
+    public Team(TeamData data)
     {
-        AttributesComponent = new TeamComponentAttributes(data);
+        TeamComponentAttributes = new TeamComponentAttributes(data);
+        TeamComponentPersistence = new TeamComponentPersistence(this);
+        TeamComponentSide = new TeamComponentSide(data);
     }
-
-
-
-/*
-    atributes
-    Side
-    ComponentCharacter 
-
-
-    Point, assist
-    one set of list for point, one set of list for assist
-    Data Runtime Entity Guid
-*/
 }

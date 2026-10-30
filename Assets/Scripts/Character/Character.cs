@@ -1,9 +1,11 @@
 public class Character 
 {
-    public CharacterComponentAttributes AttributesComponent;
+    public CharacterComponentAttributes CharacterComponentAttributes;
+    public CharacterComponentPersistence CharacterComponentPersistence;
 
-    public Character(CharacterData data) 
+    public Character(CharacterData data)
     {
-        AttributesComponent = new CharacterComponentAttributes(data);
+        CharacterComponentAttributes = new CharacterComponentAttributes(data);
+        CharacterComponentPersistence = new CharacterComponentPersistence(this);
     }
 }

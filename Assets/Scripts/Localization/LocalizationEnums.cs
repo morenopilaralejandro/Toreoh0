@@ -14,7 +14,9 @@ namespace Aremoreno.Enums.Localization
         Story_Event,
         Npc,
         Zone,
-        Dialog
+        Dialog,
+        Armor,
+        Weapon
     }
 
     public enum LocalizationField 
