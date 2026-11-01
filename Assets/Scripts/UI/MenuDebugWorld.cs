@@ -32,7 +32,7 @@ public class MenuDebugWorld : Menu
 
     public void OnButtonOpenClicked() 
     {
-        OnMenuDebugWorldOpenRequested();
+        menuManager.OpenMenu(this);
     }
 
     public void OnButtonNoClipClicked()
@@ -43,19 +43,4 @@ public class MenuDebugWorld : Menu
     }
 
     public void OnButtonToDebugClicked() => SceneLoaderManager.Instance.ReplaceGroup("SceneGroupData-DebugMainMenu");
-
-    // Event
-    protected override void OnEnable() 
-    {
-        base.OnEnable();
-        UIEvents.OnMenuDebugWorldOpenRequested += OnMenuDebugWorldOpenRequested;
-    }
-
-    protected override void OnDisable()
-    {
-        base.OnDisable();
-        UIEvents.OnMenuDebugWorldOpenRequested -= OnMenuDebugWorldOpenRequested;
-    }
-
-    private void OnMenuDebugWorldOpenRequested() => MenuManager.Instance.OpenMenu(this);
 }

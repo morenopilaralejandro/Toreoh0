@@ -1,38 +1,38 @@
 using UnityEngine;
+using System.Collections.Generic;
+using Aremoreno.Enums.Battle;
 
 public class BattleComponentTeam
 {
-/*
-
-    use this to instatiate characters etc
-    asign characters to team
+    //use this to instatiate characters etc
+    //asign characters to team
 
 
     private Battle battle;
-    public Field Field;
 
     public Dictionary<BattleSide, Team> DictTeam;
 
 
-    public BattleComponentTeam(
-        Battle battle, 
-        Transform parentTileMap, 
-        Transform parentProtectObstacle, 
-        Transform parentBarrier) 
+    public BattleComponentTeam(Battle battle)
     {
         this.battle = battle;
-        Field = new Field(
-            DatabaseManager.Instance.DatabaseRegistry.FieldData.Get(BattleArgs.FieldId),
-            battle.ConfigComponent.BattleConfig,
-            parentTileMap,
-            parentProtectObstacle,
-            parentBarrier
-        );
+
+        
+
     }
 
-    public void Dispose() 
+
+    
+
+    /*
+        for each team
+        if id initialize by data
+        if save data intialize by save data
+    */
+
+
+    public void Clear() 
     {
-        Field.Dispose();
+
     }
-*/
 }

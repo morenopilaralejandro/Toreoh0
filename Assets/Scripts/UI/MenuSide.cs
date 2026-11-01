@@ -53,6 +53,26 @@ public class MenuSide : Menu
             null);
     }
 
+    public void OnButtonCharacterClicked()
+    { 
+
+    }
+
+    public void OnButtonWingClicked()
+    { 
+
+    }
+
+    public void OnButtonArmorClicked()
+    { 
+
+    }
+
+    public void OnButtonWeaponClicked()
+    { 
+
+    }
+
     public void OnButtonExitClicked() 
     {
         stateMachine.Set(MenuStateBasic.WaitingForConfirm);

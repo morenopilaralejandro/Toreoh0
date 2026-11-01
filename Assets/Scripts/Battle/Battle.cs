@@ -2,23 +2,27 @@ using UnityEngine;
 
 public class Battle 
 {
-    public BattleComponentConfig ConfigComponent;
-    public BattleComponentField FieldComponent;
-    public BattleComponentCharacter CharacterComponent;
+    public BattleComponentConfig BattleComponentConfig;
+    public BattleComponentField BattleComponentField;
+    public BattleComponentTeam BattleComponentTeam;
+    public BattleComponentCharacter BattleComponentCharacter;
 
     public Battle(
         BattleConfig battleConfig, 
         Transform tileMapParent,
         Transform parentProtectObstacle,
-        Transform parentBarrier)
+        Transform parentBarrier,
+        Transform parentCharacter)
     {
-        ConfigComponent = new BattleComponentConfig(battleConfig);
-        FieldComponent = new BattleComponentField(this, tileMapParent, parentProtectObstacle, parentBarrier);
+        BattleComponentConfig = new BattleComponentConfig(battleConfig);
+        BattleComponentField = new BattleComponentField(this, tileMapParent, parentProtectObstacle, parentBarrier);
+        BattleComponentTeam = new BattleComponentTeam(this);
+        BattleComponentCharacter = new BattleComponentCharacter(this, parentCharacter);
     }
 
     public void Dispose() 
     {
-        FieldComponent.Dispose();
-        CharacterComponent.Dispose();
+        BattleComponentField.Dispose();
+        BattleComponentCharacter.Dispose();
     }
 }

@@ -6,6 +6,8 @@ public static class BattleArgs
     public static BattleType BattleType;
     public static BattleFormat BattleFormat;
     public static string FieldId;
+    public static string TeamNorthId;
+    public static TeamSaveData TeamNorthSaveData;
 
     public static void SetForTest() 
     {

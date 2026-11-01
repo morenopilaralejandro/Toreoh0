@@ -8,6 +8,7 @@ public class BattleManager : MonoBehaviour, IAsyncSceneLoader
     [SerializeField] private Transform parentTileMap;
     [SerializeField] private Transform parentProtectObstacle;
     [SerializeField] private Transform parentBarrier;
+    [SerializeField] private Transform parentCharacter;
 
     public Battle Battle;
 
@@ -27,10 +28,11 @@ public class BattleManager : MonoBehaviour, IAsyncSceneLoader
         Battle?.Dispose();
     }
 
-    public async Task LoadAsync() 
+    public async Task LoadAsync()
     {
-        Battle = new Battle(config, parentTileMap, parentProtectObstacle, parentBarrier);
-        await Battle.FieldComponent.LoadAsync();
+        Battle = new Battle(config, parentTileMap, parentProtectObstacle, parentBarrier, parentCharacter);
+        await Battle.BattleComponentField.LoadAsync();
+        await Battle.BattleComponentCharacter.LoadAsync();
         // characters etc
     }
 

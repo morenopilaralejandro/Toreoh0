@@ -16,4 +16,10 @@ public class TeamComponentCharacter
     {
 
     }
+
+    public void InitializeForBattle() 
+    {
+        ListCharacterPointEntity.Clear();
+        ListCharacterAssistEntity.Clear();
+    }
 }

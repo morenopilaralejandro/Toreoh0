@@ -36,4 +36,7 @@ public static class AddressableBuilder
 
     public static string GetBarrierPrefabAddress(string id) =>
         BuildAddress(config.PathBarrierPrefab, id);
+
+    public static string GetCharacterPrefabAddress(string id) =>
+        BuildAddress(config.PathCharacterPrefab, id);
 }

@@ -3,7 +3,8 @@ using System.Collections.Generic;
 public class CharacterManagerComponentStorage
 {
     //fields
-    public List<Character> ListCharacter = new();
+    // TODO change to dict with guid
+    public Dictionary<string, Character> DictCharacter = new();
     private CharacterConfig config;
 
     // constructor
@@ -29,7 +30,7 @@ public class CharacterManagerComponentStorage
     // persistence
     public void Clear()
     {
-        ListCharacter.Clear();
+        DictCharacter.Clear();
     }
 
     public void InitializeForNewGame()
@@ -42,7 +43,7 @@ public class CharacterManagerComponentStorage
     {
         CharacterManagerComponentStorageSaveData saveData = new();
         saveData.ListCharacterSaveData = new ();
-        foreach (var character in ListCharacter)
+        foreach (var character in DictCharacter.Values)
             saveData.ListCharacterSaveData.Add(character.CharacterComponentPersistence.Export());
         return saveData;
     }

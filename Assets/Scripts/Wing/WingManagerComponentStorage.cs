@@ -3,7 +3,7 @@ using System.Collections.Generic;
 public class WingManagerComponentStorage
 {
     //fields
-    public List<Wing> ListWing = new();
+    public Dictionary<string, Wing> DictWing = new();
     private WingConfig config;
 
     // constructor
@@ -29,7 +29,7 @@ public class WingManagerComponentStorage
     // persistence
     public void Clear()
     {
-        ListWing.Clear();
+        DictWing.Clear();
     }
 
     public void InitializeForNewGame()
@@ -42,7 +42,7 @@ public class WingManagerComponentStorage
     {
         WingManagerComponentStorageSaveData saveData = new();
         saveData.ListWingSaveData = new ();
-        foreach (var Wing in ListWing)
+        foreach (var Wing in DictWing.Values)
             saveData.ListWingSaveData.Add(Wing.WingComponentPersistence.Export());
         return saveData;
     }

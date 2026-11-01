@@ -3,7 +3,7 @@ using System.Collections.Generic;
 public class WeaponManagerComponentStorage
 {
     //fields
-    public List<Weapon> ListWeapon = new();
+    public Dictionary<string, Weapon> DictWeapon = new();
     private WeaponConfig config;
 
     // constructor
@@ -29,7 +29,7 @@ public class WeaponManagerComponentStorage
     // persistence
     public void Clear()
     {
-        ListWeapon.Clear();
+        DictWeapon.Clear();
     }
 
     public void InitializeForNewGame()
@@ -42,7 +42,7 @@ public class WeaponManagerComponentStorage
     {
         WeaponManagerComponentStorageSaveData saveData = new();
         saveData.ListWeaponSaveData = new ();
-        foreach (var Weapon in ListWeapon)
+        foreach (var Weapon in DictWeapon.Values)
             saveData.ListWeaponSaveData.Add(Weapon.WeaponComponentPersistence.Export());
         return saveData;
     }

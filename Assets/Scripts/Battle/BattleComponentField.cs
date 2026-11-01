@@ -15,7 +15,7 @@ public class BattleComponentField
         this.battle = battle;
         Field = new Field(
             DatabaseManager.Instance.DatabaseRegistry.FieldData.Get(BattleArgs.FieldId),
-            battle.ConfigComponent.BattleConfig,
+            battle.BattleComponentConfig.BattleConfig,
             parentTileMap,
             parentProtectObstacle,
             parentBarrier

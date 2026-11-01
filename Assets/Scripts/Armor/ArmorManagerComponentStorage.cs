@@ -3,7 +3,7 @@ using System.Collections.Generic;
 public class ArmorManagerComponentStorage
 {
     //fields
-    public List<Armor> ListArmor = new();
+    public Dictionary<string, Armor> DictArmor = new();
     private ArmorConfig config;
 
     // constructor
@@ -29,7 +29,7 @@ public class ArmorManagerComponentStorage
     // persistence
     public void Clear()
     {
-        ListArmor.Clear();
+        DictArmor.Clear();
     }
 
     public void InitializeForNewGame()
@@ -42,7 +42,7 @@ public class ArmorManagerComponentStorage
     {
         ArmorManagerComponentStorageSaveData saveData = new();
         saveData.ListArmorSaveData = new ();
-        foreach (var Armor in ListArmor)
+        foreach (var Armor in DictArmor.Values)
             saveData.ListArmorSaveData.Add(Armor.ArmorComponentPersistence.Export());
         return saveData;
     }

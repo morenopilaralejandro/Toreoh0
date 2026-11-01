@@ -34,13 +34,13 @@ public static class UIEvents
     public static void RaiseMenuSideOpenRequested()
         => OnMenuSideOpenRequested?.Invoke();
 
-    public static event Action OnMenuDebugWorldOpenRequested;
-    public static void RaiseMenuDebugWorldOpenRequested()
-        => OnMenuDebugWorldOpenRequested?.Invoke();
-
     public static event Action<AmountPickerMode, Item, int, int, int, CurrencyType> OnMenuAmountPickerItemOpenRequested;
     public static void RaiseMenuAmountPickerItemOpenRequested(AmountPickerMode amountPickerMode, Item item, int countCurrent, int countMin, int countMax, CurrencyType currencyType)
         => OnMenuAmountPickerItemOpenRequested?.Invoke(amountPickerMode, item, countCurrent, countMin, countMax, currencyType);
+
+    public static event Action OnMenuBattleActionsOpenRequested;
+    public static void RaiseMenuBattleActionsOpenRequested()
+        => OnMenuBattleActionsOpenRequested?.Invoke();
 
     // selector open requested
     public static event Action<
@@ -82,6 +82,66 @@ public static class UIEvents
     public static event Action OnSelectorSaveSlotCloseRequested;
     public static void RaiseSelectorSaveSlotCloseRequested()
         => OnSelectorSaveSlotCloseRequested?.Invoke();
+
+    public static event Action<
+        ISelectorSource<Character>, 
+        ISelectorActionClick<Character>, 
+        ISelectorFilter<Character>
+    > OnSelectorCharacterOpenRequested;
+    public static void RaiseSelectorCharacterOpenRequested(
+        ISelectorSource<Character> source, 
+        ISelectorActionClick<Character> actionClick, 
+        ISelectorFilter<Character> filter)
+        => OnSelectorCharacterOpenRequested?
+            .Invoke(source, actionClick, filter);
+
+    public static event Action<
+        ISelectorSource<Move>, 
+        ISelectorActionClick<Move>, 
+        ISelectorFilter<Move>
+    > OnSelectorMoveOpenRequested;
+    public static void RaiseSelectorMoveOpenRequested(
+        ISelectorSource<Move> source, 
+        ISelectorActionClick<Move> actionClick, 
+        ISelectorFilter<Move> filter)
+        => OnSelectorMoveOpenRequested?
+            .Invoke(source, actionClick, filter);
+
+    public static event Action<
+        ISelectorSource<Wing>, 
+        ISelectorActionClick<Wing>, 
+        ISelectorFilter<Wing>
+    > OnSelectorWingOpenRequested;
+    public static void RaiseSelectorWingOpenRequested(
+        ISelectorSource<Wing> source, 
+        ISelectorActionClick<Wing> actionClick, 
+        ISelectorFilter<Wing> filter)
+        => OnSelectorWingOpenRequested?
+            .Invoke(source, actionClick, filter);
+
+    public static event Action<
+        ISelectorSource<Armor>, 
+        ISelectorActionClick<Armor>, 
+        ISelectorFilter<Armor>
+    > OnSelectorArmorOpenRequested;
+    public static void RaiseSelectorArmorOpenRequested(
+        ISelectorSource<Armor> source, 
+        ISelectorActionClick<Armor> actionClick, 
+        ISelectorFilter<Armor> filter)
+        => OnSelectorArmorOpenRequested?
+            .Invoke(source, actionClick, filter);
+
+    public static event Action<
+        ISelectorSource<Weapon>, 
+        ISelectorActionClick<Weapon>, 
+        ISelectorFilter<Weapon>
+    > OnSelectorWeaponOpenRequested;
+    public static void RaiseSelectorWeaponOpenRequested(
+        ISelectorSource<Weapon> source, 
+        ISelectorActionClick<Weapon> actionClick, 
+        ISelectorFilter<Weapon> filter)
+        => OnSelectorWeaponOpenRequested?
+            .Invoke(source, actionClick, filter);
 
     // overview
     public static event Action<Item> OnItemOverviewUpdateRequested;
