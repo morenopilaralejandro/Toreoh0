@@ -30,6 +30,7 @@ public class WeaponManager : MonoBehaviour
     private void Initialize()
     {
         WeaponManagerComponentStorage = new WeaponManagerComponentStorage(config);
+        WeaponManagerComponentPersistence = new WeaponManagerComponentPersistence(this);
         WeaponManagerComponentPersistence.Subscribe();
     }
 }

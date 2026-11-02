@@ -1,15 +1,19 @@
 using UnityEngine;
+using Aremoreno.Enums.Battle;
 using Aremoreno.Enums.Input;
 
 public class MenuBattleResult : Menu
 {
     //[Header("UI References")]
     //[SerializeField] private DialogBoxUI dialogBox;
+    private BattleResult battleResult;
 
     // Lifecycle
-    protected override void Awake() 
+    protected override void Start() 
     {
-        base.Awake();
+        base.Start();
+        if (BattleArgs.BattleResultSaveData == null) return;
+        battleResult = new BattleResult(BattleArgs.BattleResultSaveData);
         menuManager.OpenMenu(this);
     }
 
@@ -27,5 +31,11 @@ public class MenuBattleResult : Menu
     public void OnButtonContinueClicked()
     {
         //SceneLoaderManager.Instance.ReplaceGroup("SceneGroupData-DebugMainMenu");
+        switch (battleResult.BattleResultComponentAttributes.BattleResultContinueType)
+        {
+            case BattleResultContinueType.Test:
+                SceneLoaderManager.Instance.ReplaceGroup("SceneGroupData-MainMenu");
+                break;
+        }
     }
 }

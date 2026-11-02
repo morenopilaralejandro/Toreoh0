@@ -30,6 +30,7 @@ public class ArmorManager : MonoBehaviour
     private void Initialize()
     {
         ArmorManagerComponentStorage = new ArmorManagerComponentStorage(config);
+        ArmorManagerComponentPersistence = new ArmorManagerComponentPersistence(this);
         ArmorManagerComponentPersistence.Subscribe();
     }
 }

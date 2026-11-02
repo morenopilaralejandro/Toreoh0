@@ -30,6 +30,7 @@ public class MoveManager : MonoBehaviour
     private void Initialize()
     {
         MoveManagerComponentStorage = new MoveManagerComponentStorage(config);
+        MoveManagerComponentPersistence = new MoveManagerComponentPersistence(this);
         MoveManagerComponentPersistence.Subscribe();
     }
 }

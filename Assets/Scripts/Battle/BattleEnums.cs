@@ -60,6 +60,11 @@ namespace Aremoreno.Enums.Battle
         Capture
     }
 
+    public enum BattleResultContinueType
+    {
+        Test
+    }
+
     public enum ProtectObstacleState
     {
         Allright,

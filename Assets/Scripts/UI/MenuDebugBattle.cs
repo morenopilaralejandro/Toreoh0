@@ -22,6 +22,6 @@ public class MenuDebugBattle : Menu
 
     public void OnButtonForfeitClicked() 
     {
-
+        BattleManager.Instance.Battle.BattleComponentEnd.EndByForfeit();
     }
 }

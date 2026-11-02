@@ -39,6 +39,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - SceneGroupData
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8c7eb1b32933e1c0e888a1a4fc9e0cc6
+    m_Address: Assets/Addressables/AddressablesSceneGroupData/SceneGroupData-BattleResult.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - SceneGroupData
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c46177f20588c9f8c864ca8191d54460
     m_Address: Assets/Addressables/AddressablesSceneGroupData/SceneGroupData-Credits.asset
     m_ReadOnly: 0

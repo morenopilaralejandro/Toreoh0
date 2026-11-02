@@ -30,6 +30,7 @@ public class WingManager : MonoBehaviour
     private void Initialize()
     {
         WingManagerComponentStorage = new WingManagerComponentStorage(config);
+        WingManagerComponentPersistence = new WingManagerComponentPersistence(this);
         WingManagerComponentPersistence.Subscribe();
     }
 }

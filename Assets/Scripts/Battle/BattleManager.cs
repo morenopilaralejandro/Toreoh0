@@ -36,7 +36,7 @@ public class BattleManager : MonoBehaviour, IAsyncSceneLoader
         // characters etc
     }
 
-    // Instantiate - Move to address manager if not working
+    // Instantiate
     public Object InstantiateGameObject(Object prefab) => Instantiate(prefab);
     public Object InstantiateGameObject(Object prefab, Transform parent) => Instantiate(prefab, parent);
     public Object InstantiateGameObject(Object prefab, Vector3 pos, Quaternion rot) => Instantiate(prefab, pos, rot);
