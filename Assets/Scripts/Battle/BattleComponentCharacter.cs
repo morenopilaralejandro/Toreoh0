@@ -34,9 +34,9 @@ public class BattleComponentCharacter
                     coord.PositionComponent.FormationCoordPosition,
                     coord.RotationComponent.FormationCoordRotation,
                     parentCharacter) as GameObject;
-                var entity = go.GetComponent<CharacterEntity>();
+                var entity = go.GetComponent<CharacterEntityBattle>();
                 team.TeamComponentCharacter.ListCharacterPointEntity.Add(entity);
-                //entity.Initialize(characterData);
+                //entity.InitializeForBattle(character);
                 // await entity.LoadAsync();
 
                 //TODO test if it is better to use character instead of characterData

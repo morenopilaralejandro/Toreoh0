@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class ScreenToWorldConverter
 {
@@ -19,5 +20,18 @@ public class ScreenToWorldConverter
         if(planeGround.Raycast(ray, out float distance))
             return ray.GetPoint(distance);
         return Vector3.zero;
+    }
+
+    public bool IsTouchingLayer(Vector2 screenPosition, LayerMask layer)
+    {
+        Ray ray = cameraMain.ScreenPointToRay(screenPosition);
+        if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layer))
+            return true;
+        return false;
+    }
+
+    public bool IsTouchingUI()
+    {
+        return EventSystem.current != null && !EventSystem.current.IsPointerOverGameObject();
     }
 }

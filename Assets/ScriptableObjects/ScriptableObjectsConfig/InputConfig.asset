@@ -20,4 +20,5 @@ MonoBehaviour:
   - ControlSchemeName: Touch
     ControlScheme: 2
   GroundY: 0
+  SwipeMagnitudeMin: 10
   IsDebugTouchInput: 1

@@ -8,6 +8,7 @@ namespace Aremoreno.Enums.Character
 
     public enum Element 
     {
+        None,
         Fire,
         Ice,
         Holy,

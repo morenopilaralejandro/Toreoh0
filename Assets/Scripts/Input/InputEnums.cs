@@ -56,6 +56,19 @@ namespace Aremoreno.Enums.Input
         ShortcutBagPrevious
     }
 
+    public enum InputTouch
+    {
+        Tap
+    }
+
+    public enum InputSwipeDirection
+    {
+        Up,
+        Down,
+        Left,
+        Right
+    }
+
     /*
     InputBattle
     InputNavigation

@@ -14,6 +14,7 @@ public class InputManager : MonoBehaviour
     public InputActionMapWorld MapWorld { get; private set; }
     public InputActionMapDialog MapDialog { get; private set; }
     public InputActionMapNavigation MapNavigation { get; private set; }
+    public InputActionMapTouch MapTouch { get; private set; }
     public InputLocker Locker { get; private set; }
     public InputControlSchemeTracker ControlSchemeTracker { get; private set; }
     public ScreenToWorldConverter ScreenToWorldConverter { get; private set; }
@@ -39,19 +40,23 @@ public class InputManager : MonoBehaviour
 
         InputStateTracker<InputBattle> trackerBattle = new InputStateTracker<InputBattle>();
         MapBattle = new InputActionMapBattle();
-        MapBattle.Initialize(inputActions, trackerBattle);
+        MapBattle.Initialize(inputActions, trackerBattle, config);
 
         InputStateTracker<InputWorld> trackerWorld = new InputStateTracker<InputWorld>();
         MapWorld = new InputActionMapWorld();
-        MapWorld.Initialize(inputActions, trackerWorld);
+        MapWorld.Initialize(inputActions, trackerWorld, config);
 
         InputStateTracker<InputDialog> trackerDialog = new InputStateTracker<InputDialog>();
         MapDialog = new InputActionMapDialog();
-        MapDialog.Initialize(inputActions, trackerDialog);
+        MapDialog.Initialize(inputActions, trackerDialog, config);
 
         InputStateTracker<InputNavigation> trackerNavigation = new InputStateTracker<InputNavigation>();
         MapNavigation = new InputActionMapNavigation();
-        MapNavigation.Initialize(inputActions, trackerNavigation);
+        MapNavigation.Initialize(inputActions, trackerNavigation, config);
+
+        InputStateTracker<InputTouch> trackerTouch = new InputStateTracker<InputTouch>();
+        MapTouch = new InputActionMapTouch();
+        MapTouch.Initialize(inputActions, trackerTouch, config);
 
         Locker = new InputLocker();
         List<IInputActionMap> maps = new ();
@@ -68,6 +73,7 @@ public class InputManager : MonoBehaviour
         MapWorld.Enable();
         MapDialog.Enable();
         MapNavigation.Enable();
+        MapTouch.Enable();
     }
 
     /*

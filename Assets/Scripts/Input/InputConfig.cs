@@ -11,6 +11,10 @@ public class InputConfig : ScriptableObject
     [Header("ScreenToWorldConverter")]
     public float GroundY;
 
+    [Header("Touch")]
+    public float SwipeMagnitudeMin;
+    public float TapDistanceMax;
+
     [Header("Debug")]
     public bool IsDebugTouchInput;
 }

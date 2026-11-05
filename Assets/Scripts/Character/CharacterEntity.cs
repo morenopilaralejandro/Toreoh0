@@ -4,8 +4,11 @@ public class CharacterEntity : MonoBehaviour
 {
     public Character Character;
 
-    public void Initialize(Character data)
-    {
+    public CharacterComponentRigidbody CharacterComponentRigidbody;
+    public CharacterComponentModel CharacterComponentModel;
 
+    public void Initialize(Character character)
+    {
+        
     }
 }

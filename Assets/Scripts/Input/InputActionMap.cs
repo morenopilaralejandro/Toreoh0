@@ -6,13 +6,15 @@ public abstract class InputActionMap<T> : IInputActionMap where T : Enum
 {
     protected InputActionsGame inputActions;
     protected InputStateTracker<T> tracker;
-    
+    protected InputConfig config;    
+
     public InputStateTracker<T> Tracker => tracker;
 
-    public virtual void Initialize(InputActionsGame inputActions, InputStateTracker<T> tracker) 
+    public virtual void Initialize(InputActionsGame inputActions, InputStateTracker<T> tracker, InputConfig config) 
     {
         this.inputActions = inputActions;
         this.tracker = tracker;
+        this.config = config;
         BindAll();
     }
 
