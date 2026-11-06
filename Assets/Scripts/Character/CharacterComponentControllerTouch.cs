@@ -28,6 +28,7 @@ public abstract class CharacterComponentControllerTouch : MonoBehaviour
     public virtual void FixedUpdateInternal() 
     {
         if (!IsMoving()) return;
+        if (!CanMove()) return;
         UpdateMovement();
         //UpdateRotation();
     }
@@ -58,6 +59,9 @@ public abstract class CharacterComponentControllerTouch : MonoBehaviour
     protected bool IsMoving() => isDragging && moveDirection.sqrMagnitude > inputSqrMagnitudeMin;
     //protected bool IsRotating() => moveDirection.sqrMagnitude > rotationSqrMagnitudeMin;
 
+
+    protected abstract bool CanMove();
+    protected abstract bool CanAct();
     protected abstract float GetSpeedMovement();
     protected abstract float GetSpeedRotation();
     protected abstract float GetAcceleration();
@@ -91,6 +95,7 @@ public abstract class CharacterComponentControllerTouch : MonoBehaviour
     // swipe
     private void OnSwipePerformed(InputSwipeDirection direction) 
     {
+        if (!CanAct()) return;
         switch(direction) 
         {
             case InputSwipeDirection.Up:
@@ -130,6 +135,6 @@ public abstract class CharacterComponentControllerTouch : MonoBehaviour
         moveDirection = Vector3.zero;
         tapPositionEnd = positionEnd;
         float tapDistance = Vector2.Distance(tapPositionStart, tapPositionEnd);
-        if (tapDistance <= inputConfig.TapDistanceMax) ExecuteActionTap();
+        if (tapDistance <= inputConfig.TapDistanceMax && CanAct()) ExecuteActionTap();
     }
 }

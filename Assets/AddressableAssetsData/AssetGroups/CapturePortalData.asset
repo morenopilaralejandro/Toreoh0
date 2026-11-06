@@ -14,7 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: CapturePortalData
   m_GUID: 1135abd71b96427c493da5a570054fdf
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: eb77dfc0dda7cb74a853218cdebc3af8
+    m_Address: Assets/Addressables/AddressablesFieldDataCapturePortal/capture_portal-00000-test.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CapturePortalData
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: fd8f0a373a4da231f8de6474b1779402, type: 2}
   m_SchemaSet:

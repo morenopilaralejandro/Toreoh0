@@ -1,4 +1,5 @@
 using UnityEngine;
+using Unity.Cinemachine;
 
 public class Battle 
 {
@@ -9,9 +10,13 @@ public class Battle
     public BattleComponentCharacter BattleComponentCharacter;
     public BattleComponentPersistence BattleComponentPersistence;
     public BattleComponentEnd BattleComponentEnd;
+    public BattleComponentTarget BattleComponentTarget;
+    public BattleComponentCamera BattleComponentCamera;
 
     public Battle(
         BattleConfig battleConfig, 
+        CinemachineTargetGroup cinemachineTargetGroup,
+        BattleComponentIndicatorTarget battleComponentIndicatorTarget,
         Transform tileMapParent,
         Transform parentProtectObstacle,
         Transform parentBarrier,
@@ -19,11 +24,13 @@ public class Battle
     {
         BattleComponentConfig = new BattleComponentConfig(battleConfig);
         BattleComponentAttributes = new BattleComponentAttributes();
+        BattleComponentTarget = new BattleComponentTarget(this, battleComponentIndicatorTarget);
         BattleComponentField = new BattleComponentField(this, tileMapParent, parentProtectObstacle, parentBarrier);
         BattleComponentTeam = new BattleComponentTeam(this);
         BattleComponentCharacter = new BattleComponentCharacter(this, parentCharacter);
         BattleComponentPersistence = new BattleComponentPersistence(this);
         BattleComponentEnd = new BattleComponentEnd(this);
+        BattleComponentCamera = new BattleComponentCamera(this, cinemachineTargetGroup);
     }
 
     public void Dispose() 

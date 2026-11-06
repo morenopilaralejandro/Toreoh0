@@ -11,6 +11,7 @@ public class BattleComponentCharacter
 
     public BattleComponentCharacter(Battle battle, Transform parentCharacter)
     {
+        this.battle = battle;
         this.parentCharacter = parentCharacter;
     }
 
@@ -18,32 +19,36 @@ public class BattleComponentCharacter
     {
         foreach (var team in battle.BattleComponentTeam.DictTeam.Values)
         {
-            foreach (var characterData in team.TeamComponentCharacter.ListCharacterPointData)
+            team.TeamComponentCharacter.InitializeForBattle();
+            foreach (var character in team.TeamComponentCharacter.ListCharacterPointRuntime)
             {
                 var mapping = battle.BattleComponentConfig.BattleConfig.DictListCoordCharacterSpawn[team.TeamComponentSide.BattleSide];
                 var coord = new FormationCoord(mapping.FormationCoordData);
                 coord.RotationComponent.SetRotationEuler(0f, mapping.RotationY, 0f);
 
                 AddressableBinding<GameObject> binding = new();
-                string address = AddressableBuilder.GetCharacterPrefabAddress(characterData.CharacterId);
+                string address = AddressableBuilder.GetCharacterPrefabAddress(character.CharacterComponentAttributes.CharacterId);
                 var prefab = await binding.LoadAssetAsync(address);
                 listBinding.Add(binding);
 
                 var go = BattleManager.Instance.InstantiateGameObject(
                     prefab,
                     coord.PositionComponent.FormationCoordPosition,
-                    coord.RotationComponent.FormationCoordRotation,
+                    Quaternion.identity,
                     parentCharacter) as GameObject;
                 var entity = go.GetComponent<CharacterEntityBattle>();
+                entity.InitializeForBattle(character);
+                entity.name = entity.Character.CharacterComponentAttributes.CharacterId;
+                entity.Character.CharacterComponentSide.SetBattleSide(team.TeamComponentSide.BattleSide);
                 team.TeamComponentCharacter.ListCharacterPointEntity.Add(entity);
-                //entity.InitializeForBattle(character);
+                // set model rotation
                 // await entity.LoadAsync();
-
-                //TODO test if it is better to use character instead of characterData
             }
         }
 
         // same for assist characters (start deactivated)
+
+        battle.BattleComponentTeam.EnableControlledCharacter();
     }
 
     public void Dispose() 

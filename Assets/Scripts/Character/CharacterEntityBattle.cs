@@ -19,4 +19,9 @@ public class CharacterEntityBattle : CharacterEntity
     {
         CharacterComponentControllerTouchBattle.LateUpdateInternal();
     }
+
+    public void SetControllerEnable(bool isEnable) 
+    {
+        CharacterComponentControllerTouchBattle.enabled = isEnable;
+    }
 }

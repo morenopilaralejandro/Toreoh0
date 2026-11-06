@@ -9,6 +9,6 @@ public class CharacterEntity : MonoBehaviour
 
     public void Initialize(Character character)
     {
-        
+        Character = character;
     }
 }

@@ -14,7 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: MoveData
   m_GUID: 1a319131476857317ba28de25a7a3f4c
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: d0540e3ae361dbe7e927ea5ae87791b9
+    m_Address: Assets/Addressables/AddressablesItemDataMove/move-00000-test.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MoveData
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: fd8f0a373a4da231f8de6474b1779402, type: 2}
   m_SchemaSet:

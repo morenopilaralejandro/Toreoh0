@@ -8,10 +8,13 @@ public class CharacterComponentControllerTouchBattle : CharacterComponentControl
         // if (! is controlled) this.SetActive(false)
     }
 
+    protected override bool CanMove() => true;
+    protected override bool CanAct() => true;
+
     //protected override float GetSpeedMovement() => entity.Character.CharacterComponentSpeed.SpeedMovement;
-    protected override float GetSpeedMovement() => 0.5f;
-    protected override float GetSpeedRotation() => 0.5f;
-    protected override float GetAcceleration() => 10f;
+    protected override float GetSpeedMovement() => entity.Character.CharacterComponentSpeed.SpeedMovement;
+    protected override float GetSpeedRotation() => entity.CharacterComponentModel.SpeedRotation;
+    protected override float GetAcceleration() => entity.CharacterComponentRigidbody.Acceleration;
 
     protected override void ExecuteActionTap() 
     {

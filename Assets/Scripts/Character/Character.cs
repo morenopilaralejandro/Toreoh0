@@ -4,12 +4,14 @@ public class Character
     public CharacterComponentPersistence CharacterComponentPersistence;
     public CharacterComponentElement CharacterComponentElement;
     public CharacterComponentSpeed CharacterComponentSpeed;
+    public CharacterComponentSide CharacterComponentSide;
 
     public Character(CharacterData data)
     {
         CharacterComponentAttributes = new CharacterComponentAttributes(data);
         CharacterComponentPersistence = new CharacterComponentPersistence(this);
-        CharacterComponentElement = new CharacterComponentElement(data.ListElement);
+        CharacterComponentElement = new CharacterComponentElement(data.Element0, data.Element1);
         CharacterComponentSpeed = new CharacterComponentSpeed(data, this, null);
+        CharacterComponentSide = new CharacterComponentSide(data);
     }
 }

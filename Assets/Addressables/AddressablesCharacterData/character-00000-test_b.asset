@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a73ee0ea1f7e84baddc4e3dbaabcee, type: 3}
+  m_Name: character-00000-test_b
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterData
+  CharacterId: character-00000-test_b
+  Element0: 4
+  Element1: 0
+  StatHp: 100
+  StatMeleeAttack: 100
+  StatMeleeDefense: 100
+  StatRangeAttack: 100
+  StatRangeDefense: 100
+  StatSpeed: 100
+  MoveLv0: 0
+  MoveLv1: 0
+  MoveLv2: 0
+  MoveLv3: 0
+  MoveId0: 
+  MoveId1: 
+  MoveId2: 
+  MoveId3: 
+  WingId: 

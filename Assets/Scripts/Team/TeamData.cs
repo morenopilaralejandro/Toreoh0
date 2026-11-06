@@ -5,8 +5,8 @@ using Aremoreno.Enums.Battle;
 public class TeamData : ScriptableObject
 {
     public string TeamId;
-    public string Character0Id;
-    public string Character1Id;
-    public string Assist0Id;
-    public string Assist1Id;
+    public string CharacterPointId0;
+    public string CharacterPointId1;
+    public string CharacterAssistId0;
+    public string CharacterAssistId1;
 }

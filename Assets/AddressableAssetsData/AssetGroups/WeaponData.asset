@@ -14,7 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: WeaponData
   m_GUID: f252757c384a7252b8bd5c4a3fc093cf
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 89b5f56353ea0ce9c8d9a0b1ada4bbc1
+    m_Address: Assets/Addressables/AddressablesWeaponData/weapon-00000-test_melee.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - WeaponData
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: fd8f0a373a4da231f8de6474b1779402, type: 2}
   m_SchemaSet:

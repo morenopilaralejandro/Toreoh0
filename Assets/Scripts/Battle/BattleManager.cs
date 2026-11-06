@@ -1,10 +1,13 @@
 using UnityEngine;
+using Unity.Cinemachine;
 using System.Threading.Tasks;
 
 public class BattleManager : MonoBehaviour, IAsyncSceneLoader
 {
     public static BattleManager Instance { get; private set; }
     [SerializeField] private BattleConfig config;
+    [SerializeField] private CinemachineTargetGroup cinemachineTargetGroup;
+    [SerializeField] private BattleComponentIndicatorTarget battleComponentIndicatorTarget;
     [SerializeField] private Transform parentTileMap;
     [SerializeField] private Transform parentProtectObstacle;
     [SerializeField] private Transform parentBarrier;
@@ -30,9 +33,18 @@ public class BattleManager : MonoBehaviour, IAsyncSceneLoader
 
     public async Task LoadAsync()
     {
-        Battle = new Battle(config, parentTileMap, parentProtectObstacle, parentBarrier, parentCharacter);
+        config.Initialize();
+        Battle = new Battle(
+            config, 
+            cinemachineTargetGroup, 
+            battleComponentIndicatorTarget, 
+            parentTileMap, 
+            parentProtectObstacle, 
+            parentBarrier, 
+            parentCharacter);
         await Battle.BattleComponentField.LoadAsync();
         await Battle.BattleComponentCharacter.LoadAsync();
+        Battle.BattleComponentTarget.Initialize();
         // characters etc
     }
 

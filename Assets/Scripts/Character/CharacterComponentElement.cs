@@ -3,7 +3,7 @@ using Aremoreno.Enums.Character;
 
 public class CharacterComponentElement
 {
-    public List<Element> ListElement;
+    public List<Element> ListElement = new ();
 
     public CharacterComponentElement(List<Element> listElement)
     {
@@ -12,6 +12,12 @@ public class CharacterComponentElement
             if (element != Element.None)
                 ListElement.Add(element);
         }
+    }
+
+    public CharacterComponentElement(Element element0, Element element1)
+    {
+        if (element0 != Element.None) ListElement.Add(element0);
+        if (element1 != Element.None) ListElement.Add(element1);
     }
 
     public bool Contains(Element element)

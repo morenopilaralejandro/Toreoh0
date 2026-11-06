@@ -14,7 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: WingData
   m_GUID: a3b7c96ddd9d0364bbad77c2f96a9794
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: e6e081109847b9e178172f26f1d4ac83
+    m_Address: Assets/Addressables/AddressablesWingData/wing-00000-test.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - WingData
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: fd8f0a373a4da231f8de6474b1779402, type: 2}
   m_SchemaSet:

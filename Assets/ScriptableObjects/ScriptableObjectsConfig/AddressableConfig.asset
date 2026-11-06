@@ -20,3 +20,4 @@ MonoBehaviour:
   PathProtectObstacleSprite: sprite
   PathFieldTileMap: tilemap
   PathBarrierPrefab: BarrierEntity
+  PathCharacterPrefab: CharacterEntityBattle

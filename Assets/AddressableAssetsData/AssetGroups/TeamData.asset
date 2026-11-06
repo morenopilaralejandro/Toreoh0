@@ -14,7 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: TeamData
   m_GUID: ebbf2013a4dbac2f3b05e107bc9b10eb
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 02e5af7b420ea794598fa831149d764c
+    m_Address: Assets/Addressables/AddressablesTeamData/team-00000-test_b.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - TeamData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 06582476d5793c7c5b7f33348cb89cea
+    m_Address: Assets/Addressables/AddressablesTeamData/team-00000-test_a.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - TeamData
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: fd8f0a373a4da231f8de6474b1779402, type: 2}
   m_SchemaSet:
