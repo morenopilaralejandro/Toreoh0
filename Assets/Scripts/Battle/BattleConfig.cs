@@ -20,6 +20,10 @@ public class BattleConfig : ScriptableObject
     public List<FormationCoordData> ListCoordProtectObstacles;
     public List<CharacterSpawnPositionMapping> ListCoordCharacter;
 
+    [Header("Bullet")]
+    public Mesh MeshBullet;
+    public Material MaterialBullet;
+
     public Dictionary<BattleSide, CharacterSpawnPositionMapping> DictListCoordCharacterSpawn = new();
     
     public void Initialize() 

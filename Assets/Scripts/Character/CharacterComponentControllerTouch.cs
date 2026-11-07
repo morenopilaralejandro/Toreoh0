@@ -27,10 +27,10 @@ public abstract class CharacterComponentControllerTouch : MonoBehaviour
 
     public virtual void FixedUpdateInternal() 
     {
-        if (!IsMoving()) return;
         if (!CanMove()) return;
-        UpdateMovement();
         //UpdateRotation();
+        if (!IsMoving()) return;
+        UpdateMovement();
     }
 
     public virtual void LateUpdateInternal()

@@ -12,6 +12,7 @@ public class Battle
     public BattleComponentEnd BattleComponentEnd;
     public BattleComponentTarget BattleComponentTarget;
     public BattleComponentCamera BattleComponentCamera;
+    public BattleComponentBullet BattleComponentBullet;
 
     public Battle(
         BattleConfig battleConfig, 
@@ -31,11 +32,17 @@ public class Battle
         BattleComponentPersistence = new BattleComponentPersistence(this);
         BattleComponentEnd = new BattleComponentEnd(this);
         BattleComponentCamera = new BattleComponentCamera(this, cinemachineTargetGroup);
+        BattleComponentBullet = new BattleComponentBullet(this, battleConfig);
     }
 
     public void Dispose() 
     {
         BattleComponentField.Dispose();
         BattleComponentCharacter.Dispose();
+    }
+
+    public void UpdateInternal() 
+    {
+        BattleComponentBullet.UpdateInternal();
     }
 }

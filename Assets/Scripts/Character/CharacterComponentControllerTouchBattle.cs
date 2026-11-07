@@ -18,6 +18,7 @@ public class CharacterComponentControllerTouchBattle : CharacterComponentControl
 
     protected override void ExecuteActionTap() 
     {
+        BattleManager.Instance.Battle.BattleComponentBullet.AddBullet(entity);
         CustomLog.Error($"[CharacterControllerComponentTouchBattle] ExecuteActionTap");
     }
 

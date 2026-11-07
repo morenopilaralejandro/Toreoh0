@@ -12,6 +12,7 @@ public class BattleManager : MonoBehaviour, IAsyncSceneLoader
     [SerializeField] private Transform parentProtectObstacle;
     [SerializeField] private Transform parentBarrier;
     [SerializeField] private Transform parentCharacter;
+    private bool isInitialized = false;
 
     public Battle Battle;
 
@@ -31,6 +32,12 @@ public class BattleManager : MonoBehaviour, IAsyncSceneLoader
         Battle?.Dispose();
     }
 
+    private void Update() 
+    {
+        if (!isInitialized) return;
+        Battle.UpdateInternal();
+    }
+
     public async Task LoadAsync()
     {
         config.Initialize();
@@ -46,6 +53,8 @@ public class BattleManager : MonoBehaviour, IAsyncSceneLoader
         await Battle.BattleComponentCharacter.LoadAsync();
         Battle.BattleComponentTarget.Initialize();
         // characters etc
+
+        isInitialized = true;
     }
 
     // Instantiate
