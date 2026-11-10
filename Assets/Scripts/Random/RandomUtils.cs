@@ -12,4 +12,14 @@ public static class RandomUtils
             hashSet.Add(random.Next(min, max));
         return hashSet;
     }
+
+    public static int GenerateRandomNext(int min, int max)
+    {
+        var random = new Random();
+        return random.Next(min, max);
+    }
+
+    public static bool GenerateRandomBool() {
+        return UnityEngine.Random.value <= 0.5f;
+    }
 }

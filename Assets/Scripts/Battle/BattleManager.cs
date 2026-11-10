@@ -51,7 +51,6 @@ public class BattleManager : MonoBehaviour, IAsyncSceneLoader
             parentCharacter);
         await Battle.BattleComponentField.LoadAsync();
         await Battle.BattleComponentCharacter.LoadAsync();
-        Battle.BattleComponentTarget.Initialize();
         // characters etc
 
         isInitialized = true;

@@ -20,11 +20,12 @@ public class BattleComponentCharacter
         foreach (var team in battle.BattleComponentTeam.DictTeam.Values)
         {
             team.TeamComponentCharacter.InitializeForBattle();
-            foreach (var character in team.TeamComponentCharacter.ListCharacterPointRuntime)
+            for (int j = 0; j < team.TeamComponentCharacter.ListCharacterPointRuntime.Count; j++)
             {
+                Character character = team.TeamComponentCharacter.ListCharacterPointRuntime[j];
                 var mapping = battle.BattleComponentConfig.BattleConfig.DictListCoordCharacterSpawn[team.TeamComponentSide.BattleSide];
                 var coord = new FormationCoord(mapping.FormationCoordData);
-                coord.RotationComponent.SetRotationEuler(0f, mapping.RotationY, 0f);
+                coord.RotationComponent.SetRotationEuler(0f, 0f, mapping.RotationY);
 
                 AddressableBinding<GameObject> binding = new();
                 string address = AddressableBuilder.GetCharacterPrefabAddress(character.CharacterComponentAttributes.CharacterId);
@@ -40,8 +41,9 @@ public class BattleComponentCharacter
                 entity.InitializeForBattle(character);
                 entity.name = entity.Character.CharacterComponentAttributes.CharacterId;
                 entity.Character.CharacterComponentSide.SetBattleSide(team.TeamComponentSide.BattleSide);
+                entity.Character.CharacterComponentSide.SetEntityIndex(j);
                 team.TeamComponentCharacter.ListCharacterPointEntity.Add(entity);
-                // set model rotation
+                entity.CharacterComponentModel.SetRotation(coord.RotationComponent.FormationCoordRotation);
                 // await entity.LoadAsync();
             }
         }

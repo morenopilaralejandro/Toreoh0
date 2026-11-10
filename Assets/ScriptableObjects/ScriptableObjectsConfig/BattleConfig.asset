@@ -35,15 +35,15 @@ MonoBehaviour:
   ListCoordCharacter:
   - BattleSide: 0
     FormationCoordData: {fileID: 11400000, guid: cea5b9872f2a08c86b49e651544a2a0f, type: 2}
-    RotationY: 0
+    RotationY: 180
   - BattleSide: 1
     FormationCoordData: {fileID: 11400000, guid: cdd2ae923ad03abc896fd649c22384e0, type: 2}
     RotationY: 0
   - BattleSide: 2
     FormationCoordData: {fileID: 11400000, guid: 0872878b7d095794aa9c993c5b33e866, type: 2}
-    RotationY: 0
+    RotationY: 270
   - BattleSide: 3
     FormationCoordData: {fileID: 11400000, guid: a4874cac91150a5f58aa2374045e476e, type: 2}
-    RotationY: 0
+    RotationY: 90
   MeshBullet: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
   MaterialBullet: {fileID: 2100000, guid: 68f48a23d5c4c01b3bcfd72bc2415ea1, type: 2}

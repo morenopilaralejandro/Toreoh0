@@ -13,9 +13,9 @@ public class BattleComponentTeam
         this.battle = battle;
 
         InitializeFromData(BattleArgs.TeamNorthId, BattleSide.North);
-        InitializeFromData(BattleArgs.TeamSouthId, BattleSide.South);
-
         InitializeFromSaveData(BattleArgs.TeamNorthSaveData, BattleSide.North);
+
+        InitializeFromData(BattleArgs.TeamSouthId, BattleSide.South);
         InitializeFromSaveData(BattleArgs.TeamSouthSaveData, BattleSide.South);
     }
 
@@ -45,6 +45,7 @@ public class BattleComponentTeam
     {
         DictTeam[BattleSideUser].TeamComponentCharacter.ListCharacterPointEntity[0].SetControllerEnable(true);
         battle.BattleComponentCamera.AddMemberMain(DictTeam[BattleSideUser].TeamComponentCharacter.ListCharacterPointEntity[0].transform);
+        battle.BattleComponentTarget.ChangeTargetDefault(DictTeam[BattleSideUser].TeamComponentCharacter.ListCharacterPointEntity[0]);
     }
 
     public void Clear() 

@@ -31,25 +31,27 @@ public class BattleComponentBullet
         // add one for each bullet in the pattern
         AddBullet(
             characterEntityBattle.transform.position + offsetDefault,
-            characterEntityBattle.CharacterComponentModel.Model.forward,
+            -characterEntityBattle.CharacterComponentModel.Model.up,
+            5f,
+            10f
+        );
+        /*
+        AddBullet(
+            characterEntityBattle.transform.position + offsetDefault,
+            characterEntityBattle.CharacterComponentModel.Model.up + new Vector3(1f, 0f, 0f),
             5f,
             10f
         );
         AddBullet(
             characterEntityBattle.transform.position + offsetDefault,
-            characterEntityBattle.CharacterComponentModel.Model.forward + new Vector3(1f, 0f, 0f),
+            characterEntityBattle.CharacterComponentModel.Model.up + new Vector3(-1f, 0f, 0f),
             5f,
             10f
         );
+        */
         AddBullet(
             characterEntityBattle.transform.position + offsetDefault,
-            characterEntityBattle.CharacterComponentModel.Model.forward + new Vector3(-1f, 0f, 0f),
-            5f,
-            10f
-        );
-        AddBullet(
-            characterEntityBattle.transform.position + offsetDefault,
-            characterEntityBattle.CharacterComponentModel.Model.forward * -1,
+            Quaternion.Euler(0, 0, 135) * -characterEntityBattle.CharacterComponentModel.Model.up,
             5f,
             10f
         );
@@ -122,6 +124,7 @@ public class BattleComponentBullet
                     sqrMagnitude = (bulletStruct.Pos - entity.transform.position).sqrMagnitude;
                     if (sqrMagnitude < 2f * 2f) {
                         //CustomLog.Error($"Collision with {entity.Character.CharacterComponentAttributes.CharacterId}");
+                        // entity takes damage based on bullet damage
                     }
                 }
             }
@@ -134,7 +137,7 @@ public class BattleComponentBullet
 
 
             /*
-            if (Physics.CheckSphere(bulletStruct.Pos, bulletStruct.Radius, layerObstacle)) 
+            if (Physics.CheckSphere(bulletStruct.Pos, bulletStruct.Radius, layerObstacle))
             {
                 bulletStruct.BulletState = Destroyed;
             }
@@ -197,6 +200,7 @@ public class BattleComponentBullet
 
     private void UpdateDestroyed() 
     {
+        // TODO unify with the other method to remove them as iterating backwards
         for(int i = listBulletStruct.Count - 1; i >= 0; i--)
         {
             if (listBulletStruct[i].BulletState == BulletState.Destroyed)

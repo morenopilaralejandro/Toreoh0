@@ -1,29 +1,20 @@
 using UnityEngine;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using Aremoreno.Enums.Battle;
 
 public class BattleComponentTarget
 {
     private Battle battle;
-    public List<CharacterEntityBattle> ListTarget = new ();
-    public CharacterEntityBattle TargetEntity;
-    private int count;
-    private int targetIndex;
     private BattleComponentIndicatorTarget battleComponentIndicatorTarget;
 
-    /*
-        any point entity can be targeted
-        exclude user side when creating it
-
-
-
-        have a monobehaviur component for the indicator and call it
-        set as children off that chanracer
-
-        probably recibe it in the constructor from manager
-        probably recibe camera thing in contrustor from manager
-
-    */
+    private Team team;
+    private CharacterEntityBattle entityTarget;
+    private int teamCount;
+    private int characterCount;
+    private int indexTargetTeam;
+    private int indexTargetCharacter;
 
     public BattleComponentTarget(Battle battle, BattleComponentIndicatorTarget battleComponentIndicatorTarget)
     {
@@ -31,39 +22,99 @@ public class BattleComponentTarget
         this.battleComponentIndicatorTarget = battleComponentIndicatorTarget;
     }
 
-    public void Initialize()
-    {
-        foreach (var team in battle.BattleComponentTeam.DictTeam.Values)
-        {
-            foreach (var character in team.TeamComponentCharacter.ListCharacterPointEntity)
-            {
-                if (character.Character.CharacterComponentSide.BattleSide != battle.BattleComponentTeam.BattleSideUser)
-                    ListTarget.Add(character);
-            }
-        }
-        count = ListTarget.Count;
-        ChangeTargetDefault();
-    }
-
-    public void ChangeTargetDefault() => ChangeTarget(0);
-    public void ChangeTargetNext() => ChangeTarget(targetIndex++);
-    public void ChangeTargetPrev() => ChangeTarget(targetIndex--);
-
-    private void ChangeTarget(int targetIndex)
-    {
-        if (targetIndex < 0) targetIndex = count;
-        if (targetIndex > count) targetIndex = 0;
-
-        TargetEntity = ListTarget[targetIndex];
-        battle.BattleComponentCamera.AddMemberSub(TargetEntity.transform);
-        battleComponentIndicatorTarget.SetIndicator(TargetEntity);
-    }
-
     public void Clear() 
     {
-        ListTarget.Clear();
-        count = 0;
-        targetIndex = 0;
-        TargetEntity = null;
+        team = null;
+        entityTarget = null;
+    }
+
+    public void ChangeTargetNext(CharacterEntityBattle entityTargeter)
+    {
+        teamCount = battle.BattleComponentTeam.DictTeam.Count;
+        indexTargetTeam = entityTargeter.CharacterComponentTarget.IndexTargetTeam + 1;
+        indexTargetCharacter = entityTargeter.CharacterComponentTarget.IndexTargetCharacter + 1;
+        if (indexTargetTeam >= teamCount) indexTargetTeam = 0;
+
+        while (indexTargetTeam < teamCount) 
+        {
+            team = battle.BattleComponentTeam.DictTeam.ElementAt(indexTargetTeam).Value;
+            characterCount = team.TeamComponentCharacter.ListCharacterPointEntity.Count;
+            if (indexTargetCharacter >= characterCount) indexTargetCharacter = 0;
+            while (indexTargetCharacter < characterCount) 
+            {
+                entityTarget = team.TeamComponentCharacter.ListCharacterPointEntity[indexTargetCharacter];
+                if (CanTarget(entityTargeter, entityTarget)) 
+                {
+                    ChangeTarget(entityTargeter, entityTarget, indexTargetTeam, indexTargetCharacter);
+                    return;
+                }
+                indexTargetCharacter++;
+            }
+            indexTargetTeam++;
+            if (indexTargetTeam >= teamCount) indexTargetTeam = 0;
+        }
+    }
+
+    public void ChangeTargetPrev(CharacterEntityBattle entityTargeter)
+    {
+        teamCount = battle.BattleComponentTeam.DictTeam.Count;
+        indexTargetTeam = entityTargeter.CharacterComponentTarget.IndexTargetTeam - 1;
+        indexTargetCharacter = entityTargeter.CharacterComponentTarget.IndexTargetCharacter - 1;
+        if (indexTargetTeam < 0) indexTargetTeam = teamCount - 1;
+
+        while (indexTargetTeam >= 0) 
+        {
+            team = battle.BattleComponentTeam.DictTeam.ElementAt(indexTargetTeam).Value;
+            characterCount = team.TeamComponentCharacter.ListCharacterPointEntity.Count;
+            if (indexTargetCharacter < 0) indexTargetCharacter = characterCount - 1;
+            while (indexTargetCharacter >= 0) 
+            {
+                entityTarget = team.TeamComponentCharacter.ListCharacterPointEntity[indexTargetCharacter];
+                if (CanTarget(entityTargeter, entityTarget)) 
+                {
+                    ChangeTarget(entityTargeter, entityTarget, indexTargetTeam, indexTargetCharacter);
+                    return;
+                }
+                indexTargetCharacter--;
+            }
+            indexTargetTeam--;
+            if (indexTargetTeam < 0) indexTargetTeam = teamCount - 1;
+        }
+    }
+
+    public void ChangeTargetDefault(CharacterEntityBattle entityTargeter)
+    {
+        indexTargetTeam = (int) entityTargeter.Character.CharacterComponentSide.BattleSide + 2;
+        indexTargetCharacter = entityTargeter.Character.CharacterComponentSide.EntityIndex;
+
+        entityTargeter.CharacterComponentTarget.SetIndexTargetTeam(indexTargetTeam);
+        entityTargeter.CharacterComponentTarget.SetIndexTargetCharacter(indexTargetCharacter);
+
+        teamCount = battle.BattleComponentTeam.DictTeam.Count;
+        if (indexTargetTeam >= teamCount) indexTargetTeam = 0;
+
+        team = battle.BattleComponentTeam.DictTeam.ElementAt(indexTargetTeam).Value;
+        characterCount = team.TeamComponentCharacter.ListCharacterPointEntity.Count;
+        if (indexTargetCharacter >= characterCount) indexTargetCharacter = 0;
+        entityTarget = team.TeamComponentCharacter.ListCharacterPointEntity[indexTargetCharacter];
+        if (!CanTarget(entityTargeter, entityTarget)) 
+            ChangeTargetNext(entityTargeter);
+
+        ChangeTarget(entityTargeter, entityTarget, indexTargetTeam, indexTargetCharacter);
+    }
+
+    private void ChangeTarget(CharacterEntityBattle entityTargeter, CharacterEntityBattle entityTarget, int indexTargetTeam, int indexTargetCharacter)
+    {
+        if (entityTargeter.Character.CharacterComponentSide.BattleSide == battle.BattleComponentTeam.BattleSideUser)
+            battleComponentIndicatorTarget.SetIndicator(entityTarget);
+
+        entityTargeter.CharacterComponentTarget.SetTargetEntity(entityTarget);
+        entityTargeter.CharacterComponentTarget.SetIndexTargetTeam(indexTargetTeam);
+        entityTargeter.CharacterComponentTarget.SetIndexTargetCharacter(indexTargetCharacter);
+    }
+
+    private bool CanTarget(CharacterEntityBattle entityTargeter, CharacterEntityBattle entityTarget)
+    {
+        return !entityTargeter.Character.CharacterComponentSide.IsSameTeam(entityTarget.Character);
     }
 }
