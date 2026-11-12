@@ -21,4 +21,5 @@ MonoBehaviour:
     ControlScheme: 2
   GroundY: 0
   SwipeMagnitudeMin: 10
+  TapDistanceMax: 0.001
   IsDebugTouchInput: 1

@@ -41,5 +41,6 @@ public class FieldComponentProtectObstacle
             entity.Initialize(data);
             await entity.LoadAsync();
         }
+        Clear();
     }
 }

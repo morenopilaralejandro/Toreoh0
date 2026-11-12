@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class GizmosFormationCoord : MonoBehaviour 
 {
+    #if UNITY_EDITOR 
     private float calcValue = 7.5f;
 
-    #if UNITY_EDITOR 
     private void OnDrawGizmos() 
     {
         string stringX = GetHexValue(this.transform.position.x + calcValue);

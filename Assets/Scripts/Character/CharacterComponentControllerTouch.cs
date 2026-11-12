@@ -16,7 +16,7 @@ public abstract class CharacterComponentControllerTouch : MonoBehaviour
     protected Vector2 tapPositionEnd;
     protected Vector2 moveInput;
     protected Vector3 moveDirection;
-    protected Vector3 rotationDirection;
+    //protected Vector3 rotationDirection;
 
     // lifecycle
     /*
@@ -49,7 +49,7 @@ public abstract class CharacterComponentControllerTouch : MonoBehaviour
     protected virtual void UpdateRotation()
     {
         // if (!IsRotating()) return;
-        model.Rotate(-moveDirection, GetSpeedRotation());
+        model.Rotate(moveDirection, GetSpeedRotation());
     }
 
     protected virtual void UpdateAnimation()
@@ -127,7 +127,7 @@ public abstract class CharacterComponentControllerTouch : MonoBehaviour
         moveInput = (InputManager.Instance.MapTouch.PointerPosition - tapPositionStart);
         moveDirection = new Vector3(moveInput.x, moveInput.y, 0f);
         moveDirection = Vector3.ClampMagnitude(moveDirection, clampMagnitude);
-        rotationDirection = new Vector3(moveDirection.x, 0f, moveDirection.y);
+        // rotationDirection = new Vector3(moveDirection.x, -moveDirection.y, 0f);
         // like this but reversed (changes y instead of z)  new Vector3(moveDirection.x, 0f, moveDirection.y);
     }
 

@@ -297,6 +297,7 @@ MonoBehaviour:
   canvas: {fileID: 605178051964043392}
   rectTransformDebug: {fileID: 3689291835727572098}
   sortingLayerName: UI
+  planeDistance: 0.15
 --- !u!1 &4542966629346693742
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,4 +10,9 @@ namespace Aremoreno.Enums.Bullet
         Active,
         Destroyed,
     }
+
+    public enum BulletMotionType
+    {
+        RectilinearUniform
+    }
 }

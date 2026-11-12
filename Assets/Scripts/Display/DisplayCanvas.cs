@@ -30,6 +30,7 @@ public class DisplayCanvas : MonoBehaviour
     private void OnDisplayRefreshRequested()
     {
         if (DisplayManager.Instance == null) return;
+        if (DisplayManager.Instance.GetCamera(DisplayScreen) == null) return;
         canvas.renderMode = RenderMode.ScreenSpaceCamera;
         canvas.worldCamera = DisplayManager.Instance.GetCamera(DisplayScreen);
         canvas.targetDisplay = DisplayManager.Instance.GetTargetDisplay(DisplayScreen);;

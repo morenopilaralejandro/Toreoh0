@@ -23,6 +23,7 @@ public class BattleConfig : ScriptableObject
     [Header("Bullet")]
     public Mesh MeshBullet;
     public Material MaterialBullet;
+    public LayerMask LayerObstacleBullet;
 
     public Dictionary<BattleSide, CharacterSpawnPositionMapping> DictListCoordCharacterSpawn = new();
     

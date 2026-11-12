@@ -46,5 +46,7 @@ public class FieldComponentBarrier
             entity.Initialize(data);
             await entity.LoadAsync();
         }
+
+        Clear();
     }
 }

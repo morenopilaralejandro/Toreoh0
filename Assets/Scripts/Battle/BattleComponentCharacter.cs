@@ -25,7 +25,6 @@ public class BattleComponentCharacter
                 Character character = team.TeamComponentCharacter.ListCharacterPointRuntime[j];
                 var mapping = battle.BattleComponentConfig.BattleConfig.DictListCoordCharacterSpawn[team.TeamComponentSide.BattleSide];
                 var coord = new FormationCoord(mapping.FormationCoordData);
-                coord.RotationComponent.SetRotationEuler(0f, 0f, mapping.RotationY);
 
                 AddressableBinding<GameObject> binding = new();
                 string address = AddressableBuilder.GetCharacterPrefabAddress(character.CharacterComponentAttributes.CharacterId);
@@ -43,7 +42,8 @@ public class BattleComponentCharacter
                 entity.Character.CharacterComponentSide.SetBattleSide(team.TeamComponentSide.BattleSide);
                 entity.Character.CharacterComponentSide.SetEntityIndex(j);
                 team.TeamComponentCharacter.ListCharacterPointEntity.Add(entity);
-                entity.CharacterComponentModel.SetRotation(coord.RotationComponent.FormationCoordRotation);
+                entity.CharacterComponentModel.RotateInstant(new Vector3(mapping.RotationX, mapping.RotationY, mapping.RotationZ));
+                entity.CharacterIndicatorBattleSide.SetBattleSide(team.TeamComponentSide.BattleSide);
                 // await entity.LoadAsync();
             }
         }
@@ -51,6 +51,7 @@ public class BattleComponentCharacter
         // same for assist characters (start deactivated)
 
         battle.BattleComponentTeam.EnableControlledCharacter();
+        Dispose();
     }
 
     public void Dispose() 

@@ -1,3 +1,4 @@
+using UnityEngine;
 using Aremoreno.Enums.Battle;
 
 public class CharacterComponentTarget
@@ -17,4 +18,12 @@ public class CharacterComponentTarget
     {
         this.characterEntityBattle = characterEntityBattle;
     }
+
+    public Vector3 GetDirectionToTarget() 
+    {
+        if (!HasTarget) return Vector3.zero;
+        return TargetEntity.transform.position - characterEntityBattle.transform.position;
+    }
+
+    public bool HasTarget => TargetEntity != null;
 }

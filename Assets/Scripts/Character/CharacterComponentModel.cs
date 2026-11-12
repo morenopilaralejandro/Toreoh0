@@ -23,9 +23,14 @@ public class CharacterComponentModel : MonoBehaviour
     {
         model.rotation  = Quaternion.Slerp(
             model.rotation,
-            Quaternion.LookRotation(directionMove),
+            Quaternion.LookRotation(directionMove, upwards),
             speedRotation * Time.fixedDeltaTime
         );
+    }
+
+    public void RotateInstant(Vector3 directionMove)
+    {
+        model.rotation  = Quaternion.LookRotation(directionMove, upwards);
     }
 
     public void Rotate(Vector3 directionMove, float speedRotation)
