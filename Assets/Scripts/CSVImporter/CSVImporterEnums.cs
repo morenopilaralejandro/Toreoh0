@@ -23,6 +23,9 @@ namespace Aremoreno.Enums.CSVImporter
         ItemSpriteType,
         ItemUsageContext,
         CurrencyType,
-        BarrierType
+        BarrierType,
+        BulletMotionType,
+        MoveCategory,
+        MoveCommandType
     }
 }

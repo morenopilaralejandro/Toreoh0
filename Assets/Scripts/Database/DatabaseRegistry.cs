@@ -22,6 +22,8 @@ public class DatabaseRegistry
     public Database<WingData> WingData;
     public Database<ArmorData> ArmorData;
     public Database<WeaponData> WeaponData;
+    public Database<BulletData> BulletData;
+    public Database<BulletPatternData> BulletPatternData;
 
     // Constructor
     public DatabaseRegistry() 
@@ -52,6 +54,8 @@ public class DatabaseRegistry
         WingData = new Database<WingData>("WingData", _ => _.WingId);
         ArmorData = new Database<ArmorData>("ArmorData", _ => _.ArmorId);
         WeaponData = new Database<WeaponData>("WeaponData", _ => _.WeaponId);
+        BulletData = new Database<BulletData>("BulletData", _ => _.BulletId);
+        BulletPatternData = new Database<BulletPatternData>("BulletPatternData", _ => _.BulletPatternId);
     }
 
     public IEnumerable<IAsyncDatabase> GetAllDatabases() 
@@ -75,5 +79,7 @@ public class DatabaseRegistry
         yield return WingData;
         yield return ArmorData;
         yield return WeaponData;
+        yield return BulletData;
+        yield return BulletPatternData;
     }
 }

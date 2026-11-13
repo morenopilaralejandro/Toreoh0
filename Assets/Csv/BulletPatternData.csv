@@ -1,0 +1,7 @@
+BulletPatternId,ListBulletId
+bullet_pattern-00001-spiral_basic,bullet-bullet_pattern-00001-spiral_basic-0|bullet-bullet_pattern-00001-spiral_basic-1|bullet-bullet_pattern-00001-spiral_basic-2|bullet-bullet_pattern-00001-spiral_basic-3|bullet-bullet_pattern-00001-spiral_basic-4|bullet-bullet_pattern-00001-spiral_basic-5|bullet-bullet_pattern-00001-spiral_basic-6|bullet-bullet_pattern-00001-spiral_basic-7
+bullet_pattern-00002-line_uniform,bullet-bullet_pattern-00002-line_uniform_0
+bullet_pattern-00003-line_accel,bullet-bullet_pattern-00003-line_accel_0
+bullet_pattern-00004-line_triple,bullet-bullet_pattern-00004-line_triple_0|bullet-bullet_pattern-00004-line_triple_1|bullet-bullet_pattern-00004-line_triple_2
+bullet_pattern-00005-melee_area,bullet-bullet_pattern-00005-melee_area_0|bullet-bullet_pattern-00005-melee_area_1|bullet-bullet_pattern-00005-melee_area_2|bullet-bullet_pattern-00005-melee_area_3|bullet-bullet_pattern-00005-melee_area_4|bullet-bullet_pattern-00005-melee_area_5|bullet-bullet_pattern-00005-melee_area_6|bullet-bullet_pattern-00005-melee_area_7
+bullet_pattern-00006-melee_slash,bullet-bullet_pattern-00006-melee_slash_0|bullet-bullet_pattern-00006-melee_slash_1|bullet-bullet_pattern-00006-melee_slash_2

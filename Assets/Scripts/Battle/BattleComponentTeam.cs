@@ -52,4 +52,9 @@ public class BattleComponentTeam
     {
         DictTeam.Clear();
     }
+
+    public CharacterEntityBattle GetEntityByBulletSource(BattleSide battleSide, int entityIndex)
+    {
+        return DictTeam[battleSide].TeamComponentCharacter.ListCharacterPointEntity[entityIndex];
+    }
 }

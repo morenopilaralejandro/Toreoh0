@@ -793,9 +793,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3630698546737244381}
+  - component: {fileID: 8392048921942771856}
   - component: {fileID: 2225795152639815141}
   - component: {fileID: 121233843214111118}
-  - component: {fileID: 8392048921942771856}
+  - component: {fileID: 5982599110402086376}
   m_Layer: 0
   m_Name: CharacterEntityBattle
   m_TagString: CharacterMain
@@ -821,38 +822,6 @@ Transform:
   - {fileID: 2536070544862259186}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2225795152639815141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8467952462389569587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a979356dde033d1a9ac38e4e1ddc725, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CharacterEntityBattle
-  CharacterComponentRigidbody: {fileID: 7020268082987451352}
-  CharacterComponentModel: {fileID: 7226605723026479156}
-  CharacterComponentControllerTouchBattle: {fileID: 121233843214111118}
-  CharacterIndicatorBattleSide: {fileID: 7292042451540590027}
---- !u!114 &121233843214111118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8467952462389569587}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7ad2a8e1459d8311be97edb3e925753, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CharacterComponentControllerTouchBattle
-  rb: {fileID: 7020268082987451352}
-  model: {fileID: 7226605723026479156}
-  inputConfig: {fileID: 11400000, guid: bb6549f2f78f39791a2b524ae51bd3f9, type: 2}
-  IsControlled: 0
 --- !u!54 &8392048921942771856
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -880,6 +849,54 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!114 &2225795152639815141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8467952462389569587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a979356dde033d1a9ac38e4e1ddc725, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterEntityBattle
+  CharacterComponentRigidbody: {fileID: 7020268082987451352}
+  CharacterComponentModel: {fileID: 7226605723026479156}
+  CharacterComponentControllerTouchBattle: {fileID: 121233843214111118}
+  CharacterIndicatorBattleSide: {fileID: 7292042451540590027}
+  CharacterComponentStateLock: {fileID: 5982599110402086376}
+--- !u!114 &121233843214111118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8467952462389569587}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7ad2a8e1459d8311be97edb3e925753, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterComponentControllerTouchBattle
+  rb: {fileID: 7020268082987451352}
+  model: {fileID: 7226605723026479156}
+  inputConfig: {fileID: 11400000, guid: bb6549f2f78f39791a2b524ae51bd3f9, type: 2}
+  entity: {fileID: 2225795152639815141}
+  IsControlled: 0
+--- !u!114 &5982599110402086376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8467952462389569587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1967013287753860b65342aa00680a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterComponentStateLock
+  entity: {fileID: 2225795152639815141}
+  IsStateLocked: 0
 --- !u!1 &9112938266258299608
 GameObject:
   m_ObjectHideFlags: 0

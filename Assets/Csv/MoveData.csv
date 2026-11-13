@@ -1,0 +1,7 @@
+MoveId,BulletPatternId,MoveCategory,MoveCommandType,FrameRecovery
+move-00000-test_spiral,bullet_pattern-00001-spiral_basic,Ranged,Normal,16
+move-00000-test_line_uniform,bullet_pattern-00002-line_uniform,Ranged,Normal,16
+move-00000-test_line_accel,bullet_pattern-00003-line_accel,Ranged,Normal,16
+move-00000-test_line_triple,bullet_pattern-00004-line_triple,Ranged,Normal,32
+move-00000-test_melee_area,bullet_pattern-00005-melee_area,Melee,Normal,128
+move-00000-test_melee_slash,bullet_pattern-00006-melee_slash,Melee,Normal,64

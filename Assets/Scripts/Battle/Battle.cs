@@ -13,6 +13,7 @@ public class Battle
     public BattleComponentTarget BattleComponentTarget;
     public BattleComponentCamera BattleComponentCamera;
     public BattleComponentBullet BattleComponentBullet;
+    public BattleComponentDamageCalculator BattleComponentDamageCalculator;
 
     public Battle(
         BattleConfig battleConfig, 
@@ -33,6 +34,7 @@ public class Battle
         BattleComponentEnd = new BattleComponentEnd(this);
         BattleComponentCamera = new BattleComponentCamera(this, cinemachineTargetGroup);
         BattleComponentBullet = new BattleComponentBullet(this, battleConfig);
+        BattleComponentDamageCalculator = new BattleComponentDamageCalculator(this, battleConfig);
     }
 
     public void Dispose() 

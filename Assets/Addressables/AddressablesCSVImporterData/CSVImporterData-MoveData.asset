@@ -26,3 +26,19 @@ MonoBehaviour:
     FieldName: MoveId
     ColumnName: MoveId
     EnumGenericType: 0
+  - SerializableFieldCustom: 0
+    FieldName: BulletPatternId
+    ColumnName: BulletPatternId
+    EnumGenericType: 0
+  - SerializableFieldCustom: 5
+    FieldName: MoveCategory
+    ColumnName: MoveCategory
+    EnumGenericType: 9
+  - SerializableFieldCustom: 5
+    FieldName: MoveCommandType
+    ColumnName: MoveCommandType
+    EnumGenericType: 10
+  - SerializableFieldCustom: 2
+    FieldName: FrameRecovery
+    ColumnName: FrameRecovery
+    EnumGenericType: 0

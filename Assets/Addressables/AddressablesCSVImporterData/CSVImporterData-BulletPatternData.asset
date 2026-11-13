@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e6b9e9c5c27bdcfa941ba98dfb5946, type: 3}
+  m_Name: CSVImporterData-BulletPatternData
+  m_EditorClassIdentifier: Assembly-CSharp::CSVImporterData
+  CSVFileName: BulletPatternData
+  OutputFolder: AddressablesBulletPatternData
+  ScriptableObjectTypeName: BulletPatternData
+  AssetNamePrefix: 
+  IdFieldName: BulletPatternId
+  AddressableGroup: 56bd23cd9f24e6e5caabc83b00624fb8
+  AddressableLabels:
+    LabelList:
+    - BulletPatternData
+  FieldMappings:
+  - SerializableFieldCustom: 0
+    FieldName: BulletPatternId
+    ColumnName: BulletPatternId
+    EnumGenericType: 0
+  - SerializableFieldCustom: 1
+    FieldName: ListBulletId
+    ColumnName: ListBulletId
+    EnumGenericType: 0

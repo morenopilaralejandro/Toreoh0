@@ -13,6 +13,8 @@ namespace Aremoreno.Enums.Bullet
 
     public enum BulletMotionType
     {
-        RectilinearUniform
+        RectilinearUniform,
+        RectilinearAccelerated,
+        CurveSpiralUniform
     }
 }

@@ -1,18 +1,27 @@
+using UnityEngine;
+
 public class CharacterComponentControllerTouchBattle : CharacterComponentControllerTouch
 {
-    private CharacterEntityBattle entity;
+    [SerializeField] private CharacterEntityBattle entity;
     public bool IsControlled;
+    private float rangeMelee = 3f;
+    private float rangeMeleeSqr;
 
-    public void Initialize(CharacterEntityBattle entity)
+    private Move moveTestRange;
+    private Move moveTestMelee;
+
+    public void Initialize()
     {
-        this.entity = entity;
+        rangeMeleeSqr = rangeMelee * rangeMelee;
+        moveTestRange = MoveFactory.CreateById("move-00000-test_line_uniform");
+        moveTestMelee = MoveFactory.CreateById("move-00000-test_melee_slash");
         // if (! is controlled) this.SetActive(false)
     }
 
     public void SetIsControlled(bool isControlled) => IsControlled = isControlled;
 
-    protected override bool CanMove() => true;
-    protected override bool CanAct() => true;
+    protected override bool CanMove() => entity.CanMove;
+    protected override bool CanAct() => entity.CanAct;
 
     //protected override float GetSpeedMovement() => entity.Character.CharacterComponentSpeed.SpeedMovement;
     protected override float GetSpeedMovement() => entity.Character.CharacterComponentSpeed.SpeedMovement;
@@ -23,8 +32,16 @@ public class CharacterComponentControllerTouchBattle : CharacterComponentControl
     {
         if (!entity.CharacterComponentTarget.HasTarget) return;
         entity.CharacterComponentModel.RotateInstant(entity.CharacterComponentTarget.GetDirectionToTarget());
-        BattleManager.Instance.Battle.BattleComponentBullet.AddBullet(entity);
-        // CustomLog.Error($"[CharacterControllerComponentTouchBattle] ExecuteActionTap");
+        if ((entity.CharacterComponentTarget.TargetEntity.transform.position - entity.transform.position).sqrMagnitude < rangeMeleeSqr)
+        {
+            entity.CharacterComponentStateLock.StartStateLock(moveTestMelee.MoveComponentFrame.FrameRecovery);
+            BattleManager.Instance.Battle.BattleComponentBullet.AddBullet(entity, moveTestMelee);
+        }
+        else 
+        {
+            entity.CharacterComponentStateLock.StartStateLock(moveTestRange.MoveComponentFrame.FrameRecovery);
+            BattleManager.Instance.Battle.BattleComponentBullet.AddBullet(entity, moveTestRange);
+        }
     }
 
     protected override void ExecuteActionSwipeUp()

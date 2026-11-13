@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: BulletPatternData
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: BulletPatternData
+  m_GUID: 56bd23cd9f24e6e5caabc83b00624fb8
+  m_SerializeEntries:
+  - m_GUID: 6ff4d2978768b62798638aee3299d333
+    m_Address: Assets/Addressables/AddressablesBulletPatternData/bullet_pattern-00005-melee_area.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - BulletPatternData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bbe39fbb5699a5201b87f70c7130cac6
+    m_Address: Assets/Addressables/AddressablesBulletPatternData/bullet_pattern-00001-spiral_basic.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - BulletPatternData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c18ef4a5767edfc478b591c4584bf0fb
+    m_Address: Assets/Addressables/AddressablesBulletPatternData/bullet_pattern-00004-line_triple.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - BulletPatternData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d23120e7e0584c0c48e6256a38d6cc81
+    m_Address: Assets/Addressables/AddressablesBulletPatternData/bullet_pattern-00002-line_uniform.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - BulletPatternData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fd5f57d21d8303706a92bd370f6d6a96
+    m_Address: Assets/Addressables/AddressablesBulletPatternData/bullet_pattern-00003-line_accel.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - BulletPatternData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fd9da67cc9f55216693602a0865f6808
+    m_Address: Assets/Addressables/AddressablesBulletPatternData/bullet_pattern-00006-melee_slash.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - BulletPatternData
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: fd8f0a373a4da231f8de6474b1779402, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: cf1c03b2a28518200ae00d4dce8e585c, type: 2}
+    - {fileID: 11400000, guid: bb9e748def96dcb6f8846a61a6875d36, type: 2}

@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 4cef6991fe93563c8a102d091f3ae764
   m_currentHash:
     serializedVersion: 2
-    Hash: cc109d9eeb4fd1187acbbbb28f1b1e00
+    Hash: 00000000000000000000000000000000
   m_DisableWriteTypeTree: 0
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
@@ -75,8 +75,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 718e0871a3e6a4f759f7ca90e41f519e, type: 2}
   - {fileID: 11400000, guid: a9d0c89d439f5ec56a11a552e22c24d7, type: 2}
   - {fileID: 11400000, guid: 25feee3bdd8f6bce985d194340d6e869, type: 2}
+  - {fileID: 11400000, guid: 9d8e129620c9de29a92b2f3db2d047fc, type: 2}
   - {fileID: 11400000, guid: 57481d91801287e5ab0b68b52e6e1079, type: 2}
   - {fileID: 11400000, guid: d844570f9458e25bd8ae7d76d191be21, type: 2}
+  - {fileID: 11400000, guid: 0c0ae765ed8f7bc5e822abf2eba58b17, type: 2}
   - {fileID: 11400000, guid: a16a6611e6ae84173a2db357f7de48e2, type: 2}
   - {fileID: 11400000, guid: 0eeeba535b398606f822742309f1dab0, type: 2}
   - {fileID: 11400000, guid: d9da8b8e9f18b6f808b153fcb344f405, type: 2}
@@ -158,6 +160,8 @@ MonoBehaviour:
     - WingData
     - ArmorData
     - WeaponData
+    - BulletData
+    - BulletPatternData
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: e2eb207bdb412270db2eb7bccad87051, type: 2}

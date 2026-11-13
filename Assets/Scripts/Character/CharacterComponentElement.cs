@@ -42,15 +42,4 @@ public class CharacterComponentElement
         }
         return false;
     }
-
-    public bool IsEffective(Element offenseElement, Element defenseElement)
-    {
-        int offenseIndex = (int) offenseElement;
-        int defenseIndex = (int) defenseElement;
-
-        int nextIndex = (offenseIndex + 1) % EnumUtils.GetLength<Element>();
-        if (nextIndex == 0) nextIndex++; // None is index 0
-
-        return defenseIndex == nextIndex;
-    }
 }

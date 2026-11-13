@@ -10,6 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4622f9dd2bf59bdd386564a60e5f3973, type: 3}
-  m_Name: move-00000-test
+  m_Name: move-00000-test_melee_slash
   m_EditorClassIdentifier: Assembly-CSharp::MoveData
-  MoveId: 
+  MoveId: move-00000-test_melee_slash
+  BulletPatternId: bullet_pattern-00006-melee_slash
+  MoveCategory: 1
+  MoveCommandType: 0
+  FrameRecovery: 64
