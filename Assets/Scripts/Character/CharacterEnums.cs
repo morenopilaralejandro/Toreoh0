@@ -6,7 +6,7 @@ namespace Aremoreno.Enums.Character
         Assist
     }
 
-    public enum Element 
+    public enum Element
     {
         None,
         Fire,
@@ -18,5 +18,16 @@ namespace Aremoreno.Enums.Character
         Earth,
         Electric,
         Water
+    }
+
+    public enum Stat
+    {
+        Hp,
+        Mp,
+        MeleeAttack,
+        MeleeDefense,
+        RangeAttack,
+        RangeDefense,
+        Speed
     }
 }

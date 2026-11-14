@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MoveData
   MoveId: move-00000-test_line_uniform
   BulletPatternId: bullet_pattern-00002-line_uniform
+  Element: 3
   MoveCategory: 0
   MoveCommandType: 0
   FrameRecovery: 16

@@ -35,6 +35,10 @@ MonoBehaviour:
     ColumnName: MoveCategory
     EnumGenericType: 9
   - SerializableFieldCustom: 5
+    FieldName: Element
+    ColumnName: Element
+    EnumGenericType: 11
+  - SerializableFieldCustom: 5
     FieldName: MoveCommandType
     ColumnName: MoveCommandType
     EnumGenericType: 10

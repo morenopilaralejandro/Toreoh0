@@ -26,6 +26,7 @@ namespace Aremoreno.Enums.CSVImporter
         BarrierType,
         BulletMotionType,
         MoveCategory,
-        MoveCommandType
+        MoveCommandType,
+        Element
     }
 }

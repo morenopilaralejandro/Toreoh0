@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using Aremoreno.Enums.Battle;
 using Aremoreno.Enums.Bullet;
+using Aremoreno.Enums.Character;
+using Aremoreno.Enums.Duel;
 using Aremoreno.Enums.Move;
 
 public class BattleComponentBullet
@@ -20,6 +22,11 @@ public class BattleComponentBullet
     private Quaternion rotDefault = Quaternion.identity;
     private ColorManager colorManager;
     private LayerMask layerObstacleBullet;
+
+    private bool isDestroyedOnObstacle;
+    private float elementMultiplierMatch;
+    private float elementMultiplierCommandType;
+    private float statMainValue;
 
     // lifecycle
     public BattleComponentBullet(Battle battle, BattleConfig battleConfig)
@@ -69,6 +76,12 @@ public class BattleComponentBullet
                     if (sqrMagnitude < entity.Character.CharacterComponentBullet.RadiusHitSqr)
                     {
                         isColissionCharacter = true;
+                        battle.BattleComponentDamageCalculator.ApplyDamage(                            
+                            entity,
+                            bulletStruct.Element,
+                            bulletStruct.MoveCategory,
+                            bulletStruct.Damage
+                        );
                         // CustomLog.Warning($"[BattleComponentBullet] Bullet collided with character. CharacterId: {entity.Character.CharacterComponentAttributes.CharacterId}. Bullet sourceBattleSide: {bulletStruct.SourceBattleSide}.");
                         // entity takes damage based on bullet damage
                         break;
@@ -135,18 +148,26 @@ public class BattleComponentBullet
 
             renderParams.matProps = matProps;
     }
+
+battle.BattleComponentTeam.GetEntityByBulletSource(bulletStruct.SourceBattleSide, bulletStruct.SourceEntityIndex),
+
     */
 
     // spawn
     public void AddBullet(CharacterEntityBattle characterEntityBattle, Move move)
     {
+        isDestroyedOnObstacle = move.MoveComponentAttributes.MoveCategory == MoveCategory.Range;
+        elementMultiplierMatch = battle.BattleComponentDamageCalculator.GetElementMultiplierMatch(characterEntityBattle, move.MoveComponentAttributes.Element);
+        elementMultiplierCommandType = battle.BattleComponentDamageCalculator.GetElementMultiplierCommandType(move.MoveComponentAttributes.MoveCommandType);
+        statMainValue = characterEntityBattle.Character.CharacterComponentStat.GetStatValueByDuelRoleAndMoveCategory(DuelRole.Offense, move.MoveComponentAttributes.MoveCategory);
+
         foreach(BulletData bulletData in move.MoveComponentBullet.BulletPattern.BulletPatternComponentBullet.ListBulletData)
             AddBullet(
                 pos : characterEntityBattle.transform.position + offsetDefault,
                 dir : Quaternion.Euler(0, 0, bulletData.AngularStart) * characterEntityBattle.CharacterComponentModel.Model.forward * bulletData.DirectionFactor,
                 scale : scaleDefault * bulletData.RadiusVisual,
                 rot : rotDefault,
-                damageBase : bulletData.DamageBase,
+                damage : battle.BattleComponentDamageCalculator.CalcDamage(bulletData.DamageBase, elementMultiplierMatch, elementMultiplierCommandType, statMainValue),
                 ttl : bulletData.Ttl,
                 radiusHit : bulletData.RadiusHit,
                 speedMovement : bulletData.SpeedMovement,
@@ -154,10 +175,12 @@ public class BattleComponentBullet
                 amplitude : bulletData.AmplitudeStart,
                 amplitudeDelta : bulletData.AmplitudeDelta,
                 angularDelta : bulletData.AngularDelta,
-                isDestroyedOnObstacle : move.MoveComponentAttributes.MoveCategory == MoveCategory.Range,
+                isDestroyedOnObstacle : isDestroyedOnObstacle,
                 sourceBattleSide : characterEntityBattle.Character.CharacterComponentSide.BattleSide,
                 sourceEntityIndex : characterEntityBattle.Character.CharacterComponentSide.EntityIndex,
-                bulletMotionType : bulletData.BulletMotionType
+                bulletMotionType : bulletData.BulletMotionType,
+                element : move.MoveComponentAttributes.Element,
+                moveCategory : move.MoveComponentAttributes.MoveCategory
             );
     }
 
@@ -166,7 +189,7 @@ public class BattleComponentBullet
         Vector3 dir, 
         Vector3 scale,
         Quaternion rot,
-        float damageBase,
+        float damage,
         float ttl,
         float radiusHit,
         float speedMovement, 
@@ -175,9 +198,11 @@ public class BattleComponentBullet
         float amplitudeDelta,
         float angularDelta,
         bool isDestroyedOnObstacle,
-        int sourceEntityIndex
+        int sourceEntityIndex,
         BattleSide sourceBattleSide,
-        BulletMotionType bulletMotionType)
+        BulletMotionType bulletMotionType,
+        Element element,
+        MoveCategory moveCategory)
     {
         listBulletStruct.Add(new BulletStruct 
         {
@@ -185,7 +210,7 @@ public class BattleComponentBullet
             Dir = dir,
             Scale = scale,
             Rot = rot,
-            DamageBase = damageBase,
+            Damage = damage,
             Ttl = ttl,
             RadiusHit = radiusHit,
             SpeedMovement = speedMovement,
@@ -194,10 +219,11 @@ public class BattleComponentBullet
             AmplitudeDelta = amplitudeDelta,
             AngularDelta = angularDelta,
             IsDestroyedOnObstacle = isDestroyedOnObstacle,
-            SourceEntityIndex = sourceEntityIndex.
-            SourceBattleSide = sourceBattleSide
-            BulletMotionType = bulletMotionType
-
+            SourceEntityIndex = sourceEntityIndex,
+            SourceBattleSide = sourceBattleSide,
+            BulletMotionType = bulletMotionType,
+            Element = element,
+            MoveCategory = moveCategory
         });
     }
 

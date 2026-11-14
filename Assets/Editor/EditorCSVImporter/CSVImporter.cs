@@ -82,6 +82,7 @@ public class CSVImporter : EditorWindow
         }
         EditorUtils.SaveAssets();
         EditorUtils.RefreshAssets();
+        Debug.Log($"[CSVImporter] Succesfully imported {scriptableObjectType}");
     }
 
     private object ParseValue(string stringValue, CSVFieldMapping fieldMapping, Type parserType) 

@@ -6,6 +6,7 @@ public class Character
     public CharacterComponentSpeed CharacterComponentSpeed;
     public CharacterComponentSide CharacterComponentSide;
     public CharacterComponentBullet CharacterComponentBullet;
+    public CharacterComponentStat CharacterComponentStat;
 
     public Character(CharacterData data)
     {
@@ -15,5 +16,6 @@ public class Character
         CharacterComponentSpeed = new CharacterComponentSpeed(data, this, null);
         CharacterComponentSide = new CharacterComponentSide(data);
         CharacterComponentBullet = new CharacterComponentBullet(data);
+        CharacterComponentStat = new CharacterComponentStat(data, this);
     }
 }
