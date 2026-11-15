@@ -25,5 +25,8 @@ public class CharacterData : ScriptableObject
     public string MoveId2;
     public string MoveId3;
 
+    public string MoveIdMelee;
+    public string MoveIdRange;
+
     public string WingId;
 }

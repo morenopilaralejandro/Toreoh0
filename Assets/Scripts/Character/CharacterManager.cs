@@ -4,7 +4,7 @@ public class CharacterManager : MonoBehaviour
 {
     public static CharacterManager Instance { get; private set; }
 
-    [SerializeField] private CharacterConfig config;    
+    public CharacterConfig Config;
 
     public CharacterManagerComponentStorage CharacterManagerComponentStorage;
     public CharacterManagerComponentPersistence CharacterManagerComponentPersistence;
@@ -29,7 +29,7 @@ public class CharacterManager : MonoBehaviour
 
     private void Initialize()
     {
-        CharacterManagerComponentStorage = new CharacterManagerComponentStorage(config);
+        CharacterManagerComponentStorage = new CharacterManagerComponentStorage(Config);
         CharacterManagerComponentPersistence.Subscribe();
     }
 }

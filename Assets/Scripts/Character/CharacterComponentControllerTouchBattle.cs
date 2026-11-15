@@ -6,15 +6,11 @@ public class CharacterComponentControllerTouchBattle : CharacterComponentControl
     public bool IsControlled;
     private float rangeMelee = 3f;
     private float rangeMeleeSqr;
-
-    private Move moveTestRange;
-    private Move moveTestMelee;
+    private Move move;
 
     public void Initialize()
     {
         rangeMeleeSqr = rangeMelee * rangeMelee;
-        moveTestRange = MoveFactory.CreateById("move-00000-test_line_uniform");
-        moveTestMelee = MoveFactory.CreateById("move-00000-test_melee_slash");
         // if (! is controlled) this.SetActive(false)
     }
 
@@ -32,16 +28,14 @@ public class CharacterComponentControllerTouchBattle : CharacterComponentControl
     {
         if (!entity.CharacterComponentTarget.HasTarget) return;
         entity.CharacterComponentModel.RotateInstant(entity.CharacterComponentTarget.GetDirectionToTarget());
+
         if ((entity.CharacterComponentTarget.TargetEntity.transform.position - entity.transform.position).sqrMagnitude < rangeMeleeSqr)
-        {
-            entity.CharacterComponentStateLock.StartStateLock(moveTestMelee.MoveComponentFrame.FrameRecovery);
-            BattleManager.Instance.Battle.BattleComponentBullet.AddBullet(entity, moveTestMelee);
-        }
+            move = entity.Character.CharacterComponentMove.MoveMelee;
         else 
-        {
-            entity.CharacterComponentStateLock.StartStateLock(moveTestRange.MoveComponentFrame.FrameRecovery);
-            BattleManager.Instance.Battle.BattleComponentBullet.AddBullet(entity, moveTestRange);
-        }
+            move = entity.Character.CharacterComponentMove.MoveRange;
+
+        entity.CharacterComponentStateLock.StartStateLock(move.MoveComponentFrame.FrameRecovery);
+        BattleManager.Instance.Battle.BattleComponentBullet.AddBullet(entity, move);
     }
 
     protected override void ExecuteActionSwipeUp()

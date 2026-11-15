@@ -57,7 +57,7 @@ public abstract class CharacterComponentControllerTouch : MonoBehaviour
         // if (!IsMoving()) return;
     }
 
-    protected bool IsMoving() => isDragging && moveDirection.sqrMagnitude > inputSqrMagnitudeMin;
+    public bool IsMoving() => isDragging && moveDirection.sqrMagnitude > inputSqrMagnitudeMin;
     //protected bool IsRotating() => moveDirection.sqrMagnitude > rotationSqrMagnitudeMin;
 
 

@@ -32,11 +32,11 @@ public class BattleComponentDamageCalculator
     {
         damage -= CalcDefense(
             GetElementMultiplierEffective(moveElement, defenseEntity.Character.CharacterComponentElement.ListElement),
-            defenseEntity.Character.CharacterComponentStat.GetStatValueByDuelRoleAndMoveCategory(DuelRole.Defense, moveCategory)
+            defenseEntity.Character.CharacterComponentStats.GetStatValueByDuelRoleAndMoveCategory(DuelRole.Defense, moveCategory)
         );
         
         damage = ClampDamage(damage);
-        CustomLog.Warning($"[BattleComponentBullet] CharacterId: {defenseEntity.Character.CharacterComponentAttributes.CharacterId}. Damage: damage.");
+        //CustomLog.Warning($"[BattleComponentBullet] CharacterId: {defenseEntity.Character.CharacterComponentAttributes.CharacterId}. Damage: {damage}.");
         // TODO reduce hp by damage
     }
 

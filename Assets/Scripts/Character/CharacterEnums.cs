@@ -30,4 +30,10 @@ namespace Aremoreno.Enums.Character
         RangeDefense,
         Speed
     }
+
+    public enum ScalingStrategy
+    {
+        Linear,
+        Exponential
+    }
 }

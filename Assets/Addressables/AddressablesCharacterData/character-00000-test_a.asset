@@ -25,8 +25,10 @@ MonoBehaviour:
   MoveLv1: 0
   MoveLv2: 0
   MoveLv3: 0
-  MoveId0: 
-  MoveId1: 
-  MoveId2: 
-  MoveId3: 
+  MoveId0: move-00000-test_spiral
+  MoveId1: move-00000-test_spiral
+  MoveId2: move-00000-test_spiral
+  MoveId3: move-00000-test_spiral
+  MoveIdMelee: move-00000-test_melee_slash
+  MoveIdRange: move-00000-test_line_uniform
   WingId: 

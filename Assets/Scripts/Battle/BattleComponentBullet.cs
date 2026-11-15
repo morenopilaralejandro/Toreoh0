@@ -159,7 +159,7 @@ battle.BattleComponentTeam.GetEntityByBulletSource(bulletStruct.SourceBattleSide
         isDestroyedOnObstacle = move.MoveComponentAttributes.MoveCategory == MoveCategory.Range;
         elementMultiplierMatch = battle.BattleComponentDamageCalculator.GetElementMultiplierMatch(characterEntityBattle, move.MoveComponentAttributes.Element);
         elementMultiplierCommandType = battle.BattleComponentDamageCalculator.GetElementMultiplierCommandType(move.MoveComponentAttributes.MoveCommandType);
-        statMainValue = characterEntityBattle.Character.CharacterComponentStat.GetStatValueByDuelRoleAndMoveCategory(DuelRole.Offense, move.MoveComponentAttributes.MoveCategory);
+        statMainValue = characterEntityBattle.Character.CharacterComponentStats.GetStatValueByDuelRoleAndMoveCategory(DuelRole.Offense, move.MoveComponentAttributes.MoveCategory);
 
         foreach(BulletData bulletData in move.MoveComponentBullet.BulletPattern.BulletPatternComponentBullet.ListBulletData)
             AddBullet(
