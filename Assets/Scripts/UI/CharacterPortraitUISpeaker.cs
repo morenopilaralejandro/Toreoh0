@@ -27,6 +27,6 @@ public class CharacterPortraitUISpeaker : MonoBehaviour
         var spriteCharacter = await bindingCharacter.LoadAssetAsync(speaker.AppearanceComponent.PortraitAddress);
         if (version != auxVersion) return;
         imageCharacterPortrait.sprite = spriteCharacter;
-        UIUtils.SetCanvasGroupVisible(canvasGroupCharacter, true);
+        UIUtils.SetCanvasGroupAlpha(canvasGroupCharacter, true);
     }
 }

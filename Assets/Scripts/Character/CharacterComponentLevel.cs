@@ -1,5 +1,7 @@
 public class CharacterComponentLevel : CharacterComponentLevelBase
 {
+    private Character character;
+
     public CharacterComponentLevel(Character character, CharacterSaveData saveData) : base(
         level : saveData != null ? 0 : character.CharacterComponentConfig.Config.LevelMin,
         xpCurrent : saveData != null ? 0 : 0,
@@ -10,10 +12,13 @@ public class CharacterComponentLevel : CharacterComponentLevelBase
         scalingMultiplier : character.CharacterComponentConfig.Config.ScalingMultiplier, 
         scalingExponent : character.CharacterComponentConfig.Config.ScalingExponent, 
         scalingStrategy : character.CharacterComponentConfig.Config.ScalingStrategy
-    ) { }
+    ) 
+    { 
+        this.character = character;
+    }
 
     public override void OnLevelUpPerformed()
     {
-
+        character.CharacterComponentStats.RecalculateStats();
     }
 }

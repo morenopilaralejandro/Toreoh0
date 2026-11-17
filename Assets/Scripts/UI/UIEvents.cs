@@ -7,6 +7,19 @@ using Aremoreno.Enums.UI;
 
 public static class UIEvents 
 {
+    // Battle
+    public static event Action<CharacterEntityBattle> OnBattleParticipantUpdateRequeted;
+    public static void RaiseBattleParticipantUpdateRequeted(CharacterEntityBattle entity) 
+        => OnBattleParticipantUpdateRequeted?.Invoke(entity);
+
+    public static event Action<CharacterEntityBattle> OnCharacterHpDecreased;
+    public static void RaiseCharacterHpDecreased(CharacterEntityBattle entity)
+        => OnCharacterHpDecreased?.Invoke(entity);
+
+    public static event Action<CharacterEntityBattle> OnCharacterMpDecreased;
+    public static void RaiseCharacterMpDecreased(CharacterEntityBattle entity)
+        => OnCharacterMpDecreased?.Invoke(entity);
+
     // memory
     public static event Action<GameObject> OnSelectableSelected;
     public static void RaiseSelectableSelected(GameObject go) 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: bullet-bullet_pattern-00002-line_uniform_0
   m_EditorClassIdentifier: Assembly-CSharp::BulletData
   BulletId: bullet-bullet_pattern-00002-line_uniform_0
-  DamageBase: 1
+  DamageBase: 10
   BulletMotionType: 0
   Ttl: 99
   RadiusHit: 0.2

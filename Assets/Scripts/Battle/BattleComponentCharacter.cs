@@ -45,6 +45,9 @@ public class BattleComponentCharacter
                 entity.CharacterComponentModel.RotateInstant(new Vector3(mapping.RotationX, mapping.RotationY, mapping.RotationZ));
                 entity.CharacterIndicatorBattleSide.SetBattleSide(team.TeamComponentSide.BattleSide);
                 // await entity.LoadAsync();
+                entity.Character.CharacterComponentLevel.SetLevel(99);
+
+                UIEvents.RaiseBattleParticipantUpdateRequeted(entity);
             }
         }
 

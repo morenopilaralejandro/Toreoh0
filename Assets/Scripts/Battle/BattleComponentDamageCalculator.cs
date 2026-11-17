@@ -30,14 +30,21 @@ public class BattleComponentDamageCalculator
         MoveCategory moveCategory, 
         float damage)
     {
-        damage -= CalcDefense(
-            GetElementMultiplierEffective(moveElement, defenseEntity.Character.CharacterComponentElement.ListElement),
-            defenseEntity.Character.CharacterComponentStats.GetStatValueByDuelRoleAndMoveCategory(DuelRole.Defense, moveCategory)
-        );
-        
+        damage *= GetElementMultiplierEffective(moveElement, defenseEntity.Character.CharacterComponentElement.ListElement);
+        damage -= CalcDefense(defenseEntity.Character.CharacterComponentStats.GetStatValueByDuelRoleAndMoveCategory(DuelRole.Defense, moveCategory));
         damage = ClampDamage(damage);
-        //CustomLog.Warning($"[BattleComponentBullet] CharacterId: {defenseEntity.Character.CharacterComponentAttributes.CharacterId}. Damage: {damage}.");
-        // TODO reduce hp by damage
+        defenseEntity.Character.CharacterComponentStats.ModifyStatsBattleWithClamp(Stat.Hp, Mathf.FloorToInt(-damage));
+
+        UIEvents.RaiseCharacterHpDecreased(defenseEntity);
+
+        /*
+        CustomLog.Error(
+            $"[BattleComponentDamageCalculator] [ApplyDamage] Bullet collided with {defenseEntity.Character.CharacterComponentAttributes.CharacterId} " +
+            $"GetElementMultiplierEffective: {GetElementMultiplierEffective(moveElement, defenseEntity.Character.CharacterComponentElement.ListElement)}, " +
+            $"Damage final: {damage}, " +
+            $"HP after: {defenseEntity.Character.CharacterComponentStats.StatsBattle.Get(Stat.Hp)}"
+        );
+        */
     }
 
     public float CalcDamage(
@@ -49,15 +56,31 @@ public class BattleComponentDamageCalculator
         floatValue = damageBase * elementMultiplierCommandType;
         floatValue += statMainValue * STAT_MULTIPLIER_MAIN;
         floatValue *= elementMultiplierMatch;
+        /*
+        CustomLog.Error(
+            $"[BattleComponentDamageCalculator] [CalcDamage] " + 
+            $"damageBase: {damageBase}, " + 
+            $"elementMultiplierMatch: {elementMultiplierMatch}, " + 
+            $"elementMultiplierCommandType: {elementMultiplierCommandType}, " + 
+            $"statMainValue: {statMainValue}, " + 
+            $"statMainValue * STAT_MULTIPLIER_MAIN: {statMainValue * STAT_MULTIPLIER_MAIN}, " +
+            $"result: {floatValue}"
+        );
+        */
         return floatValue;
     }
 
-    public float CalcDefense(
-        float elementMultiplierEffective, 
-        float statMainValue)
+    public float CalcDefense(float statMainValue)
     {
         floatValue = statMainValue * STAT_MULTIPLIER_MAIN;
-        floatValue *= elementMultiplierEffective;
+        /*
+        CustomLog.Error(
+            $"[BattleComponentDamageCalculator] [CalcDefense] " + 
+            $"statMainValue: {statMainValue}, " + 
+            $"statMainValue * STAT_MULTIPLIER_MAIN: {statMainValue * STAT_MULTIPLIER_MAIN}, " +
+            $"result: {floatValue}"
+        );
+        */
         return floatValue;
     }
 
@@ -101,7 +124,8 @@ public class BattleComponentDamageCalculator
             floatValue *= ELEMENT_MULTIPLIER_MATCH;
         return floatValue;
     }
-        /*        
+        /*  
+        TODO      
         if (wing match) multipliet + wing refimenet bonus
         else if bullet and character match multipliet
         else 1

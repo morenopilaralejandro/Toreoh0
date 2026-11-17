@@ -56,6 +56,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ScenesEnvironment/SceneBattleMap.unity
     guid: a44fdea99cc068381af807ee5a778eda
+  - enabled: 1
+    path: Assets/Scenes/ScenesUI/SceneBattleResultUI.unity
+    guid: a1841332cb98d0edfb2619cb4d3f7ba2
   m_configObjects:
     com.unity.adaptivePerformance.basic.provider_settings: {fileID: 11400000, guid: b8af9ae6712e711fa848047a7421583e, type: 2}
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 4dab92d3e12dc18e28fa1e064e7daefb, type: 2}

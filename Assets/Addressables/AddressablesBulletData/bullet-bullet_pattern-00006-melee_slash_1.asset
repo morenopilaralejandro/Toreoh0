@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: bullet-bullet_pattern-00006-melee_slash_1
   m_EditorClassIdentifier: Assembly-CSharp::BulletData
   BulletId: bullet-bullet_pattern-00006-melee_slash_1
-  DamageBase: 1
+  DamageBase: 25
   BulletMotionType: 1
   Ttl: 0.5
   RadiusHit: 1.2

@@ -35,7 +35,7 @@ public class CharacterComponentStats
         StatsBase.Set(Stat.Speed, data.StatSpeed);
 
         // TODO use save data
-
+        RecalculateStats();
         // TODO set battle hp and sp from save data
     }
 

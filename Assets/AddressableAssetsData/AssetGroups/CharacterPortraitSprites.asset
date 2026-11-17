@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: CharacterPortraitSprites
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: CharacterPortraitSprites
+  m_GUID: cbaf38589c6b8bffbb611f3ef2324ce2
+  m_SerializeEntries:
+  - m_GUID: 02a1a2e1f022f7a1bae9fdaae3fd2fc9
+    m_Address: sprite-character-portrait-character-00000-test_a
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7575278ef4c6612b1802ad127e0923d9
+    m_Address: Assets/Sprites/SpritesPortraitCharacter/portrait-hero.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a9d2742d7820bc1339ae5b76472c4bd6
+    m_Address: sprite-character-portrait-character-00000-test_b
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e869b008e086e79a98d43390db801143
+    m_Address: Assets/Sprites/SpritesPortraitCharacter/portrait-bull.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: fd8f0a373a4da231f8de6474b1779402, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 82a8ffce3b8e4b004adc47913fd619ae, type: 2}
+    - {fileID: 11400000, guid: 836541fec3c56b6baa0c389232c9acdc, type: 2}
