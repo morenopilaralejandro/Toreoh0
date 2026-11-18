@@ -16,6 +16,163 @@ MonoBehaviour:
   IsDamageBoostEnable: 0
   DamageBoost: 100
   IsDebugCatchEnable: 0
+  ListBattlePhaseMapping:
+  - BattlePhase: 3
+    ThresholdHp: 0.25
+    ListLocalizationReferenceStyleMapping:
+    - Style: 0
+      LocalizedString:
+        m_TableReference:
+          m_TableCollectionName: GUID:735824408b5855db8be90f3ec8f1c914
+        m_TableEntryReference:
+          m_KeyId: 21083258831511555
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      LocalizedSprite:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+    - Style: 1
+      LocalizedString:
+        m_TableReference:
+          m_TableCollectionName: GUID:735824408b5855db8be90f3ec8f1c914
+        m_TableEntryReference:
+          m_KeyId: 21083258831511555
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      LocalizedSprite:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+  - BattlePhase: 2
+    ThresholdHp: 0.45
+    ListLocalizationReferenceStyleMapping:
+    - Style: 0
+      LocalizedString:
+        m_TableReference:
+          m_TableCollectionName: GUID:735824408b5855db8be90f3ec8f1c914
+        m_TableEntryReference:
+          m_KeyId: 21083258831511554
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      LocalizedSprite:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+    - Style: 1
+      LocalizedString:
+        m_TableReference:
+          m_TableCollectionName: GUID:735824408b5855db8be90f3ec8f1c914
+        m_TableEntryReference:
+          m_KeyId: 21083258831511554
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      LocalizedSprite:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+  - BattlePhase: 1
+    ThresholdHp: 0.75
+    ListLocalizationReferenceStyleMapping:
+    - Style: 0
+      LocalizedString:
+        m_TableReference:
+          m_TableCollectionName: GUID:735824408b5855db8be90f3ec8f1c914
+        m_TableEntryReference:
+          m_KeyId: 21083258831511553
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      LocalizedSprite:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+    - Style: 1
+      LocalizedString:
+        m_TableReference:
+          m_TableCollectionName: GUID:735824408b5855db8be90f3ec8f1c914
+        m_TableEntryReference:
+          m_KeyId: 21083258831511553
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      LocalizedSprite:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+  - BattlePhase: 0
+    ThresholdHp: 2
+    ListLocalizationReferenceStyleMapping:
+    - Style: 0
+      LocalizedString:
+        m_TableReference:
+          m_TableCollectionName: GUID:735824408b5855db8be90f3ec8f1c914
+        m_TableEntryReference:
+          m_KeyId: 21083258831511552
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      LocalizedSprite:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+    - Style: 1
+      LocalizedString:
+        m_TableReference:
+          m_TableCollectionName: GUID:735824408b5855db8be90f3ec8f1c914
+        m_TableEntryReference:
+          m_KeyId: 21083258831511552
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      LocalizedSprite:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
   CountBarrier: 0
   CountCapturePortal: 1
   CountProtectObstacle: 3
@@ -58,3 +215,6 @@ MonoBehaviour:
   LayerObstacleBullet:
     serializedVersion: 2
     m_Bits: 128
+  references:
+    version: 2
+    RefIds: []

@@ -488,7 +488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 811ee5b6cc78e2d6bb547e4bc39fcd42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleManager
-  config: {fileID: 11400000, guid: 7d794801ddc5dcafbac7366873ac6b18, type: 2}
+  BattleConfig: {fileID: 11400000, guid: 7d794801ddc5dcafbac7366873ac6b18, type: 2}
   cinemachineTargetGroup: {fileID: 1562787184}
   battleComponentIndicatorTarget: {fileID: 210889922}
   parentTileMap: {fileID: 1573859096}

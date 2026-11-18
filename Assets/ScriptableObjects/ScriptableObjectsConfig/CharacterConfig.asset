@@ -49,3 +49,26 @@ MonoBehaviour:
     ScalingRatioMin: 0.1
     ScalingRatioMax: 1
     ScalingExponent: 2
+  ListFatigueMapping:
+  - FatigueState: 2
+    ThresholdHp: 10
+    FatigueMultiplier: 0.45
+  - FatigueState: 1
+    ThresholdHp: 20
+    FatigueMultiplier: 0.7
+  - FatigueState: 0
+    ThresholdHp: 2147483647
+    FatigueMultiplier: 1
+  ListScalingDifficultyMapping:
+  - AIDifficulty: 0
+    Level: 15
+  - AIDifficulty: 1
+    Level: 35
+  - AIDifficulty: 2
+    Level: 50
+  - AIDifficulty: 3
+    Level: 80
+  - AIDifficulty: 4
+    Level: 90
+  - AIDifficulty: 5
+    Level: 100

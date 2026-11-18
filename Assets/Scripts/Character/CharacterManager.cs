@@ -29,6 +29,7 @@ public class CharacterManager : MonoBehaviour
 
     private void Initialize()
     {
+        Config.Initialize();
         CharacterManagerComponentStorage = new CharacterManagerComponentStorage(Config);
         CharacterManagerComponentPersistence = new CharacterManagerComponentPersistence(this);
         CharacterManagerComponentPersistence.Subscribe();

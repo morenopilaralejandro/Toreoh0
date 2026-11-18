@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 public class BattleManager : MonoBehaviour, IAsyncSceneLoader
 {
     public static BattleManager Instance { get; private set; }
-    [SerializeField] private BattleConfig config;
+    public BattleConfig BattleConfig;
     [SerializeField] private CinemachineTargetGroup cinemachineTargetGroup;
     [SerializeField] private BattleComponentIndicatorTarget battleComponentIndicatorTarget;
     [SerializeField] private Transform parentTileMap;
@@ -40,9 +40,9 @@ public class BattleManager : MonoBehaviour, IAsyncSceneLoader
 
     public async Task LoadAsync()
     {
-        config.Initialize();
+        BattleConfig.Initialize();
         Battle = new Battle(
-            config, 
+            BattleConfig, 
             cinemachineTargetGroup, 
             battleComponentIndicatorTarget, 
             parentTileMap, 

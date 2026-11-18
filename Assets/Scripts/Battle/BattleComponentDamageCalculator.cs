@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Aremoreno.Enums.Battle;
 using Aremoreno.Enums.Character;
 using Aremoreno.Enums.Duel;
 using Aremoreno.Enums.Move;
@@ -12,6 +13,7 @@ public class BattleComponentDamageCalculator
     //private const float STAT_MULTIPLIER_SUB = 0.25f;
     private const float MULTIPLIER_DEFAULT = 1f;
     private const float SPECIAL_MULTIPLIER = 2f;
+    private const float BATTLE_PHASE_MULTIPLIER = 1.2f;
     private const float ELEMENT_MULTIPLIER_MATCH = 1.5f;
     private const float ELEMENT_MULTIPLIER_EFFECTIVE = 1.5f;
     private const float ELEMENT_MULTIPLIER_RESISTED = 0.5f;
@@ -42,7 +44,9 @@ public class BattleComponentDamageCalculator
             $"[BattleComponentDamageCalculator] [ApplyDamage] Bullet collided with {defenseEntity.Character.CharacterComponentAttributes.CharacterId} " +
             $"GetElementMultiplierEffective: {GetElementMultiplierEffective(moveElement, defenseEntity.Character.CharacterComponentElement.ListElement)}, " +
             $"Damage final: {damage}, " +
-            $"HP after: {defenseEntity.Character.CharacterComponentStats.StatsBattle.Get(Stat.Hp)}"
+            $"HP true: {defenseEntity.Character.CharacterComponentStats.StatsTrue.Get(Stat.Hp)} " +
+            $"HP battle after: {defenseEntity.Character.CharacterComponentStats.StatsBattle.Get(Stat.Hp)} " +
+            $"HP normalized afer: {defenseEntity.Character.CharacterComponentStats.GetStatNormalized(Stat.Hp)}"
         );
         */
     }
@@ -51,11 +55,13 @@ public class BattleComponentDamageCalculator
         float damageBase, 
         float elementMultiplierMatch, 
         float elementMultiplierCommandType,
+        float battlePhaseMultiplier,
         float statMainValue)
     {
         floatValue = damageBase * elementMultiplierCommandType;
         floatValue += statMainValue * STAT_MULTIPLIER_MAIN;
         floatValue *= elementMultiplierMatch;
+        floatValue *= battlePhaseMultiplier;
         /*
         CustomLog.Error(
             $"[BattleComponentDamageCalculator] [CalcDamage] " + 
@@ -138,5 +144,20 @@ public class BattleComponentDamageCalculator
         if (moveCommandType == MoveCommandType.Special)
             floatValue *= SPECIAL_MULTIPLIER;
         return floatValue;
+    }
+
+    // battlePhase
+    public float GetBattlePhaseMultiplier(MoveCategory moveCategory, BattlePhase battlePhase) 
+    {
+        if
+        (
+            (battlePhase == BattlePhase.Banderillas && moveCategory == MoveCategory.Range) ||
+            (battlePhase == BattlePhase.Muerte && moveCategory == MoveCategory.Melee)  
+        )
+            return BATTLE_PHASE_MULTIPLIER;
+        else 
+        {
+            return MULTIPLIER_DEFAULT;
+        }
     }
 }

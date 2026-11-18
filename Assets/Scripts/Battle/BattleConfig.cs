@@ -6,10 +6,14 @@ using Aremoreno.Enums.Battle;
 public class BattleConfig : ScriptableObject
 {
     [Header("Debug")]
+    public bool IsEnemyAIEnable;
     public bool IsInfiniteHpEnable;
     public bool IsDamageBoostEnable;
     public float DamageBoost;
-    public bool IsDebugCatchEnable;
+    public bool IsDebugCaptureEnable;
+
+    [Header("General")]
+    public List<BattlePhaseMapping> ListBattlePhaseMapping;
 
     [Header("Field")]
     public int CountBarrier;
@@ -25,12 +29,15 @@ public class BattleConfig : ScriptableObject
     public Material MaterialBullet;
     public LayerMask LayerObstacleBullet;
 
-    public Dictionary<BattleSide, CharacterSpawnPositionMapping> DictListCoordCharacterSpawn = new();
-    
+    public Dictionary<BattleSide, CharacterSpawnPositionMapping> DictCoordCharacterSpawn = new();
+    public Dictionary<BattlePhase, BattlePhaseMapping> DictBattlePhaseMapping = new();
+
     public void Initialize() 
     {
         foreach (var mapping in ListCoordCharacter)
-            DictListCoordCharacterSpawn[mapping.BattleSide] = mapping;
+            DictCoordCharacterSpawn[mapping.BattleSide] = mapping;
+        foreach (var mapping in ListBattlePhaseMapping)
+            DictBattlePhaseMapping[mapping.BattlePhase] = mapping;
     }
 }
 

@@ -26,6 +26,7 @@ public class BattleComponentBullet
     private bool isDestroyedOnObstacle;
     private float elementMultiplierMatch;
     private float elementMultiplierCommandType;
+    private float battlePhaseMultiplier;
     private float statMainValue;
 
     // lifecycle
@@ -159,6 +160,7 @@ battle.BattleComponentTeam.GetEntityByBulletSource(bulletStruct.SourceBattleSide
         isDestroyedOnObstacle = move.MoveComponentAttributes.MoveCategory == MoveCategory.Range;
         elementMultiplierMatch = battle.BattleComponentDamageCalculator.GetElementMultiplierMatch(characterEntityBattle, move.MoveComponentAttributes.Element);
         elementMultiplierCommandType = battle.BattleComponentDamageCalculator.GetElementMultiplierCommandType(move.MoveComponentAttributes.MoveCommandType);
+        battlePhaseMultiplier = battle.BattleComponentDamageCalculator.GetBattlePhaseMultiplier(move.MoveComponentAttributes.MoveCategory, battle.BattleComponentPhase.BattlePhaseCurrent);
         statMainValue = characterEntityBattle.Character.CharacterComponentStats.GetStatValueByDuelRoleAndMoveCategory(DuelRole.Offense, move.MoveComponentAttributes.MoveCategory);
 
         foreach(BulletData bulletData in move.MoveComponentBullet.BulletPattern.BulletPatternComponentBullet.ListBulletData)
@@ -167,7 +169,7 @@ battle.BattleComponentTeam.GetEntityByBulletSource(bulletStruct.SourceBattleSide
                 dir : Quaternion.Euler(0, 0, bulletData.AngularStart) * characterEntityBattle.CharacterComponentModel.Model.forward * bulletData.DirectionFactor,
                 scale : scaleDefault * bulletData.RadiusVisual,
                 rot : rotDefault,
-                damage : battle.BattleComponentDamageCalculator.CalcDamage(bulletData.DamageBase, elementMultiplierMatch, elementMultiplierCommandType, statMainValue),
+                damage : battle.BattleComponentDamageCalculator.CalcDamage(bulletData.DamageBase, elementMultiplierMatch, elementMultiplierCommandType, battlePhaseMultiplier, statMainValue),
                 ttl : bulletData.Ttl,
                 radiusHit : bulletData.RadiusHit,
                 speedMovement : bulletData.SpeedMovement,

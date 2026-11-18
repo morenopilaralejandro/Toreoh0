@@ -36,4 +36,57 @@ namespace Aremoreno.Enums.Character
         Linear,
         Exponential
     }
+
+    public enum AIDifficulty
+    {
+        VeryEasy,
+        Easy,
+        Normal,
+        Hard,
+        VeryHard,
+        Impossible
+    }
+
+    public enum CharacterState
+    {
+        Idle,
+        Charge
+    }
+
+    public enum AIState
+    {
+        Idle,
+        Bait,
+        Atack,
+        Turn,
+        Charge,
+        Target
+    }
+
+    public enum AIBehaviour
+    {
+        Normal,
+        Rage,
+        Weak,
+        Capture
+    }
+
+    public enum FatigueState 
+    {
+        Normal,
+        Tired,
+        Exhausted
+    }
+
+    public enum StatusEffectVolatile
+    {
+        None,
+        Stunned
+    }
+
+    public enum StatusEffectPermanent
+    {
+        None,
+        Fainted
+    }
 }

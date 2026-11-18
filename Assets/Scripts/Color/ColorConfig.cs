@@ -11,6 +11,7 @@ public class ColorConfig : ScriptableObject
     public ColorDictionary<BattleMessage> BattleMessage;
     public ColorDictionary<BattleSide> BattleSide;
     public ColorDictionary<BattleSide> BattleSideBullet;
+    public ColorDictionary<BattlePhase> BattlePhase;
 
     public IEnumerable<IColorDictionary> GetAllDictionaries() 
     {
@@ -18,5 +19,6 @@ public class ColorConfig : ScriptableObject
         yield return BattleMessage;
         yield return BattleSide;
         yield return BattleSideBullet; 
+        yield return BattlePhase;
     }
 }

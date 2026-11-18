@@ -1088,6 +1088,7 @@ MonoBehaviour:
   dimmedAlpha: 0.5
   sfxOpen: sfx-ui_menu_open
   sfxClose: sfx-ui_menu_close
+  battleConfig: {fileID: 11400000, guid: 7d794801ddc5dcafbac7366873ac6b18, type: 2}
 --- !u!224 &2042240496 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1002319715594600716, guid: 0194812fd513627f1a04812b557d5f66, type: 3}

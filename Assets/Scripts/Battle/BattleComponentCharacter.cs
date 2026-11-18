@@ -23,13 +23,16 @@ public class BattleComponentCharacter
             for (int j = 0; j < team.TeamComponentCharacter.ListCharacterPointRuntime.Count; j++)
             {
                 Character character = team.TeamComponentCharacter.ListCharacterPointRuntime[j];
-                var mapping = battle.BattleComponentConfig.BattleConfig.DictListCoordCharacterSpawn[team.TeamComponentSide.BattleSide];
+                var mapping = battle.BattleComponentConfig.BattleConfig.DictCoordCharacterSpawn[team.TeamComponentSide.BattleSide];
                 var coord = new FormationCoord(mapping.FormationCoordData);
 
                 AddressableBinding<GameObject> binding = new();
                 string address = AddressableBuilder.GetCharacterPrefabAddress(character.CharacterComponentAttributes.CharacterId);
                 var prefab = await binding.LoadAssetAsync(address);
                 listBinding.Add(binding);
+
+                character.CharacterComponentLevel.SetLevel(99);
+                character.CharacterComponentAIScalingDifficulty.ScaleByLevel(99);
 
                 var go = BattleManager.Instance.InstantiateGameObject(
                     prefab,
@@ -45,7 +48,6 @@ public class BattleComponentCharacter
                 entity.CharacterComponentModel.RotateInstant(new Vector3(mapping.RotationX, mapping.RotationY, mapping.RotationZ));
                 entity.CharacterIndicatorBattleSide.SetBattleSide(team.TeamComponentSide.BattleSide);
                 // await entity.LoadAsync();
-                entity.Character.CharacterComponentLevel.SetLevel(99);
 
                 UIEvents.RaiseBattleParticipantUpdateRequeted(entity);
             }

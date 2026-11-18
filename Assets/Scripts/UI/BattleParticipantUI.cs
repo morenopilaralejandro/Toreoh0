@@ -36,16 +36,6 @@ public class BattleParticipantUI: MonoBehaviour
         imageBackground.color = ColorManager.Instance.Palettes.BattleSide.Get(battleSide);
     }
 
-    // bar
-    private void SetBar(Stat stat, bool isInstant = false) 
-    {
-        barHp.SetValue(
-            entity.Character.CharacterComponentStats.StatsBattle.Get(stat),
-            entity.Character.CharacterComponentStats.StatsTrue.Get(stat),
-            isInstant
-        );
-    }
-
     // helper
     private bool IsValidCharacter(CharacterEntityBattle entity) => entity != null && this.entity != null && entity.Character.CharacterComponentAttributes.CharacterGuid == this.entity.Character.CharacterComponentAttributes.CharacterGuid;
 
@@ -68,11 +58,12 @@ public class BattleParticipantUI: MonoBehaviour
         if (entity.Character.CharacterComponentSide.BattleSide != this.battleSide) return;
         SetBackgroundColor(entity.Character.CharacterComponentSide.BattleSide);
         _ = SetAsync(entity);
-        SetBar(Stat.Hp, true);
+        barHp.SetValue(entity.Character.CharacterComponentStats.GetStatNormalized(Stat.Hp), isInstant : true);
     }
 
     private void OnCharacterHpDecreased(CharacterEntityBattle entity) 
     {
-        if (IsValidCharacter(entity)) SetBar(Stat.Hp);
+        if (IsValidCharacter(entity)) 
+            barHp.SetValue(entity.Character.CharacterComponentStats.GetStatNormalized(Stat.Hp), isInstant : false);
     }
 }

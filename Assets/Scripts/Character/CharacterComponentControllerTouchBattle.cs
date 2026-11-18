@@ -57,5 +57,4 @@ public class CharacterComponentControllerTouchBattle : CharacterComponentControl
     {
         CustomLog.Error($"[CharacterControllerComponentTouchBattle] ExecuteActionSwipeRight");
     }
-
 }

@@ -69,4 +69,8 @@ symbol_brackets_curly_open,{,{,{
 symbol_brackets_curly_close,},},}
 symbol_less,<,<,<
 symbol_greater,>,>,>
-text_battle,,,Luchar
+text_main_menu_battle,,,Luchar
+text_battle_phase_varas,,,Varas
+text_battle_phase_banderillas,,,Banderillas
+text_battle_phase_muerte,,,Muerte
+text_battle_phase_captura,,,Captura

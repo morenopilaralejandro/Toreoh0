@@ -20,25 +20,27 @@ public class CharacterComponentSide
         EntityIndex = entityIndex;
     }
 
-    public bool IsSameTeam(Character other) 
+    public bool IsSameTeam(Character other) => IsSameTeam(BattleSide, other.CharacterComponentSide.BattleSide);
+    public bool IsSameTeam(BattleSide otherSide) => IsSameTeam(BattleSide, otherSide);
+    public bool IsSameTeam(BattleSide ownSide, BattleSide otherSide) 
     {
         switch (BattleManager.Instance.Battle.BattleComponentAttributes.BattleFormat)
         {
             case BattleFormat.Double:
-                switch (BattleSide) 
+                switch (ownSide)
                 {
                     case BattleSide.North:
-                        return other.CharacterComponentSide.BattleSide == BattleSide.North || other.CharacterComponentSide.BattleSide == BattleSide.West;
+                        return otherSide == BattleSide.North || otherSide == BattleSide.West;
                     case BattleSide.West:
-                        return other.CharacterComponentSide.BattleSide == BattleSide.North || other.CharacterComponentSide.BattleSide == BattleSide.West;
+                        return otherSide == BattleSide.North || otherSide == BattleSide.West;
                     case BattleSide.South:
-                        return other.CharacterComponentSide.BattleSide == BattleSide.South || other.CharacterComponentSide.BattleSide == BattleSide.East;
+                        return otherSide == BattleSide.South || otherSide == BattleSide.East;
                     case BattleSide.East:
-                        return other.CharacterComponentSide.BattleSide == BattleSide.South || other.CharacterComponentSide.BattleSide == BattleSide.East;
+                        return otherSide == BattleSide.South || otherSide == BattleSide.East;
                 }
                 break;
             default:
-                return BattleSide == other.CharacterComponentSide.BattleSide;
+                return ownSide == otherSide;
         }
         return false;
     }

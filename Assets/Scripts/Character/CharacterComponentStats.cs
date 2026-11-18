@@ -47,6 +47,8 @@ public class CharacterComponentStats
     }   
 
     // get stat special
+    public float GetStatNormalized(Stat stat) => (float) StatsBattle.Get(stat) / StatsTrue.Get(stat);
+
     public float GetStatValueByDuelRoleAndMoveCategory(DuelRole duelRole, MoveCategory moveCategory) => (float) StatsBattle.Get(GetStatByDuelRoleAndMoveCategory(duelRole,moveCategory));
     public Stat GetStatByDuelRoleAndMoveCategory(DuelRole duelRole, MoveCategory moveCategory) 
     {

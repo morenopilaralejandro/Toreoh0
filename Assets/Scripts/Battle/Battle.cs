@@ -9,11 +9,13 @@ public class Battle
     public BattleComponentTeam BattleComponentTeam;
     public BattleComponentCharacter BattleComponentCharacter;
     public BattleComponentPersistence BattleComponentPersistence;
-    public BattleComponentEnd BattleComponentEnd;
     public BattleComponentTarget BattleComponentTarget;
     public BattleComponentCamera BattleComponentCamera;
     public BattleComponentBullet BattleComponentBullet;
     public BattleComponentDamageCalculator BattleComponentDamageCalculator;
+    public BattleComponentPhase BattleComponentPhase;
+    public BattleComponentEnd BattleComponentEnd;
+    public BattleComponentWinCondition BattleComponentWinCondition;
 
     public Battle(
         BattleConfig battleConfig, 
@@ -31,16 +33,24 @@ public class Battle
         BattleComponentTeam = new BattleComponentTeam(this);
         BattleComponentCharacter = new BattleComponentCharacter(this, parentCharacter);
         BattleComponentPersistence = new BattleComponentPersistence(this);
-        BattleComponentEnd = new BattleComponentEnd(this);
         BattleComponentCamera = new BattleComponentCamera(this, cinemachineTargetGroup);
         BattleComponentBullet = new BattleComponentBullet(this, battleConfig);
         BattleComponentDamageCalculator = new BattleComponentDamageCalculator(this, battleConfig);
+        BattleComponentPhase = new BattleComponentPhase(this);
+        BattleComponentEnd = new BattleComponentEnd(this);
+        BattleComponentWinCondition = new BattleComponentWinCondition(this);
+
+        BattleComponentPhase.Subscribe();
+        BattleComponentWinCondition.Subscribe();
     }
 
     public void Dispose() 
     {
         BattleComponentField.Dispose();
         BattleComponentCharacter.Dispose();
+
+        BattleComponentPhase.Unsubscribe();
+        BattleComponentWinCondition.Unsubscribe();
     }
 
     public void UpdateInternal() 

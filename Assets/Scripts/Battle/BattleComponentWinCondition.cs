@@ -2,6 +2,7 @@ public class BattleComponentWinCondition
 {
     private Battle battle;
     public IWinCondition WinCondition;
+    public CharacterEntityBattle entityLastDamaged;
 
     public BattleComponentWinCondition(Battle battle)
     {
@@ -11,10 +12,31 @@ public class BattleComponentWinCondition
         WinCondition = new WinConditionLastStanding();
 
         WinCondition.Initialize(battle);
-
     }
 
+    public void Subscribe()
+    {               
+        UIEvents.OnCharacterHpDecreased += OnCharacterHpDecreased;
+    }
+
+    public void Unsubscribe()
+    {
+        UIEvents.OnCharacterHpDecreased -= OnCharacterHpDecreased;
+    }
+
+    private void OnCharacterHpDecreased(CharacterEntityBattle entity) 
+    {
+        entityLastDamaged = entity;
+        if (WinCondition.CheckCondition())
+            battle.BattleComponentEnd.End();
+    }
+}
+
+
+
     // TODO use event hp decreased
+    // keep track of last damaged character
+
 
     //TODO 
     // capture decreases the hp of the captured entity to 0 
@@ -28,4 +50,3 @@ public class BattleComponentWinCondition
             battle.BattleComponentEnd.End();
     }
     */
-}

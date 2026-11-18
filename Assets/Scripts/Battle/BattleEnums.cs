@@ -57,7 +57,7 @@ namespace Aremoreno.Enums.Battle
         Varas,
         Banderillas,
         Muerte,
-        Capture
+        Captura
     }
 
     public enum BattleResultContinueType

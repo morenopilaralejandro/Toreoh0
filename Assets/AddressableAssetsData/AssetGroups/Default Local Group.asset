@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: 4cef6991fe93563c8a102d091f3ae764
   m_SerializeEntries:
+  - m_GUID: 1b890834f1973388fb3f142671eaff41
+    m_Address: sfx-ui_barrier_break_default
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6c404cea2dd7585ad8ba0a8b6cd50a70
     m_Address: sprite-chest-opened
     m_ReadOnly: 0
@@ -22,6 +27,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6d671acaaec701b35bd465068c78ff52
     m_Address: sprite-item-basic
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 929fdf358c985104eb250ad2b4ec6c4c
+    m_Address: sfx-ui_protect_obstacle_break_default
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

@@ -191,10 +191,6 @@ MonoBehaviour:
     m_Localized: "\xBFQuieres sobrescribir los datos guardados?"
     m_Metadata:
       m_Items: []
-  - m_Id: 10510561600872453
-    m_Localized: Luchar
-    m_Metadata:
-      m_Items: []
   - m_Id: 10930839170588672
     m_Localized: Voltear pantallas
     m_Metadata:
@@ -273,6 +269,26 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 12328188400902144
     m_Localized: "\xBFVolver al men\xFA principal?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21083258751819776
+    m_Localized: Luchar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21083258831511552
+    m_Localized: Varas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21083258831511553
+    m_Localized: Banderillas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21083258831511554
+    m_Localized: Muerte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21083258831511555
+    m_Localized: Captura
     m_Metadata:
       m_Items: []
   references:

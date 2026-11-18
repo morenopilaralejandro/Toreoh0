@@ -11,6 +11,7 @@ public class BattleComponentEnd
 
     public void End() 
     {
+        BattleArgs.SetForResults(battle);
         SceneLoaderManager.Instance.ReplaceGroup("SceneGroupData-BattleResult");
     }
 
