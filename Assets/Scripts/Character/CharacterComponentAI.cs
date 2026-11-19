@@ -2,12 +2,12 @@ using UnityEngine;
 using Aremoreno.Enums.Battle;
 using Aremoreno.Enums.Character;
 
-public class CharacterComponentAI : MonoBehaviour
+public class CharacterComponentAI
 {
     private CharacterEntityBattle entity;
 
-    [SerializeField] private CharacterComponentRigidbody rb;
-    [SerializeField] private CharacterComponentModel model;
+    private CharacterComponentRigidbody rb;
+    private CharacterComponentModel model;
 
     public CharacterComponentStateMachine<AIState> StateMachineAI;
 
@@ -28,14 +28,18 @@ public class CharacterComponentAI : MonoBehaviour
     private Vector3 destinationDirection;
 
     // lifecycle
-    public void Initialize(CharacterEntityBattle entity) 
+    public CharacterComponentAI(CharacterEntityBattle entity) 
     {
         this.entity = entity;
 
         StateMachineAI = new CharacterComponentStateMachine<AIState>();
         speedMovement = entity.Character.CharacterComponentSpeed.SpeedMovement;
         speedRotation = entity.CharacterComponentModel.SpeedRotation;
+        rb = entity.CharacterComponentRigidbody;
+        model = entity.CharacterComponentModel;
         // acceleration = entity.CharacterComponentRigidbody.Acceleration;
+        InitializeDecisionDelay();
+        SetIsAiEnabled(true);
     }
 
     public void InitializeDecisionDelay() 
@@ -84,6 +88,8 @@ public class CharacterComponentAI : MonoBehaviour
     // state
     public void UpdateAIState()
     {
+        if (!entity.CanMove) StateMachineAI.SetState(AIState.Idle);
+
         if (entity.CharacterComponentCharge.HasPendingCharge) 
         {
             timeChargeEnd = timeNow + timeChargeDuration;

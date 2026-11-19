@@ -249,9 +249,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5789686711171271398}
   - component: {fileID: 6123112355131946016}
+  - component: {fileID: 8757308639615968881}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Barrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -299,3 +300,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8757308639615968881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8954731304246142806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ca41aa5e8c3ca9debcd5a23728de15c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BarrierComponentColliderBreak
+  BarrierEntity: {fileID: 4006983334616544910}

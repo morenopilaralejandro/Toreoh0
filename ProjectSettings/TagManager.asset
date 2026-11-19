@@ -6,6 +6,10 @@ TagManager:
   tags:
   - CharacterMain
   - Interactable
+  - Character
+  - Barrier
+  - ProtectObstacle
+  - CapturePortal
   layers:
   - Default
   - TransparentFX

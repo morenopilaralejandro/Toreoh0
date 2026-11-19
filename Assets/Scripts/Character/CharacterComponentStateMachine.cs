@@ -10,4 +10,6 @@ public class CharacterComponentStateMachine<T> where T : System.Enum
         State = state;
         OnStateChanged?.Invoke(State);
     }
+    
+    public bool Is(T state) => State.Equals(state);
 }

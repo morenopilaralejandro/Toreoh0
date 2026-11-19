@@ -9,21 +9,25 @@ public class CharacterEntityBattle : CharacterEntity
     public CharacterComponentAIBehaviour CharacterComponentAIBehaviour;
     public CharacterComponentAI CharacterComponentAI;
     public CharacterComponentCharge CharacterComponentCharge;
+    public CharacterComponentStatusEffectBattle CharacterComponentStatusEffectBattle;
 
+    // lifecycle
     public void InitializeForBattle(Character character)
     {
         Initialize(character);
 
         CharacterComponentControllerTouchBattle.Initialize();
-        CharacterComponentAI.Initialize(this);
 
         CharacterComponentTarget = new CharacterComponentTarget(this);
         CharacterComponentAIBehaviour = new CharacterComponentAIBehaviour(this);
+        CharacterComponentAI = new CharacterComponentAI(this);
         CharacterComponentCharge = new CharacterComponentCharge(this);
+        CharacterComponentStatusEffectBattle = new CharacterComponentStatusEffectBattle(this);
 
         this.Character.CharacterComponentFatigue.Subscribe();
         this.CharacterComponentAIBehaviour.Subscribe();
         this.CharacterComponentAI.Subscribe();
+        this.CharacterComponentStatusEffectBattle.Subscribe();
     }
 
     private void OnDisable() 
@@ -31,8 +35,12 @@ public class CharacterEntityBattle : CharacterEntity
         this.Character.CharacterComponentFatigue.Unsubscribe();
         this.CharacterComponentAIBehaviour.Unsubscribe();
         this.CharacterComponentAI.Unsubscribe();
+        this.CharacterComponentStatusEffectBattle.Unsubscribe();
     }
 
+    // event
+
+    // update
     private void FixedUpdate()
     {
         if (CharacterComponentControllerTouchBattle.IsControlled) 
@@ -51,15 +59,16 @@ public class CharacterEntityBattle : CharacterEntity
             CharacterComponentControllerTouchBattle.LateUpdateInternal();
     }
 
+    // api
     public void SetControllerEnable(bool isEnable) 
     {
         CharacterComponentControllerTouchBattle.enabled = isEnable;
         CharacterComponentControllerTouchBattle.SetIsControlled(isEnable);
 
-        CharacterComponentAI.enabled = !isEnable;
+        // CharacterComponentAI.enabled = !isEnable;
         CharacterComponentAI.SetIsAiEnabled(!isEnable);
     }
 
     public bool CanAct => !CharacterComponentStateLock.IsStateLocked;
-    public bool CanMove => !CharacterComponentStateLock.IsStateLocked;
+    public bool CanMove => !CharacterComponentStateLock.IsStateLocked && !Character.CharacterComponentStatusEffectVolatile.IsStunned && !Character.CharacterComponentStatusEffectPermanent.IsFainted;
 }

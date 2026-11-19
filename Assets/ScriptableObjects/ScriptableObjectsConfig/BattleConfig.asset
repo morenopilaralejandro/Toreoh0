@@ -12,10 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e88e356ce72e197894b17fea68ba57c, type: 3}
   m_Name: BattleConfig
   m_EditorClassIdentifier: Assembly-CSharp::BattleConfig
+  IsEnemyAIEnable: 0
   IsInfiniteHpEnable: 0
   IsDamageBoostEnable: 0
   DamageBoost: 100
-  IsDebugCatchEnable: 0
+  IsDebugCaptureEnable: 0
+  TagCharacter: Character
+  TagBarrier: Barrier
+  TagProtectObstacle: ProtectObstacle
+  TagCapturePortal: CapturePortal
   ListBattlePhaseMapping:
   - BattlePhase: 3
     ThresholdHp: 0.25

@@ -14,6 +14,8 @@ public class Character
     public CharacterComponentMove CharacterComponentMove;
     public CharacterComponentAIScalingDifficulty CharacterComponentAIScalingDifficulty;
     public CharacterComponentAIScalingHp CharacterComponentAIScalingHp;
+    public CharacterComponentStatusEffectVolatile CharacterComponentStatusEffectVolatile;
+    public CharacterComponentStatusEffectPermanent CharacterComponentStatusEffectPermanent;
 
     public Character(CharacterData data, CharacterSaveData saveData)
     {
@@ -31,5 +33,7 @@ public class Character
         CharacterComponentMove = new CharacterComponentMove(data, this);
         CharacterComponentAIScalingDifficulty = new CharacterComponentAIScalingDifficulty(this);
         CharacterComponentAIScalingHp = new CharacterComponentAIScalingHp(this);
+        CharacterComponentStatusEffectVolatile = new CharacterComponentStatusEffectVolatile();
+        CharacterComponentStatusEffectPermanent = new CharacterComponentStatusEffectPermanent();
     }
 }

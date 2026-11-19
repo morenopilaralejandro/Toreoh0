@@ -12,6 +12,12 @@ public class BattleConfig : ScriptableObject
     public float DamageBoost;
     public bool IsDebugCaptureEnable;
 
+    [Header("Tag")]
+    public string TagCharacter;
+    public string TagBarrier;
+    public string TagProtectObstacle;
+    public string TagCapturePortal;
+
     [Header("General")]
     public List<BattlePhaseMapping> ListBattlePhaseMapping;
 

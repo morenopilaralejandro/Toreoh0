@@ -15,4 +15,4 @@ MonoBehaviour:
   BarrierId: barrier-00000-test
   BarrierType: 0
   SpriteAddress: sprite-barrier-00000-test
-  SfxAddress: 
+  SfxAddress: sfx-ui_barrier_break_default

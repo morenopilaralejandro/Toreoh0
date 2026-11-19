@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: protect_obstacle-00000-test
   m_EditorClassIdentifier: Assembly-CSharp::ProtectObstacleData
   ProtectObstacleId: protect_obstacle-00000-test
+  SfxAddress: sfx-ui_protect_obstacle_break_default
