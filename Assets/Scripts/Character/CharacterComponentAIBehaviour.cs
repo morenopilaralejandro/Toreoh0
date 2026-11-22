@@ -1,3 +1,4 @@
+using System;
 using Aremoreno.Enums.Character;
 using Aremoreno.Enums.Battle;
 
@@ -5,6 +6,8 @@ public class CharacterComponentAIBehaviour
 {
     private CharacterEntityBattle entity;
     public AIBehaviour AIBehaviour;
+
+    public Action<AIBehaviour> OnAIBehaviourChanged;
 
     public CharacterComponentAIBehaviour(CharacterEntityBattle entity) 
     {
@@ -15,6 +18,7 @@ public class CharacterComponentAIBehaviour
     public void SetAIBehaviour(AIBehaviour behaviour) 
     {
         AIBehaviour = behaviour;
+        OnAIBehaviourChanged?.Invoke(AIBehaviour);
     }
 
     // event

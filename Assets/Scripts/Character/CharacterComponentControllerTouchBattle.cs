@@ -4,13 +4,12 @@ public class CharacterComponentControllerTouchBattle : CharacterComponentControl
 {
     [SerializeField] private CharacterEntityBattle entity;
     public bool IsControlled;
-    private float rangeMelee = 3f;
     private float rangeMeleeSqr;
     private Move move;
 
     public void Initialize()
     {
-        rangeMeleeSqr = rangeMelee * rangeMelee;
+        rangeMeleeSqr = entity.Character.CharacterComponentConfig.Config.RangeMelee * entity.Character.CharacterComponentConfig.Config.RangeMelee;
         // if (! is controlled) this.SetActive(false)
     }
 

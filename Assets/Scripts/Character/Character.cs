@@ -25,7 +25,7 @@ public class Character
         CharacterComponentAppearance = new CharacterComponentAppearance(data);
         CharacterComponentElement = new CharacterComponentElement(data.Element0, data.Element1);
         CharacterComponentSide = new CharacterComponentSide(data);
-        CharacterComponentBullet = new CharacterComponentBullet(data);
+        CharacterComponentBullet = new CharacterComponentBullet(data, this);
         CharacterComponentLevel = new CharacterComponentLevel(this, saveData);
         CharacterComponentStats = new CharacterComponentStats(data, this, saveData);
         CharacterComponentFatigue = new CharacterComponentFatigue(this);

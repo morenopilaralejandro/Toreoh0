@@ -57,8 +57,9 @@ namespace Aremoreno.Enums.Character
     {
         Idle,
         Bait,
-        Atack,
+        Attack,
         Turn,
+        Move,
         Charge,
         Target
     }

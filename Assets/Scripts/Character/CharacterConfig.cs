@@ -16,6 +16,16 @@ public class CharacterConfig : ScriptableObject
     public int ScalingExponent;
     public ScalingStrategy ScalingStrategy;
 
+    [Header("Status")]
+    public float StatusDurationStun;
+
+    [Header("Battle")]
+    public float RadiusHit;
+    public float RadiusGrace;
+    public float RadiusVisual;
+
+    public float RangeMelee;
+
     [Header("Stats")]
     public List<StatsScalingMapping> ListStatsScalingMapping;
 
@@ -32,5 +42,4 @@ public class CharacterConfig : ScriptableObject
         foreach (var mapping in ListFatigueMapping)
             DictFatigueMapping[mapping.FatigueState] = mapping;
     }
-
 }

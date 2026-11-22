@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: move-00000-test_line_accel
   m_EditorClassIdentifier: Assembly-CSharp::MoveData
   MoveId: move-00000-test_line_accel
-  BulletPatternId: bullet_pattern-00003-line_accel
+  BulletPatternId: bullet_pattern-00000-line_accel
   Element: 3
   MoveCategory: 0
   MoveCommandType: 0

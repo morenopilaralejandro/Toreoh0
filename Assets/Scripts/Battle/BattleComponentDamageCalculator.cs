@@ -39,16 +39,15 @@ public class BattleComponentDamageCalculator
 
         UIEvents.RaiseCharacterHpDecreased(defenseEntity);
 
-        /*
+   
         CustomLog.Error(
-            $"[BattleComponentDamageCalculator] [ApplyDamage] Bullet collided with {defenseEntity.Character.CharacterComponentAttributes.CharacterId} " +
+            $"[BattleComponentDamageCalculator] [ApplyDamage] Bullet collided with {defenseEntity.Character.CharacterComponentAttributes.CharacterId}. " +
             $"GetElementMultiplierEffective: {GetElementMultiplierEffective(moveElement, defenseEntity.Character.CharacterComponentElement.ListElement)}, " +
             $"Damage final: {damage}, " +
-            $"HP true: {defenseEntity.Character.CharacterComponentStats.StatsTrue.Get(Stat.Hp)} " +
-            $"HP battle after: {defenseEntity.Character.CharacterComponentStats.StatsBattle.Get(Stat.Hp)} " +
+            $"HP true: {defenseEntity.Character.CharacterComponentStats.StatsTrue.Get(Stat.Hp)}, " +
+            $"HP battle after: {defenseEntity.Character.CharacterComponentStats.StatsBattle.Get(Stat.Hp)}, " +
             $"HP normalized afer: {defenseEntity.Character.CharacterComponentStats.GetStatNormalized(Stat.Hp)}"
         );
-        */
     }
 
     public float CalcDamage(

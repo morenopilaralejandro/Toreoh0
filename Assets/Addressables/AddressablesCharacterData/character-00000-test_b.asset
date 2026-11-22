@@ -22,13 +22,13 @@ MonoBehaviour:
   StatRangeDefense: 100
   StatSpeed: 100
   MoveLv0: 0
-  MoveLv1: 0
-  MoveLv2: 0
-  MoveLv3: 0
-  MoveId0: move-00000-test_spiral
-  MoveId1: move-00000-test_spiral
-  MoveId2: move-00000-test_spiral
-  MoveId3: move-00000-test_spiral
-  MoveIdMelee: move-00000-test_melee_slash
-  MoveIdRange: move-00000-test_line_uniform
+  MoveLv1: 10
+  MoveLv2: 20
+  MoveLv3: 30
+  MoveId0: move-00009-triple_trap
+  MoveId1: move-00010-cross_claw
+  MoveId2: move-00011-cross_nera_beam
+  MoveId3: move-00012-shin_cross_break
+  MoveIdMelee: move-00008-nera_wide_claw
+  MoveIdRange: move-00007-death_spiral
   WingId: 

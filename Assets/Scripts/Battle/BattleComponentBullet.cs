@@ -157,7 +157,6 @@ battle.BattleComponentTeam.GetEntityByBulletSource(bulletStruct.SourceBattleSide
     // spawn
     public void AddBullet(CharacterEntityBattle characterEntityBattle, Move move)
     {
-        isDestroyedOnObstacle = move.MoveComponentAttributes.MoveCategory == MoveCategory.Range;
         elementMultiplierMatch = battle.BattleComponentDamageCalculator.GetElementMultiplierMatch(characterEntityBattle, move.MoveComponentAttributes.Element);
         elementMultiplierCommandType = battle.BattleComponentDamageCalculator.GetElementMultiplierCommandType(move.MoveComponentAttributes.MoveCommandType);
         battlePhaseMultiplier = battle.BattleComponentDamageCalculator.GetBattlePhaseMultiplier(move.MoveComponentAttributes.MoveCategory, battle.BattleComponentPhase.BattlePhaseCurrent);
@@ -177,7 +176,7 @@ battle.BattleComponentTeam.GetEntityByBulletSource(bulletStruct.SourceBattleSide
                 amplitude : bulletData.AmplitudeStart,
                 amplitudeDelta : bulletData.AmplitudeDelta,
                 angularDelta : bulletData.AngularDelta,
-                isDestroyedOnObstacle : isDestroyedOnObstacle,
+                isDestroyedOnObstacle : bulletData.IsDestroyedOnObstacle,
                 sourceBattleSide : characterEntityBattle.Character.CharacterComponentSide.BattleSide,
                 sourceEntityIndex : characterEntityBattle.Character.CharacterComponentSide.EntityIndex,
                 bulletMotionType : bulletData.BulletMotionType,

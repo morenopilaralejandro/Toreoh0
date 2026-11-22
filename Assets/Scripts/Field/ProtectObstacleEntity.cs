@@ -3,22 +3,22 @@ using System.Threading.Tasks;
 
 public class ProtectObstacleEntity : MonoBehaviour
 {
-    public ProtectObstacleComponentAppearanceBattle AppearanceComponentBattle;
+    public ProtectObstacleComponentAppearanceBattle ProtectObstacleComponentAppearanceBattle;
     public ProtectObstacle ProtectObstacle;
 
     public void Initialize(ProtectObstacleData data)
     {
         ProtectObstacle = ProtectObstacleFactory.Create(data);
-        AppearanceComponentBattle.Initialize(this);
+        ProtectObstacleComponentAppearanceBattle.Initialize(this);
     }
 
     public async Task LoadAsync()
     {
-        await AppearanceComponentBattle.SetAsync();
+        await ProtectObstacleComponentAppearanceBattle.SetAsync();
     }
 
     public void OnDestroy()
     {
-        AppearanceComponentBattle.Clear();
+        ProtectObstacleComponentAppearanceBattle.Clear();
     }
 }

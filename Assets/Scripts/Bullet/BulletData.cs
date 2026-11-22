@@ -18,4 +18,5 @@ public class BulletData : ScriptableObject
     public float AngularStart;
     public float AngularDelta;
     public float DirectionFactor;
+    public bool IsDestroyedOnObstacle;
 }

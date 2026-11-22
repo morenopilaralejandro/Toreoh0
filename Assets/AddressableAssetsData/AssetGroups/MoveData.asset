@@ -15,8 +15,26 @@ MonoBehaviour:
   m_GroupName: MoveData
   m_GUID: 1a319131476857317ba28de25a7a3f4c
   m_SerializeEntries:
+  - m_GUID: 100c33f266537f5ce9010dc73117eca3
+    m_Address: Assets/Addressables/AddressablesMoveData/move-00012-shin_cross_break.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MoveData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1ac8b8acb8dff61708370e95385383f7
+    m_Address: Assets/Addressables/AddressablesMoveData/move-00005-jinga_beam.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MoveData
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 20d5060b101cb12f8b3b9589594ace47
     m_Address: Assets/Addressables/AddressablesMoveData/move-00000-test_spiral.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MoveData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 315f3b42646e0611e99ac7f836004fbe
+    m_Address: Assets/Addressables/AddressablesMoveData/move-00002-muleta_slash.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - MoveData
@@ -27,14 +45,56 @@ MonoBehaviour:
     m_SerializedLabels:
     - MoveData
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 473033311ff7c2e54af96ff499562e1a
+    m_Address: Assets/Addressables/AddressablesMoveData/move-00011-cross_nera_beam.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MoveData
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 51865a2d52b8d7844a6ee5e8f58b9921
     m_Address: Assets/Addressables/AddressablesMoveData/move-00000-test_melee_area.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - MoveData
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6b2dfce31a61d924097ddafa53bc467a
+    m_Address: Assets/Addressables/AddressablesMoveData/move-00004-killer_slash.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MoveData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 70aaac553dad24090a7487cc17e90696
+    m_Address: Assets/Addressables/AddressablesMoveData/move-00001-banderilla_shot.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MoveData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7137504cc4af7b2259e47db39da714c7
+    m_Address: Assets/Addressables/AddressablesMoveData/move-00010-cross_claw.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MoveData
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7f16d021fbd390cb0ba4be020380301d
     m_Address: Assets/Addressables/AddressablesMoveData/move-00000-test_line_uniform.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MoveData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 92678792a119e58ffb5711361c6142bd
+    m_Address: Assets/Addressables/AddressablesMoveData/move-00003-twin_band.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MoveData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 99dc111c39be6d496bdecfefb5c20a8d
+    m_Address: Assets/Addressables/AddressablesMoveData/move-00009-triple_trap.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MoveData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a5605a5fd65e5850f930dd372828da07
+    m_Address: Assets/Addressables/AddressablesMoveData/move-00007-death_spiral.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - MoveData
@@ -47,6 +107,18 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: dfc62433e7d67594499d6bb7a1f9d18a
     m_Address: Assets/Addressables/AddressablesMoveData/move-00000-test_melee_slash.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MoveData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f389c575b4c080462a13d4eda37cad4e
+    m_Address: Assets/Addressables/AddressablesMoveData/move-00008-nera_wide_claw.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MoveData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f80a56eb6ba1ce3719cad33a23f74b58
+    m_Address: Assets/Addressables/AddressablesMoveData/move-00006-galaxy_storm_break.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - MoveData

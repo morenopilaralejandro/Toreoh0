@@ -1,42 +1,82 @@
+using UnityEngine;
+using System.Collections;
 using Aremoreno.Enums.Character;
 
-public class CharacterComponentStatusEffectBattle
+public class CharacterComponentStatusEffectBattle : MonoBehaviour
 {
-    private CharacterEntityBattle entity;
+    [SerializeField] private CharacterEntityBattle entity;
+    private Coroutine coroutineStun;
 
-    public CharacterComponentStatusEffectBattle(CharacterEntityBattle entity)
+    // stun
+    private void StartStun()
     {
-        this.entity = entity;
+        StopStun();
+        StartCoroutine(ExecuteStun(entity.Character.CharacterComponentConfig.Config.StatusDurationStun));
+    }
+
+    private void StopStun()
+    {
+        if (coroutineStun == null) return;
+        StopCoroutine(coroutineStun);
+        coroutineStun = null;
+    }
+
+    private IEnumerator ExecuteStun(float duration)
+    {
+        float timeElapsed = 0f;
+        while (timeElapsed < duration) 
+        {
+            // if (frozen) return;
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+        entity.Character.CharacterComponentStatusEffectVolatile.ClearStun();
     }
 
     // event
-    public void Subscribe() 
+    public void Subscribe()
     {
-        this.entity.Character.CharacterComponentStatusEffectVolatile.OnStatusApplied += OnStatusVolatileApplied;
-        this.entity.Character.CharacterComponentStatusEffectVolatile.OnStatusCleared += OnStatusVolatileCleared;
-        this.entity.Character.CharacterComponentStatusEffectPermanent.OnStatusApplied += OnStatusPermanentApplied;
-        this.entity.Character.CharacterComponentStatusEffectPermanent.OnStatusCleared += OnStatusPermanentCleared;
+        entity.Character.CharacterComponentStatusEffectVolatile.OnStatusApplied += OnStatusVolatileApplied;
+        entity.Character.CharacterComponentStatusEffectVolatile.OnStatusCleared += OnStatusVolatileCleared;
+        entity.Character.CharacterComponentStatusEffectPermanent.OnStatusApplied += OnStatusPermanentApplied;
+        entity.Character.CharacterComponentStatusEffectPermanent.OnStatusCleared += OnStatusPermanentCleared;
     }
 
-    public void Unsubscribe() 
+    public void Unsubscribe()
     {
-        this.entity.Character.CharacterComponentStatusEffectVolatile.OnStatusApplied -= OnStatusVolatileApplied;
-        this.entity.Character.CharacterComponentStatusEffectVolatile.OnStatusCleared -= OnStatusVolatileCleared;
-        this.entity.Character.CharacterComponentStatusEffectPermanent.OnStatusApplied -= OnStatusPermanentApplied;
-        this.entity.Character.CharacterComponentStatusEffectPermanent.OnStatusCleared -= OnStatusPermanentCleared;
+        entity.Character.CharacterComponentStatusEffectVolatile.OnStatusApplied -= OnStatusVolatileApplied;
+        entity.Character.CharacterComponentStatusEffectVolatile.OnStatusCleared -= OnStatusVolatileCleared;
+        entity.Character.CharacterComponentStatusEffectPermanent.OnStatusApplied -= OnStatusPermanentApplied;
+        entity.Character.CharacterComponentStatusEffectPermanent.OnStatusCleared -= OnStatusPermanentCleared;
     }
 
     private void OnStatusVolatileApplied(StatusEffectVolatile status) 
     {
+        CustomLog.Error(
+            $"[CharacterComponentStatusEffectBattle] " +
+            $"{entity.Character.CharacterComponentAttributes.CharacterId} " +
+            $"applied volatile status " +
+            $"{status}."
+        );
+
         switch(status)
         {
             case StatusEffectVolatile.Stunned:
+                entity.CharacterComponentCharge.SetIsCharging(false);
+                StartStun();
                 break;
         }
     }
 
     private void OnStatusVolatileCleared(StatusEffectVolatile status) 
     {
+        CustomLog.Error(
+            $"[CharacterComponentStatusEffectBattle] " +
+            $"{entity.Character.CharacterComponentAttributes.CharacterId} " +
+            $"cleared status " +
+            $"{status}."
+        );
+
         switch(status)
         {
             case StatusEffectVolatile.Stunned:
@@ -46,6 +86,13 @@ public class CharacterComponentStatusEffectBattle
 
     private void OnStatusPermanentApplied(StatusEffectPermanent status) 
     {
+        CustomLog.Error(
+            $"[CharacterComponentStatusEffectBattle] " +
+            $"{entity.Character.CharacterComponentAttributes.CharacterId} " +
+            $"applied permanent status " +
+            $"{status}."
+        );
+
         switch(status)
         {
             case StatusEffectPermanent.Fainted:
@@ -55,6 +102,13 @@ public class CharacterComponentStatusEffectBattle
 
     private void OnStatusPermanentCleared(StatusEffectPermanent status) 
     {
+        CustomLog.Error(
+            $"[CharacterComponentStatusEffectBattle] " +
+            $"{entity.Character.CharacterComponentAttributes.CharacterId} " +
+            $"cleared permanent status " +
+            $"{status}."
+        );
+
         switch(status)
         {
             case StatusEffectPermanent.Fainted:
@@ -62,3 +116,7 @@ public class CharacterComponentStatusEffectBattle
         }
     }
 }
+
+/*
+
+*/

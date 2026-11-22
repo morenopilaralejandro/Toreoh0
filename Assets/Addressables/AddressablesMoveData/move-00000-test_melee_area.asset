@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: move-00000-test_melee_area
   m_EditorClassIdentifier: Assembly-CSharp::MoveData
   MoveId: move-00000-test_melee_area
-  BulletPatternId: bullet_pattern-00005-melee_area
+  BulletPatternId: bullet_pattern-00000-melee_area
   Element: 3
   MoveCategory: 1
   MoveCommandType: 0

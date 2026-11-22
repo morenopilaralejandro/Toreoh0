@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: move-00000-test_line_triple
   m_EditorClassIdentifier: Assembly-CSharp::MoveData
   MoveId: move-00000-test_line_triple
-  BulletPatternId: bullet_pattern-00004-line_triple
+  BulletPatternId: bullet_pattern-00000-line_triple
   Element: 3
   MoveCategory: 0
   MoveCommandType: 0

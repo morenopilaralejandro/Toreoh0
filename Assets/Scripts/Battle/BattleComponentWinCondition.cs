@@ -9,6 +9,7 @@ public class BattleComponentWinCondition
         this.battle = battle;
 
         // TODO decide wich to use using BattleFormat
+        // new win con last standing user
         WinCondition = new WinConditionLastStanding();
 
         WinCondition.Initialize(battle);

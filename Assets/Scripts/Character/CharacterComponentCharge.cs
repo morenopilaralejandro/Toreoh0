@@ -28,6 +28,7 @@ public class CharacterComponentCharge
     public void FixedUpdateInternal()
     {
         if(!entity.CharacterComponentControllerTouchBattle.IsControlled) return;
+        // if(!entity.CanMove) return;
         if(entity.CharacterComponentControllerTouchBattle.IsMoving()) return;
         if(!entity.CharacterComponentTarget.HasTarget) return;
         entity.CharacterComponentTarget.TargetEntity.CharacterComponentCharge.IncreaseCharge();

@@ -798,6 +798,7 @@ GameObject:
   - component: {fileID: 121233843214111118}
   - component: {fileID: 5982599110402086376}
   - component: {fileID: 6316843108763528475}
+  - component: {fileID: 2595076321731962219}
   m_Layer: 0
   m_Name: CharacterEntityBattle
   m_TagString: Character
@@ -867,6 +868,7 @@ MonoBehaviour:
   CharacterComponentControllerTouchBattle: {fileID: 121233843214111118}
   CharacterIndicatorBattleSide: {fileID: 7292042451540590027}
   CharacterComponentStateLock: {fileID: 5982599110402086376}
+  CharacterComponentStatusEffectBattle: {fileID: 2595076321731962219}
 --- !u!114 &121233843214111118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -912,6 +914,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterComponentColliderCharge
   CharacterEntityBattle: {fileID: 2225795152639815141}
   battleConfig: {fileID: 11400000, guid: 7d794801ddc5dcafbac7366873ac6b18, type: 2}
+--- !u!114 &2595076321731962219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8467952462389569587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6433ab0dd99b9865292a50d43cb7fd81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterComponentStatusEffectBattle
+  entity: {fileID: 2225795152639815141}
 --- !u!1 &9112938266258299608
 GameObject:
   m_ObjectHideFlags: 0

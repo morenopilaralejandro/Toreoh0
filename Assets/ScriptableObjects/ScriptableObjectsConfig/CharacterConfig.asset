@@ -18,6 +18,11 @@ MonoBehaviour:
   ScalingMultiplier: 1
   ScalingExponent: 0
   ScalingStrategy: 1
+  StatusDurationStun: 5
+  RadiusHit: 0.55
+  RadiusGrace: 0.8
+  RadiusVisual: 0.8
+  RangeMelee: 2
   ListStatsScalingMapping:
   - Stat: 0
     ScalingStrategy: 0

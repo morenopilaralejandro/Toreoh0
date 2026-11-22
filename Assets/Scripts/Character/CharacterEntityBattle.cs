@@ -10,6 +10,7 @@ public class CharacterEntityBattle : CharacterEntity
     public CharacterComponentAI CharacterComponentAI;
     public CharacterComponentCharge CharacterComponentCharge;
     public CharacterComponentStatusEffectBattle CharacterComponentStatusEffectBattle;
+    public CharacterComponentAIDecisionMove CharacterComponentAIDecisionMove; 
 
     // lifecycle
     public void InitializeForBattle(Character character)
@@ -22,7 +23,7 @@ public class CharacterEntityBattle : CharacterEntity
         CharacterComponentAIBehaviour = new CharacterComponentAIBehaviour(this);
         CharacterComponentAI = new CharacterComponentAI(this);
         CharacterComponentCharge = new CharacterComponentCharge(this);
-        CharacterComponentStatusEffectBattle = new CharacterComponentStatusEffectBattle(this);
+        CharacterComponentAIDecisionMove = new CharacterComponentAIDecisionMove(this);
 
         this.Character.CharacterComponentFatigue.Subscribe();
         this.CharacterComponentAIBehaviour.Subscribe();

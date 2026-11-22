@@ -10,7 +10,8 @@ namespace Aremoreno.Enums.Battle
     {
         Single,
         Double,
-        FreeForAll
+        FreeForAll,
+        OneAgainsAll
     }
 
     public enum BattleGamemode 
@@ -41,6 +42,10 @@ namespace Aremoreno.Enums.Battle
         in 2 vs 2 
         home -> south, east
         away -> north, west
+
+        OneAgainsAll
+        home -> south
+        away -> north weast east
     */
 
     public enum BattleState

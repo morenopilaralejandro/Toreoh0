@@ -7,11 +7,11 @@ public class CharacterComponentBullet
     public float RadiusHitSqr;
     public float RadiusGraceSqr;
 
-    public CharacterComponentBullet(CharacterData data) 
+    public CharacterComponentBullet(CharacterData data, Character character)
     {
-        RadiusHit = 0.55f;
-        RadiusGrace = 0.8f;
-        RadiusVisual = 0.8f;
+        RadiusHit = character.CharacterComponentConfig.Config.RadiusHit;
+        RadiusGrace = character.CharacterComponentConfig.Config.RadiusGrace;
+        RadiusVisual = character.CharacterComponentConfig.Config.RadiusVisual;
 
         RadiusHitSqr = RadiusHit * RadiusHit;
         RadiusGraceSqr = RadiusGrace * RadiusGrace;

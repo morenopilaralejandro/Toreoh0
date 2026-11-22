@@ -20,5 +20,6 @@ public class CharacterComponentLevel : CharacterComponentLevelBase
     public override void OnLevelUpPerformed()
     {
         character.CharacterComponentStats.RecalculateStats();
+        character.CharacterComponentMove.TryLearnByLevel(Level);
     }
 }
