@@ -27,17 +27,17 @@ MonoBehaviour:
     ColumnName: MoveId
     EnumGenericType: 0
   - SerializableFieldCustom: 0
-    FieldName: BulletPatternId
-    ColumnName: BulletPatternId
+    FieldName: SfxAddress
+    ColumnName: SfxAddress
     EnumGenericType: 0
-  - SerializableFieldCustom: 5
-    FieldName: MoveCategory
-    ColumnName: MoveCategory
-    EnumGenericType: 9
   - SerializableFieldCustom: 5
     FieldName: Element
     ColumnName: Element
     EnumGenericType: 11
+  - SerializableFieldCustom: 5
+    FieldName: MoveCategory
+    ColumnName: MoveCategory
+    EnumGenericType: 9
   - SerializableFieldCustom: 5
     FieldName: MoveCommandType
     ColumnName: MoveCommandType
@@ -45,4 +45,8 @@ MonoBehaviour:
   - SerializableFieldCustom: 2
     FieldName: FrameRecovery
     ColumnName: FrameRecovery
+    EnumGenericType: 0
+  - SerializableFieldCustom: 8
+    FieldName: ListBulletPatternMapping
+    ColumnName: ListBulletPatternMapping
     EnumGenericType: 0

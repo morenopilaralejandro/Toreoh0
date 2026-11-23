@@ -27,32 +27,14 @@ MonoBehaviour:
     m_SerializedLabels:
     - MoveData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 20d5060b101cb12f8b3b9589594ace47
-    m_Address: Assets/Addressables/AddressablesMoveData/move-00000-test_spiral.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - MoveData
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 315f3b42646e0611e99ac7f836004fbe
     m_Address: Assets/Addressables/AddressablesMoveData/move-00002-muleta_slash.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - MoveData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 3921e72e833c82003a29eacbc4f6bbe9
-    m_Address: Assets/Addressables/AddressablesMoveData/move-00000-test_line_accel.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - MoveData
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 473033311ff7c2e54af96ff499562e1a
     m_Address: Assets/Addressables/AddressablesMoveData/move-00011-cross_nera_beam.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - MoveData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 51865a2d52b8d7844a6ee5e8f58b9921
-    m_Address: Assets/Addressables/AddressablesMoveData/move-00000-test_melee_area.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - MoveData
@@ -75,12 +57,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - MoveData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7f16d021fbd390cb0ba4be020380301d
-    m_Address: Assets/Addressables/AddressablesMoveData/move-00000-test_line_uniform.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - MoveData
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 92678792a119e58ffb5711361c6142bd
     m_Address: Assets/Addressables/AddressablesMoveData/move-00003-twin_band.asset
     m_ReadOnly: 0
@@ -99,14 +75,8 @@ MonoBehaviour:
     m_SerializedLabels:
     - MoveData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b040363432fd9d92f9f9341a0bf1ef3c
-    m_Address: Assets/Addressables/AddressablesMoveData/move-00000-test_line_triple.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - MoveData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: dfc62433e7d67594499d6bb7a1f9d18a
-    m_Address: Assets/Addressables/AddressablesMoveData/move-00000-test_melee_slash.asset
+  - m_GUID: b2976475964bef26eb8e31816956db22
+    m_Address: Assets/Addressables/AddressablesMoveData/move-00000-test.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - MoveData

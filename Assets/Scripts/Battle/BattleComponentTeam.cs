@@ -47,6 +47,7 @@ public class BattleComponentTeam
         battle.BattleComponentCamera.AddMemberMain(DictTeam[BattleSideUser].TeamComponentCharacter.ListCharacterPointEntity[0].transform);
         battle.BattleComponentTarget.ChangeTargetDefault(DictTeam[BattleSideUser].TeamComponentCharacter.ListCharacterPointEntity[0]);
         battle.BattleComponentTarget.ChangeTargetDefault(DictTeam[BattleSide.North].TeamComponentCharacter.ListCharacterPointEntity[0]);
+        UIEvents.RaiseMenuBattleCommandInitializeRequested(DictTeam[BattleSideUser].TeamComponentCharacter.ListCharacterPointEntity[0]);
     }
 
     public void Clear() 

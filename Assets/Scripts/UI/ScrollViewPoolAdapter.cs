@@ -31,11 +31,14 @@ public class ScrollViewPoolAdapter<TListItem> where TListItem : MonoBehaviour
         Pool.Dispose();
     }
 
-    public void Populate<TData>(IEnumerable<TData> dataCollection, Action<TListItem, TData> bind) 
+    public void Populate<TData>(IEnumerable<TData> dataCollection, Action<TListItem, TData> bind, ISelectorFilter<TData> filter) 
     {
         Clear();
-        foreach (var data in dataCollection)
+        foreach (var data in dataCollection) 
+        {
+            if (filter != null && !filter.Matches(data)) continue;
             bind(Pool.Get(), data);
+        }
         LayoutRebuilder.ForceRebuildLayoutImmediate(rectTrasformLayout);
     }
 

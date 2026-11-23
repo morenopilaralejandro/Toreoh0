@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: move-00007-death_spiral
   m_EditorClassIdentifier: Assembly-CSharp::MoveData
   MoveId: move-00007-death_spiral
-  BulletPatternId: bullet_pattern-00007-death_spiral
+  SfxAddress: sfx-ui_select
   Element: 4
   MoveCategory: 0
   MoveCommandType: 0
-  FrameRecovery: 264
+  FrameRecovery: 128
+  ListBulletPatternMapping:
+  - BulletPatternId: bullet_pattern-00012-spiral_quadruple_b
+    DamageBase: 100

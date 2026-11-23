@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: move-00001-banderilla_shot
   m_EditorClassIdentifier: Assembly-CSharp::MoveData
   MoveId: move-00001-banderilla_shot
-  BulletPatternId: bullet_pattern-00001-banderilla_shot
+  SfxAddress: sfx-ui_select
   Element: 8
   MoveCategory: 0
   MoveCommandType: 0
   FrameRecovery: 16
+  ListBulletPatternMapping:
+  - BulletPatternId: bullet_pattern-00001-line_uniform
+    DamageBase: 10

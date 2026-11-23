@@ -51,9 +51,17 @@ public static class UIEvents
     public static void RaiseMenuAmountPickerItemOpenRequested(AmountPickerMode amountPickerMode, Item item, int countCurrent, int countMin, int countMax, CurrencyType currencyType)
         => OnMenuAmountPickerItemOpenRequested?.Invoke(amountPickerMode, item, countCurrent, countMin, countMax, currencyType);
 
-    public static event Action OnMenuBattleActionsOpenRequested;
-    public static void RaiseMenuBattleActionsOpenRequested()
-        => OnMenuBattleActionsOpenRequested?.Invoke();
+    public static event Action OnMenuBattleCommandOpenRequested;
+    public static void RaiseMenuBattleCommandOpenRequested()
+        => OnMenuBattleCommandOpenRequested?.Invoke();
+
+    public static event Action OnMenuBattleCommandCloseRequested;
+    public static void RaiseMenuBattleCommandCloseRequested()
+        => OnMenuBattleCommandCloseRequested?.Invoke();
+
+    public static event Action<CharacterEntityBattle> OnMenuBattleCommandInitializeRequested;
+    public static void RaiseMenuBattleCommandInitializeRequested(CharacterEntityBattle characterEntityBattle)
+        => OnMenuBattleCommandInitializeRequested?.Invoke(characterEntityBattle);
 
     // selector open requested
     public static event Action<

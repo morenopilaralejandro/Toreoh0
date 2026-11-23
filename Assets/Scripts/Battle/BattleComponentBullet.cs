@@ -28,6 +28,7 @@ public class BattleComponentBullet
     private float elementMultiplierCommandType;
     private float battlePhaseMultiplier;
     private float statMainValue;
+    private float damage;
 
     // lifecycle
     public BattleComponentBullet(Battle battle, BattleConfig battleConfig)
@@ -90,6 +91,8 @@ public class BattleComponentBullet
                     {
                         // CustomLog.Trace($"[BattleComponentBullet] Bullet graced with character. CharacterId: {entity.Character.CharacterComponentAttributes.CharacterId}. Bullet sourceBattleSide: {bulletStruct.SourceBattleSide}.");
                         // entity increases super gauge as reward
+                        entity.Character.CharacterComponentStatsMp.IncreaseWithGrace();
+                        UIEvents.RaiseCharacterMpDecreased(entity);
                     }
                 }
                 if (isColissionCharacter) break;         
@@ -157,32 +160,38 @@ battle.BattleComponentTeam.GetEntityByBulletSource(bulletStruct.SourceBattleSide
     // spawn
     public void AddBullet(CharacterEntityBattle characterEntityBattle, Move move)
     {
+        _ = AudioManager.Instance.Sfx.Play(move.MoveComponentSfx.SfxAddress);
         elementMultiplierMatch = battle.BattleComponentDamageCalculator.GetElementMultiplierMatch(characterEntityBattle, move.MoveComponentAttributes.Element);
         elementMultiplierCommandType = battle.BattleComponentDamageCalculator.GetElementMultiplierCommandType(move.MoveComponentAttributes.MoveCommandType);
         battlePhaseMultiplier = battle.BattleComponentDamageCalculator.GetBattlePhaseMultiplier(move.MoveComponentAttributes.MoveCategory, battle.BattleComponentPhase.BattlePhaseCurrent);
         statMainValue = characterEntityBattle.Character.CharacterComponentStats.GetStatValueByDuelRoleAndMoveCategory(DuelRole.Offense, move.MoveComponentAttributes.MoveCategory);
 
-        foreach(BulletData bulletData in move.MoveComponentBullet.BulletPattern.BulletPatternComponentBullet.ListBulletData)
-            AddBullet(
-                pos : characterEntityBattle.transform.position + offsetDefault,
-                dir : Quaternion.Euler(0, 0, bulletData.AngularStart) * characterEntityBattle.CharacterComponentModel.Model.forward * bulletData.DirectionFactor,
-                scale : scaleDefault * bulletData.RadiusVisual,
-                rot : rotDefault,
-                damage : battle.BattleComponentDamageCalculator.CalcDamage(bulletData.DamageBase, elementMultiplierMatch, elementMultiplierCommandType, battlePhaseMultiplier, statMainValue),
-                ttl : bulletData.Ttl,
-                radiusHit : bulletData.RadiusHit,
-                speedMovement : bulletData.SpeedMovement,
-                accelerationMovement : bulletData.AccelerationMovement,
-                amplitude : bulletData.AmplitudeStart,
-                amplitudeDelta : bulletData.AmplitudeDelta,
-                angularDelta : bulletData.AngularDelta,
-                isDestroyedOnObstacle : bulletData.IsDestroyedOnObstacle,
-                sourceBattleSide : characterEntityBattle.Character.CharacterComponentSide.BattleSide,
-                sourceEntityIndex : characterEntityBattle.Character.CharacterComponentSide.EntityIndex,
-                bulletMotionType : bulletData.BulletMotionType,
-                element : move.MoveComponentAttributes.Element,
-                moveCategory : move.MoveComponentAttributes.MoveCategory
-            );
+        foreach (BulletPattern bulletPattern in move.MoveComponentBullet.ListBulletPattern) 
+        {
+            damage = battle.BattleComponentDamageCalculator.CalcDamage(bulletPattern.BulletPatternComponentDamage.DamageBase, elementMultiplierMatch, elementMultiplierCommandType, battlePhaseMultiplier, statMainValue);
+
+            foreach(BulletData bulletData in bulletPattern.BulletPatternComponentBullet.ListBulletData)
+                AddBullet(
+                    pos : characterEntityBattle.transform.position + offsetDefault,
+                    dir : Quaternion.Euler(0, 0, bulletData.AngularStart) * characterEntityBattle.CharacterComponentModel.Model.forward * bulletData.DirectionFactor,
+                    scale : scaleDefault * bulletData.RadiusVisual,
+                    rot : rotDefault,
+                    damage : damage,
+                    ttl : bulletData.Ttl,
+                    radiusHit : bulletData.RadiusHit,
+                    speedMovement : bulletData.SpeedMovement,
+                    accelerationMovement : bulletData.AccelerationMovement,
+                    amplitude : bulletData.AmplitudeStart,
+                    amplitudeDelta : bulletData.AmplitudeDelta,
+                    angularDelta : bulletData.AngularDelta,
+                    isDestroyedOnObstacle : bulletData.IsDestroyedOnObstacle,
+                    sourceBattleSide : characterEntityBattle.Character.CharacterComponentSide.BattleSide,
+                    sourceEntityIndex : characterEntityBattle.Character.CharacterComponentSide.EntityIndex,
+                    bulletMotionType : bulletData.BulletMotionType,
+                    element : move.MoveComponentAttributes.Element,
+                    moveCategory : move.MoveComponentAttributes.MoveCategory
+                );
+        }
     }
 
     public void AddBullet(

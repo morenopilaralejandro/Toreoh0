@@ -17,7 +17,7 @@ public class CharacterComponentCharge
 
     public float SpeedMovementChargeMultiplier;
     private float speedMovementChargeMultiplierDefault = 1f;
-    private float speedMovementChargeMultiplierCharging = 10f;
+    private float speedMovementChargeMultiplierCharging = 25f;
 
     public CharacterComponentCharge(CharacterEntityBattle entity) 
     {

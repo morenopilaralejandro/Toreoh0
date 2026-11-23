@@ -1,9 +1,12 @@
+using System.Collections.Generic;
+
 public class MoveComponentBullet
 {
-    public BulletPattern BulletPattern;
+    public List<BulletPattern> ListBulletPattern = new ();
 
     public MoveComponentBullet(MoveData data) 
     {
-        BulletPattern = BulletPatternFactory.CreateById(data.BulletPatternId);
+        foreach(var mapping in data.ListBulletPatternMapping) 
+            ListBulletPattern.Add(BulletPatternFactory.CreateByMapping(mapping));
     }
 }

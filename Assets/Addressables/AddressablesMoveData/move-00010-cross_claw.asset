@@ -13,8 +13,13 @@ MonoBehaviour:
   m_Name: move-00010-cross_claw
   m_EditorClassIdentifier: Assembly-CSharp::MoveData
   MoveId: move-00010-cross_claw
-  BulletPatternId: bullet_pattern-00010-cross_claw
+  SfxAddress: sfx-ui_select
   Element: 4
   MoveCategory: 1
   MoveCommandType: 1
-  FrameRecovery: 264
+  FrameRecovery: 64
+  ListBulletPatternMapping:
+  - BulletPatternId: bullet_pattern-00008-slash_triple
+    DamageBase: 150
+  - BulletPatternId: bullet_pattern-00013-spiral_quadruple_c
+    DamageBase: 100

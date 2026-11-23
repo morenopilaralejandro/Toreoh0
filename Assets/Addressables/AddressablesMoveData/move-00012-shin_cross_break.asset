@@ -13,8 +13,13 @@ MonoBehaviour:
   m_Name: move-00012-shin_cross_break
   m_EditorClassIdentifier: Assembly-CSharp::MoveData
   MoveId: move-00012-shin_cross_break
-  BulletPatternId: bullet_pattern-00012-shin_cross_break
+  SfxAddress: sfx-ui_select
   Element: 4
   MoveCategory: 1
   MoveCommandType: 1
   FrameRecovery: 264
+  ListBulletPatternMapping:
+  - BulletPatternId: bullet_pattern-00009-earthquake
+    DamageBase: 200
+  - BulletPatternId: bullet_pattern-00014-spiral_sextuple_a
+    DamageBase: 100

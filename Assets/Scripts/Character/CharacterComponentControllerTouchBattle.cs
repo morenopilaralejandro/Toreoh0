@@ -40,20 +40,24 @@ public class CharacterComponentControllerTouchBattle : CharacterComponentControl
     protected override void ExecuteActionSwipeUp()
     {
         CustomLog.Error($"[CharacterControllerComponentTouchBattle] ExecuteActionSwipeUp");
+        UIEvents.RaiseMenuBattleCommandOpenRequested();
     }
 
     protected override void ExecuteActionSwipeDown()
     {
         CustomLog.Error($"[CharacterControllerComponentTouchBattle] ExecuteActionSwipeDown");
+        UIEvents.RaiseMenuBattleCommandOpenRequested();
     }
 
     protected override void ExecuteActionSwipeLeft()
     {
         CustomLog.Error($"[CharacterControllerComponentTouchBattle] ExecuteActionSwipeLeft");
+        UIEvents.RaiseMenuBattleCommandOpenRequested();
     }
 
     protected override void ExecuteActionSwipeRight()
     {
         CustomLog.Error($"[CharacterControllerComponentTouchBattle] ExecuteActionSwipeRight");
+        UIEvents.RaiseMenuBattleCommandOpenRequested();
     }
 }

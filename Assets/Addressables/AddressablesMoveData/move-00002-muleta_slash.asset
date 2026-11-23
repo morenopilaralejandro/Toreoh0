@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: move-00002-muleta_slash
   m_EditorClassIdentifier: Assembly-CSharp::MoveData
   MoveId: move-00002-muleta_slash
-  BulletPatternId: bullet_pattern-00002-muleta_slash
+  SfxAddress: sfx-ui_select
   Element: 8
   MoveCategory: 1
   MoveCommandType: 0
-  FrameRecovery: 128
+  FrameRecovery: 32
+  ListBulletPatternMapping:
+  - BulletPatternId: bullet_pattern-00007-slash_single
+    DamageBase: 100

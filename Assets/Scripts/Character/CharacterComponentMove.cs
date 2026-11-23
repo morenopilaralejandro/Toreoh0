@@ -49,7 +49,6 @@ public class CharacterComponentMove
     }
 
     // learn
-
     public void Learn(string id) => Learn(MoveFactory.CreateById(id));
     public void Learn(Move move) 
     {
@@ -79,4 +78,7 @@ public class CharacterComponentMove
     {
         return !IsLearned(move);
     }
+
+    // aford
+    public bool IsAffordable(Move move) => character.CharacterComponentStatsMp.IsAffordable(move.MoveComponentAttributes.Cost);
 }

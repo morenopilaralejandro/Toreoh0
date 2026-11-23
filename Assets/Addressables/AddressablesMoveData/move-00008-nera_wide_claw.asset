@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: move-00008-nera_wide_claw
   m_EditorClassIdentifier: Assembly-CSharp::MoveData
   MoveId: move-00008-nera_wide_claw
-  BulletPatternId: bullet_pattern-00008-nera_wide_claw
+  SfxAddress: sfx-ui_select
   Element: 4
   MoveCategory: 1
   MoveCommandType: 0
-  FrameRecovery: 128
+  FrameRecovery: 32
+  ListBulletPatternMapping:
+  - BulletPatternId: bullet_pattern-00009-earthquake
+    DamageBase: 200

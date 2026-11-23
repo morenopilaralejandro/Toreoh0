@@ -13,8 +13,13 @@ MonoBehaviour:
   m_Name: move-00011-cross_nera_beam
   m_EditorClassIdentifier: Assembly-CSharp::MoveData
   MoveId: move-00011-cross_nera_beam
-  BulletPatternId: bullet_pattern-00011-cross_nera_beam
+  SfxAddress: sfx-ui_select
   Element: 4
   MoveCategory: 0
   MoveCommandType: 1
-  FrameRecovery: 364
+  FrameRecovery: 128
+  ListBulletPatternMapping:
+  - BulletPatternId: bullet_pattern-00006-beam_evil
+    DamageBase: 100
+  - BulletPatternId: bullet_pattern-00013-spiral_quadruple_c
+    DamageBase: 100

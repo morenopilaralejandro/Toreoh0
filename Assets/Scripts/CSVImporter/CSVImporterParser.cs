@@ -60,4 +60,23 @@ public static class CSVImporterParser
         }
         return list;
     }
+
+    // Bullet
+    public static List<BulletPatternMapping> ParseBulletPatternMappingList(string stringValue)
+    {
+        var list = new List<BulletPatternMapping>();
+        if(string.IsNullOrWhiteSpace(stringValue)) return list;
+
+        string[] parts = stringValue.Split(config.DelimiterMain);
+        foreach (string part in parts)
+        {
+            string[] subparts = part.Trim().Split(config.DelimiterSub);
+            list.Add(new BulletPatternMapping 
+            {
+                BulletPatternId = ParseString(subparts[0]),
+                DamageBase = ParseInt(subparts[1])
+            });
+        }
+        return list;
+    }
 }

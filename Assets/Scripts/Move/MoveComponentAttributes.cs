@@ -8,6 +8,7 @@ public class MoveComponentAttributes
     public Element Element;
     public MoveCategory MoveCategory;
     public MoveCommandType MoveCommandType;
+    public int Cost;
 
     public MoveComponentAttributes(MoveData data) 
     {
@@ -16,5 +17,6 @@ public class MoveComponentAttributes
         Element = data.Element;
         MoveCategory = data.MoveCategory;
         MoveCommandType = data.MoveCommandType;
+        Cost = data.Cost;
     }
 }

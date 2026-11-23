@@ -15,878 +15,680 @@ MonoBehaviour:
   m_GroupName: BulletData
   m_GUID: 6a84a20a100337d2a9aa25f94f353900
   m_SerializeEntries:
-  - m_GUID: 0055b2213fdd7a3888cccf8294be40eb
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00007-death_spiral_2.asset
+  - m_GUID: 000c6f20ad378212a8e33e5fd65f3668
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00006-beam_evil_5.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 02c2ddb845c6748f4a3b84ed09a1986f
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_1.asset
+  - m_GUID: 015041f538315c9078e4474bc62e618d
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00013-spiral_quadruple_c_4.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 06c38437f2b0400319b276fa9459fa6d
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-cross_nera_beam_0.asset
+  - m_GUID: 017c2762d0be89bf8ad94566aa5561a4
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-spiral_quadruple_b_0.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 073c91b7e6103c61fafe4fbef095864b
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_5.asset
+  - m_GUID: 01e12beab2d56e462a9a27d30d916b81
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00013-spiral_quadruple_c_9.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 093af168b0ac796d6a9556f14fcead3e
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_24.asset
+  - m_GUID: 02ac79eb4bd0bc50c8c7d8115970c2eb
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00010-spiral_double_a_4.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 09514a91ca3b08137b03ad769a521c44
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-cross_nera_beam_3.asset
+  - m_GUID: 047543e3bca411712a93822ab47d9fc4
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-spiral_quadruple_b_7.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0c06e3befbdcdc802ac6befcb65240c9
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00006-galaxy_storm_break_4.asset
+  - m_GUID: 08828763f48ec9c618ec5b698504598c
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00009-earthquake_4.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0c43a3b4fa4199827b21b7d94a2844b3
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_26.asset
+  - m_GUID: 0a1b61aa90d480e9eb7eab8e0ac837cd
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00009-earthquake_6.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0ce221643fcda72a9a063bc1c5624abc
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_12.asset
+  - m_GUID: 0c6e9b6c8e4fd58f3bca79b0684e9698
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00009-earthquake_1.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0cfe3a6c99f33d22e9f452566a9c042f
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-cross_nera_beam_11.asset
+  - m_GUID: 0e5b85016226574ffa0825644a9ef8ab
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00001-line_uniform_0.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0d4a04d51a9628d7b84845c2fa2df472
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00008-nera_wide_claw_0.asset
+  - m_GUID: 0ea4886ea639a6f1fac84aafb364f875
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00006-beam_evil_4.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0db022e9798193c2f878ed9ed31e0eb8
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_4.asset
+  - m_GUID: 0fb0f8b045a62597ea4a96e5075524b9
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-spiral_quadruple_b_5.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 101beaa6a299b8f5a9217576a3422405
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-cross_nera_beam_2.asset
+  - m_GUID: 16685b5a4c48b6883a4f084f434f2cda
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00014-spiral_sextuple_a_17.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1620954a5b459acf8808d3215854946d
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_21.asset
+  - m_GUID: 17a89d75c02d2e285b16f47876c6cb87
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-spiral_quadruple_a_5.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 16c22bbdc031bf8f684e64b39a6dfed5
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00007-death_spiral_15.asset
+  - m_GUID: 1ba112afbb76bf8208682c6d9dbc5bf0
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00014-spiral_sextuple_a_12.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 18959f9c061eb1c999d737b0fe74106d
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00000-spiral_basic-6.asset
+  - m_GUID: 26426ade49ec30e3dba4db0058931a5c
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00014-spiral_sextuple_a_11.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1935190ce4eb35027aa3cfc3db03858d
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_10.asset
+  - m_GUID: 26832be085235e84aaf9fd419da4b681
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00014-spiral_sextuple_a_20.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1989c2ada1643f1fd8a5536960f9f602
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00003-twin_band_1.asset
+  - m_GUID: 295d01760885a8831aaa57bf197ff07d
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00014-spiral_sextuple_a_1.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1a34c321497ab1089ba744087000cc17
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_13.asset
+  - m_GUID: 2e8033a258383efb99d62e618a97cfb0
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00013-spiral_quadruple_c_3.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1df475f24de8d29789eeeb625abc74ec
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00006-galaxy_storm_break_11.asset
+  - m_GUID: 2eb45e46c10f5425ab3ba7ee4a384248
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-spiral_quadruple_a_3.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 21e6182ce4895c69a88bd98ca77bcd04
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00006-galaxy_storm_break_2.asset
+  - m_GUID: 2f68cde4f0268e7e18e2b89c6f0c0d04
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00005-beam_good_3.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 228adad6cc1915bb89203754dcc0bd3d
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00010-cross_claw_1.asset
+  - m_GUID: 30589648bc1adf8e4994abb0af6b92de
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00014-spiral_sextuple_a_6.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 22b86e1fee33ba226b0d2e381b49fd94
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00000-melee_area_6.asset
+  - m_GUID: 32105fc5c15de49158ae8a41637cba1e
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00010-spiral_double_a_1.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 2808b5e3f0ea6fbd0838e85dcb8df34a
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_20.asset
+  - m_GUID: 32335d20fec1a528eb141090768eb527
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-spiral_quadruple_a_11.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 292fe62d7cc3307998d28ba75a3ba962
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_19.asset
+  - m_GUID: 32b803684e5a5c46bbaa1abb14f36020
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00006-beam_evil_2.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 2b7af084fc13105a2bb86333114365f9
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-cross_nera_beam_12.asset
+  - m_GUID: 35294d41fe9af27488608351aacd04e6
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-spiral_quadruple_a_1.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 2c3c997385c12e15a99708b4921be4bf
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_31.asset
+  - m_GUID: 37e28ab3224cb8359937f772ac6e33bb
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00008-slash_triple_2.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 3234261e1faa4119a8c00506547682ff
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00007-death_spiral_12.asset
+  - m_GUID: 37f764d283edc71f8b6ad50a367f5fec
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00013-spiral_quadruple_c_2.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 32c8815748cdd4045a5456a9c2d39a34
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00003-twin_band_0.asset
+  - m_GUID: 3aa7fbbbd9eee030ca9db5763b9e6b1a
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-spiral_quadruple_a_0.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 359eb9a53f7bf610c9aea0d3f924419d
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00007-death_spiral_13.asset
+  - m_GUID: 3b5bdd34be1f2d35e84c410ee0d2fb83
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-spiral_quadruple_b_4.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 38dbf7f621050555d99ca5b2bd6e433b
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-cross_nera_beam_9.asset
+  - m_GUID: 4325cb06fb880568eae8fb00974f8546
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00005-beam_good_2.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 39889db57ede8e881bbba71d25544b39
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00007-death_spiral_8.asset
+  - m_GUID: 451735df978ad91119d3baa7c76d2e64
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00004-line_triple_0.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 3bc2092aeab101df8b86261bbc91f9c8
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00006-galaxy_storm_break_7.asset
+  - m_GUID: 480579fa797573d7baa472ebc4b407cf
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00014-spiral_sextuple_a_7.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 411df0004f72ff0c69ab0740f2a3fc8d
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00006-galaxy_storm_break_15.asset
+  - m_GUID: 4811ad12d672f6ceb84fb4355ba5d82a
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00014-spiral_sextuple_a_18.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 43778e98fbed9453695c5504435afe77
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00008-nera_wide_claw_6.asset
+  - m_GUID: 486e6e523d0345b839b1e40656b788e9
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00010-spiral_double_a_6.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4396aa9daeaf098e9a41dc11275f1ca8
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_0.asset
+  - m_GUID: 4a1313360f9e457058d096c32d0378f9
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-spiral_quadruple_b_2.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 453eccc3bb02311b7987733e215f9eda
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00006-galaxy_storm_break_22.asset
+  - m_GUID: 4c66d92f696505829ae70b0fbc2a7be9
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00005-beam_good_5.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 455e225df377f5cd79bea78547057d98
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00008-nera_wide_claw_2.asset
+  - m_GUID: 4e747718f4d0e081282270487f402296
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-spiral_quadruple_b_3.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 46a88a1ad77a6cc119dbce403ea04c02
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00006-galaxy_storm_break_23.asset
+  - m_GUID: 5acd11ab478b5aca6872b499876b2b90
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00014-spiral_sextuple_a_9.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 48ef15a53bd5e3c89904330386818541
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00000-line_uniform_0.asset
+  - m_GUID: 5cc34dc77eccda2d084e212a8bc69557
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00005-beam_good_0.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4cd1c673a9249bb338a6596d85bef7d9
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-cross_nera_beam_17.asset
+  - m_GUID: 5ee9af3f0c55d0f57bb628ca4d3e3c9a
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00008-slash_triple_0.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4dfcf75f2e6e657b59835a94ca779002
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00000-melee_area_1.asset
+  - m_GUID: 5f71814d9b22d52bab3155928eeaf499
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00013-spiral_quadruple_c_6.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4e10653e36bfb64c39837f67829e39ed
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00000-line_triple_0.asset
+  - m_GUID: 604c4d91e8d7d3600a1620b679351667
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00014-spiral_sextuple_a_10.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4fb1d190535c818fc8cb4bc6e33baee1
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00006-galaxy_storm_break_3.asset
+  - m_GUID: 613574f831cde5fd9bd69cea30d7fb80
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00014-spiral_sextuple_a_23.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 51734d0b88564f39dad5a87aa4875b9b
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00007-death_spiral_10.asset
+  - m_GUID: 6166b2168386a2348b1a8c53e2bf59c9
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00013-spiral_quadruple_c_11.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5887fed9c08beb53ab55eba9644e8919
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00006-galaxy_storm_break_17.asset
+  - m_GUID: 61779665b8e3b74adae21eef218ab973
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00007-slash_single_0.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 592368fdcc4a1a462b50dfb2ec01689f
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-cross_nera_beam_20.asset
+  - m_GUID: 6386360d32b6a6f978c287b2e510226d
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00014-spiral_sextuple_a_19.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 59cfb11442d5c697f83017d4da488831
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00000-spiral_basic-7.asset
+  - m_GUID: 63f2328927778368dad14306e2d9026e
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00000-test_0.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5d30b00814a06be0393284148fad8f4c
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00000-spiral_basic-0.asset
+  - m_GUID: 6dde1c1332ee8bdd0a05f64aa61d72a6
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00010-spiral_double_a_7.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5d5f491b85857986d869bc9b97fb5a94
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00000-melee_area_7.asset
+  - m_GUID: 6e6b881bc64f56e79893f6d2479c879e
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-spiral_quadruple_a_15.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5f8b99dbf42e8480bbfbb93e666517ef
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00005-jinga_beam_4.asset
+  - m_GUID: 70a5485bf1ae2b06698a0ad94d8981f6
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00010-spiral_double_a_2.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 602bd7482a8e1762ea9b2f0da8d2d1ad
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_8.asset
+  - m_GUID: 70d7634ad4f766b3e89d869acb9a9ebb
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00014-spiral_sextuple_a_21.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 612a8ccc849b19548a3d64fd014a9b8f
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00005-jinga_beam_6.asset
+  - m_GUID: 71ebb96eaa4c49536a8e4f11f4edccd2
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00013-spiral_quadruple_c_1.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 658133f875d6a7ff183473bedd649f5b
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-cross_nera_beam_19.asset
+  - m_GUID: 77ce9d96746d8d10796da023c5d6db77
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00014-spiral_sextuple_a_2.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 663b0bff775a490dbaea28c2610db482
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00000-melee_area_5.asset
+  - m_GUID: 7c5dbcb80152594ccb8300e31c2f6ea6
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-spiral_quadruple_a_2.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 67467c93c37c7283aa0c86d1eedd514c
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_27.asset
+  - m_GUID: 7e59fb5fe09a839db92a2643e138a65c
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00010-spiral_double_a_3.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6bfac1ea56d98aea4a18a4cb92cdbc0e
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00005-jinga_beam_3.asset
+  - m_GUID: 7e660e38168b321319ab1d2416ea8475
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-spiral_quadruple_a_7.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6d51e2b5e068d6502b05ccada37858f9
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00006-galaxy_storm_break_18.asset
+  - m_GUID: 7ec719dfa79be999da4cdebe934136a7
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00014-spiral_sextuple_a_4.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6f9740075ab2682108ed40d45c1fae1d
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00007-death_spiral_9.asset
+  - m_GUID: 8026363b88c6df71eb660d82ba969361
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-spiral_quadruple_b_8.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 709c1b5694aa96b7cbd5a83fa3ee01d6
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_25.asset
+  - m_GUID: 80d9238ca09cbfe7c8dc5ad1476e0606
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00009-earthquake_5.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 71449682bad48d82993378c2fc4f5c7e
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-cross_nera_beam_4.asset
+  - m_GUID: 82bb3b5b067f3c2a190670c8d723c871
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00003-line_double_0.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 722ea7e61390c0ca282d1eea5bc0e7a4
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00000-melee_slash_0.asset
+  - m_GUID: 83b58a898aa78f77dadd1f1f8ebaed1e
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00014-spiral_sextuple_a_5.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 72b7ee24da6abeb989006ad7e5f62471
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00000-melee_area_0.asset
+  - m_GUID: 85dddd18598965948a67d2d4fb911d7d
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-spiral_quadruple_b_14.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 747e4a0a18f964bfdb026a726a9da039
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00007-death_spiral_4.asset
+  - m_GUID: 8acef3ff35eb57360bcb6759b14412c1
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00005-beam_good_4.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 767ba5b0dce9509499d1928ead43da36
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00006-galaxy_storm_break_5.asset
+  - m_GUID: 8ca53112d178a6e4eb8767afe024ca9c
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00002-line_accel_0.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 798c7d7a6ab1de9a38940a2e30d939c3
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-cross_nera_beam_16.asset
+  - m_GUID: 901eb05cf20f27b639164eae14d396ee
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00014-spiral_sextuple_a_14.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7a3c05975ac86973db11728861701300
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-cross_nera_beam_1.asset
+  - m_GUID: 9876c9dd03d457a528959901aa393a85
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00006-beam_evil_1.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7b17d1ee05634927ba75573fed89b7f3
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00000-melee_area_2.asset
+  - m_GUID: 9ef06917dcb7fcae58ecf1615c5285a6
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00013-spiral_quadruple_c_8.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7c1b467b15f9d162abb22748262ab3ea
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-cross_nera_beam_18.asset
+  - m_GUID: a23f81adbd6d0fac0b8036aef597d43e
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-spiral_quadruple_b_13.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7f77808beb283c55aa57787bb8973b86
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00006-galaxy_storm_break_0.asset
+  - m_GUID: a7a343ea8d7154d0791919357214f67d
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-spiral_quadruple_a_4.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 80781cc01a666374587c7cae97ca8431
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00006-galaxy_storm_break_9.asset
+  - m_GUID: aa82fbed03f19817ca78a8805ae050b2
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00003-line_double_1.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 809fb5275c19a736c81a624c5f886430
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00008-nera_wide_claw_3.asset
+  - m_GUID: acd7be18ffabb3070a1100aa3a3f77e1
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00009-earthquake_3.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 82e9b3212c2eddaa8951474424b5142f
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_18.asset
+  - m_GUID: aee950ff9887316218a67124d271e559
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00013-spiral_quadruple_c_5.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 8488116a5ac50da61b72662746ee8284
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_7.asset
+  - m_GUID: af767c62dade37699af01273e925fd02
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00010-spiral_double_a_0.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 86509c2e19fa3f94ba2729279cc79f47
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00000-line_triple_1.asset
+  - m_GUID: b03fc9608e16eb033af1ea586b3ef7aa
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00009-earthquake_7.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 8671aafaf8b1dbf9e8bdf095284460ed
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00000-line_triple_2.asset
+  - m_GUID: b080302fb85f7a7f081360630b6e9a25
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00009-earthquake_0.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 87658a4d08b6270e4bf5a49a3d263bbf
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-cross_nera_beam_10.asset
+  - m_GUID: b4a1f51b1429ac7e7baa619d9b7f313d
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-spiral_quadruple_b_15.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 89f292d689bac4898865c75e8f39c6b0
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00000-spiral_basic-1.asset
+  - m_GUID: b61b28c8a764cd0a784aecb2ef6e3279
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00013-spiral_quadruple_c_15.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 8d3f9e9a848243e9cb6fae9a7156ff35
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00007-death_spiral_11.asset
+  - m_GUID: b7d9f3492360ababa983a87675c93c6d
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-spiral_quadruple_a_14.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9013444bd9ae32786b918c61733ad33a
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00000-spiral_basic-5.asset
+  - m_GUID: bb95d1141d0cea861b3277064462cf13
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-spiral_quadruple_a_13.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9065afe45fd733ceb88f2d054bd4286c
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00005-jinga_beam_2.asset
+  - m_GUID: c043a6bdaf4b0c5ef9b69aa7754f5c32
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00004-line_triple_2.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 910878bd66a02311b810a2cc60e4f07e
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00007-death_spiral_14.asset
+  - m_GUID: c42c6b0216ebc7d38a68888ff6dc79c2
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00014-spiral_sextuple_a_22.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 91312a192041ab9bab41dc7c9f4ba847
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00004-killer_slash_0.asset
+  - m_GUID: c8c50ee13940f2c7e8425da28dd5cb29
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00013-spiral_quadruple_c_10.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 917cfc8a84312691ea9f96ebeeecf8f7
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00005-jinga_beam_1.asset
+  - m_GUID: c8e4f5edb4640287ba429b3620bde9dc
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00014-spiral_sextuple_a_16.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 97b2ddf59907950f482360016f5565e8
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00006-galaxy_storm_break_20.asset
+  - m_GUID: cbec24a566ce7eb5f8c3e020d32843b4
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00008-slash_triple_1.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 97daa8cdf07184d40b4fda0fdf068b8e
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00007-death_spiral_5.asset
+  - m_GUID: cc1d2121f0a9c0fa4b79b36fb667f104
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00004-line_triple_1.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9a46ea0d200c4b705aff974d56361130
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00007-death_spiral_1.asset
+  - m_GUID: cc82d2aa2f633a62c9e0d835bcdcfdd5
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00005-beam_good_1.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9f139bf87c3947acfa79953691d697e0
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00002-muleta_slash_0.asset
+  - m_GUID: ccadd87bace0e8875a25587f865d1640
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-spiral_quadruple_b_1.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9fd93373657caa29f870036fd7159f0b
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00000-melee_area_3.asset
+  - m_GUID: cd00b8a9941c7ed0882b4a607a6a028d
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00010-spiral_double_a_5.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a04bbbd04f8a79f3191bd3730eb298d2
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_22.asset
+  - m_GUID: cd911bdd5876d10eaa3b4adbf06439a4
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00013-spiral_quadruple_c_7.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a63d2636ab44b07998efbb1a45d57575
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00006-galaxy_storm_break_1.asset
+  - m_GUID: d8942642947330a179ea97f17684e5b8
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-spiral_quadruple_b_10.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a6dea126ca3974094a628f42e379dd81
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_11.asset
+  - m_GUID: d90d24d0cebe47d87a83d67fb44b49d6
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-spiral_quadruple_a_8.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a7c99b7db6d1eb5799fa07cc2fb0557f
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00000-melee_slash_2.asset
+  - m_GUID: e005294373ac38dd9a3781624a1f1dce
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-spiral_quadruple_a_9.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a890b0b343b78a028b55c8861f89502d
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00007-death_spiral_3.asset
+  - m_GUID: e0600c8f12ad3d3f48480fdef7633a1e
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00006-beam_evil_3.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a9e6f763f434edec383d8be700596089
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00004-killer_slash_2.asset
+  - m_GUID: e0886891f3152caae8b352f6267be950
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00013-spiral_quadruple_c_14.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ad7ee2666dfc475868704da3705cb1e9
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00006-galaxy_storm_break_21.asset
+  - m_GUID: e1aa99fd7f52c2b8890cc9d11dad88fb
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-spiral_quadruple_a_12.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: adaf89829ba6819198fdac68c7372d99
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00008-nera_wide_claw_5.asset
+  - m_GUID: e43b7dc055cec403987af68e680c99d2
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00014-spiral_sextuple_a_0.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: af9a6d4b284894c638c03b034c5f6604
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00008-nera_wide_claw_7.asset
+  - m_GUID: e4d7fdd2b83e49d12ae771be09564b56
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00013-spiral_quadruple_c_0.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b079d00a253a9455d958c9258c40ede9
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_6.asset
+  - m_GUID: e5fe3ea160604ba6b825c4c326f0ccf3
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-spiral_quadruple_b_12.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b0fb535becb0d9457add2da882c96254
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_30.asset
+  - m_GUID: e84ca4ae5a2ffc9f992bc46eacc7f2e7
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-spiral_quadruple_a_10.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b298975746dde4a14a430a72df68b8f6
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00000-spiral_basic-3.asset
+  - m_GUID: e8def1335592549f48f41ee47d55e279
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-spiral_quadruple_b_6.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b4c4598cbc67326a18c05b11946ec8d9
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00000-melee_area_4.asset
+  - m_GUID: e95e835a0a7ab1e74812c2a9e8bcd672
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00006-beam_evil_0.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b4dd09673a44500558230959e47b3951
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00005-jinga_beam_0.asset
+  - m_GUID: ea4629ddba56586ef9a58b04f6d20d6f
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00014-spiral_sextuple_a_15.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b6017aabc60a028c7b14d72d979fd1d8
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00007-death_spiral_0.asset
+  - m_GUID: eab1c2a83d2c544d298e1b3ac0ddb09e
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00014-spiral_sextuple_a_13.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b660cc9eda7830b4782287cb5eac7fc6
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00001-banderilla_shot_0.asset
+  - m_GUID: eac35cdd961e738d6a3890b82c074376
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-spiral_quadruple_b_9.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b9affe8c6fc7cc42cafafc10c771ec41
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_14.asset
+  - m_GUID: ead399ae18195476bb691f5ff8c42a67
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00005-beam_good_6.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: bd3cba0bd062d329a8225505fcc647bd
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-cross_nera_beam_7.asset
+  - m_GUID: ef08acbec353940b8812db47172b7da4
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00014-spiral_sextuple_a_8.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: bd7102bc8380af440836289305f5507a
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00008-nera_wide_claw_4.asset
+  - m_GUID: f5d7928ab511652de882a795c08eb833
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00009-earthquake_2.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: bda6e20747ff1e0dcbeafbaece89274d
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00006-galaxy_storm_break_19.asset
+  - m_GUID: f71c5bb427016bff09aaaca20f6072c7
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-spiral_quadruple_a_6.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: be874b5df87198b0c875a2394e785c5e
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00000-spiral_basic-2.asset
+  - m_GUID: f7d9e96d1a60594e49c17717b170db8a
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00013-spiral_quadruple_c_12.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c79738fd87e77f717b6c596d5b90b376
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_9.asset
+  - m_GUID: fd815878814ac6ebcac32b0aefee57f8
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-spiral_quadruple_b_11.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c80a39a745b574c07957349988774a9b
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00006-galaxy_storm_break_13.asset
+  - m_GUID: fe93c6937d09868a380ee22631ab9522
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00013-spiral_quadruple_c_13.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c9702ad4d4a0c97bca1d072db43d38fc
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-cross_nera_beam_6.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: cc60065fd06037214b5af30160441b2e
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-cross_nera_beam_21.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: cce773a6c72c0bc7f92a0ceacd3ed350
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_29.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: cd971df6b5e092441a48441f7e43fa05
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00010-cross_claw_2.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: cdc1f53f68051c41ba2eaab2e479ed92
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-cross_nera_beam_14.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: cdc776c0cc5d8233595e0bcaaa920748
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00000-line_accel_0.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d03a0107d89a6e894b7c1212ea5f673d
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00006-galaxy_storm_break_16.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d2cd714936f3944478418016178f3c50
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-cross_nera_beam_5.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d332f14b310cc5ab1be8cf305f64dbdf
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-cross_nera_beam_15.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d4d0ddc5e89ec7a8c9e39258b0bb3cb8
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00010-cross_claw_0.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d6c6d0d0e2349f5f6870a170781263f6
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_2.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d945deb948a345304ba7f4a59cabeff9
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-cross_nera_beam_13.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: da20253dcf7464f99812c4c50e0b780f
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00007-death_spiral_6.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: de0477ac7e61d200793757ef26bba521
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00000-spiral_basic-4.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: decd09876259261ec9c8399de82f5cc1
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00009-triple_trap_1.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: def79e5fcf071e6018ca365702f02aba
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00009-triple_trap_2.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: defb3e60f1c8edf33be61da8b6d03257
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00006-galaxy_storm_break_10.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e2ba9664a2a6748e4ad5305915c175e3
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_3.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e2e50d29aa3371f0a8d838ccf7bd267b
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00008-nera_wide_claw_1.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e88219679e03781fea1012db6666d49b
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_23.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e9e3d6047ba19f810a6fa86a3f4201f9
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_15.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ea93466a259c4a2f3a4d240cf5881a3b
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00006-galaxy_storm_break_14.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: eb7cdc495f845ee5db8f9e8ffd4bbb76
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_16.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ec3bf30c2869d907a853d6017ab3e554
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00011-cross_nera_beam_8.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f4863139dec5f279dafb577fc6998f15
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00006-galaxy_storm_break_12.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f490b73aabf9fc16085244113af835d9
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00009-triple_trap_0.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f76293249f1d9ce44ad9b17ab2fb8d20
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_17.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f78ab5f6519d9a90392856f110f60276
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00006-galaxy_storm_break_6.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f849b1d34c43f9f17b42f6712ea84635
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00004-killer_slash_1.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: fa20862932f62d54a9c1dc34485fbab4
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00000-melee_slash_1.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: fa376741c88cbaaccaf1c21326099141
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00012-shin_cross_break_28.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: fba77e594b4bf0186b5901b1c9d2beb4
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00005-jinga_beam_5.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: febfabe225f1d7f50a50d69ba5377ce8
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00007-death_spiral_7.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BulletData
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ffaee9d20918438f0bfb9469eade5c0d
-    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00006-galaxy_storm_break_8.asset
+  - m_GUID: ffb48a3f994c289bf8561487545f74b7
+    m_Address: Assets/Addressables/AddressablesBulletData/bullet-bullet_pattern-00014-spiral_sextuple_a_3.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - BulletData

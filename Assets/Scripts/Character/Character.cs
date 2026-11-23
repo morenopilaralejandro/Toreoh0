@@ -9,6 +9,7 @@ public class Character
     public CharacterComponentBullet CharacterComponentBullet;
     public CharacterComponentLevel CharacterComponentLevel;
     public CharacterComponentStats CharacterComponentStats;
+    public CharacterComponentStatsMp CharacterComponentStatsMp;
     public CharacterComponentFatigue CharacterComponentFatigue;
     public CharacterComponentSpeed CharacterComponentSpeed;
     public CharacterComponentMove CharacterComponentMove;
@@ -28,6 +29,7 @@ public class Character
         CharacterComponentBullet = new CharacterComponentBullet(data, this);
         CharacterComponentLevel = new CharacterComponentLevel(this, saveData);
         CharacterComponentStats = new CharacterComponentStats(data, this, saveData);
+        CharacterComponentStatsMp = new CharacterComponentStatsMp(data, this, saveData);
         CharacterComponentFatigue = new CharacterComponentFatigue(this);
         CharacterComponentSpeed = new CharacterComponentSpeed(data, this, saveData);
         CharacterComponentMove = new CharacterComponentMove(data, this);

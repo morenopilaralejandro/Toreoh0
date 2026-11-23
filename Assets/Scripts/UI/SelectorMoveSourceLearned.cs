@@ -3,9 +3,14 @@ using System.Linq;
 
 public class SelectorMoveSourceLearned : ISelectorSource<Move>
 {
-    // TODO use character component moves
-    public IEnumerable<Move> Enumerate() => new List<Move>();
+    public Character Character;
 
+    public SelectorMoveSourceLearned(Character character) 
+    {
+        Character = character;
+    }
+
+    public IEnumerable<Move> Enumerate() => Character.CharacterComponentMove.ListLearned;
 
     /*
     public IEnumerable<Move> Enumerate() => MoveManager.Instance.MoveManagerComponentStorage.a

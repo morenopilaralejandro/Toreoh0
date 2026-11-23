@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: move-00005-jinga_beam
   m_EditorClassIdentifier: Assembly-CSharp::MoveData
   MoveId: move-00005-jinga_beam
-  BulletPatternId: bullet_pattern-00005-jinga_beam
+  SfxAddress: sfx-ui_select
   Element: 1
   MoveCategory: 0
   MoveCommandType: 1
-  FrameRecovery: 32
+  FrameRecovery: 128
+  ListBulletPatternMapping:
+  - BulletPatternId: bullet_pattern-00005-beam_good
+    DamageBase: 50

@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: move-00009-triple_trap
   m_EditorClassIdentifier: Assembly-CSharp::MoveData
   MoveId: move-00009-triple_trap
-  BulletPatternId: bullet_pattern-00009-triple_trap
+  SfxAddress: sfx-ui_select
   Element: 4
   MoveCategory: 0
   MoveCommandType: 1
   FrameRecovery: 16
+  ListBulletPatternMapping:
+  - BulletPatternId: bullet_pattern-00004-line_triple
+    DamageBase: 100

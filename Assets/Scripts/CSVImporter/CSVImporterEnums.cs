@@ -11,7 +11,8 @@ namespace Aremoreno.Enums.CSVImporter
         Enum,
         EnumList,
         // class
-        ItemRewardList
+        ItemRewardList,
+        BulletPatternMappingList
     }
 
     public enum EnumGenericType 

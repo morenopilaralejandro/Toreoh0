@@ -13,8 +13,13 @@ MonoBehaviour:
   m_Name: move-00006-galaxy_storm_break
   m_EditorClassIdentifier: Assembly-CSharp::MoveData
   MoveId: move-00006-galaxy_storm_break
-  BulletPatternId: bullet_pattern-00006-galaxy_storm_break
+  SfxAddress: sfx-ui_select
   Element: 3
   MoveCategory: 1
   MoveCommandType: 1
   FrameRecovery: 264
+  ListBulletPatternMapping:
+  - BulletPatternId: bullet_pattern-00009-earthquake
+    DamageBase: 200
+  - BulletPatternId: bullet_pattern-00011-spiral_quadruple_a
+    DamageBase: 100

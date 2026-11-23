@@ -79,7 +79,7 @@ public abstract class Selector<TData, TListItem> : Menu, IMenuClosable where TLi
         Refresh();
     }
 
-    public void Refresh() => scrollAdapter.Populate(source.Enumerate(), Bind);
+    public void Refresh() => scrollAdapter.Populate(source.Enumerate(), Bind, filter);
 
     // element
     public void FocusElement(int index, bool isFallbackToButtonClose = true) 
