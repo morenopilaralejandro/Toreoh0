@@ -291,6 +291,18 @@ MonoBehaviour:
     m_Localized: Captura
     m_Metadata:
       m_Items: []
+  - m_Id: 23976663760773120
+    m_Localized: "\xA1Victoria!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23976663815299072
+    m_Localized: Derrota...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23976663815299073
+    m_Localized: Empate
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -25,7 +25,7 @@ public class BattleComponentField
     public async Task LoadAsync()
     {
         await Field.TilemapComponent.SetAsync();
-        await Field.ProtectObstacleComponent.LoadAsync();
+        await Field.FieldComponentProtectObstacle.LoadAsync();
         await Field.BarrierComponent.LoadAsync();
     }
 

@@ -1,10 +1,12 @@
 using UnityEngine;
 using Aremoreno.Enums.Character;
+using Aremoreno.Enums.Move;
 
 public class CharacterComponentColliderCharge : MonoBehaviour
 {
     public CharacterEntityBattle CharacterEntityBattle;
     [SerializeField] private BattleConfig battleConfig;
+    [SerializeField] private CharacterConfig characterConfig;
 
     private void OnCollisionEnter(Collision other) 
     {
@@ -30,21 +32,31 @@ public class CharacterComponentColliderCharge : MonoBehaviour
 
     private void HandleCollisionCharacter(Collision other) 
     {
+        CharacterEntityBattle.CharacterComponentCharge.SetIsCharging(false);
+        CharacterEntityBattle.CharacterComponentStateLock.StartStateLock(characterConfig.ChargeFrameRecovery);
         CharacterEntityBattle character = other.gameObject.GetComponent<CharacterComponentColliderCharge>().CharacterEntityBattle;
         // if (CharacterEntityBattle.Character.CharacterComponentSide.IsSameTeam(character.Character)) return;
-        if (character.CharacterComponentAIBehaviour.AIBehaviour == AIBehaviour.Weak) return;
-        character.Character.CharacterComponentStats.ModifyStatsBattleWithClamp(Stat.Hp, -(character.Character.CharacterComponentStats.StatsBattle.Get(Stat.Hp) + 10));
+        // if (character.CharacterComponentAIBehaviour.AIBehaviour == AIBehaviour.Weak) return;
+        // insta kill version -> character.Character.CharacterComponentStats.ModifyStatsBattleWithClamp(Stat.Hp, -(character.Character.CharacterComponentStats.StatsBattle.Get(Stat.Hp) + 10));
+        BattleManager.Instance.Battle.BattleComponentDamageCalculator.ApplyDamage(
+            character,
+            character.Character.CharacterComponentElement.ListElement[0],
+            MoveCategory.Melee,
+            characterConfig.ChargeBaseDamage
+        );
         UIEvents.RaiseCharacterHpDecreased(character);
     }
 
     private void HandleCollisionBarrier(Collision other)
     {
+        CharacterEntityBattle.CharacterComponentCharge.SetIsCharging(false);
         other.gameObject.GetComponent<BarrierComponentColliderBreak>().Break();
         CharacterEntityBattle.Character.CharacterComponentStatusEffectVolatile.ApplyStatus(StatusEffectVolatile.Stunned);
     }
 
     private void HandleCollisionProtectObstacle(Collision other)
     {
+        CharacterEntityBattle.CharacterComponentCharge.SetIsCharging(false);
         other.gameObject.GetComponent<ProtectObstacleComponentColliderBreak>().Break();
         CharacterEntityBattle.Character.CharacterComponentStatusEffectVolatile.ApplyStatus(StatusEffectVolatile.Stunned);
     }

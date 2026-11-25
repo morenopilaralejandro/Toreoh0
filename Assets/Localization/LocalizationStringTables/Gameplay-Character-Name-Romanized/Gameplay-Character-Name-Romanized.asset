@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: Gameplay-Character-Name-Romanized
+  m_EditorClassIdentifier: Unity.Localization.Editor::UnityEditor.Localization.StringTableCollection
+  m_SharedTableData: {fileID: 11400000, guid: e2197345f28b0aedd82da7ee1a575f7d, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: fb171c620547ef0f18431746c66c661b, type: 2}
+  - {fileID: 11400000, guid: 8f1b92fb56d08b1ce9b71cb621823d27, type: 2}
+  - {fileID: 11400000, guid: 2cb151108fb812c90a90b87907734c45, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds: []

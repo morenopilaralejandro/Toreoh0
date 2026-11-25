@@ -17,6 +17,7 @@ MonoBehaviour:
   Element: 1
   MoveCategory: 0
   MoveCommandType: 1
+  Cost: 50
   FrameRecovery: 128
   ListBulletPatternMapping:
   - BulletPatternId: bullet_pattern-00005-beam_good

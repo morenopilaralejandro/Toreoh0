@@ -4,8 +4,10 @@ using Aremoreno.Enums.Input;
 
 public class MenuBattleResult : Menu
 {
-    //[Header("UI References")]
-    //[SerializeField] private DialogBoxUI dialogBox;
+    [Header("UI References")]
+    [SerializeField] private CanvasGroup canvasGroupWin;
+    [SerializeField] private CanvasGroup canvasGroupLose;
+
     private BattleResult battleResult;
 
     // Lifecycle
@@ -14,7 +16,15 @@ public class MenuBattleResult : Menu
         base.Start();
         if (BattleArgs.BattleResultSaveData == null) return;
         battleResult = new BattleResult(BattleArgs.BattleResultSaveData);
+        PopulateUI();
         menuManager.OpenMenu(this);
+    }
+
+    // Logic
+    private void PopulateUI() 
+    {
+        UIUtils.SetCanvasGroupAlpha(canvasGroupWin, battleResult.BattleResultComponentSide.IsUserWin);
+        UIUtils.SetCanvasGroupAlpha(canvasGroupLose, !battleResult.BattleResultComponentSide.IsUserWin);
     }
 
     // Input

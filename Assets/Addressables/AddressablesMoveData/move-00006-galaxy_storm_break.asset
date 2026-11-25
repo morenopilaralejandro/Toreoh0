@@ -17,6 +17,7 @@ MonoBehaviour:
   Element: 3
   MoveCategory: 1
   MoveCommandType: 1
+  Cost: 75
   FrameRecovery: 264
   ListBulletPatternMapping:
   - BulletPatternId: bullet_pattern-00009-earthquake

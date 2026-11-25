@@ -17,6 +17,7 @@ MonoBehaviour:
   Element: 8
   MoveCategory: 1
   MoveCommandType: 1
+  Cost: 25
   FrameRecovery: 64
   ListBulletPatternMapping:
   - BulletPatternId: bullet_pattern-00008-slash_triple

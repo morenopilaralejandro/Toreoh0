@@ -287,6 +287,18 @@ MonoBehaviour:
     m_Key: text_battle_phase_captura
     m_Metadata:
       m_Items: []
+  - m_Id: 23976663760773120
+    m_Key: text_battle_result_win
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23976663815299072
+    m_Key: text_battle_result_lose
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23976663815299073
+    m_Key: text_battle_result_tie
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

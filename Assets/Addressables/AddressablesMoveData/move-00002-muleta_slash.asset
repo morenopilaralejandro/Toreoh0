@@ -17,6 +17,7 @@ MonoBehaviour:
   Element: 8
   MoveCategory: 1
   MoveCommandType: 0
+  Cost: 0
   FrameRecovery: 32
   ListBulletPatternMapping:
   - BulletPatternId: bullet_pattern-00007-slash_single

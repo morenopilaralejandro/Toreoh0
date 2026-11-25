@@ -16,6 +16,8 @@ public class MenuBattleCommand : Menu
     private SelectorMoveFilterSpecial filterMove;
 
     // Lifecycle
+    public override void OnOpened() => BattleManager.Instance.Battle.BattleComponentPause.Pause();
+    public override void OnClosed() => BattleManager.Instance.Battle.BattleComponentPause.Resume();
 
     // Input
     protected override void OnGainedInput() => InputManager.Instance.MapNavigation.Tracker.OnButtonDown += OnButtonDown;

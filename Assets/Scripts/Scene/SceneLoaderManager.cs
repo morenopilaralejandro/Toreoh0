@@ -118,4 +118,8 @@ public class SceneLoaderManager : MonoBehaviour
         yield return StartCoroutine(coroutine);
         tcs.SetResult(true);
     }
+
+    public Coroutine StartCoroutineHelper(IEnumerator coroutine) => StartCoroutine(coroutine);
+    public void StopCoroutineHelper(IEnumerator coroutine) => StopCoroutine(coroutine);
+    public void StopCoroutineHelper(Coroutine coroutine) => StopCoroutine(coroutine);
 }

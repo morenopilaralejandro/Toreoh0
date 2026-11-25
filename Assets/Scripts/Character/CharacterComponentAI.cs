@@ -101,6 +101,8 @@ public class CharacterComponentAI
 
     public void FixedUpdateInternal()
     {
+        if (BattleManager.Instance.Battle.BattleComponentPause.IsPausedBattle) return;
+
         timeNow = Time.time;
         if (timeNow >= timeNextDecision)
         {

@@ -22,6 +22,8 @@ MonoBehaviour:
   RadiusHit: 0.55
   RadiusGrace: 0.8
   RadiusVisual: 0.8
+  ChargeBaseDamage: 300
+  ChargeFrameRecovery: 64
   RangeMelee: 2
   ListStatsScalingMapping:
   - Stat: 0

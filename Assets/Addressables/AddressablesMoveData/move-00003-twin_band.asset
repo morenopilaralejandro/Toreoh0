@@ -17,7 +17,7 @@ MonoBehaviour:
   Element: 5
   MoveCategory: 0
   MoveCommandType: 1
-  Cost: 100000
+  Cost: 5
   FrameRecovery: 32
   ListBulletPatternMapping:
   - BulletPatternId: bullet_pattern-00003-line_double

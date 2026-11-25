@@ -44,6 +44,8 @@ public class BattleComponentBullet
 
     public void UpdateInternal() 
     {
+        if (battle.BattleComponentPause.IsPausedPhysic) return;
+
         // loop backwards to remove bullets
         for(int i = listBulletStruct.Count - 1; i >= 0; i--)
         {

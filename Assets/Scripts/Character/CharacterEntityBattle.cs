@@ -70,6 +70,6 @@ public class CharacterEntityBattle : CharacterEntity
         CharacterComponentAI.SetIsAiEnabled(!isEnable);
     }
 
-    public bool CanAct => !CharacterComponentStateLock.IsStateLocked;
+    public bool CanAct =>  !CharacterComponentStateLock.IsStateLocked && !Character.CharacterComponentStatusEffectVolatile.IsStunned && !Character.CharacterComponentStatusEffectPermanent.IsFainted;
     public bool CanMove => !CharacterComponentStateLock.IsStateLocked && !Character.CharacterComponentStatusEffectVolatile.IsStunned && !Character.CharacterComponentStatusEffectPermanent.IsFainted;
 }

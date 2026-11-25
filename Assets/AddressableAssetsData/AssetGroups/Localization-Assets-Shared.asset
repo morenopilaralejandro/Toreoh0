@@ -21,6 +21,24 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 221adc2975ffec4a9b438eade12af7b8
+    m_Address: Assets/Localization/LocalizationStringTables/Gameplay-Character-Name-Localized/Gameplay-Character-Name-Localized
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 25119a70e2d24981ca98ad0146f1aa67
+    m_Address: Assets/Localization/LocalizationStringTables/Gameplay-Move-Name-Romanized/Gameplay-Move-Name-Romanized
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 297eedafb242fed8a8cf8bbf38b9a3fc
+    m_Address: Assets/Localization/LocalizationStringTables/Gameplay-Move-Description-Romanized/Gameplay-Move-Description-Romanized
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2f547ed1963c8d026a4c9434816640c7
     m_Address: Assets/Localization/LocalizationStringTables/Gameplay-Shop-Name-Romanized/Gameplay-Shop-Name-Romanized
       Shared Data.asset
@@ -45,6 +63,12 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 751572be4f763b6a295739c87181bfe8
+    m_Address: Assets/Localization/LocalizationStringTables/Gameplay-Move-Name-Localized/Gameplay-Move-Name-Localized
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 812cf92040dd210b698ba5e708598048
     m_Address: Assets/Localization/LocalizationStringTables/Gameplay-Item-Name-Localized/Gameplay-Item-Name-Localized
       Shared Data.asset
@@ -59,6 +83,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 862f734c929de1fdc85c16793fa02e4b
     m_Address: Assets/Localization/LocalizationStringTables/Gameplay-Shop-Name-Localized/Gameplay-Shop-Name-Localized
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8db4a01b09d409dcca730e5ba747d0e7
+    m_Address: Assets/Localization/LocalizationStringTables/Gameplay-Move-Description-Localized/Gameplay-Move-Description-Localized
       Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
@@ -93,8 +123,38 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c922a25f7447db7c1a91215d65794e21
+    m_Address: Assets/Localization/LocalizationStringTables/Gameplay-Character-Description-Localized/Gameplay-Character-Description-Localized
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d27fb9ea8a6025945b05f03bc15ad013
+    m_Address: Assets/Localization/LocalizationStringTables/Gameplay-Character-Description-Romanized/Gameplay-Character-Description-Romanized
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d47a4053252a57d9ab73af6ffe43f0ac
     m_Address: Assets/Localization/LocalizationStringTables/Gameplay-Dialog-Text-Romanized/Gameplay-Dialog-Text-Romanized
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e2197345f28b0aedd82da7ee1a575f7d
+    m_Address: Assets/Localization/LocalizationStringTables/Gameplay-Character-Name-Romanized/Gameplay-Character-Name-Romanized
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e5a55cf897311f0f3b722621ef5d0dbb
+    m_Address: Assets/Localization/LocalizationStringTables/Gameplay-Character-Nick-Romanized/Gameplay-Character-Nick-Romanized
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f6a640aceb01a6bf68f2eb1eb82134c9
+    m_Address: Assets/Localization/LocalizationStringTables/Gameplay-Character-Nick-Localized/Gameplay-Character-Nick-Localized
       Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []

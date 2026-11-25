@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Aremoreno.Enums.Battle;
 
 public class FieldComponentProtectObstacle
 {
@@ -26,7 +27,7 @@ public class FieldComponentProtectObstacle
     public async Task LoadAsync()
     {
         var prefab = await binding.LoadAssetAsync("prefab-ProtectObstacleEntity");
-        var listFormationCoord = field.FormationComponent.Formation.CoordsComponent.ListFormationCoord;
+        var listFormationCoord = field.FieldComponentFormation.Formation.CoordsComponent.ListFormationCoord;
         var data = DatabaseManager.Instance.DatabaseRegistry.ProtectObstacleData.Get(protectObstacleId);
 
         for (int i = 1; i < listFormationCoord.Count; i++) 
@@ -43,4 +44,15 @@ public class FieldComponentProtectObstacle
         }
         Clear();
     }
+
+    public int GetCountAllright() 
+    {
+        int result = 0;
+        foreach (var protectObstacle in ListProtectObstacle)
+        {
+            if (protectObstacle.StateMachineComponent.State == ProtectObstacleState.Allright)
+                result++;
+        }
+        return result;
+    } 
 }

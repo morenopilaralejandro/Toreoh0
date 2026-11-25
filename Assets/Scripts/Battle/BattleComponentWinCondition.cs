@@ -1,16 +1,16 @@
+using Aremoreno.Enums.Battle;
+
 public class BattleComponentWinCondition
 {
     private Battle battle;
     public IWinCondition WinCondition;
-    public CharacterEntityBattle entityLastDamaged;
+    public CharacterEntityBattle EntityLastDamaged;
 
     public BattleComponentWinCondition(Battle battle)
     {
         this.battle = battle;
 
-        // TODO decide wich to use using BattleFormat
-        // new win con last standing user
-        WinCondition = new WinConditionLastStanding();
+        WinCondition = new WinConditionLastStandingUser();
 
         WinCondition.Initialize(battle);
     }
@@ -27,9 +27,17 @@ public class BattleComponentWinCondition
 
     private void OnCharacterHpDecreased(CharacterEntityBattle entity) 
     {
-        entityLastDamaged = entity;
+        EntityLastDamaged = entity;
         if (WinCondition.CheckCondition())
             battle.BattleComponentEnd.End();
+    }
+
+    public BattleSide GetBattleSideLoser() 
+    {
+        if (EntityLastDamaged == null)
+            return BattleSide.South;
+        else
+            return EntityLastDamaged.Character.CharacterComponentSide.BattleSide;
     }
 }
 

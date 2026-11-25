@@ -74,3 +74,6 @@ text_battle_phase_varas,,,Varas
 text_battle_phase_banderillas,,,Banderillas
 text_battle_phase_muerte,,,Muerte
 text_battle_phase_captura,,,Captura
+text_battle_result_win,,,¡Victoria!
+text_battle_result_lose,,,Derrota...
+text_battle_result_tie,,,Empate

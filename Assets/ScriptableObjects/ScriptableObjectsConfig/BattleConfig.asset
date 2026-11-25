@@ -178,6 +178,8 @@ MonoBehaviour:
           m_Key: 
         m_FallbackState: 0
         m_WaitForCompletion: 0
+  TimeScaleDefault: 1
+  TimeScaleFrozen: 0
   CountBarrier: 0
   CountCapturePortal: 1
   CountProtectObstacle: 3

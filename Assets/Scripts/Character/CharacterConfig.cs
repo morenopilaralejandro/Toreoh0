@@ -23,6 +23,8 @@ public class CharacterConfig : ScriptableObject
     public float RadiusHit;
     public float RadiusGrace;
     public float RadiusVisual;
+    public float ChargeBaseDamage;
+    public float ChargeFrameRecovery;
 
     public float RangeMelee;
 

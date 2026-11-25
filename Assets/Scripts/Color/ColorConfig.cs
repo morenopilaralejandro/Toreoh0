@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using Aremoreno.Enums.Battle;
+using Aremoreno.Enums.Character;
 using Aremoreno.Enums.Color;
 
 [CreateAssetMenu(fileName = "ColorConfig", menuName = "ScriptableObject/Color/ColorConfig")]
@@ -12,6 +13,7 @@ public class ColorConfig : ScriptableObject
     public ColorDictionary<BattleSide> BattleSide;
     public ColorDictionary<BattleSide> BattleSideBullet;
     public ColorDictionary<BattlePhase> BattlePhase;
+    public ColorDictionary<Element> ElementText;
 
     public IEnumerable<IColorDictionary> GetAllDictionaries() 
     {
@@ -20,5 +22,6 @@ public class ColorConfig : ScriptableObject
         yield return BattleSide;
         yield return BattleSideBullet; 
         yield return BattlePhase;
+        yield return ElementText;
     }
 }

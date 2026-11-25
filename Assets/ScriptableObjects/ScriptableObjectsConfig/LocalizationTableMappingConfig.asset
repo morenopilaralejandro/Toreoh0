@@ -13,6 +13,36 @@ MonoBehaviour:
   m_Name: LocalizationTableMappingConfig
   m_EditorClassIdentifier: Assembly-CSharp::LocalizationTableMappingConfig
   Mappings:
+  - Entity: 0
+    Field: 2
+    Style: 0
+    TableReference:
+      m_TableCollectionName: Gameplay-Character-Description-Localized
+  - Entity: 0
+    Field: 2
+    Style: 1
+    TableReference:
+      m_TableCollectionName: Gameplay-Character-Description-Romanized
+  - Entity: 0
+    Field: 0
+    Style: 0
+    TableReference:
+      m_TableCollectionName: Gameplay-Character-Name-Localized
+  - Entity: 0
+    Field: 0
+    Style: 1
+    TableReference:
+      m_TableCollectionName: Gameplay-Character-Name-Romanized
+  - Entity: 0
+    Field: 1
+    Style: 0
+    TableReference:
+      m_TableCollectionName: Gameplay-Character-Nick-Localized
+  - Entity: 0
+    Field: 1
+    Style: 1
+    TableReference:
+      m_TableCollectionName: Gameplay-Character-Nick-Romanized
   - Entity: 12
     Field: 6
     Style: 0
@@ -43,6 +73,26 @@ MonoBehaviour:
     Style: 1
     TableReference:
       m_TableCollectionName: Gameplay-Item-Name-Romanized
+  - Entity: 4
+    Field: 2
+    Style: 0
+    TableReference:
+      m_TableCollectionName: Gameplay-Move-Description-Localized
+  - Entity: 4
+    Field: 2
+    Style: 1
+    TableReference:
+      m_TableCollectionName: Gameplay-Move-Description-Romanized
+  - Entity: 4
+    Field: 0
+    Style: 0
+    TableReference:
+      m_TableCollectionName: Gameplay-Move-Name-Localized
+  - Entity: 4
+    Field: 0
+    Style: 1
+    TableReference:
+      m_TableCollectionName: Gameplay-Move-Name-Romanized
   - Entity: 10
     Field: 0
     Style: 0

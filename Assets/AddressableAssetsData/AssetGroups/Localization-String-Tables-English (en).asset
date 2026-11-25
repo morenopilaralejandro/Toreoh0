@@ -21,14 +21,32 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0aead3a14aaea2330963ca1b3c613ad5
+    m_Address: Gameplay-Move-Name-Localized_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1107a4ffa38d51705a10b8719d9d49b7
     m_Address: Gameplay-Dialog-Text-Romanized_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 169d495e7f7576d03b76cd2724f4c55a
+    m_Address: Gameplay-Character-Description-Localized_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1915502c41684c272bd0801c283855d2
     m_Address: Gameplay-Item-Description-Localized_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3ba55941051ba2bc083354ffc4e3ff9d
+    m_Address: Gameplay-Move-Description-Localized_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
@@ -45,8 +63,32 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5366f481d93f3a23c835ade807a7ce2d
+    m_Address: Gameplay-Character-Description-Romanized_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 584667f368d3d7bb4a2cbcd2f9e69547
+    m_Address: Gameplay-Character-Nick-Romanized_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5993758b08f1a3630b325707538b4419
     m_Address: Gameplay-Shop-Name-Romanized_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5ca65896543f717bab9d63341e92755a
+    m_Address: Gameplay-Character-Name-Localized_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 628b9c28ebab3b860b619101468d1468
+    m_Address: Gameplay-Move-Name-Romanized_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
@@ -89,6 +131,24 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c219c6fac9ce86a7594c9fa6ca27fda3
     m_Address: Gameplay-Dialog-Text-Localized_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d7bf8412d7348ddc597e33064e2f8f50
+    m_Address: Gameplay-Move-Description-Romanized_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: de564d7d63d9994cfa96f2e6817f0793
+    m_Address: Gameplay-Character-Nick-Localized_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fb171c620547ef0f18431746c66c661b
+    m_Address: Gameplay-Character-Name-Romanized_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en

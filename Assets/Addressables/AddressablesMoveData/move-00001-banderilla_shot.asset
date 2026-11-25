@@ -17,6 +17,7 @@ MonoBehaviour:
   Element: 8
   MoveCategory: 0
   MoveCommandType: 0
+  Cost: 0
   FrameRecovery: 16
   ListBulletPatternMapping:
   - BulletPatternId: bullet_pattern-00001-line_uniform

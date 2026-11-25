@@ -15,8 +15,8 @@ public class CharacterComponentControllerTouchBattle : CharacterComponentControl
 
     public void SetIsControlled(bool isControlled) => IsControlled = isControlled;
 
-    protected override bool CanMove() => entity.CanMove;
-    protected override bool CanAct() => entity.CanAct;
+    protected override bool CanMove() => entity.CanMove && !BattleManager.Instance.Battle.BattleComponentPause.IsPausedBattle;
+    protected override bool CanAct() => entity.CanAct && !BattleManager.Instance.Battle.BattleComponentPause.IsPausedBattle;
 
     //protected override float GetSpeedMovement() => entity.Character.CharacterComponentSpeed.SpeedMovement;
     protected override float GetSpeedMovement() => entity.Character.CharacterComponentSpeed.SpeedMovement;
@@ -35,29 +35,34 @@ public class CharacterComponentControllerTouchBattle : CharacterComponentControl
 
         entity.CharacterComponentStateLock.StartStateLock(move.MoveComponentFrame.FrameRecovery);
         BattleManager.Instance.Battle.BattleComponentBullet.AddBullet(entity, move);
+        CustomLog.Error($"[CharacterControllerComponentTouchBattle] ExecuteActionTap");
     }
 
     protected override void ExecuteActionSwipeUp()
     {
         CustomLog.Error($"[CharacterControllerComponentTouchBattle] ExecuteActionSwipeUp");
-        UIEvents.RaiseMenuBattleCommandOpenRequested();
+        // if (!CanAct()) return;
+        ExecuteActionSwipeDown();
     }
 
     protected override void ExecuteActionSwipeDown()
     {
         CustomLog.Error($"[CharacterControllerComponentTouchBattle] ExecuteActionSwipeDown");
+        if (BattleManager.Instance.Battle.BattleComponentPause.IsPausedBattle) return;
         UIEvents.RaiseMenuBattleCommandOpenRequested();
     }
 
     protected override void ExecuteActionSwipeLeft()
     {
         CustomLog.Error($"[CharacterControllerComponentTouchBattle] ExecuteActionSwipeLeft");
-        UIEvents.RaiseMenuBattleCommandOpenRequested();
+        // if (!CanAct()) return;
+        ExecuteActionSwipeDown();
     }
 
     protected override void ExecuteActionSwipeRight()
     {
         CustomLog.Error($"[CharacterControllerComponentTouchBattle] ExecuteActionSwipeRight");
-        UIEvents.RaiseMenuBattleCommandOpenRequested();
+        // if (!CanAct()) return;
+        ExecuteActionSwipeDown();
     }
 }

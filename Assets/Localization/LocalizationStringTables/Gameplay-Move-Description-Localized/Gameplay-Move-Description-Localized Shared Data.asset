@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Gameplay-Move-Description-Localized Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: Gameplay-Move-Description-Localized
+  m_TableCollectionNameGuidString: 8db4a01b09d409dcca730e5ba747d0e7
+  m_Entries:
+  - m_Id: 552899190784
+    m_Key: move-00000-test
+    m_Metadata:
+      m_Items: []
+  - m_Id: 552903385088
+    m_Key: move-00001-banderilla_shot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 552903385089
+    m_Key: move-00002-muleta_slash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 552903385090
+    m_Key: move-00003-twin_band
+    m_Metadata:
+      m_Items: []
+  - m_Id: 552903385091
+    m_Key: move-00004-killer_slash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 552903385092
+    m_Key: move-00005-jinga_beam
+    m_Metadata:
+      m_Items: []
+  - m_Id: 552903385093
+    m_Key: move-00006-galaxy_storm_break
+    m_Metadata:
+      m_Items: []
+  - m_Id: 552903385094
+    m_Key: move-00007-death_spiral
+    m_Metadata:
+      m_Items: []
+  - m_Id: 552903385095
+    m_Key: move-00008-nera_wide_claw
+    m_Metadata:
+      m_Items: []
+  - m_Id: 552903385096
+    m_Key: move-00009-triple_trap
+    m_Metadata:
+      m_Items: []
+  - m_Id: 552903385097
+    m_Key: move-00010-cross_claw
+    m_Metadata:
+      m_Items: []
+  - m_Id: 552903385098
+    m_Key: move-00011-cross_nera_beam
+    m_Metadata:
+      m_Items: []
+  - m_Id: 552903385099
+    m_Key: move-00012-shin_cross_break
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 4372928728103125071
+  references:
+    version: 2
+    RefIds:
+    - rid: 4372928728103125071
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1795541914342

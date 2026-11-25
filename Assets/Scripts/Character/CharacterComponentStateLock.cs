@@ -26,6 +26,7 @@ public class CharacterComponentStateLock : MonoBehaviour
     {
         while (frameCount > 0)
         {
+            if (BattleManager.Instance.Battle.BattleComponentPause.IsPausedBattle) yield return null;
             frameCount--;
             yield return null;
         }

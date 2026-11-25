@@ -43,6 +43,10 @@ MonoBehaviour:
     ColumnName: MoveCommandType
     EnumGenericType: 10
   - SerializableFieldCustom: 2
+    FieldName: Cost
+    ColumnName: Cost
+    EnumGenericType: 0
+  - SerializableFieldCustom: 2
     FieldName: FrameRecovery
     ColumnName: FrameRecovery
     EnumGenericType: 0

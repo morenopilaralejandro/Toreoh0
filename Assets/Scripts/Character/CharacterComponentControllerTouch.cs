@@ -96,7 +96,7 @@ public abstract class CharacterComponentControllerTouch : MonoBehaviour
     // swipe
     private void OnSwipePerformed(InputSwipeDirection direction) 
     {
-        if (!CanAct()) return;
+        // if (!CanAct()) return;
         switch(direction) 
         {
             case InputSwipeDirection.Up:

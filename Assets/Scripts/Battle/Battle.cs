@@ -16,6 +16,8 @@ public class Battle
     public BattleComponentPhase BattleComponentPhase;
     public BattleComponentEnd BattleComponentEnd;
     public BattleComponentWinCondition BattleComponentWinCondition;
+    public BattleComponentCutsceneBattle BattleComponentCutsceneBattle;
+    public BattleComponentPause BattleComponentPause;
 
     public Battle(
         BattleConfig battleConfig, 
@@ -39,6 +41,8 @@ public class Battle
         BattleComponentPhase = new BattleComponentPhase(this);
         BattleComponentEnd = new BattleComponentEnd(this);
         BattleComponentWinCondition = new BattleComponentWinCondition(this);
+        BattleComponentCutsceneBattle = new BattleComponentCutsceneBattle(this);
+        BattleComponentPause = new BattleComponentPause(this, battleConfig);
 
         BattleComponentPhase.Subscribe();
         BattleComponentWinCondition.Subscribe();

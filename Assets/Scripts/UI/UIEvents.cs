@@ -20,6 +20,14 @@ public static class UIEvents
     public static void RaiseCharacterMpDecreased(CharacterEntityBattle entity)
         => OnCharacterMpDecreased?.Invoke(entity);
 
+    public static event Action<string, string> OnCutsceneBattleStarted;
+    public static void RaiseCutsceneBattleStarted(string name, string addressEvolution)
+        => OnCutsceneBattleStarted?.Invoke(name, addressEvolution);
+
+    public static event Action OnCutsceneBattleEnded;
+    public static void RaiseCutsceneBattleEnded()
+        => OnCutsceneBattleEnded?.Invoke();
+
     // memory
     public static event Action<GameObject> OnSelectableSelected;
     public static void RaiseSelectableSelected(GameObject go) 

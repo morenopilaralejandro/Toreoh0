@@ -914,6 +914,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterComponentColliderCharge
   CharacterEntityBattle: {fileID: 2225795152639815141}
   battleConfig: {fileID: 11400000, guid: 7d794801ddc5dcafbac7366873ac6b18, type: 2}
+  characterConfig: {fileID: 11400000, guid: 2966860c2d202624ab940d09d10db95f, type: 2}
 --- !u!114 &2595076321731962219
 MonoBehaviour:
   m_ObjectHideFlags: 0

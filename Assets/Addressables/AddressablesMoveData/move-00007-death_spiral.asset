@@ -17,6 +17,7 @@ MonoBehaviour:
   Element: 4
   MoveCategory: 0
   MoveCommandType: 0
+  Cost: 0
   FrameRecovery: 128
   ListBulletPatternMapping:
   - BulletPatternId: bullet_pattern-00012-spiral_quadruple_b

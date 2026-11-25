@@ -21,6 +21,10 @@ public class BattleConfig : ScriptableObject
     [Header("General")]
     public List<BattlePhaseMapping> ListBattlePhaseMapping;
 
+    [Header("Freeze")]
+    public float TimeScaleDefault;
+    public float TimeScaleFrozen;
+
     [Header("Field")]
     public int CountBarrier;
     public int CountCapturePortal;

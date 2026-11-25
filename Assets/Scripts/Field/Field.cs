@@ -5,10 +5,10 @@ public class Field
     public FieldComponentAttributes AttributesComponent;
     public FieldComponentAppearance AppearanceComponent;
     public FieldComponentConfig ConfigComponent;
-    public FieldComponentFormation FormationComponent;
+    public FieldComponentFormation FieldComponentFormation;
     public FieldComponentFormationBarrier FormationBarrierComponent;
     public FieldComponentTilemap TilemapComponent;
-    public FieldComponentProtectObstacle ProtectObstacleComponent;
+    public FieldComponentProtectObstacle FieldComponentProtectObstacle;
     public FieldComponentBarrier BarrierComponent;
 
     public Field(FieldData data) { }
@@ -22,17 +22,17 @@ public class Field
         AttributesComponent = new FieldComponentAttributes(data);
         AppearanceComponent = new FieldComponentAppearance(data);
         ConfigComponent = new FieldComponentConfig(battleConfig);
-        FormationComponent = new FieldComponentFormation(this);
+        FieldComponentFormation = new FieldComponentFormation(this);
         FormationBarrierComponent = new FieldComponentFormationBarrier(data, this);
         TilemapComponent = new FieldComponentTilemap(this, tileMapParent);
-        ProtectObstacleComponent = new FieldComponentProtectObstacle(data, this, parentProtectObstacle);
+        FieldComponentProtectObstacle = new FieldComponentProtectObstacle(data, this, parentProtectObstacle);
         BarrierComponent = new FieldComponentBarrier(this, parentBarrier);
     }
 
     public void Dispose() 
     {
         TilemapComponent.Clear();
-        ProtectObstacleComponent.Clear();
+        FieldComponentProtectObstacle.Clear();
         BarrierComponent.Clear();
     }
 }

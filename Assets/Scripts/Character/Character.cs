@@ -1,6 +1,7 @@
 public class Character 
 {
     public CharacterComponentAttributes CharacterComponentAttributes;
+    public CharacterComponentLocalization CharacterComponentLocalization;
     public CharacterComponentPersistence CharacterComponentPersistence;
     public CharacterComponentConfig CharacterComponentConfig;
     public CharacterComponentAppearance CharacterComponentAppearance;
@@ -21,6 +22,7 @@ public class Character
     public Character(CharacterData data, CharacterSaveData saveData)
     {
         CharacterComponentAttributes = new CharacterComponentAttributes(data);
+        CharacterComponentLocalization = new CharacterComponentLocalization(data);
         CharacterComponentPersistence = new CharacterComponentPersistence(this);
         CharacterComponentConfig = new CharacterComponentConfig();
         CharacterComponentAppearance = new CharacterComponentAppearance(data);

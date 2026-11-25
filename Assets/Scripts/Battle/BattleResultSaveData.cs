@@ -10,11 +10,8 @@ public class BattleResultSaveData
     public bool IsForcedLose;
     public bool IsForcedWin;
 
-    public bool IsNorthWinner;
-    public bool IsSouthWinner;
-    public BattleSide SideWinner;
-    public BattleSide SideLoser;
-    public BattleSide SideUser;
+    public BattleSide BattleSideLoser;
+    public BattleSide BattleSideUser;
 
     public BattleType BattleType;
     public BattleFormat BattleFormat;
