@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MoveData
   MoveId: move-00005-jinga_beam
   SfxAddress: sfx-ui_select
-  Element: 1
+  Element: 8
   MoveCategory: 0
   MoveCommandType: 1
   Cost: 50

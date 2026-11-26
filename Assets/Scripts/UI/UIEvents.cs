@@ -181,6 +181,10 @@ public static class UIEvents
     public static void RaiseSaveDataOverviewUpdateRequested(SaveData saveData)
         => OnSaveDataOverviewUpdateRequested?.Invoke(saveData);
 
+    public static event Action<Move> OnMoveOverviewUpdateRequested;
+    public static void RaiseMoveOverviewUpdateRequested(Move move)
+        => OnMoveOverviewUpdateRequested?.Invoke(move);
+
     // confirm dialog
     public static event Action<List<LocalizationReferenceStyleMapping>> OnDialogConfirmOpenRequested;
     public static void RaiseDialogConfirmOpenRequested(List<LocalizationReferenceStyleMapping> listMappingReference)

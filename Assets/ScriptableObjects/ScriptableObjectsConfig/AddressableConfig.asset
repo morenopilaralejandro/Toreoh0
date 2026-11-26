@@ -21,3 +21,5 @@ MonoBehaviour:
   PathFieldTileMap: tilemap
   PathBarrierPrefab: BarrierEntity
   PathCharacterPrefab: CharacterEntityBattle
+  PathElementIcon: icon-element
+  PathMoveCategoryIcon: sprite-icon-move_category

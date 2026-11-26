@@ -15,8 +15,23 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: 4cef6991fe93563c8a102d091f3ae764
   m_SerializeEntries:
+  - m_GUID: 0bda7b8750324edab81e807b0f6544e1
+    m_Address: icon-element-earth
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1b890834f1973388fb3f142671eaff41
     m_Address: sfx-ui_barrier_break_default
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3135dbb7fae7a57bc96e153a0fbacb17
+    m_Address: icon-element-holy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a2ab5bd0ce4b275799ffd7aac8c01b9
+    m_Address: icon-element-electric
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -25,8 +40,23 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6c48b5ce283915fd1aa467feb2fb30e6
+    m_Address: icon-element-wind
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6d671acaaec701b35bd465068c78ff52
     m_Address: sprite-item-basic
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7441f41bbcffe6e419df6597a243beae
+    m_Address: sprite-icon-move_category-melee
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 78f185d92af180095bb5748cfac8c05d
+    m_Address: icon-element-evil
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -35,13 +65,38 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aa82a1b32c915e4e989d1da90e668019
+    m_Address: icon-element-forest
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b6b0e3f1bbd58c5ddb2d07da574635c3
     m_Address: prefab-ProtectObstacleEntity
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c18efc3290bd66a11a11414dda52de76
+    m_Address: sprite-icon-move_category-range
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cc0bb0e9cf3d6a50c953db9d83cd51f2
+    m_Address: icon-element-water
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cda146b5ae67df0e5925aaf41465d05d
     m_Address: sprite-chest-closed
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ea515f88d1ef0d8518e9abaad06126b1
+    m_Address: icon-element-fire
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f1b4800e7bef3c485b98e88aff459fc3
+    m_Address: icon-element-ice
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

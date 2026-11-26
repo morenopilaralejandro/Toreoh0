@@ -39,4 +39,10 @@ public static class AddressableBuilder
 
     public static string GetCharacterPrefabAddress(string id) =>
         BuildAddress(config.PathCharacterPrefab, id);
+
+    public static string GetElementIconAddress(string id) =>
+        BuildAddress(config.PathElementIcon, id);
+
+    public static string GetMoveCategoryIconAddress(string id) =>
+        BuildAddress(config.PathMoveCategoryIcon, id);
 }

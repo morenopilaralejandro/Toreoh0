@@ -12,7 +12,7 @@ public class SelectorMove : Selector<Move, SelectorMoveListItem>
     // override
     public override void OnOpened() 
     {
-        //UIEvents.RaiseMoveOverviewUpdateRequested(null);
+        UIEvents.RaiseMoveOverviewUpdateRequested(null);
         base.OnOpened();
     }
 

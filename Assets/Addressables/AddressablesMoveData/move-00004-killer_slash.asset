@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MoveData
   MoveId: move-00004-killer_slash
   SfxAddress: sfx-ui_select
-  Element: 8
+  Element: 1
   MoveCategory: 1
   MoveCommandType: 1
   Cost: 25

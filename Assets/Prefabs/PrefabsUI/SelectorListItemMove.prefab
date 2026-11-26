@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2510038429873758038, guid: 159b05a8ec4f6fe1481ef1d13cec4373, type: 3}
       propertyPath: m_Name
-      value: SelectorListItem Variant 1
+      value: SelectorListItemMove
       objectReference: {fileID: 0}
     - target: {fileID: 6973086465303101616, guid: 159b05a8ec4f6fe1481ef1d13cec4373, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -130,6 +130,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2510038429873758038, guid: 159b05a8ec4f6fe1481ef1d13cec4373, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1951659443763427606}
+    - targetCorrespondingSourceObject: {fileID: 2510038429873758038, guid: 159b05a8ec4f6fe1481ef1d13cec4373, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2297523452068168552}
   m_SourcePrefab: {fileID: 100100000, guid: 159b05a8ec4f6fe1481ef1d13cec4373, type: 3}
 --- !u!1 &1272893897911836951 stripped
 GameObject:
@@ -149,6 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectorMoveListItem
   scrollForwarder: {fileID: 8200829557563158285}
+  moveUI: {fileID: 2297523452068168552}
 --- !u!114 &1951659443763427606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,6 +182,28 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &2297523452068168552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272893897911836951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c61d79c69d6e5518926323a1a9eab46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MoveUI
+  imageEvolution: {fileID: 0}
+  imageElement: {fileID: 0}
+  imageMoveCategory: {fileID: 0}
+  textName: {fileID: 0}
+  textDescription: {fileID: 0}
+  textCost: {fileID: 0}
+  textPowerBase: {fileID: 0}
+  colorCostDefault: {r: 1, g: 1, b: 1, a: 1}
+  colorCostNotAffordable: {r: 1, g: 0.49598897, b: 0.49598897, a: 1}
+  isNameColorEnabled: 0
 --- !u!114 &8200829557563158285 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4805477068142481740, guid: 159b05a8ec4f6fe1481ef1d13cec4373, type: 3}

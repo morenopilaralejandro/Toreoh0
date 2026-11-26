@@ -15,4 +15,6 @@ public class AddressableConfig : ScriptableObject
     public string PathFieldTileMap;
     public string PathBarrierPrefab;
     public string PathCharacterPrefab;
+    public string PathElementIcon;
+    public string PathMoveCategoryIcon;
 }

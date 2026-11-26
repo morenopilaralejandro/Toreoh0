@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 using Aremoreno.Enums.Input;
 
 public class MenuBattleCommand : Menu
@@ -8,12 +9,16 @@ public class MenuBattleCommand : Menu
     // TODO put forfeit on the cornet
     // asist only one per match
 
-    //[Header("UI References")]
-    //[SerializeField] private DialogBoxUI dialogBox;
+    [Header("UI References")]
+    [SerializeField] private BarUI barMpSelectorMove;
+    [SerializeField] private TMP_Text textMpBattleSelectorMove;
+    [SerializeField] private TMP_Text textMpTrueSelectorMove;
+
     private CharacterEntityBattle entity;
     private SelectorMoveSourceLearned sourceMove;
     private SelectorMoveActionClickPerform actionMove;
     private SelectorMoveFilterSpecial filterMove;
+
 
     // Lifecycle
     public override void OnOpened() => BattleManager.Instance.Battle.BattleComponentPause.Pause();
@@ -31,7 +36,14 @@ public class MenuBattleCommand : Menu
     public void OnButtonBackClicked() => RequestClose();
 
     // button
-    public void OnButtonMoveClicked() => UIEvents.RaiseSelectorMoveOpenRequested(sourceMove, actionMove, filterMove);
+    public void OnButtonMoveClicked() 
+    {
+        barMpSelectorMove.SetValue(entity.Character.CharacterComponentStatsMp.GetMpNormalized(), isInstant : true);
+        textMpBattleSelectorMove.text = entity.Character.CharacterComponentStatsMp.BattleMp.ToString();
+        textMpTrueSelectorMove.text = entity.Character.CharacterComponentStatsMp.TrueMp.ToString();
+
+        UIEvents.RaiseSelectorMoveOpenRequested(sourceMove, actionMove, filterMove);
+    } 
 
     // Event
     protected override void OnEnable()
