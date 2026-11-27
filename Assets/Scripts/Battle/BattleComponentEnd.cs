@@ -12,18 +12,23 @@ public class BattleComponentEnd
         this.battle = battle;
     }
 
-    public void End() 
+    private void EndInternal() 
     {
-        if (!IsValid()) return;
         BattleArgs.SetForResults(battle);
         SceneLoaderManager.Instance.ReplaceGroup("SceneGroupData-BattleResult");
+    }
+
+    public void EndByCondition()
+    {
+        if (!IsValid()) return;
+        battle.BattleComponentMessage.PlayMessage(BattleMessage.Finish);
     }
 
     public void EndByForfeit()
     {
         if (!IsValid()) return;
-        BattleArgs.SetForResults(battle);
-        SceneLoaderManager.Instance.ReplaceGroup("SceneGroupData-BattleResult");
+        IsForcedLose = true;
+        EndInternal();
     }
 
     private bool IsValid() 
@@ -36,5 +41,21 @@ public class BattleComponentEnd
             isEndPending = true;
             return true;
         }
+    }
+
+    // Event
+    public void Subscribe()
+    {
+        UIEvents.OnBattleMessageEnded += OnBattleMessageEnded;
+    }
+
+    public void Unsubscribe()
+    {
+        UIEvents.OnBattleMessageEnded -= OnBattleMessageEnded;
+    }
+
+    private void OnBattleMessageEnded() 
+    {
+        if(isEndPending) EndInternal();
     }
 }

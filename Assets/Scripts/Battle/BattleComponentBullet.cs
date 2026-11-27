@@ -44,7 +44,7 @@ public class BattleComponentBullet
 
     public void UpdateInternal() 
     {
-        if (battle.BattleComponentPause.IsPausedPhysic) return;
+        if (battle.BattleComponentPause.IsPausedBattle) return;
 
         // loop backwards to remove bullets
         for(int i = listBulletStruct.Count - 1; i >= 0; i--)
@@ -76,6 +76,7 @@ public class BattleComponentBullet
                 foreach (CharacterEntityBattle entity in team.TeamComponentCharacter.ListCharacterPointEntity)
                 {
                     if (entity.Character.CharacterComponentSide.BattleSide == bulletStruct.SourceBattleSide) continue;
+                    if (entity.Character.CharacterComponentStatusEffectPermanent.IsFainted) continue;
                     sqrMagnitude = (bulletStruct.Pos - entity.transform.position).sqrMagnitude;
                     if (sqrMagnitude < entity.Character.CharacterComponentBullet.RadiusHitSqr)
                     {

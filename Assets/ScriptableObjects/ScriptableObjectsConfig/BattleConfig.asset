@@ -222,6 +222,85 @@ MonoBehaviour:
   LayerObstacleBullet:
     serializedVersion: 2
     m_Bits: 128
+  ListBattleMessageMapping:
+  - BattleMessage: 0
+    Duration: 1
+    ListMappingReference:
+    - Style: 0
+      LocalizedString:
+        m_TableReference:
+          m_TableCollectionName: GUID:735824408b5855db8be90f3ec8f1c914
+        m_TableEntryReference:
+          m_KeyId: 24627254723878912
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      LocalizedSprite:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+    - Style: 1
+      LocalizedString:
+        m_TableReference:
+          m_TableCollectionName: GUID:735824408b5855db8be90f3ec8f1c914
+        m_TableEntryReference:
+          m_KeyId: 24627254723878912
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      LocalizedSprite:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+  - BattleMessage: 1
+    Duration: 1
+    ListMappingReference:
+    - Style: 0
+      LocalizedString:
+        m_TableReference:
+          m_TableCollectionName: GUID:735824408b5855db8be90f3ec8f1c914
+        m_TableEntryReference:
+          m_KeyId: 24627254749044736
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      LocalizedSprite:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+    - Style: 1
+      LocalizedString:
+        m_TableReference:
+          m_TableCollectionName: GUID:735824408b5855db8be90f3ec8f1c914
+        m_TableEntryReference:
+          m_KeyId: 24627254749044736
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      LocalizedSprite:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
   references:
     version: 2
     RefIds: []

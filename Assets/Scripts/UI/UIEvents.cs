@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
+using Aremoreno.Enums.Battle;
 using Aremoreno.Enums.Item;
 using Aremoreno.Enums.Persistence;
 using Aremoreno.Enums.UI;
@@ -27,6 +28,14 @@ public static class UIEvents
     public static event Action OnCutsceneBattleEnded;
     public static void RaiseCutsceneBattleEnded()
         => OnCutsceneBattleEnded?.Invoke();
+
+    public static event Action<BattleMessage> OnBattleMessageStarted;
+    public static void RaiseBattleMessageStarted(BattleMessage battleMessage)
+        => OnBattleMessageStarted?.Invoke(battleMessage);
+
+    public static event Action OnBattleMessageEnded;
+    public static void RaiseBattleMessageEnded()
+        => OnBattleMessageEnded?.Invoke();
 
     // memory
     public static event Action<GameObject> OnSelectableSelected;

@@ -299,6 +299,14 @@ MonoBehaviour:
     m_Key: text_battle_result_tie
     m_Metadata:
       m_Items: []
+  - m_Id: 24627254723878912
+    m_Key: text_battle_message_fight
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24627254749044736
+    m_Key: text_battle_message_finish
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

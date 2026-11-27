@@ -15,7 +15,7 @@ MonoBehaviour:
   BulletId: bullet-bullet_pattern-00012-spiral_quadruple_b_4
   DamageBase: 1
   BulletMotionType: 2
-  Ttl: 99
+  Ttl: 3
   RadiusHit: 0.2
   RadiusVisual: 0.7
   SpeedMovement: 0

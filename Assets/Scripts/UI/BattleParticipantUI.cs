@@ -65,7 +65,7 @@ public class BattleParticipantUI: MonoBehaviour
         _ = SetAsync(entity);
         barHp.SetValue(entity.Character.CharacterComponentStats.GetStatNormalized(Stat.Hp), isInstant : true);
         barMp.SetValue(entity.Character.CharacterComponentStatsMp.GetMpNormalized(), isInstant : true);
-        //textName.text = entity.Character.asd;
+        textName.text = entity.Character.CharacterComponentLocalization.Nick;
     }
 
     private void OnCharacterHpDecreased(CharacterEntityBattle entity) 

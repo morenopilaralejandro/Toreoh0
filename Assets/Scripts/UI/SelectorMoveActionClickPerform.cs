@@ -14,10 +14,11 @@ public class SelectorMoveActionClickPerform : ISelectorActionClick<Move>
             Entity.CharacterComponentModel.RotateInstant(Entity.CharacterComponentTarget.GetDirectionToTarget());
             Entity.CharacterComponentStateLock.StartStateLock(obj.MoveComponentFrame.FrameRecovery);
             Entity.Character.CharacterComponentStatsMp.ModifyMpWithClamp(-obj.MoveComponentAttributes.Cost);
-            BattleManager.Instance.Battle.BattleComponentBullet.AddBullet(Entity, obj);
             menu.RequestClose();
             UIEvents.RaiseMenuBattleCommandCloseRequested();
             UIEvents.RaiseCharacterMpDecreased(Entity);
+            BattleManager.Instance.Battle.BattleComponentCutsceneBattle.PlayCutsceneMove(obj);
+            BattleManager.Instance.Battle.BattleComponentBullet.AddBullet(Entity, obj);
         } 
         else 
         {

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -9,6 +10,7 @@ public class BarUI : MonoBehaviour
     [SerializeField] private List<BarUIMapping> listBarUIMapping;
     [SerializeField] private Image imageBar;
     [SerializeField] private bool isLerpEnable;
+    private float lerpMin = 0.05f;
     private float timeAnimation = 0.5f;
     private float timeElapsed;
     private Coroutine coroutineLerp;
@@ -57,6 +59,9 @@ public class BarUI : MonoBehaviour
         while(timeElapsed < timeAnimation)
         {
             slider.value = Mathf.Lerp(floatValueCurrent, floatValueTarget, timeElapsed / timeAnimation);
+            if (slider.value < lerpMin)
+                slider.value = 0;
+            
             timeElapsed += Time.deltaTime;
             ChangeColorByMapping(slider.value);
             yield return null;

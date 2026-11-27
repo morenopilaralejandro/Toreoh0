@@ -273,6 +273,7 @@ public class CharacterComponentAI
         else 
             move = entity.CharacterComponentAIDecisionMove.GetSpecialMoveRangeSecuencial();
 
+        BattleManager.Instance.Battle.BattleComponentCutsceneBattle.PlayCutsceneMove(move);
         PerformMove(move);
     }
 

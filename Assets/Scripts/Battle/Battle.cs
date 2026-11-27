@@ -18,6 +18,7 @@ public class Battle
     public BattleComponentWinCondition BattleComponentWinCondition;
     public BattleComponentCutsceneBattle BattleComponentCutsceneBattle;
     public BattleComponentPause BattleComponentPause;
+    public BattleComponentMessage BattleComponentMessage;
 
     public Battle(
         BattleConfig battleConfig, 
@@ -43,9 +44,11 @@ public class Battle
         BattleComponentWinCondition = new BattleComponentWinCondition(this);
         BattleComponentCutsceneBattle = new BattleComponentCutsceneBattle(this);
         BattleComponentPause = new BattleComponentPause(this, battleConfig);
+        BattleComponentMessage = new BattleComponentMessage(this, battleConfig);
 
         BattleComponentPhase.Subscribe();
         BattleComponentWinCondition.Subscribe();
+        BattleComponentEnd.Subscribe();
     }
 
     public void Dispose() 
@@ -55,6 +58,7 @@ public class Battle
 
         BattleComponentPhase.Unsubscribe();
         BattleComponentWinCondition.Unsubscribe();
+        BattleComponentEnd.Unsubscribe();
     }
 
     public void UpdateInternal() 

@@ -1,6 +1,7 @@
 using UnityEngine;
 using Unity.Cinemachine;
 using System.Threading.Tasks;
+using Aremoreno.Enums.Battle;
 
 public class BattleManager : MonoBehaviour, IAsyncSceneLoader
 {
@@ -53,6 +54,7 @@ public class BattleManager : MonoBehaviour, IAsyncSceneLoader
         await Battle.BattleComponentCharacter.LoadAsync();
         // characters etc
 
+        Battle.BattleComponentMessage.PlayMessage(BattleMessage.Fight);
         isInitialized = true;
     }
 

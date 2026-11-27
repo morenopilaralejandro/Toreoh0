@@ -27,9 +27,10 @@ public class BattleComponentWinCondition
 
     private void OnCharacterHpDecreased(CharacterEntityBattle entity) 
     {
+        if (battle.BattleComponentPause.IsPausedBattle) return;
         EntityLastDamaged = entity;
         if (WinCondition.CheckCondition())
-            battle.BattleComponentEnd.End();
+            battle.BattleComponentEnd.EndByCondition();
     }
 
     public BattleSide GetBattleSideLoser() 

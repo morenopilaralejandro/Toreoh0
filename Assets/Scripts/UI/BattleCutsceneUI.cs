@@ -24,7 +24,7 @@ public class BattleCutsceneUI: MonoBehaviour
         version++;
     }
 
-    public async Task SetAsync(string name, string addressEvolution) 
+    public async Task SetAsync(string name, string addressEvolution)
     {
         await SetAsyncEvolution(addressEvolution);
         textName.text = name;

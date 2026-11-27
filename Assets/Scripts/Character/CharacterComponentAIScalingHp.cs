@@ -4,7 +4,7 @@ using Aremoreno.Enums.Character;
 public class CharacterComponentAIScalingHp
 {
     private Character character;
-    private float multiplierHp = 1.5f;
+    private float multiplierHp = 2f; // 1.5f
 
     public CharacterComponentAIScalingHp(Character character) 
     {

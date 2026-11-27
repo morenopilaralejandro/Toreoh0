@@ -30,7 +30,11 @@ public class MenuMain : Menu
             null);
     }
 
-    public void OnButtonBattleClicked() => SceneLoaderManager.Instance.ReplaceGroup("SceneGroupData-Battle");
+    public void OnButtonBattleClicked() 
+    {
+        BattleArgs.SetForTest();
+        SceneLoaderManager.Instance.ReplaceGroup("SceneGroupData-Battle");
+    }
     public void OnButtonSettingsClicked() => SceneLoaderManager.Instance.ReplaceGroup("SceneGroupData-Settings");
     public void OnButtonCreditsClicked() => SceneLoaderManager.Instance.ReplaceGroup("SceneGroupData-Credits");
     public void OnButtonQuitClicked() => Application.Quit();

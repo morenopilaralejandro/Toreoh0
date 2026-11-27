@@ -37,6 +37,9 @@ public class BattleComponentDamageCalculator
         damage = ClampDamage(damage);
         defenseEntity.Character.CharacterComponentStats.ModifyStatsBattleWithClamp(Stat.Hp, Mathf.FloorToInt(-damage));
 
+        if (defenseEntity.Character.CharacterComponentStats.StatsBattle.Get(Stat.Hp) == 0) 
+            defenseEntity.Character.CharacterComponentStatusEffectPermanent.ApplyStatus(StatusEffectPermanent.Fainted);
+        
         UIEvents.RaiseCharacterHpDecreased(defenseEntity);
 
         /*

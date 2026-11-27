@@ -303,6 +303,14 @@ MonoBehaviour:
     m_Localized: Empate
     m_Metadata:
       m_Items: []
+  - m_Id: 24627254723878912
+    m_Localized: "\xA1A luchar!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24627254749044736
+    m_Localized: "\xA1Se acab\xF3!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

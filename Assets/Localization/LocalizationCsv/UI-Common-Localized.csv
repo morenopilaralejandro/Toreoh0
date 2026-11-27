@@ -77,3 +77,5 @@ text_battle_phase_captura,,,Captura
 text_battle_result_win,,,¡Victoria!
 text_battle_result_lose,,,Derrota...
 text_battle_result_tie,,,Empate
+text_battle_message_fight,,,¡A luchar!
+text_battle_message_finish,,,¡Se acabó!

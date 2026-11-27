@@ -5,7 +5,6 @@ using Aremoreno.Enums.Battle;
 
 public class BattleComponentCutsceneBattle
 {
-    // orchestrate systems like ui and vfx when a cutscene is requested
     private Battle battle;
     private SceneLoaderManager sceneLoaderManager;
     private Coroutine coroutineUI;
@@ -21,8 +20,8 @@ public class BattleComponentCutsceneBattle
 
     public void PlayCutsceneMove(Move move)
     {
-        UIEvents.RaiseCutsceneBattleStarted("move name", null);
         StopCoroutineUI();
+        UIEvents.RaiseCutsceneBattleStarted(move.MoveComponentLocalization.Name, null);
         sceneLoaderManager.StartCoroutineHelper(ExecuteCoroutineUI(duration));
     }
 
@@ -31,6 +30,7 @@ public class BattleComponentCutsceneBattle
         if (coroutineUI == null) return;
         sceneLoaderManager.StopCoroutineHelper(coroutineUI);
         coroutineUI = null;
+        UIEvents.RaiseCutsceneBattleEnded();
     }
 
     private void StopCoroutineGameplay()
@@ -38,6 +38,8 @@ public class BattleComponentCutsceneBattle
         if (coroutineGameplay == null) return;
         sceneLoaderManager.StopCoroutineHelper(coroutineGameplay);
         coroutineGameplay = null;
+        UIEvents.RaiseCutsceneBattleEnded();
+        // resume play
     }
 
     private IEnumerator ExecuteCoroutineUI(float duration)
@@ -62,6 +64,7 @@ public class BattleComponentCutsceneBattle
             yield return null;
         }
         UIEvents.RaiseCutsceneBattleEnded();
+        // resume play
     }
 
     /*

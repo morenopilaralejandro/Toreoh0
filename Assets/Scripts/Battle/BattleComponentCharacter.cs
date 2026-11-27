@@ -31,8 +31,10 @@ public class BattleComponentCharacter
                 var prefab = await binding.LoadAssetAsync(address);
                 listBinding.Add(binding);
 
+
                 character.CharacterComponentLevel.SetLevel(99);
-                character.CharacterComponentAIScalingDifficulty.ScaleByLevel(99);
+                if (team.TeamComponentSide.BattleSide != battle.BattleComponentTeam.BattleSideUser)
+                    character.CharacterComponentAIScalingDifficulty.ScaleByLevel(99);
 
                 var go = BattleManager.Instance.InstantiateGameObject(
                     prefab,

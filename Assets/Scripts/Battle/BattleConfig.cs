@@ -39,8 +39,12 @@ public class BattleConfig : ScriptableObject
     public Material MaterialBullet;
     public LayerMask LayerObstacleBullet;
 
+    [Header("Message")]
+    public List<BattleMessageMapping> ListBattleMessageMapping;
+
     public Dictionary<BattleSide, CharacterSpawnPositionMapping> DictCoordCharacterSpawn = new();
     public Dictionary<BattlePhase, BattlePhaseMapping> DictBattlePhaseMapping = new();
+    public Dictionary<BattleMessage, BattleMessageMapping> DictBattleMessageMapping = new ();
 
     public void Initialize() 
     {
@@ -48,6 +52,8 @@ public class BattleConfig : ScriptableObject
             DictCoordCharacterSpawn[mapping.BattleSide] = mapping;
         foreach (var mapping in ListBattlePhaseMapping)
             DictBattlePhaseMapping[mapping.BattlePhase] = mapping;
+        foreach (var mapping in ListBattleMessageMapping)
+            DictBattleMessageMapping[mapping.BattleMessage] = mapping;
     }
 }
 
